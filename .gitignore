@@ -23,3 +23,8 @@ package-lock.json
 # IDE
 .vscode/
 .idea/
+
+# Production files — local only, not for public repo
+video/stills/
+assets/character/*.jpg
+assets/*.jpg

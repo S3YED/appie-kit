@@ -1,0 +1,53 @@
+# Multi-Agent Fleet Configuration
+# How to run multiple Appies on different machines
+
+# Each Appie needs:
+# 1. Its own OpenClaw installation
+# 2. Its own bot token (Telegram/Discord/WhatsApp)
+# 3. Its own SOUL.md personality
+# 4. Shared brain repo (optional, for coordination)
+
+# Example: 3-agent fleet
+fleet:
+  orchestrator:
+    name: "Appie-1"
+    location: "Mac Mini (home)"
+    role: "Main orchestrator, direct chat with owner"
+    model: "claude-opus"
+    bot: "@my-main-bot"
+    
+  marketing:
+    name: "Appie-2"
+    location: "DigitalOcean VPS"
+    role: "CMO — blog posts, social media, email campaigns"
+    model: "claude-sonnet"
+    bot: "@my-marketing-bot"
+    
+  devops:
+    name: "Appie-3"
+    location: "DigitalOcean VPS"
+    role: "CTO — deployments, monitoring, security"
+    model: "claude-sonnet"
+    bot: "@my-devops-bot"
+
+# Shared brain (GitHub repo all agents can read/write)
+# Used for task coordination and knowledge sharing
+shared_brain:
+  repo: "your-username/appie-brain"
+  sync_interval: "30m"
+
+# Networking: Use Tailscale for secure inter-agent communication
+# Install: https://tailscale.com
+# All agents join same Tailnet → private IPs, no port forwarding needed
+networking:
+  vpn: "tailscale"
+  # Each agent gets a stable Tailscale IP
+  # Agent 1: 100.x.x.1
+  # Agent 2: 100.x.x.2
+  # Agent 3: 100.x.x.3
+
+# Cost estimate for 3-agent fleet:
+# - 2x DigitalOcean VPS ($24/mo each): $48/mo
+# - Anthropic API (Sonnet for 2 agents): ~$50/mo
+# - Anthropic API (Opus for orchestrator): ~$50/mo
+# - Total: ~$148/mo for 3 AI employees working 24/7

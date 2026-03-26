@@ -1,0 +1,30 @@
+# Discord Bot Configuration for OpenClaw
+# Copy this to your OpenClaw config directory and customize
+
+# Create your Discord bot:
+# 1. Go to https://discord.com/developers/applications
+# 2. New Application → Bot → Copy token
+# 3. Enable MESSAGE CONTENT intent
+# 4. Invite to server with bot + messaging permissions
+
+discord:
+  # Your bot token from Discord Developer Portal
+  token: "YOUR_DISCORD_BOT_TOKEN"
+  
+  # Server (guild) ID where bot operates
+  guildId: "YOUR_SERVER_ID"
+  
+  # Channel IDs the bot listens to
+  channels:
+    - "CHANNEL_ID_1"
+    - "CHANNEL_ID_2"
+
+# OpenClaw gateway config snippet for Discord
+# Add this to your openclaw.yml or config.json:
+#
+# channels:
+#   discord:
+#     token: "YOUR_DISCORD_BOT_TOKEN"
+#     guildId: "YOUR_SERVER_ID"
+#     channels:
+#       - "CHANNEL_ID"

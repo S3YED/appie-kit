@@ -1,0 +1,27 @@
+# WhatsApp Configuration for OpenClaw
+# Copy this to your OpenClaw config directory and customize
+
+# WhatsApp integration uses wacli (WhatsApp CLI)
+# See: https://github.com/nicnocquee/wacli
+
+# Prerequisites:
+# 1. Install wacli: npm install -g wacli
+# 2. Link your WhatsApp: wacli auth
+# 3. Scan QR code with your phone
+
+whatsapp:
+  # Phone number to listen on (your WhatsApp number)
+  phone: "+YOUR_PHONE_NUMBER"
+  
+  # Allowed contacts (phone numbers that can message your bot)
+  allowedSenders:
+    - "+CONTACT_PHONE_NUMBER"
+
+# OpenClaw gateway config snippet for WhatsApp
+# Add this to your openclaw.yml or config.json:
+#
+# channels:
+#   whatsapp:
+#     phone: "+YOUR_PHONE_NUMBER"
+#     allowedSenders:
+#       - "+CONTACT_PHONE"

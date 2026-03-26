@@ -7,7 +7,7 @@
 
 ## What Is This?
 
-This is the **exact configuration, skills, tools, and learnings** from running [Weblyfe](https://weblyfe.ai) — a web design agency powered by 3 AI employees (we call them Appies) that handle:
+This is the **exact configuration, tools, and learnings** from running [Weblyfe](https://weblyfe.ai) — a web design agency powered by 3 AI employees (we call them Appies) that handle:
 
 - 📧 Email triage and responses
 - 📅 Calendar management
@@ -17,9 +17,10 @@ This is the **exact configuration, skills, tools, and learnings** from running [
 - 📊 Competitor monitoring
 - 🔒 Security scanning
 - 💬 Customer support across Telegram, WhatsApp, Discord
-- 🎬 AI video and content generation
 
 **This is not a chatbot.** This is a digital team member that works 24/7, learns from mistakes, and gets stronger every day.
+
+---
 
 ## Quick Start (5 minutes)
 
@@ -28,42 +29,32 @@ This is the **exact configuration, skills, tools, and learnings** from running [
 - An Anthropic API key (Claude)
 - A Telegram bot token (optional, for messaging)
 
-### 1. Clone this repo
+### 1. Clone & install
+
 ```bash
 git clone https://github.com/S3YED/appie-kit.git
 cd appie-kit
-```
-
-### 2. Copy workspace files into your OpenClaw directory
-```bash
-# Copy the workspace template into your OpenClaw working directory
-cp -r workspace/* /path/to/your/openclaw/workspace/
-
-# Or if you want the full kit with tools:
 ./install.sh /path/to/your/openclaw/workspace/
 ```
 
-### 3. Customize your files
-Edit these files to make it yours:
+### 2. Customize your files
+
 ```bash
-# Who your AI is
-nano workspace/SOUL.md        # Personality, values, voice
-
-# Who you are
-nano workspace/USER.md         # Your name, timezone, preferences
-
-# What tools it can use
-nano workspace/TOOLS.md        # API keys, services, platforms
+nano SOUL.md        # Who your AI is (personality, values, voice)
+nano USER.md        # Who you are (name, timezone, preferences)
+nano TOOLS.md       # What tools it can use (API references)
 ```
 
-### 4. Set up your environment
+### 3. Set up environment
+
 ```bash
-cp .env.example .env
-# Fill in your API keys
-nano .env
+cp .env.example .env.secrets
+chmod 600 .env.secrets
+nano .env.secrets   # Fill in your API keys
 ```
 
-### 5. Start your Appie
+### 4. Start your Appie
+
 ```bash
 openclaw gateway start
 ```
@@ -74,68 +65,55 @@ That's it. Your AI employee is live.
 
 ## What's Inside
 
-### 📂 `/workspace` — Drag & Drop Configuration
-The core files that define your AI's personality, memory, and behavior. Copy these directly into your OpenClaw workspace.
-
-| File | Purpose |
-|------|---------|
-| `AGENTS.md` | How your AI operates, safety rules, group chat behavior |
-| `SOUL.md` | Personality, values, communication style |
-| `USER.md` | Info about you (timezone, preferences, contacts) |
-| `TOOLS.md` | Available tools and API references |
-| `IDENTITY.md` | Multi-agent identity (if running a fleet) |
-| `HEARTBEAT.md` | Proactive check-in configuration |
-
-### 🛠 `/skills` — Battle-Tested Capabilities
-Skills we've built and refined over months of production use:
-
-| Skill | What It Does |
-|-------|-------------|
-| `lead-capture` | Captures leads from web forms → Airtable + Brevo + confirmation email |
-| `competitor-watch` | Monitors competitors weekly, generates reports |
-| `security-scan` | Daily security audit (exposed keys, permissions, ports) |
-| `health-monitor` | Checks fleet health across multiple machines |
-| `email-automation` | Brevo template management + transactional emails |
-| `content-factory` | AI-generated content pipeline (video + voice + social) |
-| `deploy-helper` | Git push → Vercel deployment with safety checks |
-| `memory-manager` | Long-term memory with Supermemory + local files |
-
-### 🔧 `/tools` — Utility Scripts
-Production-hardened shell scripts and Node.js tools:
-
-| Tool | Purpose |
-|------|---------|
-| `setup-openclaw-mac.sh` | Full Mac setup (Homebrew, Node, OpenClaw, config) |
-| `setup-openclaw-vps.sh` | VPS setup (Ubuntu/Debian, firewall, Tailscale) |
-| `security-scan.sh` | Scan for exposed secrets, bad permissions, open ports |
-| `session-manager.sh` | Clean stale sessions, manage memory |
-| `token-guard.sh` | Auto-refresh OAuth tokens before expiry |
-| `health-check.sh` | Fleet health monitoring |
-| `safe-gateway-restart.sh` | Zero-downtime gateway restart |
-| `namecheap.sh` | Domain DNS management via API |
-
-### 📋 `/configs` — Platform Templates
-Example configurations for every supported platform.
-
-### 📖 `/case-studies` — Real Examples
-How Weblyfe actually uses this system in production. Real numbers, real workflows, real results.
-
-### 📝 `/prompts` — Ready-Made Prompt Library
-20+ production-tested prompts for common business tasks.
-
-### 📚 `/docs` — The Full Guide
-The complete "Build Your Own Appie" guide as markdown (also available as [PDF](https://weblyfe.ai/openclaw)).
+```
+appie-kit/
+├── workspace/          # Core AI personality & behavior files
+│   ├── AGENTS.md       # Operating rules, safety, group chat behavior
+│   ├── SOUL.md         # Personality, values, communication style
+│   ├── USER.md         # Info about you (timezone, preferences)
+│   ├── TOOLS.md        # Available tools and API references
+│   ├── IDENTITY.md     # Multi-agent identity (for fleets)
+│   ├── HEARTBEAT.md    # Proactive check-in configuration
+│   └── memory/         # Persistent memory directory
+├── tools/              # Production shell scripts
+│   ├── setup-openclaw-mac.sh    # Full Mac setup
+│   ├── setup-openclaw-vps.sh    # VPS setup (Ubuntu/Debian)
+│   ├── security-scan.sh         # Scan for exposed secrets & bad permissions
+│   ├── health-check.sh          # Fleet health monitoring
+│   ├── session-manager.sh       # Clean stale sessions, manage memory
+│   └── safe-gateway-restart.sh  # Zero-downtime gateway restart
+├── configs/            # Platform configuration examples
+│   ├── telegram.example.yml     # Telegram bot setup
+│   ├── discord.example.yml      # Discord bot setup
+│   ├── whatsapp.example.yml     # WhatsApp integration
+│   └── multi-agent.example.yml  # Multi-agent fleet setup
+├── prompts/            # Production-tested prompt library
+│   ├── business-automations.md  # Lead capture, CRM, proposals
+│   ├── content-creation.md      # Blog, social, video content
+│   ├── customer-support.md      # Support workflows
+│   └── development-ops.md       # DevOps, deployments, monitoring
+├── case-studies/       # Real-world examples with numbers
+│   ├── weblyfe-agency.md        # 3-agent agency fleet
+│   ├── lead-automation.md       # Automated lead pipeline
+│   └── content-pipeline.md      # AI content generation
+├── video/              # Launch video production docs
+│   ├── PRODUCTION.md            # Scene-by-scene production bible
+│   └── RESEARCH-CHARACTER-CONSISTENCY.md
+├── install.sh          # One-command installer
+├── .env.example        # Environment variables template
+└── LICENSE             # MIT
+```
 
 ---
 
-## The Weblyfe Software Stack
+## The Weblyfe Stack
 
-This is the stack we use and recommend:
+The tools we use and recommend:
 
 | Category | Tool | Why |
 |----------|------|-----|
 | **AI Brain** | Claude (Anthropic) | Best reasoning, tool use, and safety |
-| **Framework** | OpenClaw | Open source, self-hosted, persistent memory |
+| **Framework** | [OpenClaw](https://github.com/openclaw/openclaw) | Open source, self-hosted, persistent memory |
 | **Messaging** | Telegram | Best bot API, instant delivery, groups |
 | **Websites** | Webflow | Visual builder, CMS, no-code |
 | **CRM** | Airtable | Flexible, API-first, automatable |
@@ -148,8 +126,6 @@ This is the stack we use and recommend:
 | **Voice** | ElevenLabs | Natural TTS, voice cloning |
 | **Video** | fal.ai (Kling 3.0) | Best character consistency, 4K |
 | **Search** | Exa | AI-native search API |
-| **DNS** | Namecheap | Cheap domains, good API |
-| **Version Control** | GitHub | Standard, Actions, Pages |
 
 ---
 
@@ -157,21 +133,20 @@ This is the stack we use and recommend:
 
 ### 1. Lead Capture Automation
 **Before:** Manually checking email, copying leads to spreadsheet, sending follow-ups.
-**After:** Form submission → Airtable lead created → Brevo list updated → Confirmation email sent → Appie monitors for follow-up timing.
+**After:** Form → Airtable lead → Brevo list → Confirmation email → Auto follow-up timing.
 **Result:** 0 manual steps, <2 second end-to-end, 24/7 capture.
 
 ### 2. Multi-Agent Fleet (3 Appies)
-**Setup:** Appie-1 (Orchestrator, Mac Mini), Appie-2 (Marketing, VPS), Appie-3 (DevOps, VPS)
-**Each agent** has its own personality, skills, and responsibilities.
-**Communication:** Via Tailscale VPN, direct SSH, or message relay.
-**Cost:** ~$50/month total infrastructure.
+**Setup:** Appie-1 (Orchestrator, Mac Mini), Appie-2 (Marketing, VPS), Appie-3 (DevOps, VPS).
+**Cost:** ~$148/month total for 3 AI employees working 24/7.
+See [`configs/multi-agent.example.yml`](configs/multi-agent.example.yml) for setup details.
 
 ### 3. Content Pipeline
 **Input:** One brand brief or topic idea.
-**Output:** AI-generated video (Kling 3.0) + voiceover (ElevenLabs) + social media posts (Buffer) + blog draft.
+**Output:** AI video (Kling 3.0) + voiceover (ElevenLabs) + social posts + blog draft.
 **Time:** 15 minutes vs 4+ hours manual.
 
-[See full case studies →](case-studies/)
+[Full case studies →](case-studies/)
 
 ---
 
@@ -189,13 +164,13 @@ Everything in this kit reflects these values:
 
 ## Security
 
-This repo contains **zero secrets**. All API keys, tokens, and personal data use placeholders.
+This repo contains **zero secrets**. All API keys and tokens use placeholders.
 
 Before going live:
 - [ ] Review `SOUL.md` for any personal info
-- [ ] Check `.env` has no real keys committed
+- [ ] Check `.env.secrets` has no real keys committed
 - [ ] Run `tools/security-scan.sh` after setup
-- [ ] Set file permissions: `chmod 600 .env .env.secrets`
+- [ ] Set file permissions: `chmod 600 .env.secrets`
 - [ ] Use Tailscale for remote access (never expose SSH publicly)
 
 ---
@@ -211,8 +186,6 @@ Found a bug? Built a cool skill? [Open an issue](https://github.com/S3YED/appie-
 MIT — Use it, modify it, sell it, whatever. Just don't blame us if your AI orders 1000 pizzas.
 
 ---
-
-## Credits
 
 Built by [Seyed Hosseini](https://instagram.com/seyed.jpg) at [Weblyfe](https://weblyfe.ai).
 

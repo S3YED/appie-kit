@@ -1,0 +1,28 @@
+# Telegram Bot Configuration for OpenClaw
+# Copy this to your OpenClaw config directory and customize
+
+# Get your bot token from @BotFather on Telegram
+# 1. Message @BotFather
+# 2. /newbot → follow prompts
+# 3. Copy the token
+
+telegram:
+  # Your bot token from BotFather
+  token: "YOUR_BOT_TOKEN_HERE"
+  
+  # Who can message your bot (Telegram user IDs)
+  # Find your ID: message @userinfobot on Telegram
+  allowedSenders:
+    - "YOUR_TELEGRAM_USER_ID"
+  
+  # Bot display name (set via @BotFather /setname)
+  displayName: "My Appie"
+
+# OpenClaw gateway config snippet for Telegram
+# Add this to your openclaw.yml or config.json:
+#
+# channels:
+#   telegram:
+#     token: "YOUR_BOT_TOKEN_HERE"
+#     allowedSenders:
+#       - "YOUR_TELEGRAM_USER_ID"
