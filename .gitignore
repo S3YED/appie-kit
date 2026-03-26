@@ -1,0 +1,25 @@
+# Secrets — NEVER commit these
+.env
+.env.secrets
+.env.local
+*.pem
+*.key
+
+# Memory — personal data
+memory/*.md
+!memory/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+package-lock.json
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
