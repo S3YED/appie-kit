@@ -126,6 +126,7 @@ The tools we use and recommend:
 | **Voice** | ElevenLabs | Natural TTS, voice cloning |
 | **Video** | fal.ai (Kling 3.0) | Best character consistency, 4K |
 | **Search** | Exa | AI-native search API |
+| **Desktop Agent** | [Clawd Cursor](https://clawdcursor.com) | Screen control, universal app automation |
 
 ---
 
@@ -145,6 +146,12 @@ See [`configs/multi-agent.example.yml`](configs/multi-agent.example.yml) for set
 **Input:** One brand brief or topic idea.
 **Output:** AI video (Kling 3.0) + voiceover (ElevenLabs) + social posts + blog draft.
 **Time:** 15 minutes vs 4+ hours manual.
+
+### 4. Desktop Automation (Clawd Cursor)
+**Problem:** Every SaaS tool needs its own API integration, keys, auth flows, rate limits.
+**Solution:** [Clawd Cursor](https://clawdcursor.com) gives your Appie eyes and hands. It sees your screen and controls your cursor.
+**Result:** One skill replaces dozens of API integrations. If you can click it, your agent can too.
+**Cost:** $0 for simple tasks (local Ollama), ~$0.01 for complex multi-app workflows.
 
 [Full case studies →](case-studies/)
 
