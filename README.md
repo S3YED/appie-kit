@@ -26,8 +26,19 @@ This is the **exact configuration, tools, and learnings** from running [Weblyfe]
 
 ### Prerequisites
 - [OpenClaw](https://github.com/openclaw/openclaw) installed
-- An Anthropic API key (Claude)
+- An OpenRouter API key (MiniMax M2.7 recommended)
 - A Telegram bot token (optional, for messaging)
+
+
+
+### Recommended: MiniMax M2.7 via OpenRouter (17x cheaper)
+
+The default recommendation for v4.4 is **MiniMax M2.7** via OpenRouter:
+- Cost: ~$0.01/1M tokens (vs $3.50/1M for Claude Opus)
+- Quality: equivalent to GPT-4 class
+- Setup: Get an OpenRouter key at [openrouter.ai](https://openrouter.ai) and set it as your model provider
+
+For full comparison and setup: see the [Build Your Own Appie PDF v4.4](https://weblyfe.ai/guide/Build-Your-Own-Appie-v4.pdf).
 
 ### 1. Clone & install
 
@@ -112,7 +123,7 @@ The tools we use and recommend:
 
 | Category | Tool | Why |
 |----------|------|-----|
-| **AI Brain** | Claude (Anthropic) | Best reasoning, tool use, and safety |
+| **AI Brain** | MiniMax M2.7 (OpenRouter) | 17x cheaper than Claude, same quality |
 | **Framework** | [OpenClaw](https://github.com/openclaw/openclaw) | Open source, self-hosted, persistent memory |
 | **Messaging** | Telegram | Best bot API, instant delivery, groups |
 | **Websites** | Webflow | Visual builder, CMS, no-code |

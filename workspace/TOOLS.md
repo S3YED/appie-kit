@@ -4,6 +4,31 @@
 # Add API endpoints, CLI commands, and service references here.
 # NEVER put actual API keys here — use .env.secrets for that.
 
+
+## AI Models (via OpenRouter)
+
+### MiniMax M2.7 (Recommended)
+- Provider: OpenRouter
+- Cost: ~$0.01/1M tokens (input), ~$0.03/1M tokens (output)
+- Quality: GPT-4 class, excellent reasoning
+- Setup: Set OPENROUTER_API_KEY in .env.secrets
+- Model ID: minimax/minimax-m2.7
+
+### Claude (fallback)
+- Provider: Anthropic via OpenRouter
+- Cost: ~$3/1M tokens (opus)
+- Best for: complex reasoning, coding, safety-critical tasks
+- Setup: Set ANTHROPIC_API_KEY in .env.secrets
+- Model ID: anthropic/claude-3.5-sonnet
+
+### Recommended Fallback Chain
+1. MiniMax M2.7 (primary)
+2. MiniMax M2.7-highspeed (faster)
+3. GPT-4o-mini (OpenAI via OpenRouter)
+4. Claude-3-haiku (Anthropic fallback)
+
+See full pricing: https://openrouter.ai/models
+
 ## Platform Access
 
 ### Email (Brevo / SendGrid / etc.)
