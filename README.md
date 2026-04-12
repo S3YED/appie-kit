@@ -116,6 +116,7 @@ appie-kit/
 ├── tools/              # Production shell scripts
 │   ├── setup-openclaw-mac.sh    # Full Mac setup
 │   ├── setup-openclaw-vps.sh    # VPS setup (Ubuntu/Debian)
+│   ├── hermes-agent-install.sh  # Install Hermes Agent on VPS (Nous Research)
 │   ├── security-scan.sh         # Scan for exposed secrets & bad permissions
 │   ├── health-check.sh          # Fleet health monitoring
 │   ├── session-manager.sh       # Clean stale sessions, manage memory
