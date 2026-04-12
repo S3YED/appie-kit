@@ -26,9 +26,10 @@ if [ -z "$TARGET" ]; then
     exit 1
 fi
 
-# Create target if needed
+# Create target directories
 mkdir -p "$TARGET/memory"
 mkdir -p "$TARGET/tools"
+mkdir -p "$TARGET/skills"
 
 # Copy workspace files (don't overwrite)
 echo "=== Copying workspace files ==="
@@ -38,6 +39,19 @@ for FILE in AGENTS.md SOUL.md USER.md TOOLS.md IDENTITY.md HEARTBEAT.md; do
     else
         cp "$SCRIPT_DIR/workspace/$FILE" "$TARGET/$FILE"
         echo "  ✅ $FILE"
+    fi
+done
+
+# Copy skills (don't overwrite)
+echo ""
+echo "=== Copying skills ==="
+for SKILL in "$SCRIPT_DIR"/skills/*/; do
+    SKILLNAME=$(basename "$SKILL")
+    if [ -d "$TARGET/skills/$SKILLNAME" ]; then
+        echo "  ⏭️  skills/$SKILLNAME already exists (skipping)"
+    else
+        cp -r "$SKILL" "$TARGET/skills/$SKILLNAME"
+        echo "  ✅ skills/$SKILLNAME"
     fi
 done
 

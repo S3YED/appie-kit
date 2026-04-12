@@ -74,6 +74,28 @@ That's it. Your AI employee is live.
 
 ---
 
+## Skills — Plug & Play Capabilities
+
+Skills extend your Appie with production-ready capabilities. Drop them into your OpenClaw skills directory and they're immediately available.
+
+### [`frontend-design-3`](skills/frontend-design-3/) — Production UI
+Build distinctive, production-grade interfaces that avoid generic AI aesthetics. Supports React, HTML/CSS, Next.js, Vue. Includes:
+- Bold typography with unique Google Fonts pairings
+- Ambient motion systems (scroll reveals, hover states, load orchestration)
+- Gradient meshes, noise textures, custom shadows
+- Dark/light theme variants built-in
+
+### [`ui-ux-pro-max`](skills/ui-ux-pro-max/) — Design Intelligence
+AI-powered design decision engine. 67+ UI styles, 161 color palettes, 57 font pairings, 99 UX guidelines, 25 chart types. Run standalone Python scripts or let OpenClaw invoke them automatically.
+
+### [`tips-landing-pages`](skills/tips-landing-pages/) — Conversion Framework
+The TIPS framework (Tempt → Influence → Persuade → Sell) — a Dutch evolution of AIDA for modern landing pages. Every Weblyfe landing page is built with this. Includes brand design system, copy rules, and a step-by-step workflow.
+
+### [`anthropics-frontend-design`](skills/anthropics-frontend-design/) — Lightweight Companion
+A lighter companion to `frontend-design-3` for quick component-level tasks. Same aesthetic standards, faster for small pieces.
+
+---
+
 ## What's Inside
 
 ```
@@ -86,6 +108,11 @@ appie-kit/
 │   ├── IDENTITY.md     # Multi-agent identity (for fleets)
 │   ├── HEARTBEAT.md    # Proactive check-in configuration
 │   └── memory/         # Persistent memory directory
+├── skills/             # AgentSkills — plug-and-play capabilities
+│   ├── frontend-design-3/   # Production-grade UI (React, HTML/CSS, Next.js)
+│   ├── ui-ux-pro-max/      # 67+ UI styles, 161 palettes, 57 font pairings
+│   ├── tips-landing-pages/ # TIPS conversion framework (Dutch AIDA evolution)
+│   └── anthropics-frontend-design/  # Lightweight frontend companion
 ├── tools/              # Production shell scripts
 │   ├── setup-openclaw-mac.sh    # Full Mac setup
 │   ├── setup-openclaw-vps.sh    # VPS setup (Ubuntu/Debian)
@@ -110,6 +137,7 @@ appie-kit/
 ├── video/              # Launch video production docs
 │   ├── PRODUCTION.md            # Scene-by-scene production bible
 │   └── RESEARCH-CHARACTER-CONSISTENCY.md
+├── assets/             # Brand assets, character sheets
 ├── install.sh          # One-command installer
 ├── .env.example        # Environment variables template
 └── LICENSE             # MIT
