@@ -78,21 +78,79 @@ That's it. Your AI employee is live.
 
 Skills extend your Appie with production-ready capabilities. Drop them into your OpenClaw skills directory and they're immediately available.
 
-### [`frontend-design-3`](skills/frontend-design-3/) — Production UI
-Build distinctive, production-grade interfaces that avoid generic AI aesthetics. Supports React, HTML/CSS, Next.js, Vue. Includes:
-- Bold typography with unique Google Fonts pairings
-- Ambient motion systems (scroll reveals, hover states, load orchestration)
-- Gradient meshes, noise textures, custom shadows
-- Dark/light theme variants built-in
+### Design & Creative
 
-### [`ui-ux-pro-max`](skills/ui-ux-pro-max/) — Design Intelligence
-AI-powered design decision engine. 67+ UI styles, 161 color palettes, 57 font pairings, 99 UX guidelines, 25 chart types. Run standalone Python scripts or let OpenClaw invoke them automatically.
+| Skill | Description |
+|-------|-------------|
+| [`frontend-design-3`](skills/frontend-design-3/) | Production-grade UI (React, HTML/CSS, Next.js, Vue). Bold typography, motion systems, gradient meshes |
+| [`anthropics-frontend-design`](skills/anthropics-frontend-design/) | Lightweight companion to frontend-design-3 for quick component-level tasks |
+| [`ui-ux-pro-max`](skills/ui-ux-pro-max/) | Design decision engine. 67+ UI styles, 161 palettes, 57 font pairings, 99 UX guidelines |
+| [`tips-landing-pages`](skills/tips-landing-pages/) | TIPS conversion framework (Tempt, Influence, Persuade, Sell) |
+| [`21st-dev`](skills/21st-dev/) | Install shadcn/ui-compatible React components from 21st.dev registry (Magic UI, Aceternity, etc.) |
+| [`design`](skills/design/) | Unified design: logo generation (55 styles), CIP mockups (50 deliverables), banners, icons, social photos |
+| [`design-mastery`](skills/design-mastery/) | Core design knowledge: hierarchy, spacing, typography, color, depth, UX laws |
+| [`design-system`](skills/design-system/) | Token architecture, three-layer tokens (primitive/semantic/component), CSS variables, slide generation |
+| [`ui-styling`](skills/ui-styling/) | shadcn/ui + Tailwind CSS. Accessible components, dark mode, responsive layouts |
+| [`banner-design`](skills/banner-design/) | Multi-format banners across 22 art styles for social, ads, web, print |
+| [`brand`](skills/brand/) | Brand identity, voice, messaging frameworks, asset management, design tokens |
+| [`slides`](skills/slides/) | Strategic HTML presentations with Chart.js, design tokens, copywriting formulas |
 
-### [`tips-landing-pages`](skills/tips-landing-pages/) — Conversion Framework
-The TIPS framework (Tempt → Influence → Persuade → Sell) — a Dutch evolution of AIDA for modern landing pages. Every Weblyfe landing page is built with this. Includes brand design system, copy rules, and a step-by-step workflow.
+### Development
 
-### [`anthropics-frontend-design`](skills/anthropics-frontend-design/) — Lightweight Companion
-A lighter companion to `frontend-design-3` for quick component-level tasks. Same aesthetic standards, faster for small pieces.
+| Skill | Description |
+|-------|-------------|
+| [`nextjs-expert`](skills/nextjs-expert/) | Next.js 15 App Router specialist. Server Components, Server Actions, auth, caching, streaming |
+| [`coding`](skills/coding/) | Code quality guidelines, patterns, security rules, debugging workflow |
+| [`gitclaw`](skills/gitclaw/) | Automated workspace backup to GitHub via crontab. Self-install, conflict resolution |
+
+### Content & Media
+
+| Skill | Description |
+|-------|-------------|
+| [`agentic-video-tools`](skills/agentic-video-tools/) | Compare and integrate agentic video editing APIs (Vizard, Submagic, Descript). Automation-first ranking |
+| [`video-editing-pro`](skills/video-editing-pro/) | Cut-decision framework for short-form video. Pause thresholds, hook precision, energy curve, caption strategy |
+
+### SEO & Marketing
+
+| Skill | Description |
+|-------|-------------|
+| [`seo-checklist`](skills/seo-checklist/) | Pre-publish on-page SEO checklist: title, meta, H1, keywords, images, breadcrumbs |
+| [`seo-keyword-strategie`](skills/seo-keyword-strategie/) | Keyword research: long-tail focus, placement rules, search volume validation, monster article strategy |
+
+### Infrastructure & DevOps
+
+| Skill | Description |
+|-------|-------------|
+| [`digital-ocean`](skills/digital-ocean/) | Manage DigitalOcean droplets, domains, and infrastructure via DO API |
+| [`n8n`](skills/n8n/) | Interact with n8n workflows — list, trigger, monitor, manage automations |
+| [`web-scraping-javascript-sites`](skills/web-scraping-javascript-sites/) | Scrape SPA/TypeScript sites. urllib-first strategy, Playwright fallback, stealth mode, bot detection bypass |
+
+### Research & Search
+
+| Skill | Description |
+|-------|-------------|
+| [`exa-plus`](skills/exa-plus/) | Neural web search via Exa AI. People, companies, news, research, code. Deep search, date/domain filters |
+| [`read-github`](skills/read-github/) | Read GitHub repos via gitmcp.io. Semantic search, smart code navigation, zero hallucination on structure |
+
+### Personas & Roles
+
+| Skill | Description |
+|-------|-------------|
+| [`persona-content-creator`](skills/persona-content-creator/) | Create, organize, and distribute content across Google Workspace |
+| [`persona-customer-support`](skills/persona-customer-support/) | Manage customer support — track tickets, respond, escalate issues |
+| [`persona-exec-assistant`](skills/persona-exec-assistant/) | Manage an executive's schedule, inbox, and communications |
+| [`persona-project-manager`](skills/persona-project-manager/) | Coordinate projects — track tasks, schedule meetings, share docs |
+| [`persona-researcher`](skills/persona-researcher/) | Organize research — manage references, notes, collaboration |
+| [`persona-it-admin`](skills/persona-it-admin/) | Administer IT — monitor security, configure Workspace |
+
+### Integrations
+
+| Skill | Description |
+|-------|-------------|
+| [`browser-use`](skills/browser-use/) | Web scraping, screenshots, form filling, Google/YT/TikTok image/video download with Playwright |
+| [`clawdcursor`](skills/clawdcursor/) | Desktop AI agent — control any app via GUI. Screenshots, clicks, forms, cross-app workflows |
+| [`airtable`](skills/airtable/) | Query, create, update Airtable records. API wrapper with bulk operations |
+| [`notion-masterclass`](skills/notion-masterclass/) | Notion workspace operations. Source-of-truth ladder, clarity protocol, chaos-to-execution pipeline |
 
 ---
 
@@ -108,11 +166,36 @@ appie-kit/
 │   ├── IDENTITY.md     # Multi-agent identity (for fleets)
 │   ├── HEARTBEAT.md    # Proactive check-in configuration
 │   └── memory/         # Persistent memory directory
-├── skills/             # AgentSkills — plug-and-play capabilities
-│   ├── frontend-design-3/   # Production-grade UI (React, HTML/CSS, Next.js)
-│   ├── ui-ux-pro-max/      # 67+ UI styles, 161 palettes, 57 font pairings
-│   ├── tips-landing-pages/ # TIPS conversion framework (Dutch AIDA evolution)
-│   └── anthropics-frontend-design/  # Lightweight frontend companion
+├── skills/             # AgentSkills — 33 plug-and-play capabilities
+│   ├── frontend-design-3/          # Production-grade UI
+│   ├── ui-ux-pro-max/             # Design decision engine
+│   ├── tips-landing-pages/        # TIPS conversion framework
+│   ├── anthropics-frontend-design/ # Lightweight frontend companion
+│   ├── 21st-dev/                  # shadcn/ui component registry
+│   ├── design/                    # Logo, CIP, banners, icons, social photos
+│   ├── design-mastery/            # Core design knowledge
+│   ├── design-system/             # Token architecture
+│   ├── ui-styling/                # shadcn/ui + Tailwind
+│   ├── banner-design/             # Multi-format banners
+│   ├── brand/                     # Brand identity & tokens
+│   ├── slides/                    # HTML presentations
+│   ├── nextjs-expert/             # Next.js 15 specialist
+│   ├── coding/                    # Code quality guidelines
+│   ├── gitclaw/                   # GitHub backup automation
+│   ├── agentic-video-tools/       # Video editing API comparison
+│   ├── video-editing-pro/         # Cut-decision framework
+│   ├── seo-checklist/             # On-page SEO checklist
+│   ├── seo-keyword-strategie/     # Keyword research
+│   ├── digital-ocean/             # DO infrastructure management
+│   ├── n8n/                       # n8n workflow automation
+│   ├── web-scraping-javascript-sites/ # SPA scraping
+│   ├── exa-plus/                  # Neural web search
+│   ├── read-github/               # GitHub doc reader
+│   ├── persona-*/                 # 6 workspace personas
+│   ├── browser-use/               # Playwright web automation
+│   ├── clawdcursor/               # Desktop GUI agent
+│   ├── airtable/                  # Airtable API
+│   └── notion-masterclass/        # Notion workspace ops
 ├── tools/              # Production shell scripts
 │   ├── setup-openclaw-mac.sh    # Full Mac setup
 │   ├── setup-openclaw-vps.sh    # VPS setup (Ubuntu/Debian)
