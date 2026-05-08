@@ -315,12 +315,18 @@ Before going live:
 
 ## Resources
 
+- [Getting Started](GETTING-STARTED.md): 20-minute walk-through from clone to first agent response
+- [FAQ](FAQ.md): setup, skills, models, privacy, hardware, use cases
+- [Troubleshooting](TROUBLESHOOTING.md): symptom-first index for common issues
+- [Skills Catalog](SKILLS.md): browse 155 skills by category
+- [Contributing](CONTRIBUTING.md): how to add skills and submit changes
+- [Changelog](CHANGELOG.md): version history
+- [Code of Conduct](CODE_OF_CONDUCT.md): community standards
+- [Security Policy](SECURITY.md): how to report a vulnerability
 - v4.4 guide: [Build Your Own Appie PDF](https://weblyfe.ai/store)
 - Hermes Agent: [github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)
 - OpenClaw: [github.com/openclaw/openclaw](https://github.com/openclaw/openclaw)
 - MiniMax M2.7 via OpenRouter: [openrouter.ai](https://openrouter.ai)
-- [CONTRIBUTING.md](CONTRIBUTING.md): how to add skills and contribute
-- [CHANGELOG.md](CHANGELOG.md): version history
 
 ---
 
