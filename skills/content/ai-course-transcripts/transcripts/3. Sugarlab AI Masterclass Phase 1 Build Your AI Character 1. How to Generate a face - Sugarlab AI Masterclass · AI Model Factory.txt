@@ -1,0 +1,103 @@
+[0.0s - 13.0s] Hi guys, I'm Dragon and welcome back and now we're entering phase one, how to build your
+[13.0s - 14.0s] AI character.
+[14.0s - 19.0s] This is the most important phase of the entire project, of your entire business in reality.
+[19.0s - 23.8s] Finding a good phase can really make or break your entire character and getting hung up
+[23.8s - 29.4s] on the shitty phase will cause you to spend a lot of time, waste a lot of tokens.
+[29.4s - 31.8s] So dialing in this first step is very important.
+[31.8s - 37.3s] A lot of people at Sugarlab, they would go straight to load character up here, or simply
+[37.3s - 38.7s] create character.
+[38.7s - 46.5s] However, in my experience, it could be better for you to go and actually create the phases
+[46.5s - 48.8s] slightly a different way.
+[48.8s - 51.8s] And the reason I'm saying this is because it's faster and it will help you iterate
+[51.8s - 57.3s] faster which in turn will also help you create the characters faster and fail faster.
+[57.3s - 58.3s] Which in business is everything.
+[58.3s - 62.4s] It's all about failing fast, making mistakes and getting on top of those mistakes and
+[62.4s - 63.4s] moving forward.
+[63.4s - 65.5s] So yeah, let's get started with that.
+[65.5s - 69.6s] You see me looking at this way out on the second screen here so don't get confused
+[69.6s - 70.6s] about that.
+[70.6s - 74.5s] I make phases always kind of close up and I kind of get ID pictures.
+[74.5s - 80.7s] The more ID picture like the phase is, the higher quality your final output phase
+[80.7s - 81.7s] will be.
+[81.7s - 84.3s] So I like to start with the word portrait.
+[85.3s - 92.5s] Another ID image and then also I then specify what I would like my character to look like.
+[92.5s - 95.1s] So imagine I like Asians.
+[95.1s - 96.1s] Imagine we start with Asian.
+[96.1s - 102.4s] So we say Asian, female, let's say she's 20 years old.
+[102.4s - 106.9s] Let's say she has black hair, black hair.
+[106.9s - 111.8s] She is, I don't know, let's just start with this.
+[111.8s - 125.4s] We can maybe even say a Vogue face or a model face, perfect face, and then we can generate
+[125.4s - 131.8s] a few times and then we will get our first images.
+[131.8s - 137.2s] Okay, don't really like these that much and what we're looking for here is in
+[137.2s - 140.3s] reality, that's also the ponytail.
+[140.3s - 144.9s] What we're trying to get here is the most clear head shot we can get.
+[144.9s - 149.0s] Maybe let's do it like 25 years old, these are a little bit too young looking.
+[149.0s - 153.1s] I want to get like also the ears, I want to get the straight on face.
+[153.1s - 156.2s] I really want to get a nice face card.
+[156.2s - 160.4s] The better the face card we get here, yeah, the easier this will be to create
+[160.4s - 161.6s] the character out of it.
+[161.6s - 165.2s] So as you guys can see, I kind of, the way I do this, the way I prompt, right,
+[165.6s - 169.8s] the last one we kind of discussed like what the fuck is a prompt is, you know, before
+[169.8s - 174.0s] I kind of explained how I use a structure, how I make sure that, you know, I kind of
+[174.0s - 179.5s] start with actions or I describe the character and all of this kind of fun stuff.
+[179.5s - 184.3s] In this case, it's all about just getting a clean, clean head shot, right?
+[184.3s - 189.7s] A theory, a head shot like this, a theory is the best because you can really see
+[189.7s - 192.5s] the entire head, you can see the shape of the head, you can see the shape of
+[192.5s - 193.5s] the face.
+[194.2s - 195.9s] This is quite a good one, right?
+[195.9s - 199.2s] For example, an image like this, it will be very hard for the AI.
+[199.2s - 202.8s] The eye is already like cut off, so the AI will have to interpret what the eye
+[202.8s - 206.5s] looks like, it has to interpret what the face looks like, you know, and this
+[206.5s - 209.6s] is one big distinction you have to know for Sugar Lab, what's Sugar Lab
+[209.6s - 211.5s] right now is that you're loading a face.
+[211.5s - 214.7s] It's like it's something you load into the image, right?
+[214.7s - 218.6s] It's not something that is, it's not like we're making a special AI, we're
+[218.6s - 221.5s] taking the face and then we're applying that to other images that are
+[221.5s - 222.2s] being created.
+[222.2s - 225.4s] And we have two versions of that, but the main thing you guys need to understand
+[225.4s - 228.9s] and know is it's important in this step to get a face cut.
+[228.9s - 231.4s] So for example here, we don't see the side of the face, the AI will have to
+[231.4s - 233.5s] interpret that high failure rate, right?
+[233.5s - 238.1s] Same with this one, with this one we don't see the top of the head, we
+[238.1s - 239.6s] don't see the ears, right?
+[239.6s - 243.2s] So having something like this is actually almost perfect, right?
+[243.2s - 247.1s] Because this can get a great, it's going to give the AI a lot of detail
+[247.1s - 247.7s] already.
+[247.7s - 251.2s] So if you're happy with the face, you go to the next step.
+[251.3s - 254.2s] But that you'll have to check in the next episode.
+[254.9s - 260.7s] So for now, my advice on what you guys have to do is go create a character.
+[260.7s - 262.6s] She can be you, she can even be a Caucasian.
+[263.9s - 264.6s] It doesn't matter.
+[265.5s - 270.6s] And you go and just go to create and you just generate a few times and
+[270.6s - 274.3s] you generate until you get a good headshot, you know, and don't be afraid
+[274.3s - 275.8s] to just play around with prompts.
+[275.8s - 280.3s] Like in the previous episode, I also talked about, you know, just creating
+[280.3s - 282.0s] cool content and having fun with it.
+[282.6s - 287.5s] In the end, this platform originated from a born generator, meaning that
+[287.5s - 290.1s] you can generate born and very realistic images.
+[290.1s - 291.2s] That's what we specialize in.
+[291.5s - 295.8s] So, you know, also getting used to the prompting and used to the AI
+[295.8s - 299.4s] and how it works and how everything works together, that really saves
+[299.4s - 300.0s] you a lot of time.
+[300.8s - 302.5s] So don't be afraid to generate a little bit.
+[302.6s - 305.6s] Don't be afraid to play with keywords, to add stuff, to remove
+[305.6s - 308.4s] stuff, not every prompt will work for everyone, not everything
+[308.4s - 309.4s] will always work for everyone.
+[309.6s - 313.1s] This is because it's generative AI, so it's based on pure randomness
+[313.1s - 314.2s] every single time you prompt.
+[314.6s - 316.3s] And that's why you get a seed, right?
+[317.0s - 319.7s] So if you want to replicate an image like this, you can take the seed
+[319.9s - 322.2s] and replicate it, but I'll show you that this is a different episode.
+[322.2s - 328.4s] So for now, go create images in the create page to get a headshot
+[328.4s - 331.9s] that you like and try to get one that's close, but not too close, right?
+[331.9s - 335.3s] So if it's like a very close image of the face, it'll also be harder
+[335.3s - 335.8s] for the AI.
+[336.8s - 341.7s] But guess something that is, yeah, kind of like perfect example
+[341.7s - 342.8s] would be something like this, right?
+[342.8s - 345.3s] This is really a good example of what you're looking for.
+[345.5s - 346.8s] So yeah, good luck, everyone.
+[347.0s - 352.0s] And I urge you to send your awesome findings and, you know,
+[352.2s - 353.6s] creations in the school.
+[353.8s - 357.7s] And as you guys go to the next, I would say step, I'll teach
+[357.7s - 360.1s] you guys how to turn this into a very nice and good-looking
+[360.1s - 361.9s] character, so I'll catch you guys there.

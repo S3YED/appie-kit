@@ -1,0 +1,45 @@
+/Users/diddywolf888/Library/Python/3.9/lib/python/site-packages/faster_whisper/feature_extractor.py:224: RuntimeWarning: divide by zero encountered in matmul
+  mel_spec = self.mel_filters @ magnitudes
+/Users/diddywolf888/Library/Python/3.9/lib/python/site-packages/faster_whisper/feature_extractor.py:224: RuntimeWarning: overflow encountered in matmul
+  mel_spec = self.mel_filters @ magnitudes
+/Users/diddywolf888/Library/Python/3.9/lib/python/site-packages/faster_whisper/feature_extractor.py:224: RuntimeWarning: invalid value encountered in matmul
+  mel_spec = self.mel_filters @ magnitudes
+[0.0s - 15.4s] All right guys, so welcome to the confi UI master class. Before you're going to binge
+[15.4s - 20.1s] watch all the videos, I just have a quick couple of notes. So most of the technical
+[20.1s - 25.3s] videos are not created by me, they're created by Jack and Jack is my partner and the
+[25.3s - 30.4s] developer of the awesome workflow that you guys are gonna get. Jack will be
+[30.4s - 36.4s] referring a lot to this document. So this entire document, except for how to do
+[36.4s - 40.0s] like the local setup, because to be honest I don't think anyone is gonna do
+[40.0s - 43.8s] that, you're just gonna do a cloud setup, it's a lot easier. This entire
+[43.8s - 48.0s] document, except for the local installation, it will be all here. So
+[48.0s - 51.4s] whenever he says like you'll click on this link and download this LoRa,
+[51.5s - 55.6s] then you go here and you find it here in the downloads. So there's not anything
+[55.6s - 60.4s] here yet because I'm still making it, but if you watch it, everything from
+[60.4s - 65.1s] this document will be in school. So you don't need to go anywhere else.
+[65.1s - 70.1s] Second thing is is that the videos about phase 2, the workflow, will be
+[70.1s - 74.9s] different than your workflow. This is because the videos were created with
+[74.9s - 79.2s] the version 1 workflow and you have the version 2 workflow and pretty soon
+[79.2s - 84.6s] you will get version 3 with the new one and points of more epic stuff. But for
+[84.6s - 91.2s] now this is it. But yeah, the videos are still very accurate, some
+[91.2s - 96.2s] things just might look a bit different. So keep that in mind. What more is I
+[96.2s - 100.5s] don't have a video for you guys on how to actually train a LoRa, because
+[100.5s - 104.3s] I tried it multiple times and they all came out like shit. That's why I
+[104.3s - 108.1s] partnered with one of the best character creators on the planet to
+[108.1s - 112.3s] build me a LoRa for me. So the best I can do is just give you guys some
+[112.3s - 117.3s] YouTube videos on how to train a LoRa with some tips. But yeah, I cannot teach
+[117.3s - 120.7s] you anything that I don't know how to do myself. Another thing is that if you
+[120.7s - 126.7s] have any questions then please don't DM me directly because I don't know how
+[126.7s - 130.4s] to help you if you have any technical questions. Your best bet is just post
+[130.4s - 133.9s] it in the community. We almost have a hundred people in there. That means
+[133.9s - 139.9s] probably some of those 100 people know how to help you so you will get your
+[139.9s - 143.8s] answers a lot faster. And if it's a really complicated thing that multiple
+[143.8s - 148.4s] people have then I will ask Jack to take a look at it. And finally if you
+[148.4s - 152.0s] really can't figure it out then you can always buy a LoRa from me. What do
+[152.0s - 156.9s] you get? You get the LoRa, you get the entire setup, plug-and-play, ready
+[156.9s - 161.8s] to go. You get one-on-one DM support so you will get either Jack or Nick
+[162.2s - 166.8s] or some other developer here in your DM and whenever something breaks or you
+[166.8s - 170.8s] have a question you can simply ask them a question. Just throwing it out
+[170.8s - 173.7s] there. If you want to do it yourself then please do it yourself. If you're
+[173.7s - 177.9s] like me and you get fucking BTSS from any of this technical stuff then yeah
+[177.9s - 181.7s] you can DM me. I'll put the price in the in the description of this module
+[181.7s - 188.2s] and you can purchase a LoRa. If not then yeah that's also fine.

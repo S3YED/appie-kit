@@ -1,0 +1,35 @@
+[0.0s - 6.2s] Another thing that I just want to quickly just touch on one final time is the face swaps.
+[6.2s - 10.2s] So obviously in the beginning when I told you guys about creating the character there's a
+[10.2s - 15.4s] difference but I never really explained why there's a difference and I'll explain it now in detail.
+[16.3s - 22.2s] So we have essential face swap which is the core technology it works very well for everything
+[22.9s - 28.1s] but it's not the best obviously it has some problems with consistency with
+[29.0s - 35.0s] uh you know you know with the the consistency between the initial image and the final image
+[35.0s - 39.2s] that's generated which and then afterwards you also have some problems with per image the
+[39.2s - 44.1s] consistency of the face there might be some small variations which is normal in AI right and has
+[44.1s - 48.2s] also has this but in essential this can be slightly more dramatic and can make the images
+[48.2s - 56.4s] to go slightly more polished however having a good essential face can solve that like so good
+[56.5s - 60.9s] like I have some characters that are really really well done like the one I shared already
+[60.9s - 64.9s] here but you guys got my connection from it's a very well done character all make with essential
+[64.9s - 71.6s] right nothing enhanced the reason for this is because we have an AI that generates the face
+[72.2s - 77.5s] and everything else in the image at some time I mean the AI has to take into account the face
+[77.5s - 83.5s] shape which is a very detailed and fine thing right the face and the rest of the surroundings
+[84.1s - 89.4s] so that's why you often get a more polished output however with enhanced we don't generate
+[89.4s - 93.8s] the face and everything else in the image at the same time we generate the image first
+[93.8s - 99.9s] and afterwards we add a face it's more face swap so what's happening there is that the
+[99.9s - 105.4s] AI can first focus 100% on creating an awesome image and then afterwards add the face
+[106.4s - 111.0s] so just take that into account that the technology it is core is different and that's
+[111.0s - 114.6s] why the images look different and that's why the faces also look different and making a
+[114.6s - 119.5s] choice here can help a lot but don't be afraid to then still make a blow job using essential
+[119.5s - 124.2s] because users will still see that it's a good blow job and they will not be able to tell
+[124.2s - 129.9s] because anyway the mark is open the face is distorted anyway because of that you know I
+[129.9s - 135.4s] say for gunshots so don't be afraid of playing around with this people are a lot of scrutinizing
+[135.4s - 139.6s] when you may think we talk to influencers all the time we work with influencers all the time
+[139.7s - 144.8s] and they also tell us yes it's normal to have variation and it does not affect us that much
+[144.8s - 151.4s] obviously having a one-to-one always is better obviously and that will come with a very soon
+[151.4s - 157.4s] to come update which right now actually uh you know if under is actually testing one of the first
+[157.4s - 161.5s] use cases as of this recording and probably by the time that you're watching this it's
+[161.5s - 167.3s] already a feature on sugar lab and if not it will be soon to come so these are some quick
+[167.3s - 172.0s] things I just want to touch on in pro settings that I didn't touch on throughout the rest of the
+[172.0s - 178.3s] course just to ensure that you guys also know how to use them and get used to them so yeah
+[178.3s - 184.5s] guys happy prompting have fun and perfect your skills and I'll see you guys in the chat and
+[184.5s - 190.2s] if there's any questions I'll be happy to answer thank you guys bye bye

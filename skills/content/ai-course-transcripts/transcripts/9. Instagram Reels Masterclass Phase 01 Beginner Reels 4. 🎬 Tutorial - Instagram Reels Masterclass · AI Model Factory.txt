@@ -1,0 +1,14 @@
+[0.0s - 9.8s] Okay, so I really struggled to generate this image, I miserably failed.
+[9.8s - 13.5s] With both Sugarlab AI and Phlox I wasn't able to do it.
+[13.5s - 17.8s] So I generated this very ugly image with the fake background.
+[17.8s - 20.8s] But for the sake of this example, I'm just going to use it.
+[20.8s - 26.2s] And one more tip, if you want to generate a video where she's just moving without
+[26.2s - 30.2s] actually moving her feet, then what I recommend is putting her in high heels.
+[30.2s - 33.7s] If you make your prompt something like swaying hips side to side,
+[33.7s - 37.4s] then you put her in normal shoes, then she will be moving a lot.
+[37.4s - 41.3s] But if you put her in high heels, then she will be just standing in a place like this.
+[41.3s - 44.2s] And honestly, to do this zoom effect is really fucking easy.
+[44.2s - 47.6s] All you need to do is just zoom in.
+[47.6s - 52.4s] You go to the feet like this, then you go to position,
+[52.4s - 55.9s] you make a keyframe in the beginning and then you go to the end
+[55.9s - 59.8s] and then the end position will be this, I guess.

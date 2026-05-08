@@ -1,0 +1,20 @@
+# 2. II. VPNs- Useful or Useless.! - AI Influencer Course V2 · AI Model Factory
+# Source: /Users/diddywolf888/clawd/learning/ai-course/1. AI Influencer Course V2/Phase 3 IG Setup Like a Pro/2. II. VPNs- Useful or Useless.! - AI Influencer Course V2 · AI Model Factory.mp4
+
+[0.0s - 6.0s] Now I quickly want to talk about the VPNs and proxies because I know that's like a big topic in the industry
+[6.0s - 13.0s] and you probably heard from people that, oh if you're not from the USA, you need to get a VPN in the USA
+[13.0s - 18.0s] it's completely bullshit. Whatever you do, do not get a VPN.
+[18.0s - 22.0s] You can create an Instagram account on your VPN and it will probably work
+[22.0s - 26.0s] but the moment your battery dies or your VPN disconnects
+[26.0s - 31.0s] then you instantly get shadowbanned or even worse, suspended.
+[31.0s - 34.0s] So whatever you do, do not get yourself a VPN.
+[34.0s - 39.0s] Now proxy is a different story. You can set up a proxy in the USA
+[39.0s - 45.0s] but for most people that are starting out, I would say just leave it as it is, man.
+[45.0s - 50.0s] It's really hard to get a high quality proxy supplier because a lot of these proxies, they get recycled
+[50.0s - 56.0s] so once one IP gets banned, then they keep selling it and then you buy that proxy, that IP
+[56.0s - 61.0s] and then you can also get banned. So it's hard to get a supplier, it's hard to set up.
+[61.0s - 63.0s] If you're just starting out, just leave it as it is, man.
+[63.0s - 68.0s] It really doesn't matter if you're from Vietnam or from France or from the USA
+[68.0s - 74.0s] you can still target over 70% US people with strategies in this course.
+[74.0s - 79.0s] So again, don't get a proxy, don't get a VPN, just get yourself a local SIM card
+[79.0s - 80.0s] and that's it.

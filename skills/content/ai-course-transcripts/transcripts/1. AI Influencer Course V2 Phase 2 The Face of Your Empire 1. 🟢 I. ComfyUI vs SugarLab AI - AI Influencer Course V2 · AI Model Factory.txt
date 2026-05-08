@@ -1,0 +1,25 @@
+# 1. 🟢 I. ComfyUI vs SugarLab AI - AI Influencer Course V2 · AI Model Factory
+# Source: /Users/diddywolf888/clawd/learning/ai-course/1. AI Influencer Course V2/Phase 2 The Face of Your Empire/1. 🟢 I. ComfyUI vs SugarLab AI - AI Influencer Course V2 · AI Model Factory.mp4
+
+[0.0s - 6.0s] right now you're at the crossroad. What platform are you going to use? If you
+[6.0s - 9.6s] would have asked me this like literally a week ago, then I would have say go for
+[9.6s - 14.6s] Sugarleb AI, because they're right now the most realistic on the market, unlike
+[14.6s - 19.5s] most of those flux tools out there. But if you want an honest answer, then the
+[19.5s - 25.1s] most realistic tool you can opt for is going to be Konfi UI. And frankly I
+[25.1s - 29.2s] don't think that that's ever gonna change. Konfi UI is always gonna be
+[29.2s - 34.6s] one step ahead of the future, because you're directly importing open-sourced
+[34.6s - 38.7s] shit, so whenever something gets released you are the first one to use it. In the
+[38.7s - 42.0s] beginning it's a fucking pain in the ass to use it, and don't even get me
+[42.0s - 45.7s] started about setting it up. I actually hire someone to set it up for me,
+[45.7s - 50.7s] because I'm really not that tech savvy. That said, the quality is just
+[50.7s - 55.6s] superior. So I recommend everyone that's starting out opt for Konfi UI. Do not
+[55.6s - 60.8s] use any of those tools out there. If you really, really want to use a tool, then I
+[60.8s - 66.0s] do recommend Sugarleb AI, because they use STXL, LoRa's coming this month. It's
+[66.0s - 70.9s] just more realistic than apps like Picasso AI. So I'll drop some examples
+[70.9s - 76.9s] below of the same character, the same LoRa, but one from Picasso AI, Flux,
+[76.9s - 83.2s] one from Sugarleb AI, STXL. Now I am on Konfi UI, which is also Flux. So
+[83.2s - 88.7s] again, if you do decide to use Sugarleb AI, then we do have a Sugarleb AI master
+[88.7s - 92.1s] class for you, explaining you exactly how to use it. If you want to go for
+[92.1s - 95.4s] Konfi UI, which again is what I recommend, because you're going to get
+[95.4s - 99.9s] best results with Konfi UI, then I recently dropped a Konfi UI master
+[99.9s - 103.8s] class. Pick whatever one suits you best, and just stick with that.

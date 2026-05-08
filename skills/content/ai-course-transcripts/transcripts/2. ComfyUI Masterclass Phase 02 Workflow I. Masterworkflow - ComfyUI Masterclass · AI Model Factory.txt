@@ -1,0 +1,429 @@
+[0.0s - 6.2s] Okay, welcome to the ComfyUI master workflow.
+[6.2s - 12.3s] This workflow has everything that I use on a daily basis to make my content.
+[12.3s - 17.8s] So we have a few different sections here that I've tried to keep as labeled as possible.
+[17.8s - 23.6s] We have our Flux graphics, which Flux is the main model that I trained for.
+[23.6s - 28.6s] So if you've purchased the LoRa from us, then most likely you're working in Flux
+[28.6s - 33.6s] and your character, LoRa, will live in this space.
+[33.6s - 36.6s] And then you will generate pictures from there.
+[36.6s - 44.1s] And then, yeah, so we also have some other options here for fixing,
+[44.1s - 48.4s] using yellow and ultra-lytics models, and that's what these are for.
+[48.4s - 53.7s] And then if you are a rare person and you use Dablediffusion XL,
+[53.7s - 55.8s] then that's what this area is for.
+[55.8s - 59.8s] You generate your pictures up here, and then you can use Flux.
+[59.8s - 63.6s] Do you fix the face and the hands, and that's what those are for.
+[63.6s - 67.0s] And then over here, we have an upscaling setup.
+[67.0s - 70.6s] Very self-explanatory, you basically upload your image.
+[70.6s - 75.1s] And then you choose a model that you wanna use to upscale, and
+[75.1s - 76.7s] then it scales it.
+[76.7s - 78.4s] And you also choose the bitofactor.
+[78.4s - 83.0s] So if you get a factor of Q, then it's times two.
+[83.0s - 90.0s] So if it's 1024 by 1024, then it would be 2048 by 2048.
+[90.0s - 96.5s] And then we also have our WAN 2.1 image-to-video setup.
+[96.5s - 99.4s] So you put in an image, and
+[99.4s - 106.9s] then you generate a video from Mac image, and that's what that is.
+[106.9s - 110.8s] And then in-painting, in-painting is basically image input
+[110.8s - 114.0s] that allows you to alter a specific part of the image.
+[114.0s - 118.3s] So let's say I right-click and I edit the image,
+[118.3s - 123.7s] I can change her hand if I want to, I paint in over it, and then generating.
+[125.3s - 126.4s] And so that's what that is.
+[126.4s - 128.2s] We're gonna go over all this in more detail.
+[128.2s - 129.9s] I'm just kind of going through and
+[129.9s - 133.0s] explaining all the things that we have here.
+[133.0s - 137.1s] So we also have our Pony in Paint which is more
+[137.1s - 139.2s] geared towards not, say, four guides guides.
+[139.2s - 143.8s] So if you're dealing with something where you need to change some nudity so
+[143.8s - 146.6s] that it looks better, then you would use the Pony in Paint.
+[148.4s - 153.4s] And then we have Flux Context, which is a tool that allows you to input
+[153.4s - 158.9s] images and then combine them with a prompt, and it does a pretty good job.
+[160.0s - 162.1s] It does create some smaller images, so
+[162.1s - 165.6s] I find myself fixing the images with in-painting.
+[165.6s - 166.9s] So that's what this is for.
+[168.2s - 172.9s] Let's start, let's actually start with what's graphics.
+[172.9s - 177.5s] Let's kind of dig in here and get this situated for our character.
+[179.6s - 184.8s] So the first thing you wanna do when you get a workflow from MAME is
+[184.8s - 191.3s] I always have different names for all of my models, and I have different paths.
+[191.4s - 194.4s] So we've wanna make sure we've already probably,
+[194.4s - 198.5s] since we've already installed Comfy, we've probably already installed our models.
+[198.5s - 202.8s] So, and if you haven't, then please review the workflows for
+[202.8s - 203.7s] the install guides.
+[205.8s - 207.1s] We have to say we're gonna go through and
+[207.1s - 208.4s] we're just gonna re-select everything.
+[208.4s - 211.8s] I don't have to, because I already have the right stuff, but
+[211.8s - 214.0s] I'm just gonna go through and do it anyway.
+[216.7s - 217.8s] So that you can see what I'm doing.
+[217.8s - 222.6s] T5 looks like, this is the one I want, yeah.
+[236.5s - 239.2s] So I'm just going through and re-selecting everything.
+[239.2s - 240.8s] This was flux realism.
+[240.8s - 244.8s] I keep all my lores in folders, so
+[244.8s - 246.6s] I have to make sure that it's looking in the folder.
+[248.7s - 254.6s] You see how it just says N-E-E-G, but down here it says flux backslash, N-E-E-G.
+[254.6s - 256.6s] That's because I store it in a folder.
+[256.6s - 258.9s] If you're in RunPod and you have things stored in folders,
+[258.9s - 262.7s] it would be a forward slash, but because I'm in Windows, it's a backslash.
+[262.7s - 265.8s] And then you gotta make sure you put your character lore here.
+[265.8s - 267.1s] We're doing Saskia.
+[271.2s - 275.2s] And then that's it for re-selecting models.
+[275.2s - 277.7s] Now let's kind of talk about what else we have going on here.
+[281.6s - 282.6s] We have our width and height,
+[282.6s - 285.0s] which is a setting that you might end up touching.
+[285.0s - 292.7s] I tend to go anywhere from 1080 by 1350, and it autocrats for
+[292.7s - 296.1s] some reason, but it's still a good aspect ratio, so I don't care.
+[296.1s - 302.6s] 1080 by 1344, or sometimes I go as high as, whoops,
+[302.6s - 309.8s] 1280 by 1600, that makes a nice large image.
+[309.8s - 314.7s] But I think 1344 and
+[314.7s - 321.3s] 1088 is fine, it's probably a lot faster, and it comes out looking just fine.
+[323.8s - 326.2s] And then let's talk about weights.
+[326.2s - 330.8s] So the weights in the power loader that are associated with the Lora's,
+[330.8s - 332.2s] I think are already pretty good.
+[332.2s - 336.6s] You want your character to be at one, and
+[336.6s - 339.9s] you want your realism to be at one as well.
+[339.9s - 342.4s] The iPhone, I think, can be a little bit much sometimes.
+[342.4s - 345.4s] I wanna use it, cuz I think it looks really good.
+[345.4s - 349.4s] But sometimes it can break if we go a little too high.
+[349.4s - 352.4s] Sudden 0.8 is fine.
+[352.4s - 356.6s] And then our age slider is actually a totally different kind of Lora.
+[356.6s - 358.7s] It actually is able to go negative.
+[358.8s - 361.8s] Negative just means it should look younger.
+[361.8s - 363.5s] Positive means it should look older.
+[363.5s - 368.5s] Zero is kind of like, I'd probably guess to be like about 30.
+[368.5s - 371.2s] I happen to think that when I train a Lora,
+[371.2s - 374.6s] it tends to add age to the face.
+[374.6s - 376.4s] So I use this to kind of balance it out,
+[376.4s - 378.8s] to get it to look like how it's supposed to look.
+[378.8s - 383.3s] And I'll go anywhere from negative 0.5 to negative 0.3.
+[383.3s - 386.3s] Unless you're aiming for older, then you would just turn that off and
+[386.3s - 387.4s] it probably looks fine.
+[389.7s - 393.9s] And then, so let's see here, that should be it for that.
+[393.9s - 395.1s] Now let's talk about prompting.
+[396.4s - 399.1s] There are two text boxes in Flux.
+[399.1s - 405.1s] And the top one, if we look back over here to our Clip Loader,
+[405.1s - 409.7s] these models that we have here, the Clip Name, Clip Name 2,
+[409.7s - 413.2s] these models are actually the models that kind of interpret the text that
+[413.2s - 415.5s] you enter in, your prompt, right?
+[415.5s - 419.4s] So we need a model to kind of understand what your language is.
+[419.4s - 420.6s] And we have two of them.
+[420.6s - 424.2s] We have the T5XXL, and we have the Clip Underswore L.
+[424.2s - 427.0s] Why don't let's upside down, because this text box is for
+[427.0s - 431.1s] the Clip Underswore L, and this text box is for the T5XXL.
+[432.3s - 436.9s] T5XXL is by Google, and it is more conversational.
+[436.9s - 440.1s] It likes paragraphs and sentences.
+[440.1s - 443.8s] And it likes if you spend a lot of time talking about a certain
+[443.8s - 447.7s] part of the picture, it will draw attention to it, and
+[447.7s - 449.8s] it will forget other details.
+[449.8s - 452.4s] So that's kind of how you treat this one.
+[452.4s - 458.7s] And then this one likes tags, so it likes comma separated things.
+[458.7s - 463.9s] A woman, we're gonna put our trigger word in,
+[463.9s - 466.6s] which is usually your character's name.
+[466.6s - 469.6s] I always, every Laura that I ever train,
+[469.6s - 473.3s] the trigger word is always the name right before the first underscore.
+[474.2s - 479.9s] So everything ran before underscore flux D is the trigger word.
+[479.9s - 483.4s] So if it's a two word thing, like for instance, if I made this one,
+[483.4s - 485.7s] it would be Laura Flux would be the trigger word.
+[487.2s - 489.7s] But I did not make that one, so that's not the trigger word for that one.
+[492.9s - 496.2s] And then, so yeah, okay, a woman, Saskia, shot on iPhone.
+[496.2s - 499.5s] I like these tags to be very vague so that I don't have to edit them
+[499.5s - 502.0s] often, but they really do help guide the shot.
+[502.0s - 506.1s] And I also have a couple negative words in here that I, things I don't want.
+[506.1s - 509.3s] I don't want plastic, I don't want shiny skin, and I don't want glory.
+[512.0s - 515.7s] But down here, we're gonna prompt like a nice sentence prompt.
+[515.7s - 517.5s] So I'm just gonna go ahead and go brazy with it.
+[521.0s - 522.9s] We're gonna put our trigger word, then comma, and
+[522.9s - 525.0s] then we're gonna describe our character.
+[525.0s - 528.4s] The Laura, he'd already know what our character looks like, but
+[528.4s - 531.8s] I just like to make sure that I'm driving a couple things home.
+[531.8s - 534.1s] So I'm going to describe Saskia.
+[561.8s - 571.1s] And that's probably, I don't know.
+[571.1s - 573.6s] Some of this language might not be the best for this, but.
+[577.2s - 579.0s] But this is kind of how I like to prompt.
+[579.0s - 582.0s] I like to describe things in full sentences.
+[582.0s - 586.2s] And then, yeah, this is the kind of language that I would use to describe
+[586.2s - 586.7s] Saskia.
+[588.3s - 590.7s] And then now, I'm going to describe her outfit.
+[651.8s - 670.3s] Guess that's all we're gonna do for now, that's your prompt.
+[670.3s - 672.1s] Basically, when you come in here,
+[672.1s - 676.5s] you'll either have a huge prompt in here already, and
+[676.5s - 680.0s] you'll just want to keep the first paragraph and last paragraph.
+[680.0s - 683.9s] But everything in between, you can edit however you want for
+[683.9s - 685.3s] the best results.
+[685.3s - 688.4s] But I mean, I encourage you to play with this however you want to.
+[696.5s - 698.9s] Okay, so let's look at what we got.
+[698.9s - 702.6s] So let's just finish generating, and here's the last image.
+[702.6s - 706.9s] If we go over here to this button on the sidebar, and
+[706.9s - 711.6s] if you don't see any of this, it's because you'd have it hidden.
+[711.6s - 714.9s] So there should be a little hamburger menu right here that says show menu.
+[720.8s - 723.6s] And we can go through this and
+[723.6s - 725.2s] look through all the images that we just generated.
+[725.2s - 727.6s] So as you can see, they're all very different.
+[727.6s - 732.9s] And that's because we have a random seed, which you're probably gonna keep
+[732.9s - 736.1s] random unless you're testing out a specific prompt and
+[736.2s - 740.8s] you want to change your part of it to see what kind of results you can get.
+[740.8s - 742.4s] But because I have a random seed,
+[742.4s - 747.7s] it's starting from a different noise, like calculation.
+[747.7s - 749.8s] So some of these, you might notice,
+[749.8s - 753.0s] you kind of have an idea of what your character looks like.
+[753.0s - 755.2s] And I know what soft steel it's like.
+[755.2s - 758.4s] And I know that this is kind of a weird,
+[758.4s - 761.1s] I might clean this one up in Photoshop.
+[761.1s - 764.6s] But I think that's probably the best one that it looks the most like.
+[764.6s - 767.5s] And I've already cleaned up some of these, walked this V line in Photoshop.
+[768.6s - 771.6s] And that's kind of the battle, right?
+[771.6s - 773.6s] You kind of picking the one that you like the most.
+[775.3s - 777.3s] And I would probably generate more than four.
+[777.3s - 782.7s] If I really want this prompt to work, I'll probably run like
+[782.7s - 788.0s] a hundred and then walk away and then come back and pick my favorites.
+[788.0s - 793.3s] Or something, but just to test out a prompt, I'll run four.
+[793.3s - 796.6s] Just to see if I miss something, like I'll be typing and I'll forget like,
+[798.3s - 801.2s] whoops, I forgot to prompt her shorts or something.
+[801.2s - 802.8s] So that's kind of how that works.
+[802.8s - 806.4s] So this is your basic safe for work text to image workflow.
+[809.0s - 812.6s] Okay, so now that we've worked with the first part of the workflow,
+[812.6s - 816.8s] which is usually already activated once you open it,
+[816.8s - 823.1s] let's go over how to activate other workflows and extension workflows.
+[823.1s - 828.3s] So let's dive right into not safe for work.
+[828.3s - 831.5s] What we're going to do is we're going to keep this one active, and
+[831.5s - 836.4s] the way you activate other parts of the workflow is you click this little toggle.
+[837.6s - 843.2s] And that basically activates the chest fix, which uses a Pony Checkpoint,
+[843.2s - 848.6s] which is a Sable Diffusion Checkpoint, to fix part of the image.
+[849.3s - 855.0s] We're also going to uncheck, or we're going to activate this,
+[855.0s - 857.1s] the Pony Grind Fix.
+[859.1s - 859.8s] So.
+[867.8s - 874.5s] And these are our Ultralytics Segum models, our yellow V8 models.
+[874.5s - 876.0s] They go by a bunch of different names, but
+[876.0s - 877.9s] these are the things that detect.
+[877.9s - 882.3s] Parts of the image, and then create a mask that then is inpainted.
+[882.3s - 886.1s] So whatever image gets generated will get passed here, and
+[886.1s - 892.2s] it will detect her chest, and then basically do a revisory pass over her
+[892.2s - 895.9s] chest, and then that image will get tossed down here, and it will
+[895.9s - 899.8s] then get detected by the panty line model, which is the groin.
+[899.8s - 903.0s] And then it will do a pass over that area.
+[903.0s - 907.3s] So let's set up our first part of the workflow to be a not safe for
+[907.8s - 909.2s] workflow.
+[909.2s - 912.4s] We're going to check on this, just any other Lora slot, and
+[912.4s - 913.6s] we're going to add our Mystic.
+[914.8s - 916.8s] And I'm going to use V5.
+[916.8s - 919.1s] I'm not quite sure what is in the folder.
+[919.1s - 921.4s] You might have a V3 or a V5.
+[921.4s - 926.0s] If you are curious about the V5, let me know.
+[926.0s - 927.3s] You can also get that on Civet.
+[929.0s - 933.2s] And then I'm going to turn that to, oops, I'm going to turn that to point E.
+[933.2s - 936.2s] I think the not safe for work model works better at point E.
+[937.7s - 940.3s] And then we're going to revise our prompt.
+[940.3s - 942.0s] So she's no longer wearing anything.
+[955.8s - 957.7s] So there's our not safe for work prompt.
+[957.7s - 962.3s] And let's run a badge of four.
+[963.8s - 965.3s] Okay, so it looks like it's done.
+[965.3s - 970.4s] And as you can see, I have my four batches right here.
+[970.4s - 974.6s] Well, what's different about these is you can see in the bottom corner,
+[974.6s - 975.9s] there's the number three.
+[977.1s - 981.7s] And the reason for that is because I ran three workflows in one batch.
+[982.8s - 987.2s] So how do we see all three of these images over here?
+[987.2s - 991.6s] Well, there's a little button right here that says Show Flat List.
+[991.6s - 997.1s] And if I click Show Flat List, I can see all of the images that were generated.
+[998.4s - 1001.6s] Now, there will be nightmare fuel.
+[1001.6s - 1006.7s] This is not a perfect way of working, but let's take a look at what we have.
+[1006.7s - 1008.8s] So here's the original flux image.
+[1008.8s - 1011.0s] It's not quite soft gear.
+[1011.0s - 1012.0s] She gained a little bit.
+[1017.0s - 1018.0s] Why is it still doing that?
+[1018.0s - 1019.1s] I'm trying to copy that.
+[1022.5s - 1026.6s] Okay, so you can see how our breasts change from the first two images.
+[1028.3s - 1030.1s] So that's Pony doing its thing.
+[1035.2s - 1038.3s] CBC had just parts of these images change.
+[1041.5s - 1045.4s] You see how flux does a really bad job with certain things.
+[1045.4s - 1047.6s] But then PonyCat fixes it.
+[1047.6s - 1049.8s] And then Photoshop would take us a little further.
+[1049.8s - 1053.1s] But essentially, that's what these three are doing.
+[1054.4s - 1057.2s] And then I'm just going to refresh and clear this.
+[1069.6s - 1074.9s] Okay, so now that we have a fresh slate, why don't we turn off all of these?
+[1076.4s - 1079.0s] And let's go over to our next workflow.
+[1079.0s - 1081.7s] In the Not Safe for Work workflow, I go over this.
+[1081.7s - 1089.6s] This is very similar to the Pony workflow for Not Safe for Work.
+[1089.6s - 1091.1s] And I don't really use that anymore.
+[1091.1s - 1095.9s] If you have a Pony Laura, then refer to that workflow for, or
+[1095.9s - 1099.8s] I'm sorry, refer to that video, and then our upscale.
+[1106.6s - 1108.9s] So you're to pick a upscale model.
+[1108.9s - 1110.6s] And you can get those from Civet.
+[1110.6s - 1111.9s] I have a few right here.
+[1111.9s - 1115.4s] I think I uploaded a couple into the all models directory as well.
+[1116.6s - 1121.5s] I think clarity, clear reality is a good one, so we'll just use that.
+[1121.5s - 1123.4s] I'm going to upscale it by two.
+[1123.4s - 1128.4s] So I'm pretty sure this image is 1280 by 1600, so it should be twice that.
+[1131.2s - 1135.0s] And when I click Generate, hopefully I remember to shut off all the other
+[1135.0s - 1136.0s] models, again, cool.
+[1137.4s - 1138.2s] It looks like it did it.
+[1139.0s - 1140.8s] And it gives you this cool before and after.
+[1149.1s - 1150.0s] Yeah, so there you go.
+[1153.7s - 1155.3s] So that's how that works.
+[1155.3s - 1156.8s] You upload your image.
+[1156.8s - 1158.9s] You decide by how much you want to upscale it, and
+[1158.9s - 1162.4s] then you choose the model that you want to use.
+[1162.4s - 1165.4s] And clear reality is a good model, so there's that.
+[1166.4s - 1170.1s] And then next, let's go over inpainting.
+[1170.1s - 1173.7s] So again, we're going to have an input image.
+[1176.6s - 1179.1s] And earlier we made this mask.
+[1179.1s - 1184.2s] Let's actually convert all of our stuff to our models.
+[1184.2s - 1186.9s] So I'm going to use FluxDev.
+[1188.9s - 1191.5s] And your naming convention might be different than mine.
+[1191.5s - 1193.2s] I'm pretty sure those are all the same.
+[1193.2s - 1195.0s] Got to re-select all these models.
+[1207.0s - 1211.1s] And then remember, right-click, open with Mask Editor,
+[1211.1s - 1212.9s] exchange our mask.
+[1212.9s - 1215.9s] If you hold the right-click, it undoes the mask.
+[1215.9s - 1217.5s] I kind of want to fix this area.
+[1217.5s - 1219.8s] So we're going to get a re-roll of this area.
+[1219.8s - 1223.0s] So essentially, you're basically inputting an image,
+[1223.0s - 1229.6s] and then you're sort of changing the part that you
+[1229.6s - 1230.1s] mask.
+[1234.1s - 1236.5s] And then same thing, you kind of want to just prompt
+[1236.5s - 1237.7s] your character.
+[1238.7s - 1240.7s] And then same thing, you kind of want to just prompt
+[1240.7s - 1241.8s] your character.
+[1249.2s - 1256.2s] And then when this value is set to 0,
+[1256.2s - 1258.1s] there is no change from the original.
+[1258.1s - 1260.8s] And when this value is set to 1,
+[1260.8s - 1263.5s] there is 100% of a change from the original.
+[1263.5s - 1265.7s] And we don't want 100% of a change
+[1265.7s - 1267.6s] because we want to keep the context.
+[1267.6s - 1269.9s] But we do want a somewhat decently large change.
+[1269.9s - 1272.6s] So I'm going to change that to 65%.
+[1272.6s - 1275.8s] And then I'm going to generate 4.
+[1275.8s - 1278.7s] And I'm going to click Run.
+[1278.7s - 1280.5s] All right, it looks like it's done.
+[1280.5s - 1282.6s] I don't necessarily think the results are exactly
+[1282.6s - 1284.4s] where I was going for, but it's OK.
+[1284.4s - 1286.2s] It at least shows us what it did.
+[1286.2s - 1287.8s] So OK.
+[1287.8s - 1291.3s] As you can see, as we go through these four images,
+[1291.3s - 1293.4s] the only part of the image that changes
+[1293.4s - 1295.9s] is right where I had masked.
+[1295.9s - 1298.2s] And that's exactly what we want.
+[1298.2s - 1299.2s] I'd probably go with this one.
+[1299.2s - 1300.1s] I think that's decent.
+[1300.1s - 1304.3s] It's more clear what's happening with their shirt
+[1304.3s - 1307.6s] as opposed to the way I went to originaling.
+[1307.6s - 1309.2s] Yeah, I think that's good.
+[1309.2s - 1310.9s] So that's the kind of thing you want to use it for,
+[1310.9s - 1312.2s] to change something slightly.
+[1312.2s - 1314.8s] It's good for remixing hands.
+[1314.8s - 1316.9s] If the face, like you'd have a perfect picture
+[1316.9s - 1318.8s] but your character's face isn't right,
+[1318.8s - 1323.2s] you can actually activate the Laura and her name.
+[1323.2s - 1324.9s] And then it will get her face right
+[1324.9s - 1326.5s] and get a reroll of her face.
+[1327.5s - 1329.6s] So that's what inpainting is for.
+[1329.6s - 1331.9s] And we can go over Pony.
+[1331.9s - 1334.1s] Pony is very similar.
+[1334.1s - 1337.1s] Obviously, the workflow's the same,
+[1337.1s - 1340.9s] but we're gonna be using this for not safe
+[1340.9s - 1344.5s] for work on this side and safe for work on this side.
+[1344.5s - 1346.8s] Things like her face and hands
+[1346.8s - 1351.4s] and maybe like other body parts,
+[1351.4s - 1353.8s] rerolls are good with flux,
+[1353.8s - 1356.6s] but you're gonna use this for like the nude parts,
+[1356.6s - 1359.8s] I think is the most effective use of it.
+[1359.8s - 1361.8s] So that's what that's for.
+[1361.8s - 1364.8s] Next, let's go over context.
+[1364.8s - 1366.4s] And I'll show you how that works.
+[1367.8s - 1369.7s] Okay, so let's activate that.
+[1369.7s - 1371.0s] And basically the way this works
+[1371.0s - 1373.3s] is I'm going to choose three images
+[1373.3s - 1376.9s] and I'm going to prompt kind of them together
+[1376.9s - 1378.3s] into one scene.
+[1378.3s - 1383.0s] So I'm gonna keep Saskia here as our subjects
+[1383.0s - 1384.6s] and then I'm gonna add a second subject,
+[1384.6s - 1387.4s] which will be this kiddie pool, I guess,
+[1387.4s - 1390.1s] and then the desert.
+[1391.0s - 1392.3s] And so what I'm gonna do with this
+[1392.3s - 1396.5s] is I'm gonna say the character
+[1396.5s - 1398.7s] is next to the kiddie pool,
+[1398.7s - 1401.4s] next to the pool all side in the desert.
+[1401.4s - 1403.1s] So let's go over to our prompts.
+[1413.0s - 1416.0s] And we'll see what that does.
+[1416.0s - 1421.0s] And you might see that there is able dollar sign right here.
+[1421.0s - 1423.8s] That's because this is an API node.
+[1423.8s - 1427.8s] And API nodes are actually able to communicate
+[1427.8s - 1430.8s] with the Black Forest Labs website
+[1430.8s - 1434.4s] where you kind of pay for credits
+[1434.4s - 1436.7s] because this model isn't really open to the public,
+[1436.7s - 1440.0s] but we can use the node to sort of use them all.
+[1440.3s - 1442.1s] And so as you'll see here,
+[1442.1s - 1445.9s] I've connected my email and I have credits.
+[1445.9s - 1447.5s] So in order to use this,
+[1447.5s - 1450.2s] you need to pay for credits.
+[1450.2s - 1453.8s] And then I want a four or five aspect ratio
+[1453.8s - 1456.4s] and then everything else I think is good.
+[1456.4s - 1457.8s] What we'll notice though
+[1457.8s - 1460.4s] is that it doesn't quite look like her
+[1460.4s - 1461.8s] when we see the result.
+[1462.8s - 1463.6s] Let's run this
+[1465.9s - 1469.3s] so that it can get an idea of what it's gonna look like.
+[1469.3s - 1472.6s] It does a nice little map of the three things.
+[1474.1s - 1476.6s] So you can kind of see how it put,
+[1476.6s - 1479.1s] I didn't really do a good job with my caty pool.
+[1479.1s - 1480.2s] Maybe I should try.
+[1483.9s - 1485.1s] I don't know how to spell caty pool,
+[1485.1s - 1486.5s] how I pick that's right.
+[1500.3s - 1501.1s] I don't know.
+[1507.1s - 1509.9s] Oh, it looks like I can't say kitty pool.
+[1515.6s - 1517.7s] I guess I'm inflatable and say that.
+[1525.7s - 1527.5s] That one's content moderated too.
+[1528.3s - 1529.5s] I wonder if it's,
+[1531.0s - 1532.8s] so I paused the recording to see
+[1532.8s - 1535.4s] what was causing those moderation strikes
+[1535.4s - 1539.2s] and it was actually Saskia's butt I think.
+[1539.2s - 1540.4s] So as you can see,
+[1540.4s - 1544.4s] I was able to actually get the inflatable pool
+[1544.4s - 1546.5s] in the desert and the character.
+[1547.6s - 1550.7s] Now obviously that what's nothing like Saskia
+[1550.7s - 1553.3s] but it like has her basic,
+[1553.3s - 1556.0s] but it has her outfit and it has her body type,
+[1556.0s - 1557.1s] but that's not really her face.
+[1557.1s - 1559.6s] So you would probably pin paint that to fix it.
+[1559.6s - 1560.4s] If you wanted,
+[1560.4s - 1563.8s] if you really cared about this image and it was perfect,
+[1563.8s - 1565.3s] you could fix it,
+[1565.3s - 1568.4s] but this is kind of how context is used.
+[1568.4s - 1571.0s] And then now let's look at WAN.
+[1572.2s - 1575.1s] So WAN is a image to video model.
+[1577.8s - 1579.5s] So for the WAN 2.1,
+[1579.5s - 1581.2s] the image to video,
+[1581.2s - 1584.9s] but if you're on RunPod and we set it up for you,
+[1585.1s - 1587.3s] chances are you don't have any of these models
+[1587.3s - 1589.2s] and you would need to ask for that special
+[1589.2s - 1591.4s] because it takes up a lot of space.
+[1591.4s - 1594.1s] So we don't like to do it just,
+[1594.1s - 1597.3s] we don't wanna use up everybody's space,
+[1597.3s - 1598.6s] especially when most of the time
+[1598.6s - 1600.6s] you're just gonna be generating images
+[1600.6s - 1602.8s] and using cling for your videos.
+[1604.0s - 1606.6s] This is a very specific use case
+[1606.6s - 1609.2s] and that is for like not safe for work.
+[1609.2s - 1611.8s] So I'm just gonna run one real quick.
+[1612.6s - 1616.4s] So the way that you do things with WAN
+[1616.4s - 1617.8s] is you upload an image
+[1617.8s - 1619.8s] and then you're gonna choose a motion Laura,
+[1619.8s - 1624.0s] which most likely you'll get from Civit.
+[1624.0s - 1626.1s] So you'll go to Civit and you'll pick a motion Laura
+[1626.1s - 1628.5s] and you'll download it and put it in your Laura directory
+[1628.5s - 1629.9s] and then you pick it from here.
+[1629.9s - 1631.4s] So let's see which ones I have.
+[1631.4s - 1632.4s] I have a bunch of different ones.
+[1632.4s - 1633.8s] I have a couple of character Laura's.
+[1633.8s - 1635.4s] I don't have one for Sastia.
+[1635.4s - 1638.0s] I don't really feel the need to have one.
+[1638.0s - 1639.4s] I think because she's facing her way up,
+[1639.4s - 1641.5s] I'll probably just do this one.
+[1641.5s - 1642.4s] Let's see.
+[1650.0s - 1650.9s] So let's do that
+[1650.9s - 1652.7s] because that's what the war is called.
+[1654.9s - 1658.0s] So let's run that and see what we get.
+[1659.2s - 1661.6s] Okay, so we've just finished and it's a little silly,
+[1661.6s - 1665.0s] but you can kind of get a nice heat effect
+[1665.0s - 1668.7s] of how WAN does their video.
+[1668.7s - 1672.4s] I, again, would choose Kling over this any day of the week,
+[1672.4s - 1675.2s] but it can do stuff.
+[1675.2s - 1677.8s] The Laura's are pretty good.
+[1677.8s - 1679.7s] Well, I hope that was helpful.
+[1679.7s - 1681.1s] I tried to cover everything.
+[1682.4s - 1684.9s] If you have questions, feel free to let me know.
+[1684.9s - 1688.4s] Everybody happy generating and good luck.

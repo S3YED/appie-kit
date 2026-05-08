@@ -1,0 +1,281 @@
+[0.0s - 7.0s] Hi, Ike it here, and today we are going to be going over the package that you receive
+[7.0s - 11.0s] as a Lora client from me on Fiverr or our website.
+[11.0s - 18.6s] If you bought a Lora from me or Digital Divas, then you will be receiving a folder
+[18.6s - 19.6s] in a Google Drive.
+[19.6s - 22.5s] And in the Google Drive, you should have your character name and inside there you
+[22.5s - 27.4s] should have a folder called Lora's and a folder called Word Flows.
+[27.4s - 32.1s] Now let's go over what these contents are.
+[32.1s - 39.9s] So in Lora's we have our Flux Realism Lora, our iPhone Photo Lora, our Neeg, our Age
+[39.9s - 42.9s] Slider Lora, and our Character Lora.
+[42.9s - 45.5s] My character is Saskia.
+[45.5s - 48.3s] Yours will be named after your character.
+[48.3s - 55.4s] And the trigger of your Lora will always be the first word in the file name.
+[55.4s - 59.6s] Not for everything, obviously these have their own triggers, but for your characters,
+[59.6s - 64.4s] the one that I train is going to be the first word.
+[64.4s - 71.9s] So we're actually just going to start off by downloading all of these.
+[71.9s - 75.0s] And then, yeah, so we'll wait for that to finish zipping.
+[75.0s - 76.8s] And then let's go over to our workflows.
+[76.8s - 81.9s] There is a JSON file in here, we're going to download that as well.
+[81.9s - 84.8s] And then we're just going to wait for all of that to finish.
+[84.8s - 87.2s] This is not a Comfy UI install tutorial.
+[87.2s - 89.9s] It's not a Flux install tutorial.
+[89.9s - 94.6s] It's simply just what you do with your files once you get them from it.
+[94.6s - 101.5s] I do have install guides for RunPod, a setup guide for RunDiffusion, as well as
+[101.5s - 105.6s] a install guide for local.
+[105.6s - 111.0s] This is just specifically for if you've already done all that, then you are just
+[111.0s - 112.0s] going to have your Lora.
+[112.0s - 115.8s] And I'm going to walk you through the workflows that you receive, as well as
+[115.8s - 117.0s] where the Loras go.
+[117.0s - 119.6s] So let's go over to File Explorer.
+[119.6s - 121.5s] We have a zip right here.
+[121.5s - 124.6s] Let's extract that zip.
+[130.7s - 131.5s] Great.
+[131.5s - 134.7s] And now we're going to go over to our Myles folder.
+[134.7s - 139.8s] So I have my Myles folder set up a little bit differently, but we're just
+[139.8s - 142.4s] going to grab all our Loras.
+[142.4s - 148.3s] I'm going to hit Control-X to remove them from here to cut them.
+[148.3s - 150.1s] And then I'm going to go to my Lora directory.
+[150.1s - 153.2s] And the way it works is I have everything stored in this directory
+[153.2s - 154.5s] called All Models.
+[154.5s - 157.1s] If you're in RunDiffusion, you know where your models directory is.
+[157.1s - 158.8s] You know where your Loras directory is.
+[158.8s - 162.9s] If you're in RunPod, you know it's in your models directory
+[162.9s - 164.5s] inside your Loras directory.
+[164.5s - 168.6s] You should know that from the setup guide if you're local.
+[168.6s - 169.5s] Then same thing.
+[169.5s - 172.1s] It's going to be in your comfy directory inside your models directory
+[172.1s - 173.7s] inside your Lora directory.
+[173.7s - 175.1s] I don't work that way.
+[175.1s - 179.1s] I put them in here, and I sort them into different folders.
+[179.1s - 181.0s] So I'm just going to paste these in here,
+[181.0s - 183.9s] because I already have all four of these in my Flux directory.
+[183.9s - 185.1s] I'm actually just going to delete them,
+[185.1s - 187.5s] but you're going to put them in here, OK,
+[187.5s - 189.3s] inside your Lora directory.
+[189.3s - 190.9s] And that's where that will go.
+[190.9s - 191.4s] And I mixed.
+[191.4s - 193.6s] For some reason, it looks like this did not download.
+[193.6s - 195.2s] So we're just going to try that again.
+[196.2s - 200.1s] And then it should start.
+[200.1s - 202.6s] Perfect.
+[202.6s - 204.9s] OK, so now that we have everything in our folder,
+[204.9s - 208.4s] let's go back here to our downloads.
+[208.4s - 212.5s] Oops, that guy had that twice, because it just did this.
+[212.5s - 214.7s] So here's her workflow right there.
+[214.7s - 216.7s] I drag this offspring.
+[216.7s - 218.5s] And I already have comfy running.
+[221.5s - 223.3s] So here's comfy.
+[224.3s - 226.1s] And we're just going to actually,
+[226.1s - 227.1s] I'm just going to Queer Lists.
+[234.9s - 236.2s] OK, so here we are in comfy.
+[236.2s - 237.5s] It's blank right now.
+[237.5s - 240.5s] And then so what we're going to do
+[240.5s - 242.9s] is we're just going to go back to our downloads folder,
+[242.9s - 245.5s] and then just drag this in.
+[245.5s - 247.9s] And you should see something that looks like this.
+[247.9s - 251.2s] So mine has Saskia's name right here.
+[251.2s - 252.1s] But yours might not.
+[252.1s - 253.9s] It'll probably have Yoruki Archer's name.
+[253.9s - 256.2s] Or if not, it might just have Saskia's name
+[256.2s - 257.5s] in which he'd switch it.
+[257.5s - 258.8s] So let's go over this workflow.
+[258.8s - 260.5s] This is a basic text to image workflow.
+[260.5s - 265.8s] It might look like this with all the connectors.
+[265.8s - 268.6s] I hide them, because I've purposely set this up
+[268.6s - 270.7s] to look like this.
+[270.7s - 273.4s] Not so that we can bypass parts of the workflow,
+[273.4s - 277.6s] but because I want it to feel like an interface for people
+[277.6s - 279.1s] that are new to comfy.
+[279.1s - 281.7s] You're probably not going to be engineering your own workflows.
+[281.7s - 284.2s] You're probably just going to be using ones that your use
+[284.2s - 284.9s] case.
+[284.9s - 287.2s] So I figure it's just easier to say,
+[287.2s - 288.9s] here's where the models and parameters are.
+[288.9s - 290.9s] Here's where the text guidance is.
+[290.9s - 293.2s] And here's where the output is.
+[293.2s - 297.4s] And then the text to image is this full of them.
+[297.4s - 300.1s] So first of all, let's go over each element here.
+[300.1s - 304.5s] So our first node is our UNET loader, our diffusion model
+[304.5s - 305.4s] loader.
+[305.4s - 307.3s] And that is Flux Dev.
+[307.3s - 309.7s] Flux Dev is the model that we use.
+[309.7s - 311.4s] And we want the weight tag to be FP8.
+[312.3s - 314.8s] First of all, we want to make sure we're
+[314.8s - 317.3s] worth re-selecting our models when we first come in here.
+[317.3s - 322.2s] So mine's actually called Flux1Dev.sft.
+[322.2s - 324.3s] Yours might be called that and might be called
+[324.3s - 327.2s] Flux1Dev.safetensors.
+[327.2s - 329.7s] The same thing, it's just a different extension.
+[329.7s - 331.2s] So that's actually why I would want
+[331.2s - 334.1s] to do it, because if I ran it with safetensors,
+[334.1s - 334.9s] it would have been live.
+[334.9s - 336.9s] I don't know what that is, because it doesn't.
+[336.9s - 338.3s] It only knows what this one is.
+[338.3s - 341.4s] For me, yours might be different.
+[341.4s - 346.9s] And then we want to select the T5XXL FP8 model,
+[346.9s - 350.4s] and then the ClipHunterscoreL model,
+[350.4s - 354.3s] and then the ae.safetensors file.
+[354.3s - 355.9s] And we're just re-selecting everything,
+[355.9s - 358.5s] because things might have different names.
+[358.5s - 361.7s] Right here, like I said, I store all of my models
+[361.7s - 364.1s] in folders, so all these LORAs
+[364.1s - 367.7s] need to be re-selected for you, most likely.
+[367.7s - 369.5s] Because you might not have a Flux folder,
+[369.5s - 371.1s] and you might have a different name.
+[371.1s - 372.9s] So we're just going to click on this first one,
+[372.9s - 379.0s] and we're going to do Realism, FluxRealismLora.
+[379.0s - 380.5s] And obviously, my model's directory
+[380.5s - 383.0s] is intact, because I'm on my computer.
+[383.0s - 386.2s] And then we're going to do iPhone, just search iPhone,
+[386.2s - 387.8s] select it.
+[387.8s - 391.4s] And then we're going to do EEE, select it,
+[391.4s - 392.7s] and then your character.
+[392.7s - 395.7s] Whatever your character's name is, start typing it.
+[395.7s - 397.2s] And then let's talk about, now
+[397.2s - 398.5s] that we have these re-selected,
+[398.5s - 401.3s] let's talk about the weights and each.
+[401.3s - 402.8s] What does go over each one?
+[402.8s - 407.8s] Realism, I like to have at 1, which is 100%.
+[407.8s - 411.4s] For a normal Lora, this strength is a percentage.
+[411.4s - 413.5s] It's 0 to 1.
+[413.5s - 414.7s] You don't typically go over.
+[414.7s - 418.5s] You can go over with Flux to like 1.3 if you wanted to,
+[418.5s - 420.6s] if you just want to push it a little further.
+[420.6s - 421.6s] I know people do that.
+[421.6s - 423.8s] I don't typically be there.
+[423.8s - 425.5s] I feel you can push all the way to 0.8.
+[425.5s - 431.3s] I think it tends to get in bright P if you go fire.
+[431.3s - 434.7s] If you go too low, you kind of get that Flux, shiny skin
+[434.7s - 436.7s] look if you go too low with it.
+[436.7s - 439.1s] I think this is what makes things look real.
+[439.1s - 443.7s] So I typically have that around 0.5 to 0.8.
+[443.7s - 446.8s] And then this is an open slot for clothing.
+[446.8s - 449.2s] Or when we go over the not safe for work
+[449.2s - 450.6s] version of this word flow, there's
+[450.6s - 454.0s] actually a Lora that goes here called NSFW Master.
+[454.0s - 459.4s] And we will basically be bypassing that to use that Lora.
+[459.4s - 462.3s] But for your safe work stuff, you can put an outfit here
+[462.3s - 464.2s] if you want to experiment.
+[464.2s - 467.7s] That's just an open slot for other stuff.
+[467.7s - 469.4s] And then the age slider works differently.
+[469.4s - 471.7s] It's actually amount of percentage.
+[471.7s - 474.0s] It actually likes float values.
+[474.0s - 479.2s] So basically, 1 is older, 0 is like middle,
+[479.2s - 481.1s] and negative 1 is younger.
+[481.1s - 485.7s] And you could do like 2 or negative 2.
+[485.7s - 488.2s] I think it's outrageous when you go that far.
+[488.2s - 494.3s] So I keep it at negative 0.3 or 0.5.
+[494.3s - 496.6s] It does affect smiling.
+[496.6s - 498.4s] I keep it negative because I think
+[498.4s - 501.5s] that Flux has these interesting shine,
+[501.5s - 506.7s] like glossy faces with like really defined smile lines.
+[506.7s - 508.5s] To a fault, I don't think everybody
+[508.5s - 510.1s] had smile live like that.
+[510.1s - 512.1s] So I like to have that age slider a little bit tone
+[512.1s - 516.5s] bound just to get rid of some of those characteristics
+[516.5s - 518.5s] that we get from Flux.
+[518.5s - 523.3s] And then character Lora, of course, it's our 1, 100%.
+[523.3s - 525.4s] OK, so for the second column,
+[525.4s - 527.3s] the only settings in here that you're probably
+[527.3s - 529.9s] going to be touching are maybe the width and height.
+[529.9s - 535.1s] Just to go faster, you could do 10 to 24, 5, 12, maybe,
+[535.1s - 537.8s] if you wanted to.
+[537.8s - 542.9s] So Flux has trained on 2 megapixels, which is 1,600
+[542.9s - 543.9s] by 1,200.
+[543.9s - 548.0s] So I like to do 1,200 by 1,600.
+[548.0s - 550.9s] Or I'm sorry, 1,280.
+[550.9s - 552.5s] 1,280 by 1,600.
+[552.5s - 553.7s] And that's just me, though.
+[553.7s - 556.5s] Again, if you want us to be faster, you can lower it.
+[556.5s - 559.7s] There's some different.
+[559.7s - 561.5s] If it's divisible by 5, 12, or whatever,
+[561.5s - 562.6s] I think you're good.
+[562.6s - 564.9s] You don't have to worry too much.
+[564.9s - 567.3s] And then you might.
+[567.3s - 570.0s] So the noise is basically the starting point
+[570.0s - 570.7s] of the generation.
+[570.7s - 574.2s] So if you were to put this to fixed, and it wasn't random,
+[574.2s - 575.6s] and you didn't change any settings
+[575.6s - 577.3s] and you generated an image, and then you
+[577.3s - 580.8s] generated another image, it would be the same image twice
+[580.8s - 581.9s] if you had it fixed.
+[581.9s - 583.9s] But if you have it random, it
+[583.9s - 586.5s] will be a different starting point for your noise.
+[586.5s - 591.2s] This number basically just generates randomly.
+[591.2s - 593.7s] So if you're testing, I don't know,
+[593.7s - 596.0s] different colored hair or something,
+[596.1s - 598.5s] then you would fix it to get the same image
+[598.5s - 599.5s] with different colored hair.
+[599.5s - 602.1s] Roughly, it does tend to change other aspects of it.
+[602.1s - 606.7s] It's not perfectly the same image with different hair.
+[606.7s - 608.0s] It's in the same ballpark, though.
+[608.0s - 611.6s] You can kind of see how it changes,
+[611.6s - 614.1s] like dominance in the background and stuff.
+[614.1s - 615.8s] But we typically leave that on random
+[615.8s - 619.3s] before just generating images.
+[619.3s - 623.6s] And then I'm going to clean up this prompt.
+[626.4s - 630.7s] But first, let's talk about the two different clip styles.
+[630.7s - 633.4s] So as you remember, for Flux, we
+[633.4s - 635.9s] have two different kinds of clips.
+[635.9s - 640.5s] So we have clip L and T5XXL.
+[640.5s - 643.9s] Now, when we delete this prompt so you can see,
+[643.9s - 645.1s] when there's nothing in here, it
+[645.1s - 649.6s] tells us which model it's using, in which box.
+[649.6s - 651.2s] So if there was no text down here,
+[651.2s - 653.9s] this would say T5XXL.
+[653.9s - 659.5s] And this says clip L. So the way clip works
+[659.5s - 664.1s] is it likes tags, comma-separated tags.
+[664.1s - 666.6s] And I have been pretty generic.
+[666.6s - 669.7s] I don't get too specific, like the outfit and stuff,
+[669.7s - 672.2s] because I don't really want to change those too much.
+[672.2s - 675.6s] It would be ridiculous if I had to change aspects
+[675.6s - 678.2s] of the top prompt to match this prompt.
+[678.2s - 680.8s] So I keep this very broad.
+[680.8s - 683.2s] Stoskirt, this is how I describe her.
+[683.2s - 685.1s] And this is her bedroom.
+[685.1s - 686.5s] And she's always in her bedroom,
+[686.5s - 689.4s] and then always has these camera qualities.
+[692.4s - 694.8s] And then, yeah.
+[694.8s - 696.1s] So let's talk about the T5.
+[696.1s - 702.6s] T5 is more conversational and gets more sentence
+[702.6s - 704.9s] and paragraph-oriented.
+[704.9s - 707.0s] So I'm actually going to delete most of this
+[707.0s - 709.1s] and just kind of walk you through what we have here.
+[709.1s - 710.7s] So yours probably will look a lot like this
+[710.7s - 712.0s] when you get it, because I like
+[712.0s - 715.6s] to test with a lot of that stuff in the middle there.
+[715.6s - 717.0s] But let's talk about this.
+[717.0s - 718.8s] So I have a paragraph up here that's just
+[718.8s - 720.8s] describing Stoskirt, the way she looks.
+[720.8s - 722.1s] It's not what she's wearing.
+[722.1s - 723.4s] It's not anything like that.
+[723.4s - 727.7s] Just like her hair, her makeup, her body type.
+[727.7s - 730.1s] All these things go in her style, like just
+[730.1s - 732.7s] her overall vibe.
+[732.7s - 734.3s] I just describe her right off the bat.
+[734.3s - 736.5s] And then I also, at the end, I
+[736.5s - 741.5s] like to get some camera stuff, like some camera quality.
+[741.5s - 743.4s] Descriptions, I think that helps a lot.
+[743.4s - 745.0s] And so that's what I do there.
+[745.0s - 747.5s] And in the middle, this is where we can cut a joke crazy.
+[747.5s - 749.4s] Let's talk about what she's doing.
+[749.4s - 751.1s] So let's put her action.
+[751.1s - 752.6s] So the first thing I'm going to write
+[752.6s - 754.1s] is her action, I'm going to say.
+[767.5s - 770.4s] Yeah, she's taking a mirror selfie of her phone cases
+[770.4s - 771.9s] black.
+[771.9s - 773.5s] And let's talk about what she's wearing.
+[781.3s - 783.1s] Yeah, so she's wearing a black dress.
+[783.1s - 784.3s] And let's talk about her room.
+[796.5s - 797.5s] She's in her bedroom.
+[797.5s - 798.9s] The walls are painted black.
+[798.9s - 802.5s] And there is a string lighting hung on the walls.
+[802.5s - 803.5s] Cool.
+[803.5s - 805.3s] So now we have a nice prompt.
+[805.3s - 807.3s] The other value you might end up touching is daddins.
+[807.3s - 809.1s] I keep that around four usually.
+[809.1s - 811.1s] But some people swear by three.
+[811.1s - 815.1s] Basically what this means is the higher this member is,
+[815.1s - 817.7s] the more adherent to your proc it's supposed to be.
+[817.7s - 820.1s] But if you're going to be a daddins,
+[820.1s - 822.2s] you're going to have to be a daddins.

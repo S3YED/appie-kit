@@ -1,0 +1,15 @@
+[0.0s - 11.8s] So this is a very dirty trick.
+[11.8s - 17.1s] Just by adding a timer, you can literally transform two boring pictures into something that people
+[17.1s - 19.5s] will probably watch till the end.
+[19.5s - 22.4s] Now, to be honest, I wouldn't do this with pictures.
+[22.4s - 26.0s] I would much rather do this with videos, but I still think that if you want to do
+[26.0s - 30.0s] pictures instead of rails, and this is definitely something you want to try.
+[30.0s - 34.3s] Also the second thing I noticed by some of these rails have really good reach.
+[34.3s - 38.1s] The text in the second picture is too short to read.
+[38.1s - 42.8s] So it's like a big text and it's relatively little time to read that text.
+[42.8s - 44.5s] People are going to try to read it.
+[44.5s - 46.6s] They can't finish it and then they replay it.
+[46.6s - 50.0s] And then once they replay it, they're either going to pause the video or they're
+[50.0s - 51.4s] going to replay it again.
+[51.4s - 54.0s] So in both cases, that's really good for the algorithm.
+[54.0s - 56.4s] And that's probably the reason why this works so well.

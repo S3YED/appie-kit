@@ -1,0 +1,244 @@
+[0.0s - 6.0s] Alright, and welcome to the not safe for work part of this tutorial. So if you're here
+[6.0s - 10.8s] It's either because you purchased a Laura from me or if maybe you're just a member of our patreon
+[11.7s - 13.4s] Yeah, so
+[13.4s - 15.2s] this is
+[15.2s - 18.7s] This stuff we can't show on YouTube. So let's let's talk about this
+[18.7s - 24.6s] So I'm not I'm I'm here. I'm kind of operating under the assumption that you've already watched the safe for work version
+[24.6s - 26.6s] So I'm not going to teach you how to install
+[26.8s - 28.4s] Laura's or anything like that
+[28.4s - 32.0s] You should already know how to do that. You should already know how to install comfy
+[32.0s - 36.1s] You should already know where all the files go. This is strictly for workflows
+[36.8s - 37.8s] discussion
+[37.8s - 43.2s] So your Flix text language should down here have a whole section that you have not seen before
+[44.3s - 46.6s] It should say nipple fix right here
+[47.6s - 49.6s] and in fact, let's actually just
+[50.2s - 52.2s] Just
+[55.1s - 57.1s] Rename that
+[57.1s - 61.2s] So the first thing we're gonna do let's let's unbypass that hopefully you have easy
+[62.5s - 64.5s] What's it called?
+[65.0s - 68.2s] Easy years installed. Let me show you what that looks like
+[68.2s - 70.2s] You
+[76.3s - 82.7s] Install easy use and you'll get this really great in dirt net and they're cool figure up a nerve nap is that it has
+[83.5s - 85.5s] these little eyeballs and
+[87.7s - 89.7s] The eyeballs help you
+[93.1s - 95.3s] Yeah, so basically what this this is
+[95.9s - 96.9s] The
+[96.9s - 100.8s] It's like it's like face detailer, but it can use a different model
+[101.3s - 103.2s] So in our ultralytics provider
+[103.2s - 109.3s] We're actually using a different model called breasts and what that does is it detets for the breasts are and that it doesn't in
+[109.3s - 115.7s] Paint pass automatically and so we're just gonna go in with I'm gonna buy that this Laura because you don't you won't need that
+[116.6s - 121.6s] Unless you have a pony Laura that you want to use for this you can you can reactivate that and use that
+[122.1s - 127.4s] But I'm gonna actually you know what I probably will honestly do that because I do have them
+[129.2s - 134.7s] So I have Ariel's Laura set up and let's see here
+[138.7s - 141.5s] And I get rid of any prompts that I don't think makes sense
+[141.5s - 147.1s] Yeah, so this because we're switching to pony everything down here is is a
+[148.3s - 151.5s] Positive and negative prompts so we can do that and
+[152.1s - 156.1s] Then let's look at what we have up here. Okay, so because we just went over the safe for work
+[156.1s - 163.3s] You already know all this stuff, but I actually also unbypassed this I put in the not safe for work master, Laura
+[163.3s - 165.3s] And the reason why we're in painting
+[165.8s - 168.7s] Technically, this is a good example of how we can do this
+[168.8s - 170.8s] And the reason why we're in painting
+[170.9s - 175.9s] Technically, this Laura is powerful enough to just make about safe work content and it's actually pretty good at it
+[175.9s - 177.9s] It's just a little plastic looking
+[178.4s - 182.4s] The other issue with it is it tends to interfere with your face
+[183.5s - 188.6s] So I don't really like this Laura when it comes to interacting with character Laura's in fact
+[188.6s - 192.3s] That's a common complaint with a lot of flux Laura's so
+[193.1s - 200.6s] Like outfits and not safe for work, they tend to conflict with characters a lot and it's really unfortunate because it hurts
+[201.8s - 204.6s] It makes things less flexible. So I
+[205.6s - 211.3s] Turned the weight down to like from anywhere from point three to point five. I'm gonna leave it at point five for now
+[212.4s - 215.8s] And then we want to just make sure that we're prompting for that as well
+[216.6s - 218.3s] so I
+[218.3s - 220.6s] Have her I have Ariel's description
+[220.6s - 223.7s] I switched to Ariel for this if you just watch the other one I was work with Saskia
+[223.7s - 228.3s] But I'm working with Ariel now and there I have her camera stuff and then I have her background
+[229.0s - 233.0s] But between that we're just gonna put in our action. So we're gonna do
+[235.4s - 241.1s] Where I do a not safe for work photo because that's the trigger for not safe for work master of
+[242.3s - 245.8s] Young woman Ariel and then hers whole her whole description and
+[245.8s - 248.6s] Adam we're gonna just say she's
+[275.8s - 277.8s] I
+[285.2s - 288.4s] Don't really know I'm gonna try that and we'll see what we get
+[289.9s - 298.3s] So now yeah, we need to make sure that we are carefully describing the nudity because it's my flux still really struggles with us
+[298.3s - 300.2s] even with that Laura
+[300.2s - 305.6s] So let's run that and see what yet and then with this deactivate and what's gonna happen is
+[306.3s - 313.1s] Hopefully if she is topless we will the TEPT her breasts and then in paint to fix the nipples because the
+[313.2s - 315.2s] Flex nipples look very weird
+[315.7s - 319.1s] And then I'm also gonna make sure that I put this all on the right spot
+[325.6s - 327.6s] Not safe for work
+[331.0s - 333.0s] You
+[337.8s - 343.3s] So now I've converted to my mouse a for work files, so let's run a batch of four and see what we get
+[345.9s - 350.9s] Okay, it looks like it just finished before we look over there I just want to go to the to
+[351.8s - 356.3s] So we can kind of just look at where we have here. The first thing since we have two outputs
+[357.3s - 359.3s] It's gonna put it to here
+[359.6s - 366.4s] If we click show flawless, it sure was both which I think it's better. So let's look at our first
+[367.5s - 368.6s] generation
+[368.6s - 372.9s] So here it is just straight-up flux, right and we could already see there's some breakage
+[372.9s - 377.4s] I think that Laura just kind of breaks stuff sometimes if it tries to talk to other things
+[377.5s - 380.3s] Maybe point five was a little too much. That's okay
+[380.9s - 382.8s] But if we go to the right
+[382.8s - 384.8s] There is our pony
+[384.9s - 388.9s] So pony and painted some much better working nipples onto our character
+[389.6s - 391.8s] So that's basically what this workflow does
+[392.9s - 398.5s] Looks a year and see this is broken too. I would probably go to point three probably to try to fix this
+[398.7s - 402.6s] So here's what we have for flux and he is what we have for parting as you can see
+[402.6s - 409.5s] That's just a massive improvement. It looks much better. It's less shiny for some reason and it just looks more human. I guess
+[410.5s - 414.0s] saying what this one again a weird picture, but
+[414.8s - 417.3s] flux pony flux pony and
+[417.6s - 423.1s] And then this one sometimes it won't catch it didn't notice that there were nipples somehow
+[423.1s - 426.3s] It didn't detect them. So it actually did not make a change
+[427.2s - 430.1s] So these are the things to expect when you're working with this workflow
+[430.8s - 435.9s] Sometimes it'll be broken looking and sometimes it won't detect nipples
+[436.9s - 438.4s] so
+[438.4s - 444.0s] That that's kind of your fair wine because that's the flux text image now. Let's talk about pony text image
+[444.3s - 446.6s] So pony does a little bit of the opposite
+[447.3s - 453.9s] It basically generates a pony image here, and then it will automatically detect the face and
+[454.9s - 456.9s] in paint
+[456.9s - 458.9s] your character face and
+[459.9s - 463.9s] Then that all you get your character is here. Here's all your typical
+[464.7s - 472.2s] Flux Lora's and then here's your face and then here's the prompt for that and you just need to do basic like
+[472.2s - 474.2s] the trigger that's it and
+[474.5s - 478.8s] So that's flux and then here's the output and then if you wanted to
+[479.3s - 481.7s] We can run flux over the hands
+[481.7s - 483.7s] I typically don't do this because I think it's a waste of time
+[484.3s - 489.7s] Takes a really long time to do to generate an image to in paint and then in paint again
+[489.9s - 493.5s] That seems like a lot of steps. So I typically don't do the last one
+[493.9s - 497.3s] you can turn it on if you want to the only thing you need here is the
+[498.6s - 502.1s] The hand yellow map. I think there's another one. I
+[502.8s - 505.5s] Think I have to you tried this one
+[507.6s - 510.5s] But I'm not gonna go over that if you want to use it it's here
+[512.4s - 518.6s] By now you kind of understand the concept of face to tailor and yeah hand to tailor
+[520.9s - 522.9s] Face to tailor
+[524.1s - 530.1s] But what I will do is talk about prompting so as you probably know their checkpoint that you're going to be using for
+[530.1s - 533.4s] Pony is damn Pony realistic and then
+[534.5s - 541.3s] Yeah, so let's talk about prompting for Pony. Pony is a little bit different. Okay, you use something called Buru tags
+[542.1s - 550.1s] So Buru tags are from this website, right? It's website called damn Buru and Dan Buru is a database for anime and
+[551.1s - 556.3s] all of the stuff that civet like all the anime stuff is all
+[556.9s - 561.3s] Trained on this amazing data set that has all the art ever right?
+[561.7s - 567.7s] Well Pony is trained on art and it's trained on this database and as well as a bunch of things on reddit, too
+[568.4s - 572.9s] So the way this works is if you click on a picture, let's just click on something spicy
+[574.1s - 576.3s] You see all these general tags on the side
+[577.2s - 584.3s] These are the things that Pony understands it understands one girl, which means the picture is of one girl
+[584.8s - 587.7s] It understands. Let's see. What else do we have your anus?
+[588.3s - 593.3s] These are words that you can use to get the spicy stuff out, right?
+[594.7s - 596.9s] Let's try it. Let's search one. So if I search
+[599.2s - 603.3s] Just search vaginal that literally just means intercourse
+[604.5s - 609.1s] so if you type that and in Pony you will get vaginal like
+[609.6s - 616.5s] You will get images that looks like this, obviously they're realistic because we're using a realistic model but these poses
+[617.6s - 623.6s] This is the definition of that word that word for Pony, right? That's what that means
+[624.1s - 626.1s] We could do other stuff
+[626.8s - 629.0s] you want to come in here and you want to
+[631.1s - 636.7s] You want to study these tags because these are the tags that Pony owes so if you're thinking you're like dildo
+[637.3s - 640.9s] Why isn't dildo working? It's because it's not dildo. It's object
+[643.7s - 647.5s] Insertion I think yeah object object insertion
+[649.4s - 651.4s] Biotech object twice
+[652.9s - 655.9s] So now we can see that there's objects, you know what I mean
+[656.5s - 661.3s] This is why this is an important tool. You need to come here and you need to search for the thing
+[661.3s - 665.3s] So let me when you search dildo. Let's say I'm struggling with this. Oh
+[666.3s - 670.5s] Look at that. I there's that but that could work perfect
+[672.1s - 674.2s] I'm actually just gonna add back to my prompt them
+[675.3s - 678.7s] So these are the things you need to look at because this is the thing that it understands
+[678.7s - 683.4s] I could put dildo and dildo at writing it would probably work. I know an object insertion is also there
+[684.1s - 689.0s] Study this learn it and then props. That's that's the goal. So what's you I have here. I
+[690.1s - 692.1s] have her trigger and
+[693.1s - 697.7s] Then her description is less sentency and it's more broken down, right?
+[698.0s - 702.1s] So instead of saying she has long black hair with blue highlights
+[702.4s - 708.6s] It's black and blue hair multicolored air goff dark. I actually don't know what dark meant here
+[708.6s - 710.5s] I'm just gonna get rid of that
+[710.5s - 712.5s] and then technically mood and
+[713.0s - 718.3s] Then the Y on the bed is is a Boer tag from behind is a Boer tag pass up
+[718.9s - 722.9s] Looking at looking back I view it looking at viewers the Boer side I do back
+[723.6s - 726.0s] Because she's looking back and then yeah
+[727.8s - 729.8s] Technically I only dab that
+[730.0s - 732.2s] bedroom black walls black sheets
+[732.9s - 740.6s] Film grain amateur photo and then let's go over this real quick pony has a different system for prompting quality
+[741.0s - 743.1s] They use scores. So
+[743.8s - 749.2s] If you come here this might be a score one or something because the ARP is not that great, right
+[749.8s - 757.7s] So we want everything above seven. So we do score up from seven score up from eight score nine
+[758.6s - 762.7s] Everything that we're gonna be sampling from we'll have these quality tags. That's what that means
+[762.9s - 766.5s] You don't have to change that that just sits it there at the top and it's ready to go
+[767.2s - 768.7s] and
+[768.7s - 772.6s] Then once that happens, we're gonna upscale we have a little scale by right here
+[772.6s - 778.2s] I scale up by one point six six six seven. The reason for that is because we can't go over
+[779.3s - 784.8s] This we keep over 1024 by 1024 for Excel when we make our original image
+[785.1s - 791.7s] But I want it to be 1280 by 1600. So I'll up scale it. So we we're gonna run this first
+[792.2s - 798.4s] upscale it run it again at point five denoising and then we're gonna see a preview of our pony image and
+[798.8s - 803.4s] Then it's gonna inpaint the face with flux and then we're gonna see the result of
+[803.9s - 811.0s] The pony image with the inpainted face right here. Okay, so let's run one so you can see this work
+[811.7s - 814.8s] First thing that's gonna happen is is going to cache the models
+[815.8s - 819.6s] Okay, and now it's actually just running it. So this is the first image that we're generating and
+[821.9s - 827.3s] Then we're basically gonna tell it hey new late and it needs to be up scaled by this much
+[828.4s - 831.4s] and then it's gonna resample again at point five and
+[836.2s - 838.2s] Then it's gonna spit out
+[843.3s - 846.7s] This image and now you can see that that's Ariel if you know Ariel
+[846.7s - 849.3s] I don't know if you know Ariel, but this this looks like Ariel
+[849.9s - 854.0s] But her face is like the quality is not great. It doesn't quite look like her but it's her
+[854.7s - 855.7s] It's not quite right
+[855.7s - 860.3s] This is why we do the face detailer because pony is just really bad at faces
+[860.5s - 866.7s] Even if Ballora is trained on her. It's just if we're gonna we have to use face detailer
+[867.7s - 871.1s] To be able to get a good face with pony if we're gonna do that
+[871.1s - 875.0s] We might as well just use the face that we're already posting our Instagram. So that's what this is for
+[876.2s - 879.4s] And so now it's going to run through that. It takes a little bit longer
+[879.4s - 884.9s] And then we should see a nice result here
+[894.9s - 899.1s] And there's your face so this is the way the pony workflow works
+[899.5s - 902.6s] It's essentially the opposite of the flux floor up the workflow
+[902.6s - 905.9s] You start with a flux image and then you in paint it to correct the bad
+[906.3s - 912.7s] Which is flux is bad at not safe for work and then with the pony you basically fix the face
+[913.2s - 917.5s] The only downside of pony is that it doesn't look as realistic as flux
+[918.0s - 921.3s] So I really use it as a last resort if I need to do something really crazy
+[921.6s - 926.1s] Like this pose would probably be impossible with flux. Also, you can't do anything with toys
+[926.1s - 929.0s] You can't do anything with intercourse with flux very easily
+[929.6s - 933.2s] So it's just easier to get quick results this way
+[934.0s - 940.0s] So if you're looking for a not safe for work model, this is ponies a good one and so that's what this is
+[940.6s - 943.2s] and then the last workflow is the
+[944.3s - 946.3s] pony in painting workflow
+[948.1s - 953.5s] The pony and painting workflow is like not different than the flux one. It's pretty much the same thing
+[953.5s - 955.5s] You just upload your image here
+[958.4s - 959.8s] And
+[959.8s - 965.1s] Then you right-click and change it in the mask editor. I'm just gonna I'm just gonna run over this area
+[968.3s - 973.7s] And then same thing we don't have the Laura you can just
+[979.2s - 982.2s] Un-bypass it and then you run it
+[982.7s - 984.6s] And then we got to we're loading up damn pony
+[984.6s - 988.7s] The only thing that might feel a little different is the denoising strengths is right here rather than
+[988.9s - 991.5s] It's not as accessible, but I try to color code everything
+[991.5s - 999.0s] I try to color code the lores to be blue positive prompt always green negative prompt red and then your your case sampler
+[999.0s - 1003.5s] or whatever has your denoising on it is always or whatever this car is and
+[1004.4s - 1008.2s] Then yeah, we'll just run a batch of four so we can see what that looks like
+[1009.6s - 1012.1s] But technically I would not do this in pony
+[1012.1s - 1015.2s] I would probably fix that with a flux in paint workflow
+[1015.7s - 1020.7s] The pony you've been paying workflow is more if you need to fix something like a vagina or something
+[1022.0s - 1027.4s] So yeah, we'll see what this does, but that's that that's how you use this one
+[1029.3s - 1032.4s] See as you can see it's not quite fixing it it's just kind of
+[1033.3s - 1036.5s] Repurposing it as like a different Lauren. I would probably that's only the best one
+[1036.5s - 1039.7s] I would probably just hit it with the remove to on Photoshop, but whatever
+[1040.4s - 1043.7s] So yeah, I hope that clears up all the denote or I'm sorry
+[1043.7s - 1048.6s] I hope that clears up all the not safe for work workflows if you had questions on it. Yeah
+[1049.5s - 1055.5s] Yeah, oh and then I guess real quick. Let's talk about civet. There are some weird things on civet
+[1055.5s - 1059.9s] I think probably some of the most lores that exist on civet are for pony
+[1060.5s - 1065.7s] So if you I don't know why experiments that I'm already seeing some weird stuff
+[1066.3s - 1068.9s] But there are you know, there's different sex positions feet
+[1068.9s - 1070.9s] I guess you do feet
+[1071.8s - 1073.7s] Something is considered
+[1073.7s - 1079.5s] See what's your friend if you're trying to experiment with pony then yeah, look around and
+[1081.0s - 1083.3s] There's got to be something for what you're looking for
+[1085.8s - 1089.3s] Also if you look at images made in pony
+[1090.9s - 1093.7s] You can see what people are prompting to do certain things as well
+[1094.5s - 1100.4s] So that's another good way to shop if you're in your obscure images and then set your filter by the way
+[1101.3s - 1103.3s] Set your filter to you pony
+[1104.8s - 1107.7s] Where I'm blinking but
+[1109.7s - 1115.8s] And then if you see something like for instance on an out there's I see two pasties I wonder what that is
+[1115.8s - 1118.0s] Let's see. It looks like they used
+[1124.7s - 1129.8s] For a weather self-armed quickly bounces body. Oh, this is the animation
+[1132.8s - 1139.7s] It's another thing that's kind of annoying about sit it right now is there's so many videos now that there's no generation data anymore
+[1141.5s - 1145.5s] But I guess if you go to a Laura page you will see the prompt there
+[1146.5s - 1149.1s] But yeah, it seems like oh wait, you know what? I
+[1150.1s - 1154.3s] Think I can turn off a video. Oh, I only have video checked. I didn't even realize that
+[1157.6s - 1159.9s] Well, that would solve that problem, okay, here we go
+[1160.6s - 1166.7s] So yeah, I don't know if you like this picture look click on it and then look at what they're doing
+[1169.0s - 1171.1s] And then people are like
+[1172.6s - 1175.8s] Asking questions about the prompt to because sometimes they don't have it
+[1175.9s - 1179.7s] You can see these people use like a bunch of different models, right
+[1181.3s - 1186.8s] The flicks pretty real what is this pony realism and then here's her a whole prompt
+[1190.3s - 1194.4s] Yeah, I don't come here this is a good resource I know it's kind of intimidating and
+[1195.2s - 1197.2s] There's a lot of weird kinks on here
+[1197.8s - 1199.8s] You get used to it, I guess
+[1200.7s - 1202.1s] but
+[1202.1s - 1206.9s] Yeah, it's a good way to learn so alright good luck, but
