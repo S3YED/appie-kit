@@ -1,6 +1,6 @@
 # venice — Venice AI Research (Isolated Subagent)
 
-**Wanneer gebruiken:** Als Harry of Seyed vraagt om iets te zoeken/onderzoeken via Venice AI, of wil dat Wolfie iets analyseert met Venice.
+**Wanneer gebruiken:** Als je gebruiker vraagt om iets te zoeken/onderzoeken via Venice AI, of wil dat Wolfie iets analyseert met Venice.
 
 **Belangrijk:** Deze skill draait ALTIJD in een geïsoleerde subagent. De main session blijft beschikbaar. Spreek nooit Venice direct aan vanuit de main session.
 
@@ -9,7 +9,7 @@
 1. Subagent ontvangt de vraag
 2. Stuurt vraag naar Venice AI via REST API
 3. Schrijft resultaat naar een output bestand
-4. Main session leest het bestand en presenteert aan Harry
+4. Main session leest het bestand en presenteert aan de gebruiker
 
 ## API Setup
 
@@ -31,7 +31,7 @@ Body:
   "model": "venice-uncensored",
   "messages": [
     {"role": "system", "content": "Je bent een behulpzame onderzoeksassistent."},
-    {"role": "user", "content": "<vraag van Harry>"}
+    {"role": "user", "content": "<vraag van gebruiker>"}
   ],
   "max_tokens": 2048,
   "temperature": 0.7
@@ -41,7 +41,7 @@ Body:
 ## Output bestand
 
 Schrijf het Venice antwoord naar:
-`/Users/diddywolf888/.openclaw/workspace/tmp/venice_result_YYYYMMDD_HHMMSS.txt`
+`~/.openclaw/workspace/tmp/venice_result_YYYYMMDD_HHMMSS.txt`
 
 ## Werkwijze
 
@@ -49,7 +49,7 @@ Schrijf het Venice antwoord naar:
 2. Als geen key → probeer te lezen uit:
    - `~/.openclaw/workspace/config/venice.key`
    - `~/.venice.key`
-   - `/Users/diddywolf888/.openclaw/workspace/notes/venice_api_key.txt`
+   - `~/.openclaw/workspace/notes/venice_api_key.txt`
 3. Bouw API request en stuur naar Venice
 4. Bij timeout/error → max 3 retries met 5s delay
 5. Schrijf antwoord naar output bestand

@@ -25,7 +25,7 @@ N8N_BASE_URL  # "app.n8n.weblyfe.nl"
 N8N_API_KEY   # Bearer-style token, sent as X-N8N-API-KEY header
 ```
 
-DigitalOcean droplet: `n8n-weblyfe` (id 545108451, region ams3, size s-1vcpu-1gb, public IP 142.93.232.231). DO API token in `~/.openclaw/openclaw.json` as `DIGITALOCEAN_ACCESS_TOKEN`. **No SSH key registered on DO account, so direct SSH from Appie-1 to the droplet is blocked** — see Notion task `354c3321-de60-8128-b1b1-df81e0ddc0ed` for the manual key-add procedure.
+DigitalOcean droplet: `n8n-<your-project>` (region ams3, size s-1vcpu-1gb). DO API token in `~/.openclaw/openclaw.json` as `DIGITALOCEAN_ACCESS_TOKEN`. **No SSH key registered on DO account, so direct SSH from Appie-1 to the droplet is blocked** — add your SSH key via the DO dashboard before attempting direct SSH.
 
 ## Production-ready workflow checklist
 
@@ -36,7 +36,7 @@ Before declaring a workflow "foolproof," verify all of the following:
 3. **Graceful degradation on non-critical leaf nodes.** Sheet appends and label-adds get `onError: continueRegularOutput` or `continueErrorOutput` so a downstream service hiccup doesn't block the upstream archive.
 4. **Idempotent file naming.** Drive uploads use `{sender_domain}_{email_date}_{thread_id_short}.pdf` style — *not* `{$now}` — so retries don't create duplicates.
 5. **Subject filter is specific.** A trigger with only `has:attachment` will hit every random PDF (contracts, screenshots, your own outbound mail). Add explicit subject patterns.
-6. **Skip rules for known false positives.** Stripe TECHWIZ LLC = income, skip. Outbound mail from `seyed@weblyfe.nl` = own content, skip. Embed in a Code node early in the flow.
+6. **Skip rules for known false positives.** Add rules for your known income sources (e.g. Stripe transactions) and your own outbound mail. Embed in a Code node early in the flow.
 7. **Multi-attachment handling.** If a single email might carry multiple PDFs (Tally, Midjourney), the Code node must emit one item per PDF — n8n's `Object.keys(...).find(...)` only takes the first.
 8. **Folder mapping covers backfill + future.** The Drive folder map should include 2024-2026 and a fallback that auto-discovers via Drive search.
 9. **Single-account vs multi-account.** Each Gmail Trigger is bound to one credential. Multi-account coverage requires either multiple Trigger nodes or a parallel pipeline (Python `tools/invoice-pipeline.py` covers all 3 accounts as backup).
@@ -75,7 +75,7 @@ n8n-nodes-base.manualTrigger / .errorTrigger
 
 ## Backup + rollback procedure
 
-Backups live at `~/clawd/n8n-backups/<workflow_id>__<slug>.json`. Daily commit by `tools/n8n-backup.py`.
+Backups live at `~/appie-brain/n8n-backups/<workflow_id>__<slug>.json`. Daily commit by `tools/n8n-backup.py`.
 
 To roll back a single workflow to its prior state:
 
@@ -103,9 +103,9 @@ curl -X PUT -H 'X-N8N-API-KEY: $N8N_API_KEY' -H 'Content-Type: application/json'
 `tools/n8n-health.py` (hourly):
 - **Failure check:** queries `/executions?status=error&limit=50`, filters to last 1h window, aggregates by workflow, alerts via Telegram MarkdownV2.
 - **Silent-death check:** queries last 200 executions, finds workflows with `scheduleTrigger`/`cron` that have NO successful run in 24h, alerts.
-- **Cooldown:** 30 min per alert key (state in `~/clawd/.cache/n8n-health-state.json`) so flapping doesn't spam.
+- **Cooldown:** 30 min per alert key (state in `~/appie-brain/.cache/n8n-health-state.json`) so flapping doesn't spam.
 
-State of failing/silent workflows visible in `~/clawd/logs/n8n-health.jsonl`. Common patterns:
+State of failing/silent workflows visible in `~/appie-brain/logs/n8n-health.jsonl`. Common patterns:
 - *Whatsapp Agent | DRP failures* — likely external Whatsapp API issues; check execution detail.
 - *GLOBAL ERROR HANDLER errors* — usually a downstream issue that the handler couldn't auto-fix.
 
@@ -117,14 +117,14 @@ State of failing/silent workflows visible in `~/clawd/logs/n8n-health.jsonl`. Co
 
 ## Authoritative refs
 
-- Doctrine: `~/clawd/knowledge/token-reduction-system/95-token-reduction.md` (output discipline + tier routing — applies to LLM nodes inside n8n flows).
-- This skill: `~/clawd/skills/n8n-pro/SKILL.md` (you are here).
+- Doctrine: `~/appie-brain/knowledge/token-reduction-system/95-token-reduction.md` (output discipline + tier routing — applies to LLM nodes inside n8n flows).
+- This skill: `~/appie-brain/skills/n8n-pro/SKILL.md` (you are here).
 - Memory pointer: auto-memory `reference_invoice_pipeline.md` carries the fleet-wide ops summary.
-- Backup history: `~/clawd/n8n-backups/` (47+ workflow JSONs, daily commits on master).
+- Backup history: `~/appie-brain/n8n-backups/` (47+ workflow JSONs, daily commits on master).
 - Tools: `tools/n8n-backup.py`, `tools/n8n-health.py`, `tools/n8n-harden.py`, `tools/invoice-pipeline.py`.
 
 ## Recent landmark events
 
 - **2026-05-02 morning.** Gmail Invoicing v1 (`caS-m8n9KKb4tHBobvSgS`) had a Q2 2026 folder ID typo (`Uvxq` vs real `Uvx`) plus 1x/day polling plus no archive-after-process. Patched in-place, then cloned to v2 (`pgKuiPoPpmv9QKgl`, "no AI"), then hardened with multi-PDF support + Stripe TECHWIZ skip + idempotent filename + tightened subject filter. v1 deactivated. Backup at commit `aea94cc`, post-state at `353d084` and `8b43952`.
-- **2026-05-02 same morning.** GLOBAL ERROR HANDLER alert recipient changed from `lorenzogarufi2@gmail.com` solo to `seyed@weblyfe.nl, lorenzogarufi2@gmail.com` (both). Retry added to its `Send a message` node.
+- **2026-05-02 same morning.** GLOBAL ERROR HANDLER alert recipient updated to include both the primary admin and a secondary address. Retry added to its `Send a message` node.
 - **2026-05-02 same morning.** First fleet-wide harden: 28 active workflows scanned, 20 patched (118 nodes received retry+wait defaults). 8 failed PUT validation due to missing credentials in pre-existing nodes — flagged for manual cleanup in n8n UI.

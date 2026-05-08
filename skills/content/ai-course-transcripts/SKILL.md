@@ -50,9 +50,8 @@ Format makes it easy to: cite specific lines, jump to source video frames, vecto
 ## Provenance
 
 - Source: AI Model Factory by Herman Carter (paid Skool community).
-- Downloaded as 91 MP4s on 2026-03-18 by Appie-Opus to `~/clawd/learning/ai-course/`.
-- Re-transcribed by Wolfie (Harry Van Deursen's Mac Mini, `diddywolf888@100.102.181.116`) using faster-whisper. Job completed 2026-05-07.
-- Pulled to Mac Mini at `~/clawd/learning/ai-course-transcripts/wolfie-knowledge/` then deduped + packaged into this skill.
+- Downloaded as 91 MP4s and transcribed using faster-whisper by a transcription worker.
+- Deduped and packaged into this skill.
 
 ## Related skills
 

@@ -54,10 +54,10 @@ Use them together:
 
 ```
 # Look up what Herman said about <topic>
-grep -ril "<topic>" ~/clawd/skills/ai-course-transcripts/transcripts/
+grep -ril "<topic>" ~/.openclaw/skills/ai-course-transcripts/transcripts/
 
 # Then check what's better in 2026
-ls ~/clawd/skills/ai-course-supplements/lessons/ | xargs -I{} grep -l "<topic>" ~/clawd/skills/ai-course-supplements/lessons/{}
+ls ~/.openclaw/skills/ai-course-supplements/lessons/ | xargs -I{} grep -l "<topic>" ~/.openclaw/skills/ai-course-supplements/lessons/{}
 ```
 
 For RAG: index both skills into the same vector store (e.g. `ai-course` namespace in Pinecone). Tag chunks by source (`transcripts` vs `supplements`) so retrieval can prioritize one or the other.

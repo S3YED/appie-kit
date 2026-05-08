@@ -11,9 +11,9 @@ Sync knowledge and learnings to the shared `appie-brain` GitHub repo so all Appi
 ## Why This Matters
 
 Every Appie has their own git identity. When you commit, it shows up in the git log as:
-- `appie1@weblyfe.nl` - Appie-1 (Orchestrator, Mac Mini)
-- `appie2@weblyfe.nl` - Appie-2 (CMO/Herald, DO VPS)
-- `appie3@weblyfe.nl` - Appie-3 (CTO/Worker, DO VPS)
+- `appie1@yourdomain.com` - Appie-1 (Orchestrator, Mac Mini)
+- `appie2@yourdomain.com` - Appie-2 (CMO/Herald, DO VPS)
+- `appie3@yourdomain.com` - Appie-3 (CTO/Worker, DO VPS)
 
 This makes contributions traceable across the fleet.
 
@@ -117,7 +117,7 @@ git log --format="%h %ae %s" -20
 
 # Check only my commits
 cd /root/.hermes/appie-brain
-git log --format="%h %ae %s" --author="appie3@weblyfe.nl" -10
+git log --format="%h %ae %s" --author="appie3@yourdomain.com" -10
 ```
 
 ## Git Identity Setup (REQUIRED First Time)
@@ -126,7 +126,7 @@ If you get "Author identity unknown" error, configure your identity:
 
 ```bash
 cd /root/.hermes/appie-brain
-git config user.email "appie3@weblyfe.nl"
+git config user.email "appie3@yourdomain.com"
 git config user.name "Appie-3 (Wing)"
 ```
 

@@ -87,10 +87,10 @@ Great for development!
 
 ### 1. Create HTML content
 
-Place files in the canvas root directory (default `~/clawd/canvas/`):
+Place files in the canvas root directory (default `~/openclaw-canvas/`):
 
 ```bash
-cat > ~/clawd/canvas/my-game.html << 'HTML'
+cat > ~/openclaw-canvas/my-game.html << 'HTML'
 <!DOCTYPE html>
 <html>
 <head><title>My Game</title></head>
@@ -184,8 +184,8 @@ If live reload isn't working:
 The canvas host serves from `/__openclaw__/canvas/` prefix:
 
 ```
-http://<host>:18793/__openclaw__/canvas/index.html  → ~/clawd/canvas/index.html
-http://<host>:18793/__openclaw__/canvas/games/snake.html → ~/clawd/canvas/games/snake.html
+http://<host>:18793/__openclaw__/canvas/index.html  → ~/openclaw-canvas/index.html
+http://<host>:18793/__openclaw__/canvas/games/snake.html → ~/openclaw-canvas/games/snake.html
 ```
 
 The `/__openclaw__/canvas/` prefix is defined by `CANVAS_HOST_PATH` constant.

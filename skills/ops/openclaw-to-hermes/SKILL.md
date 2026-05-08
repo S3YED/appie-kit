@@ -27,7 +27,7 @@ git clone git@github.com:S3YED/appie-brain.git ~/.hermes/appie-brain
 cd ~/.hermes
 git init
 git remote add origin git@github.com:S3YED/appie-brain.git
-git config user.email "appieN@weblyfe.nl"
+git config user.email "appieN@yourdomain.com"
 git config user.name "Appie-N"
 
 # 5. Install deps

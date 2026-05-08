@@ -9,7 +9,7 @@
 
 ## Reading order
 
-This order interleaves Herman's modules (`T:` prefix, in `~/clawd/skills/ai-course-transcripts/`) with the supplement lessons (`S:` prefix, in `~/clawd/skills/ai-course-supplements/`).
+This order interleaves Herman's modules (`T:` prefix, in `~/.openclaw/skills/ai-course-transcripts/`) with the supplement lessons (`S:` prefix, in `~/.openclaw/skills/ai-course-supplements/`).
 
 ### Phase A — Foundations (Week 1, ~10 hours)
 

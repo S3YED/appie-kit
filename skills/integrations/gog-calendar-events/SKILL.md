@@ -36,7 +36,7 @@ Replace `<your-email-address>` with the email associated with the Google Calenda
 
 ## Pitfalls
 
-*   **Missing `--account`**: `gog` commands often require the `--account` flag (e.g., `--account seyed@weblyfe.nl`) if a default account hasn't been set via `gog auth manage`.
+*   **Missing `--account`**: `gog` commands often require the `--account` flag (e.g., `--account you@yourdomain.com`) if a default account hasn't been set via `gog auth manage`.
 *   **Incorrect Help Syntax**: To get help for a `gog` subcommand, use `gog <command> --help` (e.g., `gog calendar --help`), not `gog help <command>`.
 
 ## See Also

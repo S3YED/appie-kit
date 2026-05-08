@@ -124,8 +124,8 @@ for card in page.query_selector_all(".job-card"):
 ```python
 # Fill and submit a contact form
 page.goto("https://example.com/contact")
-page.fill("#name", "Seyed Hosseini")
-page.fill("#email", "seyed@weblyfe.nl")
+page.fill("#name", "Jane Smith")
+page.fill("#email", "jane@example.com")
 page.fill("#message", "Interested in your services")
 page.select_option("#budget", "$5,000-10,000")
 page.click("#submit")

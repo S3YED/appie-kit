@@ -36,10 +36,10 @@ Each Appie has a status page in the Status database that tasks can be assigned t
 
 | Appie | Status Page ID | Bot |
 |-------|---------------|-----|
-| **Appie-1 (Mac)** | `2ffc3321-de60-810c-ba85-d818742249db` | @weblyfeopenclaw |
-| **Appie-2 (DO)** | `2ffc3321-de60-8127-a19c-d0f3271bd24f` | @appieweblyfebot |
-| **Appie-3 (DO)** | `2ffc3321-de60-8115-abee-eed033d76e17` | @eppieweblyfebot |
-| **Seyed** | `308c3321-de60-8113-a39f-c956a26b7fe2` | (human) |
+| **Appie-1 (Mac)** | `<your-appie-1-notion-id>` | @your_bot_1 |
+| **Appie-2 (DO)** | `<your-appie-2-notion-id>` | @your_bot_2 |
+| **Appie-3 (DO)** | `<your-appie-3-notion-id>` | @your_bot_3 |
+| **You** | `<your-notion-id>` | (human) |
 
 ---
 
@@ -146,7 +146,7 @@ const unfinished = await getTasks({
 const myTasks = await getTasks({
   property: 'Assignee',
   relation: {
-    contains: '2ffc3321-de60-8115-abee-eed033d76e17'
+    contains: '<your-appie-3-notion-id>'
   }
 });
 
@@ -235,7 +235,7 @@ async function createTask(title, options = {}) {
 await createTask('Deploy new feature', {
   priority: 'High',
   due: '2026-02-20',
-  assignee: '2ffc3321-de60-8115-abee-eed033d76e17', // Appie-3
+  assignee: '<your-appie-3-notion-id>', // Appie-3
   project: 'Command Center'
 });
 ```
@@ -274,7 +274,7 @@ async function assignTask(pageId, appieStatusId) {
 }
 
 // Assign to Appie-3
-await assignTask(task.id, '2ffc3321-de60-8115-abee-eed033d76e17');
+await assignTask(task.id, '<your-appie-3-notion-id>');
 ```
 
 ### Add Documentation to Task
@@ -570,7 +570,7 @@ const tasks = await getTasks({
 ### Assignee Not Working
 ```javascript
 // Use the STATUS PAGE ID, not database ID:
-const APPIE3_STATUS_ID = '2ffc3321-de60-8115-abee-eed033d76e17';
+const APPIE3_STATUS_ID = '<your-appie-3-notion-id>';
 
 await notionRequest(`/v1/pages/${pageId}`, 'PATCH', {
   properties: {
