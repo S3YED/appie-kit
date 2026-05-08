@@ -1,5 +1,5 @@
 #!/bin/bash
-# Appie Kit Installer — Copy workspace files to your OpenClaw directory
+# Appie Kit Installer - Copy workspace files and skills to your agent workspace
 # Usage: ./install.sh [target-directory]
 
 set -e
@@ -19,6 +19,7 @@ if [ -z "$TARGET" ]; then
     echo ""
     echo "This will copy:"
     echo "  - Workspace files (SOUL.md, AGENTS.md, USER.md, etc.)"
+    echo "  - Skills: all 155 skills from skills/<category>/<skill>/ into target/skills/<skill>/"
     echo "  - Tools (security-scan.sh, health-check.sh, etc.)"
     echo "  - .env.example"
     echo ""
@@ -43,16 +44,25 @@ for FILE in AGENTS.md SOUL.md USER.md TOOLS.md IDENTITY.md HEARTBEAT.md; do
 done
 
 # Copy skills (don't overwrite)
+# Skills are organized as skills/<category>/<skill>/
+# We flatten them into target/skills/<skill>/ for agent consumption.
+# INDEX.md and README.md at the category level are skipped.
 echo ""
 echo "=== Copying skills ==="
-for SKILL in "$SCRIPT_DIR"/skills/*/; do
-    SKILLNAME=$(basename "$SKILL")
-    if [ -d "$TARGET/skills/$SKILLNAME" ]; then
-        echo "  ⏭️  skills/$SKILLNAME already exists (skipping)"
-    else
-        cp -r "$SKILL" "$TARGET/skills/$SKILLNAME"
-        echo "  ✅ skills/$SKILLNAME"
-    fi
+for CATEGORY_DIR in "$SCRIPT_DIR"/skills/*/; do
+    CATEGORY=$(basename "$CATEGORY_DIR")
+    # Skip non-directory entries and meta-files
+    [ -d "$CATEGORY_DIR" ] || continue
+    for SKILL_DIR in "$CATEGORY_DIR"*/; do
+        [ -d "$SKILL_DIR" ] || continue
+        SKILLNAME=$(basename "$SKILL_DIR")
+        if [ -d "$TARGET/skills/$SKILLNAME" ]; then
+            echo "  ⏭️  skills/$SKILLNAME already exists (skipping)"
+        else
+            cp -r "$SKILL_DIR" "$TARGET/skills/$SKILLNAME"
+            echo "  ✅ skills/$CATEGORY/$SKILLNAME"
+        fi
+    done
 done
 
 # Copy tools
@@ -89,8 +99,8 @@ echo "  1. cd $TARGET"
 echo "  2. Edit SOUL.md (replace {{placeholders}} with your info)"
 echo "  3. Edit USER.md (your name, timezone, company)"
 echo "  4. Edit .env.secrets (add API keys)"
-echo "  5. openclaw gateway start"
+echo "  5. hermes start  (or: openclaw gateway start)"
 echo ""
-echo "Docs: https://weblyfe.ai/openclaw"
+echo "Docs: https://weblyfe.ai/store"
 echo "GitHub: https://github.com/S3YED/appie-kit"
 echo "=========================================="
