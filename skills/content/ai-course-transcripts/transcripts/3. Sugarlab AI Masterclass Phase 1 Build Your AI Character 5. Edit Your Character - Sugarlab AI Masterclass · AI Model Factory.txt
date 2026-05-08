@@ -1,0 +1,67 @@
+[0.0s - 6.1s] Then you have two options to generate or to chat. Most of you will want to generate I'm guessing
+[6.1s - 12.9s] either chat is more for leisurely enthusiasts I would say. So once you go to generate it will
+[12.9s - 17.8s] send you to the generator and it will fill in your character for you already as you can see
+[17.8s - 25.8s] with all of the tag selected. Now this is the start of how to build your character and in here
+[25.8s - 31.2s] is actually the most important step. In this step we will find out if the character we made
+[31.2s - 38.2s] and the face we chose actually works well or not. So in this step I would advise you guys to go
+[38.2s - 46.9s] and to type something. A prompt I really like to use is a female on the on the beach
+[46.9s - 56.4s] on a tropical beach on a tropical beach a tropical atmosphere hyper realistic
+[59.0s - 59.9s] spelt it there
+[62.1s - 69.1s] listing some mistypes anyway there we go my hands are sticky it's very hot here today the
+[69.1s - 75.8s] nubloons anyway so then uh yeah we will go and this is already where it will become interesting
+[75.8s - 81.3s] so I will show you guys already the first quick lesson that is very key to when you're generating
+[81.3s - 87.3s] I'll generate the two images with with the as I selected and I'll do one image without
+[87.3s - 91.9s] the as I selected and you'll see that the image will be slightly different in terms of
+[91.9s - 98.4s] how the character is standing so now we compare do we like the amount of cohesion
+[98.4s - 104.9s] and let's say how the base is consistent yes or no if we don't like facial consistency
+[105.8s - 110.2s] we can go and we can create a new character however we do like the facial consistency
+[110.2s - 115.8s] and congratulations you just made your character however there's one more thing you can try if
+[115.8s - 121.1s] you're unhappy with the way the face looks which is uh you can go to pro in which uh you
+[121.1s - 124.2s] know we have a lot of a lot of cool pro features which I'll run the best through
+[124.2s - 129.5s] later on in this course but we have something here in pro settings called baseball like I
+[129.5s - 133.4s] mentioned before we're loading your face right we're not loading the character we're
+[133.4s - 138.7s] loading the face so what you can do is you can change it from essential to enhanced now this
+[138.7s - 144.1s] has a few a few drawbacks uh enhanced cannot make blow jobs or kind of make cum shots on
+[144.1s - 147.8s] the face so this is something you have to keep into account right there's a lot of people
+[147.8s - 151.8s] that'll be asking for this kind of content however creating it with essential will work
+[151.8s - 156.2s] and it will still be very highly consistent so just keep this in mind you also swish
+[156.2s - 160.5s] between these two right but this is a cool something you can try if you're unhappy with
+[160.5s - 165.4s] the face you made to check if you can kind of fix it with this if this doesn't work
+[165.4s - 171.4s] and you're still unhappy then my advice is to go and create a new character and start again
+[172.1s - 177.6s] and this may take one or you know three four tries this is not unheard of so as you guys
+[177.6s - 183.6s] can see now the facial cohesion will be a lot higher uh the facial like uh it will be
+[183.6s - 188.6s] a lot more similar to the original image created because normal face the essential
+[188.9s - 195.9s] has like a 70 to 80 similarity depending on the image so from the original image I'll say
+[195.9s - 200.9s] so this this means that obviously if you're using enhanced you will have a higher chance of
+[200.9s - 206.2s] succeeding with your character this is just the way it is however there's a few drawbacks like
+[206.2s - 211.8s] I just mentioned we are continuously improving the technology so it's not like a few weeks ago
+[211.8s - 215.8s] we had some problems with blurriness which we now kind of solved here already so what could
+[215.8s - 220.9s] you see improving and fixing and trying to make it better but yeah this is not the quick and short
+[220.9s - 225.4s] video on how to create your character so let me just do one you guys do it yeah create your cool
+[225.4s - 231.4s] character portrait face special create character then make sure to stack the right and proper
+[231.4s - 236.6s] tags once you have the right and proper tag selected you then after that to go you press
+[236.6s - 240.9s] save character you can always go back to editing it right in the character page like
+[240.9s - 246.7s] I showed you guys and from there you guys can go and you guys can test your character and
+[246.7s - 252.8s] check if the character actually works if you're happy with it congrats you can now continue into
+[252.8s - 258.1s] the next phases of this course if you're however not happy with it which you can see mostly in
+[258.1s - 264.2s] the first three or four images you can go and retry a new character try making a different
+[264.2s - 269.6s] portrait just to make sure if you have some stuff that is not happening I don't know as a
+[269.6s - 274.4s] final note for example you notice the character is not really keeping blue eyes sometimes it's
+[274.4s - 279.6s] good to just also specify it in the prompt right when you specify something in the prompt
+[279.6s - 284.3s] the AI houses now two times because in reality the tags go to the AI and the prompt goes to
+[284.3s - 289.9s] the AI so sometimes we're adding a tag again it could help but also just you know just so
+[289.9s - 295.4s] he does know proper prompting etiquette or I would say by the books prompting means that
+[295.4s - 303.1s] you don't repeat things so try to watch out for contradictions this is my biggest tip is watch out
+[303.1s - 308.0s] for contradictions and don't use plurals the 90% of people coming to me with problems it's
+[308.0s - 313.0s] it's a prompting problem not an AI problem or a platform problem mostly when people have
+[313.0s - 318.6s] failures or things that don't work it's because the prompts are very long or very very like
+[318.6s - 323.4s] highly detailed and concise it's like yeah like the AI is going to try and put everything
+[323.4s - 328.8s] in there and the chance that it can take everything is low so it'll end up taming
+[329.4s - 333.6s] so this is just something that you guys should take into account after you know this is my
+[333.6s - 338.0s] character I'm going to be continuing with her I like the enhanced face swap in this sense
+[338.0s - 343.0s] I feel like it's more natural looking so yeah so this is how I did it you guys should go
+[343.0s - 348.7s] and do the same we found her already told you guys that obviously there are a few ways
+[348.8s - 355.2s] of generate like a few good performing characters like the Asians the gingers and the blonde
+[355.2s - 359.5s] so go and you know choose your poison I would say and find a face that works well
+[359.5s - 366.2s] and once you have it show it to us let us know and now your journey begins so good luck
+[366.2s - 371.0s] this is your homework create your own character

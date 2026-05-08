@@ -1,0 +1,88 @@
+[0.0s - 5.6s] So a thing that you'll notice with ConfUI is that it just sucks at certain stuff, for
+[5.6s - 11.2s] example hands, feet, a problem that I often face that I have like a really bad ass for
+[11.2s - 14.9s] some reason.
+[14.9s - 20.4s] So what you want to do is you want to get yourself LoRa's from Civet AI.
+[20.4s - 24.2s] So for the ones that don't know Civet AI is like a big hub, you have all kinds
+[24.2s - 26.9s] of LoRa's, everything is free.
+[26.9s - 31.2s] So you can simply install it and usually it solves the problem.
+[31.2s - 35.7s] I recommend using this LoRa for as specific, I have really good results with it, I'll also
+[35.7s - 37.8s] drop it in this module.
+[37.8s - 41.1s] And what most people do is they see this big button that says download and it's
+[41.1s - 42.8s] very incentivizing to click on it.
+[42.8s - 47.4s] So they click on it, they upload it to JupyterLab and then they go with that.
+[47.4s - 49.7s] Do not do it this way.
+[49.7s - 54.0s] If you do it this way then it's either going to break the workflow or it's not
+[54.0s - 56.5s] going to work the way it's supposed to work.
+[56.5s - 61.3s] So you need to upload it and not download it, if that makes sense.
+[61.3s - 64.8s] So yeah, I got three things for you that you need.
+[64.8s - 67.7s] First thing you're going to need is your API key.
+[67.7s - 71.4s] So you click on your profile here in Civet AI.
+[71.4s - 75.5s] You go to settings, then all the way down is API keys.
+[75.5s - 78.9s] So you click here, you add an API key.
+[78.9s - 82.7s] The next thing you need to do is save it somewhere because it shows you once.
+[82.7s - 86.1s] After that it's gone forever.
+[86.1s - 87.9s] So yeah, keep that in mind.
+[87.9s - 90.1s] So I already did that.
+[90.1s - 93.2s] This is not a real API key but let's just say that it is.
+[93.2s - 94.5s] Second thing you need is a template.
+[94.5s - 98.8s] I made the template for you so you can find it in the description of this module.
+[98.8s - 101.4s] The last thing you need is the actual LoRa.
+[101.4s - 106.6s] So I go back here and instead of clicking download I right click on it and I go copy
+[106.6s - 107.6s] link address.
+[107.6s - 112.2s] And there you can see that the only things I actually need is the model and the API key.
+[112.2s - 114.1s] So this is the model.
+[114.1s - 117.9s] I replace this.
+[117.9s - 120.9s] Make sure that you also delete the brackets.
+[120.9s - 125.4s] Then I copy my API key, I put it here.
+[125.4s - 128.8s] I copy all this stuff and I go to JupyterLab.
+[128.8s - 130.9s] So JupyterLab is the back end, right?
+[130.9s - 132.9s] And ConfUI is the front end.
+[132.9s - 138.8s] So you go to JupyterLab, you open a new screen.
+[138.8s - 140.2s] You don't click on terminal.
+[140.2s - 149.9s] If you go to ConfUI, models, LoRa's.
+[149.9s - 155.1s] And this is the folder where you will have all your LoRa's.
+[155.1s - 158.3s] If you're here then you click on terminal and what you'll notice then is that it's
+[158.3s - 160.3s] going to load this folder.
+[160.3s - 163.5s] So it says workspace, ConfModels, LoRa's.
+[163.5s - 166.6s] All you need to do now is simply paste it like this.
+[166.6s - 168.7s] You hit enter.
+[168.7s - 173.5s] And it's not going to work because I used the fake API key but it should look something
+[173.5s - 175.7s] like this.
+[175.7s - 179.4s] So now you uploaded a LoRa from Civet AI.
+[179.4s - 185.6s] If I go to the front end now in ConfUI then it's not going to work.
+[185.6s - 188.1s] It should show here but it's not going to show.
+[188.1s - 189.1s] It doesn't work that way.
+[189.1s - 192.7s] What you need to do is you need to simply close ConfUI like this and then you go
+[192.7s - 198.3s] back to your pod and then you open it again and then it should show.
+[198.3s - 200.5s] That's more...
+[200.5s - 205.0s] That's basically how you install LoRa's.
+[205.0s - 210.9s] One more thing I want to mention is that you cannot install every LoRa first of all
+[210.9s - 212.5s] because you have a flux.
+[212.5s - 218.4s] If you bought a LoRa from me then you have a flux LoRa and I think most people
+[218.4s - 220.1s] have a flux LoRa.
+[220.1s - 225.2s] So if I type in S in the search bar, you'll see a bunch of porn right now,
+[225.2s - 227.7s] then you'll see that there are different LoRa's.
+[227.7s - 233.3s] So you got flux1d, fluxcontact, fluxnel, stxl, all that stuff.
+[233.3s - 237.7s] You want to put it on fluxdev because that's the LoRa that you have and then you can
+[237.7s - 240.8s] only use these LoRa's.
+[240.8s - 246.0s] What's more is that every LoRa has different trigger words.
+[246.0s - 249.6s] So you can either find them here in ConfUI.
+[249.6s - 254.1s] So a trigger word means that if I install this LoRa and I use the word
+[254.1s - 257.3s] as shiny skin, then it's going to load the LoRa.
+[257.3s - 260.2s] But if I don't use that word, then it's not going to work.
+[260.2s - 262.9s] So make sure that you use the trigger word.
+[262.9s - 267.1s] You can also find the trigger word by going to the LoRa that you want to use.
+[267.1s - 272.2s] So let's select it real quick.
+[272.2s - 273.4s] Round as...
+[273.4s - 279.2s] I right click on it, I do show info, fetch from Sivit AI.
+[279.2s - 282.6s] And then now I can see like all the trigger words here.
+[282.6s - 284.5s] So if I use underwear, it loads.
+[284.5s - 285.8s] If I use shirt, it loads.
+[285.8s - 291.7s] If I use any of these words, then the LoRa will load.
+[291.7s - 297.4s] Also in Sivit AI often they give like suggestions on what strength to use.
+[297.4s - 300.6s] Either they give it here in the description or they give it here or they don't give
+[300.6s - 301.6s] it at all.
+[301.6s - 305.8s] But always read that because sometimes you need to tweak these numbers, the strength
+[305.8s - 308.2s] in order to make it work properly.
+[308.2s - 310.2s] So yeah, I think that's basically it.
+[310.2s - 314.3s] This is how you install LoRa from Sivit AI in Confi.
