@@ -10,7 +10,7 @@ Prerequisite tools: varies per skill - Node.js/React for frontend skills, Python
 |-------|-------------|-------------|--------|
 | [21st-dev](21st-dev/) | Install shadcn/ui-compatible React components from 21st.dev registry (Magic UI, Aceternity, etc.) | - | Both |
 | [ai-course-supplements](ai-course-supplements/) | 17-lesson AI course supplement covering 2025-2026 model advances | - | Both |
-| [ai-course-transcripts](ai-course-transcripts/) | 164 deduped Herman Carter AI course transcripts for reference and study | - | Both |
+| [ai-course-transcripts](ai-course-transcripts/) | 164 Herman Carter AI course transcripts for reference and study | - | Both |
 | [appie-video-production](appie-video-production/) | End-to-end video production workflow: script, voiceover, b-roll, export | ELEVENLABS_API_KEY | Both |
 | [architecture-diagram](architecture-diagram/) | Generate system architecture diagrams from descriptions via Mermaid or Excalidraw | - | Both |
 | [ascii-art](ascii-art/) | Convert images or text to ASCII art for terminal display or plain-text output | - | Both |

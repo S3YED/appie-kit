@@ -8,8 +8,8 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## v4.4 (May 2026)
 
 ### Added
-- 155 deduplicated public skills organized into 8 categories: automation, communication, content, integrations, knowledge, meta, ops, personal.
-- Skills are sourced from 800+ raw skills across the full Appie fleet (Mac Mini OpenClaw, Spark Atlas Hermes, Eva OpenClaw, Wolfdiddy Hermes, Hetzner Appie-2/3/4 Hermes), deduped by md5 hash, name-collision-resolved, and Hermes builtins removed (those ship with every Hermes install).
+- 155 production skills organized into 8 categories: automation, communication, content, integrations, knowledge, meta, ops, personal.
+- Skills extracted from the live Appie fleet (Mac Mini, Spark Atlas, Hetzner nodes, Wolfdiddy). Each skill is ready to drop into any Hermes or OpenClaw workspace.
 - Hermes Agent compatibility across all skills. Skills were originally OpenClaw-only; the v4.4 fleet runs primarily on Hermes Agent (Nous Research).
 - `skills/INDEX.md`: master skill index with per-category counts and links.
 - Per-category INDEX.md and README.md files inside each skill category.

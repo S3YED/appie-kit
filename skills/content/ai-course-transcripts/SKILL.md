@@ -12,7 +12,7 @@ This skill bundles the complete searchable transcripts of the **AI Model Factory
 
 ## What's inside
 
-164 unique lesson transcripts grouped by module (after content-hash dedupe of 178 raw files):
+164 lesson transcripts grouped by module:
 
 | Module | Lessons | Topic |
 |---|---|---|
