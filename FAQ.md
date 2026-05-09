@@ -207,7 +207,7 @@ OpenRouter returns HTTP 429. The agent backs off automatically in most cases. If
 
 **Is there a paid version of this kit?**
 
-The kit is free and open source (MIT license). The "Build Your Own 24/7 AI Employee" course at weblyfe.ai/store includes step-by-step video walkthroughs, a private community, and ongoing updates. The kit here is everything you need to run the system, the course accelerates the learning curve.
+The kit is free and open source (MIT license). The "Build Your Own Techwiz" PDF at weblyfe.ai/pdf includes step-by-step walkthroughs, the complete Appie Kit, and ongoing updates. The kit here is everything you need to run the system; the PDF accelerates the learning curve.
 
 **Where do I get help?**
 

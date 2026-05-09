@@ -176,4 +176,4 @@ Include:
 ## Questions
 
 - GitHub Issues: [github.com/S3YED/appie-kit/issues](https://github.com/S3YED/appie-kit/issues)
-- Guide and community: [weblyfe.ai/store](https://weblyfe.ai/store)
+- Guide and PDF: [weblyfe.ai/pdf](https://weblyfe.ai/pdf)
