@@ -1,4 +1,4 @@
-# Integrations — 133 skills
+# Integrations — 134 skills
 
 | Skill | Description | Source |
 |---|---|---|
@@ -125,8 +125,9 @@
 | recipe-share-folder-with-team [hermes-builtin] | Share a Google Drive folder and all its contents with a list of collaborators. | ? |
 | recipe-sync-contacts-to-sheet [hermes-builtin] | Export Google Contacts directory to a Google Sheets spreadsheet. | ? |
 | recipe-watch-drive-changes [hermes-builtin] | Subscribe to change notifications on a Google Drive file or folder. | ? |
-| slides | Create strategic HTML presentations with Chart.js, design tokens, responsive lay | ? |
-| sonoscli | Control Sonos speakers (discover/status/play/volume/group). | ? |
+|| spark-comfy | Generate images via Spark Atlas's ComfyUI API. Tailnet-only, X-API-Key auth. | SPARK_API_KEY |
+|| slides | Create strategic HTML presentations with Chart.js, design tokens, responsive lay | ? |
+|| sonoscli | Control Sonos speakers (discover/status/play/volume/group). | ? |
 | spotify | Spotify: play, search, queue, manage playlists and devices. | ? |
 | trello | Manage Trello boards, lists, and cards via the Trello REST API. | ? |
 | venice | ? | ? |

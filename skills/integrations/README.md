@@ -1,6 +1,6 @@
 # integrations
 
-Skills for third-party service integrations, ML tooling, AI model APIs, and platform connectors. This is the largest category - 87 skills covering everything from calendar and email to fine-tuning frameworks, ML inference, and niche SaaS tools.
+Skills for third-party service integrations, ML tooling, AI model APIs, and platform connectors. This is the largest category - 88 skills covering everything from calendar and email to fine-tuning frameworks, ML inference, and niche SaaS tools.
 
 Prerequisite tools: varies widely per skill. Most web-API skills require `curl`. ML skills typically require Python 3.10+ and specific pip packages. See each skill's SKILL.md for full prerequisites.
 
@@ -77,6 +77,7 @@ Prerequisite tools: varies widely per skill. Most web-API skills require `curl`.
 | [seo-checklist](seo-checklist/) | Pre-publish on-page SEO checklist: title, meta, H1, keywords, images, breadcrumbs | - | Both |
 | [sketch](sketch/) | Sketch vector design file reading and export automation | macOS | OpenClaw |
 | [skill-creator](skill-creator/) | Scaffold new Hermes/OpenClaw skills from templates | - | Both |
+| [spark-comfy](spark-comfy/) | Generate images via Spark Atlas's ComfyUI inference API. Tailnet-only access with X-API-Key auth. | SPARK_API_KEY | Both |
 | [spike](spike/) | Spike.sh incident management and on-call alerting | SPIKE_API_KEY | Both |
 | [spotify](spotify/) | Spotify Web API: search, playback control, playlist management | SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET | Both |
 | [subagent-driven-development](subagent-driven-development/) | Dispatch multiple sub-agents to implement features in parallel with review gates | - | Hermes |

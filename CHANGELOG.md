@@ -8,14 +8,15 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## v4.4 (May 2026)
 
 ### Added
-- 155 production skills organized into 8 categories: automation, communication, content, integrations, knowledge, meta, ops, personal.
+- 156 production skills organized into 8 categories: automation, communication, content, integrations, knowledge, meta, ops, personal.
 - Skills extracted from the live Appie fleet (Mac Mini, Spark Atlas, Hetzner nodes, Wolfdiddy). Each skill is ready to drop into any Hermes or OpenClaw workspace.
+- `skills/integrations/spark-comfy/`: Spark Atlas ComfyUI client for Tailnet-only image generation. Indexed into the integrations library and category listings.
 - Hermes Agent compatibility across all skills. Skills were originally OpenClaw-only; the v4.4 fleet runs primarily on Hermes Agent (Nous Research).
 - `skills/INDEX.md`: master skill index with per-category counts and links.
 - Per-category INDEX.md and README.md files inside each skill category.
 - `skills/content/`: 49 skills covering UI/UX design, image generation, video production, SEO, copywriting, Next.js, TTS, stable diffusion, and more.
 - `skills/knowledge/`: 22 skills for LLM fine-tuning (LoRA, GRPO, DPO), quantization (GGUF, llama.cpp), vLLM inference, Whisper STT, DSPy, model evaluation.
-- `skills/integrations/`: 31 skills for Airtable, Notion, Google Workspace, GitHub, n8n, fal.ai, Spotify, Webflow, Trello, Gemini, Oracle, and others.
+- `skills/integrations/`: 32 skills for Airtable, Notion, Google Workspace, GitHub, n8n, fal.ai, Spotify, Webflow, Trello, Gemini, Oracle, and others.
 - `skills/ops/`: 16 skills for infrastructure management, git workflows, tmux, 1Password, healthcheck, and fleet maintenance.
 - `skills/automation/`: 19 skills including ClawFlow multi-step workflows, kanban orchestration, parallel agent dispatch, brain-sync, and memory search.
 - `skills/communication/`: 6 skills for Telegram, Discord, Slack, iMessage (BlueBubbles), WhatsApp (wacli), and voice calls.

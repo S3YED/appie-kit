@@ -1,6 +1,6 @@
 # Appie Kit - Skill Discovery
 
-155 public skills, 8 categories. Sourced from a live 7-agent fleet running Hermes Agent and OpenClaw.
+156 public skills, 8 categories. Sourced from a live 7-agent fleet running Hermes Agent and OpenClaw.
 
 Each skill is a directory with a `SKILL.md` file. Drop any skill folder into `~/.hermes/skills/` or `~/.openclaw/skills/` and it is immediately available in your next session.
 
@@ -35,7 +35,7 @@ Highlights: `frontend-design-3`, `ui-ux-pro-max`, `tips-landing-pages`, `design`
 
 ---
 
-### integrations (31 skills)
+### integrations (32 skills)
 Third-party service integrations: Airtable, Notion, Google Workspace, GitHub, n8n, fal.ai, Spotify, Webflow, Trello, and more.
 
 [Browse integrations skills](skills/integrations/INDEX.md) | [Readme](skills/integrations/README.md)
