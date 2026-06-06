@@ -1,10 +1,10 @@
 # 🧙🏽‍♂️ Appie Kit: Build Your Own AI Employee
 
-> The same system that runs a real web design agency, now with 156 production skills extracted from a live 7-agent fleet.
+> The same system that runs a real web design agency, now with 162 production skills extracted from a live 7-agent fleet.
 
 [![Hermes Agent](https://img.shields.io/badge/Powered%20by-Hermes%20Agent-031D16?style=for-the-badge)](https://github.com/NousResearch/hermes-agent)
 [![OpenClaw](https://img.shields.io/badge/Also%20works%20with-OpenClaw-0a4020?style=for-the-badge)](https://github.com/openclaw/openclaw)
-[![Skills](https://img.shields.io/badge/Skills-156%20production-DFB771?style=for-the-badge)](skills/INDEX.md)
+[![Skills](https://img.shields.io/badge/Skills-162%20production-DFB771?style=for-the-badge)](skills/INDEX.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-555?style=for-the-badge)](LICENSE)
 
 ## What Is This?
@@ -24,11 +24,11 @@ This is the **exact configuration, tools, and skills** extracted from running [W
 
 ---
 
-## What's New in v4.4
+## What's New in v4.5
 
-Released April 2026, going public May 2026.
+Released June 2026.
 
-- **156 production skills** extracted from the live Appie fleet (Mac Mini, Spark Atlas, Hetzner nodes, Wolfdiddy). Up from 33 in v4.3.
+- **162 production skills** extracted from the live Appie fleet (Mac Mini, Spark Atlas, Hetzner nodes, Wolfdiddy). Up from 156 in v4.4.
 - **Hermes Agent compatibility** across the board. Skills were originally OpenClaw-only; the fleet now runs primarily on [Hermes Agent](https://github.com/NousResearch/hermes-agent).
 - **MiniMax M2.7 as the default model** via OpenRouter: 17x cheaper than Claude at GPT-4 class quality.
 - **fal.ai + RunPod media stack** for image and video generation (Kling, Nano Banana, ComfyUI workers).
@@ -109,20 +109,20 @@ That's it. Your AI employee is live.
 
 ## Skills by Category
 
-156 public skills across 8 categories. Each category has its own index.
+162 public skills across 8 categories. Each category has its own index.
 
 | Category | Net Skills | What it covers |
 |---|---|---|
-| [automation](skills/automation/INDEX.md) | 19 | Agent self-management, fleet coordination, brain sync, sub-agent spawning, ClawFlow workflows |
+| [automation](skills/automation/INDEX.md) | 20 | Agent self-management, fleet coordination, brain sync, sub-agent spawning, ClawFlow workflows |
 | [communication](skills/communication/INDEX.md) | 6 | Telegram, Discord, Slack, iMessage (BlueBubbles), WhatsApp (wacli), voice calls |
 | [content](skills/content/INDEX.md) | 49 | UI/UX design, image gen, video production, SEO, copywriting, Next.js, TTS, stable diffusion |
 | [integrations](skills/integrations/INDEX.md) | 32 | Airtable, Notion, Google Workspace, GitHub, n8n, fal.ai, Spotify, Webflow, Trello, Gemini |
 | [knowledge](skills/knowledge/INDEX.md) | 22 | LLM fine-tuning (LoRA/GRPO), quantization, vLLM, Whisper STT, DSPy, model evaluation |
-| [meta](skills/meta/INDEX.md) | 8 | Skill authoring, ClawHub registry, task planning, dogfood QA, brainstorming frameworks |
+| [meta](skills/meta/INDEX.md) | 13 | Skill authoring, ClawHub registry, task planning, dogfood QA, brainstorming frameworks |
 | [ops](skills/ops/INDEX.md) | 16 | GitHub/git, DigitalOcean, tmux, 1Password, healthcheck, session management, fleet maintenance |
 | [personal](skills/personal/INDEX.md) | 4 | Bear Notes, Spotify, Things 3 (macOS), weather |
 
-156 ready-to-drop-in skills across 8 categories. The full skill library from the live fleet is larger; this kit contains the skills that transfer cleanly to any Hermes or OpenClaw setup.
+162 ready-to-drop-in skills across 8 categories. The full skill library from the live fleet is larger; this kit contains the skills that transfer cleanly to any Hermes or OpenClaw setup.
 
 ---
 
@@ -206,7 +206,7 @@ appie-kit/
 │   ├── IDENTITY.md     # Multi-agent identity (for fleets)
 │   ├── HEARTBEAT.md    # Proactive check-in configuration
 │   └── memory/         # Persistent memory directory
-├── skills/             # 156 public skills, 8 categories
+├── skills/             # 162 public skills, 8 categories
 │   ├── automation/     # Agent self-management, fleet coordination
 │   ├── communication/  # Messaging platform integrations
 │   ├── content/        # Design, video, SEO, copywriting, frontend

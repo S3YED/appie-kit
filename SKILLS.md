@@ -1,6 +1,6 @@
 # Appie Kit - Skill Discovery
 
-156 public skills, 8 categories. Sourced from a live 7-agent fleet running Hermes Agent and OpenClaw.
+162 public skills, 8 categories. Sourced from a live 7-agent fleet running Hermes Agent and OpenClaw.
 
 Each skill is a directory with a `SKILL.md` file. Drop any skill folder into `~/.hermes/skills/` or `~/.openclaw/skills/` and it is immediately available in your next session.
 
@@ -8,7 +8,7 @@ Each skill is a directory with a `SKILL.md` file. Drop any skill folder into `~/
 
 ## Categories
 
-### automation (19 skills)
+### automation (20 skills)
 Agent self-management, fleet coordination, workflow orchestration, and inter-agent dispatch.
 
 [Browse automation skills](skills/automation/INDEX.md) | [Readme](skills/automation/README.md)
@@ -40,7 +40,7 @@ Third-party service integrations: Airtable, Notion, Google Workspace, GitHub, n8
 
 [Browse integrations skills](skills/integrations/INDEX.md) | [Readme](skills/integrations/README.md)
 
-Highlights: `exa-plus`, `n8n`, `n8n-pro`, `github`, `gog`, `google-drive`, `airtable`, `notion-masterclass`, `fal-ai`, `webflow`, `spotify`
+Highlights: `exa-plus`, `n8n`, `n8n-pro`, `github`, `gog`, `google-drive`, `airtable`, `notion-masterclass`, `fal-ai`, `webflow`, `spotify`, `spark-comfy`
 
 ---
 
@@ -53,7 +53,7 @@ Highlights: `vllm`, `unsloth`, `axolotl`, `llama-cpp`, `gguf`, `whisper`, `dspy`
 
 ---
 
-### meta (8 skills)
+### meta (13 skills)
 Skills about the skill system itself: authoring, registry, planning, QA, and brainstorming.
 
 [Browse meta skills](skills/meta/INDEX.md) | [Readme](skills/meta/README.md)
