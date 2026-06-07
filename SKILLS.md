@@ -1,6 +1,6 @@
 # Appie Kit - Skill Discovery
 
-162 public skills, 8 categories. Sourced from a live 7-agent fleet running Hermes Agent and OpenClaw.
+413 public skills, 9 categories. Sourced from a live 7-agent fleet running Hermes Agent and OpenClaw, plus the ECC engineering/agentic-ops set (imported, MIT).
 
 Each skill is a directory with a `SKILL.md` file. Drop any skill folder into `~/.hermes/skills/` or `~/.openclaw/skills/` and it is immediately available in your next session.
 
@@ -77,6 +77,15 @@ Personal productivity and lifestyle integrations (primarily macOS).
 [Browse personal skills](skills/personal/INDEX.md) | [Readme](skills/personal/README.md)
 
 Highlights: `bear-notes`, `things-mac`, `spotify-player`, `weather`
+
+---
+
+### ecc (251 skills, imported · MIT)
+Engineering and agentic-ops skills imported from [affaan-m/ecc](https://github.com/affaan-m/ecc) v2.0.0-rc.1. Complements our fleet-sourced skills with language/framework patterns, agent-harness construction, autonomous loops, continuous learning, cost-aware LLM pipelines, security review, and cross-harness conventions. See [ecc/PROVENANCE.md](skills/ecc/PROVENANCE.md) for attribution.
+
+[Browse ecc skills](skills/ecc/INDEX.md)
+
+Highlights: `agent-harness-construction`, `autonomous-loops`, `continuous-learning`, `cost-aware-llm-pipeline`, `api-design`, `browser-qa`, `security-review`, `deep-research`, `tdd-workflow`, `iterative-retrieval`
 
 ---
 
