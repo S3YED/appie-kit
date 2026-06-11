@@ -1,0 +1,33 @@
+{
+  "name": "Wait for Approval",
+  "type": "n8n-nodes-base.wait",
+  "position": [0, 0],
+  "parameters": {
+    "resume": "form",
+    "form": {
+      "formTitle": "Review and Approve",
+      "formDescription": "## Review the content below\n\nPlease review and choose an action:",
+      "formFields": {
+        "values": [
+          {
+            "fieldLabel": "Action",
+            "fieldType": "dropdown",
+            "fieldOptions": {
+              "values": [
+                {"option": "Approve"},
+                {"option": "Reject"},
+                {"option": "Request Changes"}
+              ]
+            },
+            "requiredField": true
+          },
+          {
+            "fieldLabel": "Comments",
+            "fieldType": "textarea",
+            "requiredField": false
+          }
+        ]
+      }
+    }
+  }
+}

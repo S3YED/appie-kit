@@ -1,0 +1,132 @@
+{
+  "name": "Multi-Source Deduplication Example",
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [240, 400]
+    },
+    {
+      "parameters": {
+        "url": "https://hacker-news.firebaseio.com/v0/topstories.json",
+        "options": {}
+      },
+      "name": "Source 1 - Hacker News IDs",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [460, 240]
+    },
+    {
+      "parameters": {
+        "url": "https://api.example.com/articles",
+        "options": {}
+      },
+      "name": "Source 2 - API Articles",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [460, 400]
+    },
+    {
+      "parameters": {
+        "url": "https://example.com/feed.xml",
+        "options": {}
+      },
+      "name": "Source 3 - RSS Feed",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [460, 560]
+    },
+    {
+      "parameters": {
+        "mode": "append"
+      },
+      "name": "Merge All Sources",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 2.1,
+      "position": [680, 400]
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "={{ (() => {\n  const items = $input.all();\n  const seen = new Set();\n  const unique = [];\n\n  for (const item of items) {\n    const url = (item.json.url || '').toLowerCase().replace(/^https?:\\/\\/(www\\.)?/, '').replace(/\\/$/, '');\n    \n    if (url && !seen.has(url)) {\n      seen.add(url);\n      unique.push({\n        ...item.json,\n        normalizedUrl: url,\n        fetchedAt: new Date().toISOString()\n      });\n    }\n  }\n\n  return unique;\n})() }}",
+        "options": {}
+      },
+      "name": "Deduplicate by URL",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [900, 400]
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "Source 1 - Hacker News IDs",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Source 2 - API Articles",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Source 3 - RSS Feed",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Source 1 - Hacker News IDs": {
+      "main": [
+        [
+          {
+            "node": "Merge All Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Source 2 - API Articles": {
+      "main": [
+        [
+          {
+            "node": "Merge All Sources",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Source 3 - RSS Feed": {
+      "main": [
+        [
+          {
+            "node": "Merge All Sources",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Merge All Sources": {
+      "main": [
+        [
+          {
+            "node": "Deduplicate by URL",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
