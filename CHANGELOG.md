@@ -10,9 +10,11 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 - `skills/integrations/spark-comfy/`: Spark Atlas ComfyUI client for Tailnet-only image generation via SDXL + FLUX schnell; style presets, queue + status polling, X-API-Key auth. (added 2026-05-26)
 - 6 additional skills synced from live fleet across automation and meta categories, bringing total to **162 production skills**.
+- 5 operational fleet skills from `appie-2`: `hermes-runtime-operations`, `ssh-access-recovery`, `content-production-workflow`, `seo-weblyfe`, and `travel-flight-research`. (added 2026-06-13)
 
 ### Changed
 - README and SKILLS.md skill count updated from 156 to 162 (verified by `find skills -name SKILL.md | wc -l`).
+- Public skill indexes reconciled with tracked `SKILL.md` files; total count is now **510** including the imported ECC set. (2026-06-13)
 - Per-category counts corrected: automation 19 -> 20, meta 8 -> 13.
 - Version label updated from v4.4 to v4.5 to align with the [Build Your Own Techwiz PDF v4.5](https://weblyfe.ai/pdf) guide.
 

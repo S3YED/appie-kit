@@ -1,6 +1,6 @@
 # Appie Kit - Skill Discovery
 
-413 public skills, 9 categories. Sourced from a live 7-agent fleet running Hermes Agent and OpenClaw, plus the ECC engineering/agentic-ops set (imported, MIT).
+510 public skills, 9 categories. Sourced from a live 7-agent fleet running Hermes Agent and OpenClaw, plus the ECC engineering/agentic-ops set (imported, MIT).
 
 Each skill is a directory with a `SKILL.md` file. Drop any skill folder into `~/.hermes/skills/` or `~/.openclaw/skills/` and it is immediately available in your next session.
 
@@ -8,7 +8,7 @@ Each skill is a directory with a `SKILL.md` file. Drop any skill folder into `~/
 
 ## Categories
 
-### automation (20 skills)
+### automation (29 skills)
 Agent self-management, fleet coordination, workflow orchestration, and inter-agent dispatch.
 
 [Browse automation skills](skills/automation/INDEX.md) | [Readme](skills/automation/README.md)
@@ -17,7 +17,7 @@ Highlights: `clawflow`, `kanban-orchestrator`, `dispatch-multiple-agents`, `brai
 
 ---
 
-### communication (6 skills)
+### communication (7 skills)
 Messaging platform integrations: Telegram, Discord, Slack, iMessage, WhatsApp, voice calls.
 
 [Browse communication skills](skills/communication/INDEX.md) | [Readme](skills/communication/README.md)
@@ -26,7 +26,7 @@ Highlights: `discord`, `slack`, `bluebubbles` (iMessage), `wacli` (WhatsApp), `v
 
 ---
 
-### content (49 skills)
+### content (53 skills)
 UI/UX design, image generation, video production, SEO, copywriting, Next.js, TTS, and more. The largest creative category.
 
 [Browse content skills](skills/content/INDEX.md) | [Readme](skills/content/README.md)
@@ -35,7 +35,7 @@ Highlights: `frontend-design-3`, `ui-ux-pro-max`, `tips-landing-pages`, `design`
 
 ---
 
-### integrations (32 skills)
+### integrations (84 skills)
 Third-party service integrations: Airtable, Notion, Google Workspace, GitHub, n8n, fal.ai, Spotify, Webflow, Trello, and more.
 
 [Browse integrations skills](skills/integrations/INDEX.md) | [Readme](skills/integrations/README.md)
@@ -44,7 +44,7 @@ Highlights: `exa-plus`, `n8n`, `n8n-pro`, `github`, `gog`, `google-drive`, `airt
 
 ---
 
-### knowledge (22 skills)
+### knowledge (31 skills)
 LLM fine-tuning (LoRA, GRPO, DPO), quantization (GGUF, llama.cpp), vLLM inference, Whisper STT, DSPy, AudioCraft, and model evaluation.
 
 [Browse knowledge skills](skills/knowledge/INDEX.md) | [Readme](skills/knowledge/README.md)
@@ -53,7 +53,7 @@ Highlights: `vllm`, `unsloth`, `axolotl`, `llama-cpp`, `gguf`, `whisper`, `dspy`
 
 ---
 
-### meta (13 skills)
+### meta (14 skills)
 Skills about the skill system itself: authoring, registry, planning, QA, and brainstorming.
 
 [Browse meta skills](skills/meta/INDEX.md) | [Readme](skills/meta/README.md)
@@ -62,7 +62,7 @@ Highlights: `skill-creator`, `hermes-agent-skill-authoring`, `clawhub`, `clawlis
 
 ---
 
-### ops (16 skills)
+### ops (19 skills)
 Infrastructure management, DevOps, git workflows, tmux, 1Password, fleet health, and system administration.
 
 [Browse ops skills](skills/ops/INDEX.md) | [Readme](skills/ops/README.md)
@@ -71,7 +71,7 @@ Highlights: `digital-ocean`, `gitclaw`, `healthcheck`, `tmux`, `1password`, `git
 
 ---
 
-### personal (4 skills)
+### personal (22 skills)
 Personal productivity and lifestyle integrations (primarily macOS).
 
 [Browse personal skills](skills/personal/INDEX.md) | [Readme](skills/personal/README.md)
