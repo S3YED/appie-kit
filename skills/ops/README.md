@@ -13,8 +13,11 @@ Prerequisite tools: `gh` CLI for GitHub skills, SSH access for remote management
 | [clawhub](clawhub/) | OpenClaw hub management: register, update, and manage skill hubs | - | OpenClaw |
 | [clawlist](clawlist/) | List and search installed OpenClaw skills and their metadata | - | OpenClaw |
 | [coding](coding/) | Code quality guidelines: immutability, small files, error handling, security patterns | - | Both |
+| [agent-fleet-operations](agent-fleet-operations/) | Hermes/Appie fleet provisioning, reachability gates, provider recovery, and refresh workflow | SSH, Tailscale | Hermes |
+| [client-bot-security](client-bot-security/) | Audit and harden client Telegram bot deployments, token storage, SSH keys, and lifecycle controls | SSH | Hermes/OpenClaw |
 | [digital-ocean](digital-ocean/) | Manage DigitalOcean droplets, domains, and infrastructure via DO API | DO_API_TOKEN | Both |
 | [eightctl](eightctl/) | Eightfold infrastructure control: manage resources and deployments | - | Both |
+| [fleet-skill-sync](fleet-skill-sync/) | Pull, dedupe, curate, and distribute skills across the Appie fleet | SSH, Tailscale | Hermes/OpenClaw |
 | [git-sync](git-sync/) | Two-way git sync for workspace files: push local changes, pull remote updates | GIT_REMOTE | Both |
 | [gitclaw](gitclaw/) | Automated workspace backup to GitHub via crontab. Self-install, conflict resolution | GITHUB_TOKEN | Both |
 | [github](github/) | GitHub operations via gh CLI: issues, PRs, CI runs, code review, API queries | GH_TOKEN | Both |

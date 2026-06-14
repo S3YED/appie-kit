@@ -1,6 +1,6 @@
 # Appie Kit - Skill Discovery
 
-510 public skills, 9 categories. Sourced from a live 7-agent fleet running Hermes Agent and OpenClaw, plus the ECC engineering/agentic-ops set (imported, MIT).
+513 public skills, 9 categories. Sourced from a live 7-agent fleet running Hermes Agent and OpenClaw, plus the ECC engineering/agentic-ops set (imported, MIT).
 
 Each skill is a directory with a `SKILL.md` file. Drop any skill folder into `~/.hermes/skills/` or `~/.openclaw/skills/` and it is immediately available in your next session.
 
@@ -62,12 +62,12 @@ Highlights: `skill-creator`, `hermes-agent-skill-authoring`, `clawhub`, `clawlis
 
 ---
 
-### ops (19 skills)
+### ops (22 skills)
 Infrastructure management, DevOps, git workflows, tmux, 1Password, fleet health, and system administration.
 
 [Browse ops skills](skills/ops/INDEX.md) | [Readme](skills/ops/README.md)
 
-Highlights: `digital-ocean`, `gitclaw`, `healthcheck`, `tmux`, `1password`, `git-sync`, `appie-self-maintenance`
+Highlights: `agent-fleet-operations`, `fleet-skill-sync`, `client-bot-security`, `digital-ocean`, `gitclaw`, `healthcheck`, `tmux`, `1password`, `git-sync`, `appie-self-maintenance`
 
 ---
 
