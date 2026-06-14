@@ -1,4 +1,4 @@
-# Ops - 22 skills
+# Ops - 23 skills
 
 | Skill | Description | Source |
 |---|---|---|
@@ -10,6 +10,7 @@
 | [client-bot-security](client-bot-security/) | Full-spectrum security audit for client Telegram bots across a multi-gateway fleet (Hermes + OpenClaw). Covers bot in… | fleet |
 | [debugging-hermes-tui-commands](debugging-hermes-tui-commands/) | Debug Hermes TUI slash commands: Python, gateway, Ink UI. | local |
 | [digital-ocean](digital-ocean/) | Manage Digital Ocean droplets, domains, and infrastructure via DO API. | local |
+| [fleet-infra-fixes](fleet-infra-fixes/) | Recurring operational fixes and credential patterns for the Appie fleet, including Node/simdjson breakage, pnpm TTY… | fleet |
 | [fleet-skill-sync](fleet-skill-sync/) | Use when pulling, comparing, de-duping, curating or syncing skills across the Appie fleet (appie-1/2/3/4, Spark, Harr… | fleet |
 | [git-sync](git-sync/) | Automatically syncs local workspace changes to the remote GitHub repository. Use after significant changes or periodi… | local |
 | [gitclaw](gitclaw/) | Back up the OpenClaw agent workspace to a GitHub repo and keep it synced via a cron-driven commit/push script. | local |

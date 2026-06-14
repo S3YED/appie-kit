@@ -12,11 +12,13 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - 6 additional skills synced from live fleet across automation and meta categories, bringing total to **162 production skills**.
 - 5 operational fleet skills from `appie-2`: `hermes-runtime-operations`, `ssh-access-recovery`, `content-production-workflow`, `seo-weblyfe`, and `travel-flight-research`. (added 2026-06-13)
 - 3 operational fleet skills from `appie-1` and `appie-3-hermes`: `agent-fleet-operations`, `fleet-skill-sync`, and `client-bot-security`. (added 2026-06-14)
+- `skills/ops/fleet-infra-fixes/`: recurring Appie fleet infrastructure fixes from `appie-2` / Eva, covering Node/simdjson breakage, deploy-key isolation, token reauth, and Tailscale Serve discipline. (added 2026-06-14)
 
 ### Changed
 - README and SKILLS.md skill count updated from 156 to 162 (verified by `find skills -name SKILL.md | wc -l`).
 - Public skill indexes reconciled with tracked `SKILL.md` files; total count is now **510** including the imported ECC set. (2026-06-13)
 - Public skill indexes updated to **513** after the 2026-06-14 fleet sync.
+- Public skill indexes updated to **514** after the follow-up 2026-06-14 fleet sync.
 - Per-category counts corrected: automation 19 -> 20, meta 8 -> 13.
 - Version label updated from v4.4 to v4.5 to align with the [Build Your Own Techwiz PDF v4.5](https://weblyfe.ai/pdf) guide.
 

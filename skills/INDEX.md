@@ -1,6 +1,6 @@
 # Appie-Kit Skills Index
 
-**Production skills in appie-kit:** 513
+**Production skills in appie-kit:** 514
 
 | Category | Skills | Index |
 |---|---:|---|
@@ -10,7 +10,7 @@
 | integrations | 84 | [integrations/INDEX.md](integrations/INDEX.md) |
 | knowledge | 31 | [knowledge/INDEX.md](knowledge/INDEX.md) |
 | meta | 14 | [meta/INDEX.md](meta/INDEX.md) |
-| ops | 22 | [ops/INDEX.md](ops/INDEX.md) |
+| ops | 23 | [ops/INDEX.md](ops/INDEX.md) |
 | personal | 22 | [personal/INDEX.md](personal/INDEX.md) |
 | ecc (imported, MIT) | 251 | [ecc/INDEX.md](ecc/INDEX.md) |
-| **TOTAL** | **513** | |
+| **TOTAL** | **514** | |
