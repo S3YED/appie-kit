@@ -1,6 +1,6 @@
 # Weblyfe Portfolio Analysis & Design DNA
 
-Geanalyseerd: weblyfe.nl/projects — Seyed's portfolio
+Geanalyseerd: <portfolio-url>/projects — Seyed's portfolio
 Doel: Begrijpen wat de Weblyfe stijl is en waarom het werkt.
 
 ---

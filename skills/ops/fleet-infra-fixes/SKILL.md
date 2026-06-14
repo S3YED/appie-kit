@@ -1,3 +1,10 @@
+---
+name: fleet-infra-fixes
+description: "Resolve recurring Appie fleet infrastructure issues including Node/Homebrew breakage, pnpm install blockers, deploy keys, secrets, browser auth, Tailscale serve, and local model routing."
+version: 1.0.0
+category: ops
+---
+
 # fleet-infra-fixes Skill
 
 ## Purpose
@@ -18,7 +25,7 @@ Vercel/GitHub account tokens are scope-wide. To give a bot write access to ONLY 
 
 ## Secrets discipline
 
-Never echo secrets to Telegram or any chat (they are logged server-side). Secrets live in `~/.weblyfe-secrets/.env` or the agent's config. Tailscale serve cert/key must be gitignored (`*.ts.net.crt/.key`) and kept out of repos.
+Never echo secrets to Telegram or any chat (they are logged server-side). Secrets live in `$SECRETS_VAULT_DIR/.env` or the agent's config. Tailscale serve cert/key must be gitignored (`*.ts.net.crt/.key`) and kept out of repos.
 
 ## Token re-auth (the common blocker)
 
@@ -30,7 +37,7 @@ Chrome 148 app-bound cookie encryption defeats profile-copy session reuse; Chrom
 
 ## Tailscale serve (Mission Control)
 
-Expose tailnet-only, NEVER funnel: `tailscale serve --bg 3000` -> `https://appie-1.tail61f54b.ts.net`. Disable: `tailscale serve --https=443 off`. The cert/key land in the cwd; move them to `~/.weblyfe-secrets/ts-certs/`.
+Expose tailnet-only, NEVER funnel: `tailscale serve --bg 3000` -> `https://<tailnet-host>.ts.net`. Disable: `tailscale serve --https=443 off`. The cert/key land in the cwd; move them to `$SECRETS_VAULT_DIR/ts-certs/`.
 
 ## Local models
 

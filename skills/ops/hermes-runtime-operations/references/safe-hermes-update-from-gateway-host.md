@@ -24,10 +24,10 @@ This is not necessarily a broken repo or disk. It can mean the check is running 
    - `hermes gateway status`
    - `hermes cron list`
    - `hermes doctor`
-2. Clone or fetch a fresh upstream copy into a neutral path such as `/root/hermes-update-scan/hermes-agent-latest`.
+2. Clone or fetch a fresh upstream copy into a neutral path such as `$HERMES_UPDATE_SCAN_DIR/hermes-agent-latest`.
 3. Compare current codebase to latest, especially local dirty files and files touched upstream.
 4. Back up before update:
-   - source patch: `git diff > /root/hermes-update-backups/hermes-local-source-adjustments-$(date +%Y%m%d-%H%M%S).patch`
+   - source patch: `git diff > $HERMES_UPDATE_BACKUP_DIR/hermes-local-source-adjustments-$(date +%Y%m%d-%H%M%S).patch`
    - Hermes home tarball, excluding bulky regenerated caches/logs
    - gateway service unit: `systemctl cat hermes-gateway > ...`
    - pre-update HEAD: `git rev-parse HEAD > ...`
@@ -50,7 +50,7 @@ If code update breaks the install but git still works:
 
 ```bash
 cd /usr/local/lib/hermes-agent
-git reset --hard $(cat /root/hermes-update-backups/hermes-pre-update-head.txt)
+git reset --hard $(cat $HERMES_UPDATE_BACKUP_DIR/hermes-pre-update-head.txt)
 /usr/local/lib/hermes-agent/venv/bin/python -m pip install -e '.[all]'
 systemctl restart hermes-gateway
 ```

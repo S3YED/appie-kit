@@ -79,7 +79,7 @@
 1. Create all hooks first (copy from `references/viral-hooks.md`)
 2. Write all captions (NL + EN for each post)
 3. Generate/create all visuals
-4. Save to `/root/clawd/assets/content/captions/[week-X]/`
+4. Save to `$CONTENT_ASSET_DIR/captions/[week-X]/`
 
 ### Step 3: Scheduling (30 min)
 1. Load into Meta Business Suite or scheduling tool

@@ -1,3 +1,10 @@
+---
+name: content-safe-zones
+description: "Place text, captions, CTAs, and overlays safely for Instagram Reels, TikTok, and YouTube Shorts vertical-video layouts."
+version: 1.0.0
+category: content
+---
+
 # Content Safe Zones — Instagram Reels, TikTok, YouTube Shorts
 
 Reference guide for placing text, captions, CTAs, and overlays on 9:16 vertical video (1080x1920).

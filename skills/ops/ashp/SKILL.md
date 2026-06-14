@@ -1,3 +1,10 @@
+---
+name: ashp
+description: "Use Appie Secure Handshake Protocol patterns for authenticated inter-agent communication and secure Appie-family coordination."
+version: 1.0.0
+category: ops
+---
+
 # Appie Secure Handshake Protocol (ASHP)
 
 *Inter-agent communication protocol for the Appie family*
@@ -37,10 +44,10 @@ Each Appie instance has a unique API key configured in `~/.openclaw/openclaw.jso
 ```json
 {
   "ashp": {
-    "api_key": "appie-1-abc123def456",
+    "api_key": "<agent-api-key>",
     "allowed_keys": [
-      "appie-2-xyz789ghi012",
-      "appie-3-jkl345mno678"
+      "<peer-api-key-1>",
+      "<peer-api-key-2>"
     ],
     "timeout_ms": 30000
   }
@@ -52,7 +59,7 @@ Each Appie instance has a unique API key configured in `~/.openclaw/openclaw.jso
 ```
 Step 1: Appie-1 initiates
   → POST /api/ashp/handshake
-  → { "to": "appie-2", "from": "appie-1", "key_id": "appie-1-abc123" }
+  → { "to": "appie-2", "from": "appie-1", "key_id": "<key-id>" }
 
 Step 2: Appie-2 validates and responds
   → Returns: { "status": "accepted", "session_id": "sess_abc123" }
@@ -75,7 +82,7 @@ Initiate secure handshake with another Appie.
 {
   "to": "appie-2",
   "from": "appie-1",
-  "key_id": "appie-1-abc123def456"
+  "key_id": "<key-id>"
 }
 ```
 
@@ -95,7 +102,7 @@ Confirm handshake and establish session.
 ```json
 {
   "session_id": "sess_xyz789",
-  "signature": "sha256(session_id + api_key)"
+  "signature": "sha256(session_id + <api-key>)"
 }
 ```
 

@@ -1,3 +1,10 @@
+---
+name: notion-tasks
+description: "Create, manage, and complete tasks in Seyed and Appie Notion task databases while preserving task schemas and conventions."
+version: 1.0.0
+category: integrations
+---
+
 # Notion Tasks Skill
 
 *How Appies manage tasks in Notion*
@@ -11,8 +18,8 @@ Comprehensive guide for creating, managing, and completing tasks in the Notion T
 ## Database Overview
 
 **Tasks Database**
-- **Database ID:** `538bdf7b-a506-4c9c-b451-5d2f78b4d544`
-- **Data Source ID:** `7da4b13f-ea03-44d8-a0ec-f725a76dac79` (Use this for queries!)
+- **Database ID:** set `NOTION_TASKS_DATABASE_ID` in the environment
+- **Data Source ID:** set `NOTION_TASKS_DATA_SOURCE_ID` in the environment. Use this for queries.
 - **API Version:** `2025-09-03`
 
 ### Task Properties
@@ -81,7 +88,7 @@ const https = require('https');
 const fs = require('fs');
 
 const NOTION_TOKEN = fs.readFileSync(process.env.HOME + '/.config/notion/api_key', 'utf8').trim();
-const TASKS_DATA_SOURCE_ID = '7da4b13f-ea03-44d8-a0ec-f725a76dac79';
+const TASKS_DATA_SOURCE_ID = process.env.NOTION_TASKS_DATA_SOURCE_ID;
 
 function notionRequest(path, method = 'POST', body = null) {
   return new Promise((resolve, reject) => {
@@ -223,7 +230,7 @@ async function createTask(title, options = {}) {
   const result = await notionRequest('/v1/pages', 'POST', {
     parent: { 
       type: 'database_id',
-      database_id: '538bdf7b-a506-4c9c-b451-5d2f78b4d544'
+      database_id: process.env.NOTION_TASKS_DATABASE_ID
     },
     properties
   });
@@ -316,7 +323,7 @@ What it includes:
 - Helper scripts
 - Best practices
 
-Location: /root/clawd/skills/notion-tasks/
+Location: `<repo>/skills/notion-tasks/`
 Commit: abc1234
 Date: 2026-02-16
 `;
@@ -330,11 +337,11 @@ await documentTask(task.id, doc);
 
 ### Task Workflow Tool
 
-**Location:** `/root/clawd/tools/task-workflow.js`
+**Location:** `$TOOLS_DIR/task-workflow.js`
 
 #### Start a Task
 ```bash
-node /root/clawd/tools/task-workflow.js start "Task Title"
+node "$TOOLS_DIR/task-workflow.js" start "Task Title"
 ```
 
 What it does:
@@ -344,7 +351,7 @@ What it does:
 
 #### Finish a Task
 ```bash
-node /root/clawd/tools/task-workflow.js finish "Task Title" "Documentation text"
+node "$TOOLS_DIR/task-workflow.js" finish "Task Title" "Documentation text"
 ```
 
 What it does:

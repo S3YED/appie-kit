@@ -48,6 +48,7 @@ Before going live with your own Appie:
 4. **Rotate API keys quarterly**, especially if your repo has ever been pushed publicly.
 5. **Review `workspace/SOUL.md` and `workspace/USER.md`** for any personal information before committing them anywhere.
 6. **Set file permissions correctly**: `chmod 600 .env.secrets`.
+7. **Keep fleet access private**: copy `configs/fleet-access.example.yml` to `fleet-access.local.yml` and never commit the filled file.
 
 ## Disclosure Policy
 

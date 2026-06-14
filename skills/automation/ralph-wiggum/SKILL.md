@@ -1,3 +1,10 @@
+---
+name: ralph-wiggum
+description: "Run Ralph Wiggum autonomous coding loops where each fresh agent iteration implements, verifies, commits, and records one task."
+version: 1.0.0
+category: automation
+---
+
 # Ralph Wiggum Skill
 
 **Purpose:** Autonomous coding loop technique for complex build tasks.

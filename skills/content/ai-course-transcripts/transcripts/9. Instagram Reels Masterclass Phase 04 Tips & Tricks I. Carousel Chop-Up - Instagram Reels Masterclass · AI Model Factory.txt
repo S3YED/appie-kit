@@ -1,8 +1,0 @@
-[0.0s - 15.6s] So here's a little trick I like to use and it's going to make your life a lot easier.
-[15.6s - 19.2s] Whenever you have a cool picture and you want to upload it, but you want to make it into
-[19.2s - 25.3s] a carousel, so similar pictures with different poses with the same background, then all
-[25.4s - 32.0s] you need to do is upload your picture to Kling AI and you use a prompt like, I don't know,
-[32.0s - 37.8s] caressing hair and smiling or caressing hair and posing or just normal posing.
-[37.8s - 43.0s] After that you simply send the video to your mobile phone and you look for frames that
-[43.0s - 44.6s] you want to use as pictures.
-[44.6s - 48.0s] So basically you just screenshot those frames and that's it.

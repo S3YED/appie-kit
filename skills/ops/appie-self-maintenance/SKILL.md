@@ -1,11 +1,11 @@
 ---
 name: appie-self-maintenance
-title: Appie-2 Self-Maintenance Skill
-description: Daily healthcheck and maintenance for Appie-2. Keeps the system running smooth.
+title: Agent Self-Maintenance Skill
+description: Daily healthcheck and low-risk maintenance for a Hermes/OpenClaw agent host.
 ---
 
 ## Purpose
-Daily healthcheck and maintenance for Appie-2. Keeps the system running smooth.
+Daily healthcheck and low-risk maintenance for a Hermes/OpenClaw agent host.
 
 ## What It Checks
 - Gateway status (port 18789, process health)

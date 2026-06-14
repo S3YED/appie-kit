@@ -34,4 +34,4 @@ Use this when a deployed app shows a frontend JSON parse error or a generic Verc
 - The Vercel project name, scope, and env vars match the repo you actually deployed.
 
 ## Session note
-In one triage session, `/api/redeem-invite` and sibling routes on `weblyfe/defilet-whatsapp` returned `FUNCTION_INVOCATION_FAILED`; logs showed `ERR_MODULE_NOT_FOUND` for `/var/task/api/_audit`, while the frontend surfaced `Unexpected token 'A'... is not valid JSON`.
+In one triage session, `/api/redeem-invite` and sibling routes on `<team>/<project>` returned `FUNCTION_INVOCATION_FAILED`; logs showed `ERR_MODULE_NOT_FOUND` for `/var/task/api/_audit`, while the frontend surfaced `Unexpected token 'A'... is not valid JSON`.

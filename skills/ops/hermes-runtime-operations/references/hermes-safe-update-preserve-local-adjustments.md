@@ -22,8 +22,8 @@ hermes cron list
 When the user asks to "self scan", "download the new repo", or "compare before updating", create a separate clean upstream checkout instead of pulling into the live repo:
 
 ```bash
-mkdir -p /root/hermes-update-audit
-cd /root/hermes-update-audit
+mkdir -p $HERMES_UPDATE_AUDIT_DIR
+cd $HERMES_UPDATE_AUDIT_DIR
 rm -rf hermes-agent-upstream
 git clone --depth 1 git@github.com:NousResearch/hermes-agent.git hermes-agent-upstream
 
@@ -32,13 +32,13 @@ git rev-parse HEAD
 git rev-parse --abbrev-ref HEAD
 git status --short --branch
 git diff --name-status
-git diff > /root/hermes-update-audit/local-source-adjustments.patch
+git diff > $HERMES_UPDATE_AUDIT_DIR/local-source-adjustments.patch
 
 # Compare changed local files against upstream versions without mutating production.
 for f in $(git diff --name-only); do
-  [ -f "/root/hermes-update-audit/hermes-agent-upstream/$f" ] && \
-    diff -u "$f" "/root/hermes-update-audit/hermes-agent-upstream/$f" \
-      > "/root/hermes-update-audit/compare-${f//\//__}.diff" || true
+  [ -f "$HERMES_UPDATE_AUDIT_DIR/hermes-agent-upstream/$f" ] && \
+    diff -u "$f" "$HERMES_UPDATE_AUDIT_DIR/hermes-agent-upstream/$f" \
+      > "$HERMES_UPDATE_AUDIT_DIR/compare-${f//\//__}.diff" || true
 done
 ```
 

@@ -1,8 +1,15 @@
+---
+name: video-editing-pro
+description: "Make decision-level edits for talking-head short-form video, including hook selection, pacing, filler removal, and retention checks."
+version: 1.0.0
+category: content
+---
+
 # video-editing-pro Skill
 
 ## Purpose
 
-Decision-level framework for cutting talking-head short-form video (Reels/Shorts/TikTok). Not tool instructions — cut decisions: which sentences survive, where to end them, how to pick the hook, how to pace energy, and how to know when you got it wrong. Codified from auto-editor source defaults, production-audio practitioner interviews, platform retention data, and analysis of the 2026-05-03 Weblyfe Content Factory clips.
+Decision-level framework for cutting talking-head short-form video (Reels/Shorts/TikTok). Not tool instructions — cut decisions: which sentences survive, where to end them, how to pick the hook, how to pace energy, and how to know when you got it wrong. Codified from auto-editor source defaults, production-audio practitioner interviews, platform retention data, and analysis of the 2026-05-03 content factory clips.
 
 ---
 
@@ -111,7 +118,7 @@ The wrong mental model: "I need to get from 36s to under 30s." The right mental 
 Source: René Coronado: "My goal is NOT to get from 14 seconds to 6 seconds."
 
 **4. Cut when the sentence restates**
-If a sentence says the same thing as the previous sentence in different words, cut it. In the Weblyfe clip-02, "Thank you page, checkout page, you name it, all of it" (15.74–18.9s) restates what the Monday funnel sentence already established. It got cut in v1 — correctly. "Even the screenshots and the mockups are all made by my AI" (19.0–21.76s) adds new information (AI-made mockups) but was also cut — that may have been an error (see clip analysis below).
+If a sentence says the same thing as the previous sentence in different words, cut it. In one example clip, "Thank you page, checkout page, you name it, all of it" (15.74–18.9s) restates what the Monday funnel sentence already established. It got cut in v1 — correctly. "Even the screenshots and the mockups are all made by my AI" (19.0–21.76s) adds new information (AI-made mockups) but was also cut — that may have been an error (see clip analysis below).
 
 **5. The "does it earn its place" test**
 From TikTok editing doctrine: every pause between sentences, every transitional phrase, every breath that does not add rhythm should be cut. Transitional connectors ("And then...", "So basically...", "You know what I mean?") are the first to go.
@@ -276,7 +283,7 @@ Source: joelv.ca — "Watching the cut with someone else beside you is watching 
 
 ---
 
-## Clip Analysis: Weblyfe 2026-05-03
+## Clip Analysis Pattern
 
 ### What happened in v1
 
@@ -342,7 +349,7 @@ These 5 changes would reduce total runtime from 49.6s → ~44s and fix the two m
 
 ## Motion Graphics with Remotion
 
-Codified 2026-05-03. Brand: Weblyfe — Rethink Sans, #DFB771 gold, #247459 teal, #031D16 dark, #F6FEFC light.
+Codified 2026-05-03. Brand example — Rethink Sans, #DFB771 gold, #247459 teal, #031D16 dark, #F6FEFC light.
 
 ### A. Repos to study
 
@@ -358,7 +365,7 @@ Codified 2026-05-03. Brand: Weblyfe — Rethink Sans, #DFB771 gold, #247459 teal
 
 ### B. Visual hook recipe — Scale-punch with mask reveal (0–2.3s)
 
-Chosen pattern: text SCALE-PUNCH + background color flash + word appears from below. Best for Weblyfe: brand-aligned, no VFX software, pure CSS/spring.
+Chosen pattern: text SCALE-PUNCH + background color flash + word appears from below. Best for this brand style: brand-aligned, no VFX software, pure CSS/spring.
 
 ```tsx
 // src/components/Hook.tsx

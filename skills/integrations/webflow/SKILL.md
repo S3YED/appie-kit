@@ -1,9 +1,16 @@
+---
+name: webflow
+description: "Operate Webflow CMS for Weblyfe client sites, including collections, item updates, image fields, publishing, and asset-upload fallbacks."
+version: 1.0.0
+category: integrations
+---
+
 # Webflow CMS Skill
 
 ## Credentials
-- **API Token**: `YOUR_WEBFLOW_API_TOKEN`
-- **Site ID**: `68f612cac31a6f533ce5528d`
-- **Site**: berendstrik.webflow.io
+- **API Token**: `WEBFLOW_API_TOKEN` environment variable
+- **Site ID**: `WEBFLOW_SITE_ID` environment variable
+- **Site**: <webflow-site-domain>
 
 ## Image Upload Workflow
 
@@ -13,19 +20,19 @@
 const { WebflowClient } = require('webflow-api');
 const fs = require('fs');
 
-const client = new WebflowClient({ 
-  token: 'YOUR_WEBFLOW_API_TOKEN' 
+const client = new WebflowClient({
+  token: process.env.WEBFLOW_API_TOKEN
 });
 
 async function uploadAsset(filePath, fileName) {
   const fileBuffer = fs.readFileSync(filePath);
   const arrayBuffer = fileBuffer.buffer.slice(
-    fileBuffer.byteOffset, 
+    fileBuffer.byteOffset,
     fileBuffer.byteOffset + fileBuffer.byteLength
   );
-  
+
   return await client.assets.utilities.createAndUpload(
-    '68f612cac31a6f533ce5528d',
+    process.env.WEBFLOW_SITE_ID,
     { file: arrayBuffer, fileName }
   );
 }
@@ -50,20 +57,20 @@ curl -X PATCH "https://api.webflow.com/v2/collections/<ID>/items/<ITEM_ID>" \
 ## Collections
 
 ### Museums Collection
-- **Collection ID**: `69ce595b57060eb28a767604`
+- **Collection ID**: `<COLLECTION_ID>`
 - **Fields**: name, slug, museum-description, cover (Image), article (RichText), url-naar-collectie (Link), city (PlainText), pic-1 (Image)
 - **Item IDs**: See museums section below
 
 ### Events Collection
-- **Collection ID**: `69bfd230ceecbebceff82be0`
+- **Collection ID**: `<COLLECTION_ID>`
 - **Fields**: name, date-time, location, location-link, gallery, cover-image (Image), event-short-description, event-description, google-maps-embed (RichText), event-passed
 
 ### Arts Collection
-- **Collection ID**: `69bfd1ac805e504d421e717e`
+- **Collection ID**: `<COLLECTION_ID>`
 - **Fields**: title, slug, category, image (Image), description
 
 ### FAQs Collection
-- **Collection ID**: `69bfcf6e010a4c52f2a48c84`
+- **Collection ID**: `<COLLECTION_ID>`
 
 ## Common Operations
 
@@ -98,26 +105,26 @@ curl -s -X POST "https://api.webflow.com/v2/sites/<SITE_ID>/publish" \
 ## Museums (11 items)
 | ID | Naam | City |
 |----|------|------|
-| `69da5015eae9663f6a1249a7` | Stedelijk Museum Amsterdam | Amsterdam |
-| `69da502755f63a9020331500` | Collectie Gelderland | Arnhem |
-| `69da5028589590c9f45f26f5` | Fries Museum | Leeuwarden |
-| `69da50296e1e2ae5ac11da20` | Museum Boijmans Van Beuningen | Rotterdam |
-| `69da502a33b6e39977b3878e` | Museum De Lakenhal | Leiden |
-| `69da502c36537a51a7297f60` | SCHUNCK | Heerlen |
-| `69da502fff42dc29f5e158e4` | Museum Het Valkhof | Nijmegen |
-| `69da51907598dd35f8bb0196` | Rijksmuseum Twenthe | Enschede |
-| `69da519179c7893028f9a61a` | Stedelijk Museum Schiedam | Schiedam |
-| `69da5192c39688272b34cd9f` | TextielMuseum | Tilburg |
-| `69da519333b6e39977b3c51b` | Museum Het Domein | Sittard |
+| `<ITEM_ID>` | Stedelijk Museum Amsterdam | Amsterdam |
+| `<ITEM_ID>` | Collectie Gelderland | Arnhem |
+| `<ITEM_ID>` | Fries Museum | Leeuwarden |
+| `<ITEM_ID>` | Museum Boijmans Van Beuningen | Rotterdam |
+| `<ITEM_ID>` | Museum De Lakenhal | Leiden |
+| `<ITEM_ID>` | SCHUNCK | Heerlen |
+| `<ITEM_ID>` | Museum Het Valkhof | Nijmegen |
+| `<ITEM_ID>` | Rijksmuseum Twenthe | Enschede |
+| `<ITEM_ID>` | Stedelijk Museum Schiedam | Schiedam |
+| `<ITEM_ID>` | TextielMuseum | Tilburg |
+| `<ITEM_ID>` | Museum Het Domein | Sittard |
 
 ## Events (5 items)
 | ID | Naam | Gallery | Date |
 |----|------|--------|------|
-| `69c905c1c217479704f7a9d4` | Heem | Fries Museum | 28 Apr 2024 – 27 Apr 2025 |
-| `69c905bf336bdaf15ece39a1` | 33 1/3 RPM | De Vishal | 7 Sep – 13 Oct 2024 |
-| `69c905bdfecfd85d4f92cc0d` | Copilot, Voice and Vision | Galerie Fons Welters | 2 Nov – 21 Dec 2024 |
-| `69c905acfecfd85d4f92ca7d` | Connecting Threads | GPS Gallery | 9 Jan – 17 Jan 2026 |
-| `69bfda27313639e3d6279b81` | Art Rotterdam 2026 | Rotterdam Ahoy | 27 – 29 Mar 2026 |
+| `<ITEM_ID>` | Heem | Fries Museum | 28 Apr 2024 – 27 Apr 2025 |
+| `<ITEM_ID>` | 33 1/3 RPM | De Vishal | 7 Sep – 13 Oct 2024 |
+| `<ITEM_ID>` | Copilot, Voice and Vision | Galerie Fons Welters | 2 Nov – 21 Dec 2024 |
+| `<ITEM_ID>` | Connecting Threads | GPS Gallery | 9 Jan – 17 Jan 2026 |
+| `<ITEM_ID>` | Art Rotterdam 2026 | Rotterdam Ahoy | 27 – 29 Mar 2026 |
 
 ## Error Codes
 - **401**: Invalid token or no asset upload permission

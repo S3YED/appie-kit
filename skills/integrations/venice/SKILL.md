@@ -1,3 +1,10 @@
+---
+name: venice
+description: "Run Venice AI research through an isolated subagent workflow and return summarized results without blocking the main session."
+version: 1.0.0
+category: integrations
+---
+
 # venice — Venice AI Research (Isolated Subagent)
 
 **Wanneer gebruiken:** Als je gebruiker vraagt om iets te zoeken/onderzoeken via Venice AI, of wil dat Wolfie iets analyseert met Venice.

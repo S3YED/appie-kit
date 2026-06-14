@@ -168,7 +168,7 @@ Full calendar template: `references/content-calendar.md`
 ---
 
 ## File Locations
-- Captions: `/root/clawd/assets/content/captions/`
-- Assets (renders): `/root/clawd/assets/content/appie-*.png`
-- Strategy docs: `/root/clawd/assets/content/CONTENT-PIPELINE-WEEK1.md`
-- Generated captions: `/root/clawd/assets/content/captions/WEEK1-CAPTIONS-BILINGUAL.md`
+- Captions: `$CONTENT_ASSET_DIR/captions/`
+- Assets (renders): `$CONTENT_ASSET_DIR/renders/*.png`
+- Strategy docs: `$CONTENT_ASSET_DIR/CONTENT-PIPELINE-WEEK1.md`
+- Generated captions: `$CONTENT_ASSET_DIR/captions/WEEK1-CAPTIONS-BILINGUAL.md`

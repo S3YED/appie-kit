@@ -24,7 +24,7 @@ Use this when the user wants Vercel deploys to happen through GitHub pushes inst
    # or https://github.com/<owner>/<repo>.git if HTTPS creds are known-good
    ```
 
-4. Prefer SSH remotes for Weblyfe/Vercel projects when available. Seyed's Vercel setup often expects commits pushed via the SSH key connected to the GitHub integration. HTTPS/expired `gh` credentials can block despite the repo being otherwise deployable.
+4. Prefer SSH remotes for Vercel projects when available. Some Vercel setups expect commits pushed via the SSH key connected to the GitHub integration. HTTPS/expired `gh` credentials can block despite the repo being otherwise deployable.
 
 5. Keep deploy commits clean:
    - Stage only build-relevant source, config, and docs needed for the deploy.
@@ -49,7 +49,7 @@ Use this when the user wants Vercel deploys to happen through GitHub pushes inst
    - Check Vercel deployment page/API if available.
    - Fetch the production/custom domain and confirm the new content is live.
 
-## Reporting to Seyed
+## Reporting to the operator
 
 Be direct. Say exactly what is already done and what the real blocker is:
 - local build status

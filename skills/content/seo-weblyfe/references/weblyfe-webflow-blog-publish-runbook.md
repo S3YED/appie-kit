@@ -20,7 +20,7 @@ Use when the user asks to "push it live" for a Weblyfe blog draft.
 5. Verify title/snippet match expected content before reporting success.
 
 ## Weblyfe-specific notes from this session
-- Site: `weblyfe.nl` (Webflow site id observed: `615bd59fd9d3edeb08fd3ea9`)
+- Site: set `WEBFLOW_SITE_ID` in the environment. Do not hardcode live site IDs.
 - Blog collection observed: `Blog Posts` (`65bf2899afe1cc2af3665110`)
 - CMS path pattern verified: `/post/<slug>`
 

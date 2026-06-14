@@ -1,3 +1,10 @@
+---
+name: seo-bezoekersmagneet
+description: "Explain and audit foundational SEO strategy for Weblyfe clients, including why organic ranking matters and what Google evaluates."
+version: 1.0.0
+category: content
+---
+
 # SEO Bezoekersmagneet Skill
 
 ## Purpose

@@ -167,7 +167,7 @@ puppeteer.use(StealthPlugin());
 })();
 ```
 
-Available at: `/root/.hermes/hermes-agent/node_modules/puppeteer-extra-plugin-stealth`
+Available at: `$HERMES_AGENT_DIR/node_modules/puppeteer-extra-plugin-stealth`
 
 ## TypeScript Site Patterns
 
@@ -231,7 +231,7 @@ headers = {
 
 | Tool | Location | Use |
 |------|----------|-----|
-| **playwright** | `/root/.hermes/hermes-agent/node_modules/playwright` | Browser automation |
+| **playwright** | `$HERMES_AGENT_DIR/node_modules/playwright` | Browser automation |
 | **puppeteer-extra + stealth** | Same | Bot-evasion browser |
 | **httpx** | Python venv | Async HTTP |
 | **requests** | Python venv | Simple HTTP |
@@ -276,13 +276,13 @@ def test_site(url):
         return False
 
 if __name__ == "__main__":
-    url = sys.argv[1] if len(sys.argv) > 1 else "https://weblyfe.ai/openclaw"
+    url = sys.argv[1] if len(sys.argv) > 1 else "https://example.com/app"
     print(f"Testing: {url}")
     can_scrape = test_site(url)
     print(f"\nRecommendation: {'urllib works' if can_scrape else 'Use Playwright'}")
 ```
 
-Run: `python3 /root/.hermes/skills/web-scraping-javascript-sites/scripts/test-site.py https://example.com`
+Run: `python3 $HERMES_SKILLS_DIR/web-scraping-javascript-sites/scripts/test-site.py https://example.com`
 
 ## See Also
 

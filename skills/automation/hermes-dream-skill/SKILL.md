@@ -1,14 +1,14 @@
 ---
 name: hermes-dream
 description: >
-  Nightly memory consolidation skill for Hermes agents (Appie-3 & Appie-4).
+  Nightly memory consolidation skill for Hermes agents.
   Consolidates memory each night, writes to ~/hermes-dreams/, and delivers to fleet.
   Schedule: 03:10 AM daily via Hermes cron.
 ---
 
 # Hermes Dream Skill
 
-Install on Hermes agents (Appie-3/4) for fleet-wide memory consolidation.
+Install on Hermes agents for fleet-wide memory consolidation.
 
 ## What It Does
 
@@ -43,16 +43,16 @@ Install on Hermes agents (Appie-3/4) for fleet-wide memory consolidation.
 ## Cleanup Candidates
 [old/stale entries]
 ## Fleet Notes
-[things Appie-1 should know]
+[things the primary agent should know]
 ```
 
 ## Collection
 
-Appie-1 collects via:
+The primary agent collects via:
 ```bash
 # Via git push (Hermes pushes its dream to a git repo each morning)
 # OR via:
-ssh appie-1 "cat >> ~/memory/fleet-dreams/appie-4-$(date +%Y-%m-%d).md" < ~/hermes-dreams/YYYY-MM-DD.md
+ssh <primary-host> "cat >> ~/memory/fleet-dreams/<node>-$(date +%Y-%m-%d).md" < ~/hermes-dreams/YYYY-MM-DD.md
 ```
 
 ## Key Notes for Hermes

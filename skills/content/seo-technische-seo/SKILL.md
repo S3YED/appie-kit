@@ -1,10 +1,17 @@
+---
+name: seo-technische-seo
+description: "Audit and fix technical SEO for Weblyfe sites, including crawling, indexing, structured data, speed, and launch readiness."
+version: 1.0.0
+category: content
+---
+
 # SEO Technische SEO Skill
 
 ## Purpose
 Ensure Google can crawl, index, and correctly interpret any Weblyfe site. Use this at site launch (prerequisite before any on-page or off-page work), when a site is not appearing in search results, or when rankings drop unexpectedly. Also covers rich markup (structured data) which unlocks enhanced SERP features.
 
 ## Source
-"Technische SEO" PDF from Seyed's Weblyfe University SEO course (downloaded from Drive 2026-05-03).
+"Technische SEO" PDF from the source SEO course (downloaded from Drive 2026-05-03).
 
 ## Quick reference
 | Task | Action |

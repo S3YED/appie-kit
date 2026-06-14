@@ -1,0 +1,17 @@
+{
+  "count": 526,
+  "unique": 526,
+  "dups": {},
+  "issues": [],
+  "categories": {
+    "automation": 26,
+    "communication": 6,
+    "content": 49,
+    "ecc": 250,
+    "integrations": 108,
+    "knowledge": 31,
+    "meta": 11,
+    "ops": 23,
+    "personal": 22
+  }
+}

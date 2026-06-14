@@ -46,5 +46,5 @@ support@softconf.com and request it.
 - git pull from github to a local repository
 - then, git push from your local repository to overleaf project 
     - Overleaf project is https://www.overleaf.com/project/5f64f1fb97c4c50001b60549
-    - Overleaf git url is https://git.overleaf.com/5f64f1fb97c4c50001b60549
+    - Overleaf git url is https://git.overleaf.com/<overleaf-project-id>
 - then, click "Submit" and then "Submit as Template" in overleaf in order to ask overleaf to update the overleaf template from the overleaf project 

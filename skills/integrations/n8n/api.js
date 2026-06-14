@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * n8n API Wrapper for Appie
+ * n8n API Wrapper
  * Direct HTTP calls to n8n instance
  * 
  * Usage:
@@ -14,13 +14,13 @@
 
 const https = require('https');
 
-// Configuration - reads from env or uses Weblyfe defaults
-const N8N_BASE_URL = (process.env.N8N_BASE_URL || 'app.n8n.weblyfe.nl').trim().replace(/^https?:\/\//, '');
+// Configuration - reads from env
+const N8N_BASE_URL = (process.env.N8N_BASE_URL || 'n8n.example.com').trim().replace(/^https?:\/\//, '');
 const N8N_API_KEY = (process.env.N8N_API_KEY || '').trim();
 
 if (!N8N_API_KEY) {
   console.error('Error: N8N_API_KEY environment variable required');
-  console.error('Set it in your shell or clawdbot.json env.vars');
+  console.error('Set it in your shell or your agent config env vars');
   process.exit(1);
 }
 

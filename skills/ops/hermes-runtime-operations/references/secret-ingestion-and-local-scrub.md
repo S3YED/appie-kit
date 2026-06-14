@@ -12,7 +12,7 @@ Use when the user pastes a credential in chat and asks you to save it, then scru
 ## Procedure
 
 1. Save to the appropriate env/auth file with restrictive permissions.
-   - Hermes default env path: `/root/.hermes/.env`
+   - Hermes default env path: `$HERMES_HOME/.env`
    - Ensure parent dir is `700` and env file is `600`.
    - If multiple scripts may expect different names, save under the canonical name plus stable aliases, but only when they clearly refer to the same credential class.
 
@@ -22,13 +22,13 @@ Use when the user pastes a credential in chat and asks you to save it, then scru
 
 3. Scrub accessible local traces.
    - Search text files under:
-     - `/root/.hermes/logs`
-     - `/root/.hermes/sessions`
-     - `/root/.hermes/cron/output`
+     - `$HERMES_HOME/logs`
+     - `$HERMES_HOME/sessions`
+     - `$HERMES_HOME/cron/output`
      - `/tmp`
      - shell history files where present
    - Replace exact raw secret bytes with a neutral marker such as `[REDACTED_TOKEN]`.
-   - For `/root/.hermes/state.db`, update text-like columns containing the raw value, then `VACUUM` if possible.
+   - For `$HERMES_HOME/state.db`, update text-like columns containing the raw value, then `VACUUM` if possible.
    - Avoid keeping secret-bearing backups. If a backup of SQLite or env contains the raw token, delete it or scrub it too.
 
 4. Verify no remaining matches outside the intended env/auth store.

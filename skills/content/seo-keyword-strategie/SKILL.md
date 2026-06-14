@@ -1,3 +1,10 @@
+---
+name: seo-keyword-strategie
+description: "Select, validate, and place SEO keywords for Weblyfe pages, blog posts, and site content architecture."
+version: 1.0.0
+category: content
+---
+
 # SEO Keyword Strategie Skill
 
 ## Purpose

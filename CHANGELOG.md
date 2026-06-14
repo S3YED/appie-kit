@@ -8,17 +8,19 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## v4.5 (2026-06-06)
 
 ### Added
-- `skills/integrations/spark-comfy/`: Spark Atlas ComfyUI client for Tailnet-only image generation via SDXL + FLUX schnell; style presets, queue + status polling, X-API-Key auth. (added 2026-05-26)
+- `configs/fleet-access.example.yml`, `docs/FLEET-ACCESS.md`, and `tools/validate-public-skills.py` for public-safe fleet host onboarding and pre-publish validation. (added 2026-06-14)
+- `skills/integrations/spark-comfy/`: GPU/media worker ComfyUI client for Tailnet-only image generation via SDXL + FLUX schnell; style presets, queue + status polling, X-API-Key auth. (added 2026-05-26)
 - 6 additional skills synced from live fleet across automation and meta categories, bringing total to **162 production skills**.
 - 5 operational fleet skills from `appie-2`: `hermes-runtime-operations`, `ssh-access-recovery`, `content-production-workflow`, `seo-weblyfe`, and `travel-flight-research`. (added 2026-06-13)
 - 3 operational fleet skills from `appie-1` and `appie-3-hermes`: `agent-fleet-operations`, `fleet-skill-sync`, and `client-bot-security`. (added 2026-06-14)
-- `skills/ops/fleet-infra-fixes/`: recurring Appie fleet infrastructure fixes from `appie-2` / Eva, covering Node/simdjson breakage, deploy-key isolation, token reauth, and Tailscale Serve discipline. (added 2026-06-14)
+- `skills/ops/fleet-infra-fixes/`: recurring Appie fleet infrastructure fixes from `appie-2` / external worker, covering Node/simdjson breakage, deploy-key isolation, token reauth, and Tailscale Serve discipline. (added 2026-06-14)
 
 ### Changed
 - README and SKILLS.md skill count updated from 156 to 162 (verified by `find skills -name SKILL.md | wc -l`).
 - Public skill indexes reconciled with tracked `SKILL.md` files; total count is now **510** including the imported ECC set. (2026-06-13)
 - Public skill indexes updated to **513** after the 2026-06-14 fleet sync.
 - Public skill indexes updated to **514** after the follow-up 2026-06-14 fleet sync.
+- Public tree sanitized and re-indexed to **526** public skills with private/client-specific material quarantined outside the repo. (2026-06-14)
 - Per-category counts corrected: automation 19 -> 20, meta 8 -> 13.
 - Version label updated from v4.4 to v4.5 to align with the [Build Your Own Techwiz PDF v4.5](https://weblyfe.ai/pdf) guide.
 
@@ -28,8 +30,8 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Added
 - 156 production skills organized into 8 categories: automation, communication, content, integrations, knowledge, meta, ops, personal.
-- Skills extracted from the live Appie fleet (Mac Mini, Spark Atlas, Hetzner nodes, Wolfdiddy). Each skill is ready to drop into any Hermes or OpenClaw workspace.
-- `skills/integrations/spark-comfy/`: Spark Atlas ComfyUI client for Tailnet-only image generation. Indexed into the integrations library and category listings.
+- Skills extracted from the live Appie fleet (Mac Mini, GPU/media workers, VPS nodes, and approved client-bot hosts). Each skill is ready to drop into any Hermes or OpenClaw workspace.
+- `skills/integrations/spark-comfy/`: GPU/media worker ComfyUI client for Tailnet-only image generation. Indexed into the integrations library and category listings.
 - Hermes Agent compatibility across all skills. Skills were originally OpenClaw-only; the v4.4 fleet runs primarily on Hermes Agent (Nous Research).
 - `skills/INDEX.md`: master skill index with per-category counts and links.
 - Per-category INDEX.md and README.md files inside each skill category.
@@ -102,3 +104,9 @@ Initial release (commit `873c83f`).
 - Case studies: lead capture automation, multi-agent fleet, content pipeline.
 - `install.sh` one-command installer.
 - MIT license.
+## 2026-06-14 - Skill audit and hygiene pass
+
+- Added evidence-backed origin/quality audit reports under `reports/skill-audit/2026-06-14/`.
+- Added missing frontmatter descriptions to legacy Appie/Weblyfe skills so Hermes can trigger them reliably.
+- Quarantined private/sensitive first-party skills under `skills/_quarantine/sensitive-review/` pending manual review instead of publishing them in the public index.
+- Regenerated skill indexes and category counts from filesystem evidence.

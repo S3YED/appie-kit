@@ -1,7 +1,7 @@
 ---
 name: fleet-dream
 description: >
-  Nightly memory consolidation across the Weblyfe agent fleet (Appie-1/2/5 OpenClaw + Appie-3/4 Hermes).
+  Nightly memory consolidation across an agent fleet running Hermes Agent and/or OpenClaw.
   Use when: running the nightly dream sweep, checking fleet memory status, or manually triggering consolidation.
   Collects memory from all fleet nodes, runs LLM analysis (MiniMax M2.7), and writes consolidated insights.
 ---
@@ -13,10 +13,10 @@ Runs every night at 03:05 AM. Collects memory from all agents, consolidates with
 ## How It Works
 
 ```
-03:05 AM — Appie-1 (Mac Mini)
-  ├─ SSH → Appie-2: collect ~/.openclaw/memory/YYYY-MM-DD.md
-  ├─ SSH → Appie-3: collect ~/.hermes/memories/*.md
-  ├─ SSH → Appie-4: collect ~/.hermes/memories/*.md
+03:05 AM — primary agent host
+  ├─ SSH → OpenClaw worker: collect ~/.openclaw/memory/YYYY-MM-DD.md
+  ├─ SSH → Hermes worker: collect ~/.hermes/memories/*.md
+  ├─ SSH → Hermes worker: collect ~/.hermes/memories/*.md
   └─ Local:  ~/memory/YYYY-MM-DD.md
          ↓
   MiniMax M2.7 consolidation prompt

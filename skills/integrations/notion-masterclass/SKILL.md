@@ -1,3 +1,10 @@
+---
+name: notion-masterclass
+description: "Operate Notion workspaces in a Notion-native way: find source-of-truth pages, edit databases safely, and preserve workspace structure."
+version: 1.0.0
+category: integrations
+---
+
 # Notion Masterclass by Notion AI (Workspace Operator v2)
 
 > This is a skill module for operating Notion workspaces in a truly Notion-native way.
@@ -169,4 +176,4 @@ How excellent agents keep your system clean:
 
 ---
 
-*Source: https://www.notion.so/weblyfe/Notion-Masterclass-by-Notion-AI-Agent-Skill-3951fdd454434fa0a275ae607ebd2a80*
+*Source: internal Notion workspace document. Do not publish live page IDs.*

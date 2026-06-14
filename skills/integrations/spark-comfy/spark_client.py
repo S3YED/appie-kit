@@ -1,7 +1,7 @@
 """Spark Atlas image-generation client.
 
 Standard-library-only HTTP client for the spark-api FastAPI wrapper around ComfyUI.
-Tailnet-only: requires routing to 100.69.197.43 and an X-API-Key in SPARK_API_KEY.
+Tailnet-only: requires routing to SPARK_BASE and an X-API-Key in SPARK_API_KEY.
 
 Example:
     from spark_client import spark_generate
@@ -31,7 +31,7 @@ import urllib.parse
 import urllib.request
 from typing import Any
 
-SPARK_BASE = os.environ.get("SPARK_BASE", "http://100.69.197.43:8190")
+SPARK_BASE = os.environ.get("SPARK_BASE", "http://<spark-tailscale-ip>:8190")
 SPARK_API_KEY = os.environ.get("SPARK_API_KEY", "")
 DEFAULT_POLL_INTERVAL = 2.0
 DEFAULT_POLL_TIMEOUT = 300.0

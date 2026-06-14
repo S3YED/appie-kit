@@ -1,8 +1,8 @@
 #!/bin/bash
-# Appie-2 Self-Maintenance Script
+# Agent self-maintenance script
 # Run by cron or on-demand
 
-WORKSPACE="/root/.openclaw/workspace"
+WORKSPACE="${OPENCLAW_WORKSPACE:-$HOME/.openclaw/workspace}"
 HEARTBEAT="$WORKSPACE/HEARTBEAT.md"
 MEMORY="$WORKSPACE/memory"
 GIT_DIR="$WORKSPACE/.git"
@@ -19,7 +19,7 @@ GW_STATUS=$(curl -s http://127.0.0.1:18789/ 2>/dev/null | grep -o '"status":"[^"
 log "Gateway status: $GW_STATUS"
 
 # 2. Disk space
-DISK=$(df -h /root | tail -1 | awk '{print $5}' | sed 's/%//')
+DISK=$(df -h "$HOME" | tail -1 | awk '{print $5}' | sed 's/%//')
 log "Disk usage: ${DISK}%"
 
 # 3. Git status

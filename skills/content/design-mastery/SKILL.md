@@ -1,3 +1,10 @@
+---
+name: design-mastery
+description: "Apply Appie and Weblyfe design principles for hierarchy, spacing, typography, color, UI polish, and premium minimal interfaces."
+version: 1.0.0
+category: content
+---
+
 # Design Mastery - Appie's Design Brain
 
 **Doel:** Dit is mijn interne kennis voor design. Raadplegen bij ELK design project.

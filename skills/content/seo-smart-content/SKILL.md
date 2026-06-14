@@ -1,3 +1,10 @@
+---
+name: seo-smart-content
+description: "Plan SEO content networks and internal-link architectures that compound authority across Weblyfe client sites."
+version: 1.0.0
+category: content
+---
+
 # SEO Smart Content Skill
 
 ## Purpose

@@ -1,13 +1,13 @@
 ---
 name: agentic-video-tools
-description: "Compare and integrate agentic short-form video editing SaaS tools and OSS alternatives for the Weblyfe Content Factory pipeline. Use when Appie-2 needs to automate: raw clip → Reel/Short/TikTok with captions/SFX/music/transitions → publish to IG/TikTok/YT with zero human editor in the loop. Covers automation depth ranking, API integration recipes, OSS alternatives, and anti-patterns."
+description: "Compare and integrate agentic short-form video editing SaaS tools and OSS alternatives for the content factory pipeline. Use when the agent needs to automate: raw clip → Reel/Short/TikTok with captions/SFX/music/transitions → publish to IG/TikTok/YT with zero human editor in the loop. Covers automation depth ranking, API integration recipes, OSS alternatives, and anti-patterns."
 ---
 
-# Agentic Video Tools — Weblyfe Content Factory
+# Agentic Video Tools — content factory
 
 ## Purpose
 
-Equip Appie-2 to choose and drive the right tool for fully automated short-form video production. The decision axis is **automation depth**, not feature richness for human editors. A tool with 50 manual effects but no API is useless. A tool with 3 endpoints and a webhook is gold.
+Equip the agent to choose and drive the right tool for fully automated short-form video production. The decision axis is **automation depth**, not feature richness for human editors. A tool with 50 manual effects but no API is useless. A tool with 3 endpoints and a webhook is gold.
 
 Goal pipeline: `raw clip URL → API call → captions + reframe + music → finished 9:16 MP4 → publish to IG/TikTok/YT`. Human reviews the output, does not produce it.
 
@@ -77,7 +77,7 @@ Goal pipeline: `raw clip URL → API call → captions + reframe + music → fin
 
 ## Automation Tier Ranking
 
-### Tier 1 — REST API + Webhook (fully drivable by Appie-2)
+### Tier 1 — REST API + Webhook (fully drivable by the agent)
 
 **Vizard.ai**
 - `POST /open-api/v1/project/create` → returns `projectId`
@@ -148,7 +148,7 @@ raw clip URL
 
 ### Fallback / Script-first option: Descript
 
-For content where Appie-2 has the transcript in advance (podcast, interview), Descript's Underlord API is the most powerful: one `POST /jobs/agent` with a natural language instruction handles filler removal, captions, clips, and translation. Free for all paying users during beta. Use when the clip editing needs script-level precision, not just hook detection.
+For content where the agent has the transcript in advance (podcast, interview), Descript's Underlord API is the most powerful: one `POST /jobs/agent` with a natural language instruction handles filler removal, captions, clips, and translation. Free for all paying users during beta. Use when the clip editing needs script-level precision, not just hook detection.
 
 ---
 
@@ -251,7 +251,7 @@ curl -X POST https://api.descript.com/v1/jobs/agent \
 
 ### Tools with no API — Playwright fallback note
 
-Quso.ai, Captions.ai, Munch Studio: use Playwright + a headless Chromium session if forced. Cost: ~30-90 seconds per video, brittle to UI changes, no SLA. Tag these as `MANUAL_OR_PLAYWRIGHT` in pipeline config. Not recommended for Appie-2 primary path.
+Quso.ai, Captions.ai, Munch Studio: use Playwright + a headless Chromium session if forced. Cost: ~30-90 seconds per video, brittle to UI changes, no SLA. Tag these as `MANUAL_OR_PLAYWRIGHT` in pipeline config. Not recommended for the agent primary path.
 
 ---
 
@@ -286,7 +286,7 @@ For full asset separation (SRT + video tracks + EDL), **Descript is the only too
 - **What it does:** YouTube URL → Whisper transcription → GPT-4o-mini highlight detection → face-tracked vertical crop → 9:16 MP4 clips. Direct OSS replacement for OpusClip/Vidyo.ai/Klap.
 - **Tech:** Python, yt-dlp, faster-whisper, OpenCV, ffmpeg, OpenAI API
 - **Good for:** Batch processing existing YouTube content with no SaaS cost. Self-hostable. API cost only (OpenAI).
-- **Lacks:** No captions layer, no brand templates, no direct social publish, no REST API wrapper. Requires engineering work to embed in Appie-2 pipeline.
+- **Lacks:** No captions layer, no brand templates, no direct social publish, no REST API wrapper. Requires engineering work to embed in the agent pipeline.
 
 ### 3. OpenShorts (mutonby)
 - **Repo:** https://github.com/mutonby/openshorts
@@ -296,7 +296,7 @@ For full asset separation (SRT + video tracks + EDL), **Descript is the only too
 - **Good for:** The most complete OSS alternative to a full SaaS stack. Self-hosted = no per-video fee. Clip gen + captions + social features in one repo.
 - **Lacks:** No published REST API (internal only); no built-in social publisher; requires infra management; ElevenLabs and fal.ai API costs still apply.
 
-**OSS recommendation for Weblyfe:** Run **AI-Youtube-Shorts-Generator** for clip extraction + **Submagic API** for captions as a cost-optimised hybrid. OSS handles the expensive clip generation; Submagic adds the polished caption layer at $0.69/video. Total cost drops to ~$0.20/video (OpenAI Whisper + GPT-4o-mini per clip) + $0.69 Submagic = ~$0.89/video, minus any SaaS subscription base cost.
+**OSS recommendation for the brand:** Run **AI-Youtube-Shorts-Generator** for clip extraction + **Submagic API** for captions as a cost-optimised hybrid. OSS handles the expensive clip generation; Submagic adds the polished caption layer at $0.69/video. Total cost drops to ~$0.20/video (OpenAI Whisper + GPT-4o-mini per clip) + $0.69 Submagic = ~$0.89/video, minus any SaaS subscription base cost.
 
 ---
 
@@ -308,7 +308,7 @@ These tools market themselves as AI-automated but require human review at every 
 - The web UI defaults to a "review and pick clips" workflow. The API exists but is closed beta (annual Business, 20+ packs/year, contact sales). Most creators using OpusClip are in the manual UI loop. Creator reviews: "I end up spending more time correcting the AI than just editing." Virality scores confirmed unreliable. The "AI Video Compilation Maker" feature advertised on the marketing page does not exist per creator reports.
 
 **Captions.ai (mobile-first, no automation surface)**
-- Explicitly a mobile app. Web version exists but is secondary. No documented REST API. "Scale" tier may expose limited API but no public docs found. One-tap workflows are UI buttons, not API calls. Auto-export times reported as "an hour or more" on Trustpilot. Do not include in Appie-2 automated pipeline.
+- Explicitly a mobile app. Web version exists but is secondary. No documented REST API. "Scale" tier may expose limited API but no public docs found. One-tap workflows are UI buttons, not API calls. Auto-export times reported as "an hour or more" on Trustpilot. Do not include in the agent automated pipeline.
 
 **Munch Studio (approval-gate UI)**
 - The platform explicitly states users "choose posts you love and post with just one click." This is a human-review-required model. No API. Rebranded from GetMunch (itself rebranded), suggesting instability. Avoid.
@@ -320,7 +320,7 @@ These tools market themselves as AI-automated but require human review at every 
 - Produces text summaries and timestamps, not video clips. No video output. Not relevant for this pipeline. Included in original brief but is a different category of tool.
 
 **Eddie AI (desktop NLE assistant, not cloud)**
-- Native Mac/Win app. Connects to Premiere, DaVinci, Final Cut. Excellent for human editors. Zero automation surface for agents. Not relevant for Appie-2.
+- Native Mac/Win app. Connects to Premiere, DaVinci, Final Cut. Excellent for human editors. Zero automation surface for agents. Not relevant for the agent.
 
 **Klap (API exists but expensive for pure API path)**
 - $1.24/video on pure API usage pricing ($0.32 generate + $0.44 input + $0.48 export). At 100 videos/month that's $124/mo in API fees alone, plus the Pro+ subscription ($151/mo). Total: ~$275/mo vs Vizard at ~$20/mo. Use Klap only if Vizard quality is insufficient and API access is the priority.
@@ -329,7 +329,7 @@ These tools market themselves as AI-automated but require human review at every 
 
 ## How to Apply
 
-### Appie-2 content factory pipeline (recommended)
+### the agent content factory pipeline (recommended)
 
 ```
 1. Receive raw clip (S3 URL or YouTube URL) from content briefing
@@ -340,7 +340,7 @@ These tools market themselves as AI-automated but require human review at every 
    c. Wait for Submagic webhook → download captioned MP4
 4. POST to IG/TikTok/YT via their native publish APIs
    (OR use Vizard publish endpoint for supported platforms)
-5. Log output URLs to Notion task + Telegram report to Seyed
+5. Log output URLs to Notion task + operator report
 ```
 
 ### For script-based content (podcast/interview processing)
@@ -383,7 +383,7 @@ Cost: ~$0.10-0.20 (OpenAI) + $0.69 (Submagic) = ~$0.89/video
 import httpx, os
 
 VIZARD_KEY = os.environ["VIZARD_KEY"]
-WEBHOOK_URL = "https://appie.weblyfe.nl/hooks/vizard"
+WEBHOOK_URL = "https://example.com/hooks/vizard"
 
 resp = httpx.post(
     "https://elb-api.vizard.ai/hvizard-server-front/open-api/v1/project/create",
@@ -411,10 +411,10 @@ resp = httpx.post(
     "https://api.submagic.co/v1/projects",
     headers={"x-api-key": SUBMAGIC_KEY, "Content-Type": "application/json"},
     json={
-        "videoUrl": "https://cdn.weblyfe.nl/clips/clip_001.mp4",
+        "videoUrl": "https://cdn.example.com/clips/clip_001.mp4",
         "language": "en",
-        "template": "weblyfe-brand-v1",
-        "webhookUrl": "https://appie.weblyfe.nl/hooks/submagic",
+        "template": "brand-template-v1",
+        "webhookUrl": "https://example.com/hooks/submagic",
     },
     timeout=30,
 )
@@ -429,7 +429,7 @@ print(resp.json())
 - `viral-shorts-course` — hook formulas, retention benchmarks, platform-specific structure; use to evaluate which Vizard clips to publish
 - `seo-pack` — once video is published, apply SEO to title/description/hashtags
 - `fal-ai` — for custom B-roll generation (Nano Banana) to feed into the pipeline before Submagic
-- Future: `content-factory-pipeline` — orchestration skill that stitches this skill + `viral-shorts-course` + `fal-ai` + IG/TikTok/YT publish APIs into one Appie-2 runbook
+- Future: `content-factory-pipeline` — orchestration skill that stitches this skill + `viral-shorts-course` + `fal-ai` + IG/TikTok/YT publish APIs into one the agent runbook
 
 ---
 

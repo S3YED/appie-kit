@@ -1,0 +1,75 @@
+# Fleet access template for adding worker and client-bot hosts safely.
+# Copy to fleet-access.local.yml or your private ops repo. Do not commit the filled version.
+# Keep real hostnames, Tailscale IPs, usernames, bot handles, and key paths private.
+
+ssh_public_key: "ssh-ed25519 <public-key> <agent-comment>"
+
+hosts:
+  external-worker:
+    role: "approved external bot or worker"
+    runtime: "hermes | openclaw"
+    ssh_alias: "external-worker"
+    host: "<external-worker-tailscale-name-or-ip>"
+    user: "<external-worker-ssh-user>"
+    identity_file: "~/.ssh/<private-key-name>"
+    skills_paths:
+      - "~/.hermes/skills"
+      - "~/.openclaw/skills"
+    allowed_actions:
+      - "read skill manifests"
+      - "pull sanitized skills to local staging"
+    blocked_actions:
+      - "copy secrets"
+      - "copy private memory"
+      - "sync explicit or client-private content into appie-kit"
+
+  gpu-worker:
+    role: "GPU or media worker"
+    runtime: "hermes"
+    ssh_alias: "gpu-worker"
+    host: "<gpu-worker-tailscale-name-or-ip>"
+    user: "<gpu-worker-ssh-user>"
+    identity_file: "~/.ssh/<private-key-name>"
+    skills_paths:
+      - "~/.hermes/skills"
+      - "~/.hermes/profiles/*/skills"
+    pre_work_command: "<optional-health-or-hardening-command>"
+    allowed_actions:
+      - "read skill manifests"
+      - "pull sanitized media/GPU skills to local staging"
+    blocked_actions:
+      - "copy provider credentials"
+      - "expose GPU service ports publicly"
+      - "publish private media prompts or client assets"
+
+  client-bot-host:
+    role: "approved client-bot inventory source only"
+    runtime: "hermes | openclaw"
+    ssh_alias: "client-bot-host"
+    host: "<client-bot-host-tailscale-name-or-ip>"
+    user: "<client-bot-host-ssh-user>"
+    identity_file: "~/.ssh/<private-key-name>"
+    skills_paths:
+      - "~/.hermes/skills"
+      - "~/.hermes/profiles/*/skills"
+      - "~/.openclaw/skills"
+    allowed_actions:
+      - "read skill manifests after explicit approval"
+      - "pull only non-private, non-explicit, reusable skill candidates to local staging"
+    blocked_actions:
+      - "sync appie-kit back to this host unless owner explicitly requests it"
+      - "copy DMs, client data, NSFW material, memory, or credentials"
+      - "publish anything containing client-bot private context"
+
+verification:
+  before_pull:
+    - "tailscale ping <host>"
+    - "nc -z -G 3 <host> 22"
+    - "ssh -o BatchMode=yes -o ConnectTimeout=10 <user>@<host> 'whoami && hostname'"
+  after_pull:
+    - "create manifest with path, frontmatter name, description, sha256"
+    - "classify against stock skills and existing appie-kit skills"
+    - "quarantine questionable material outside the repo"
+    - "run duplicate/frontmatter validation"
+    - "run secret and private-pattern scans"
+    - "run gitleaks before publishing"

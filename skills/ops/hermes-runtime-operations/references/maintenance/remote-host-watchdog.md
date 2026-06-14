@@ -24,7 +24,7 @@ script="mac_mini_healthcheck.py"
 Bad:
 
 ```text
-script="/root/.hermes/scripts/mac_mini_healthcheck.py"
+script="$HERMES_HOME/scripts/mac_mini_healthcheck.py"
 ```
 
 Use `no_agent=True` for watchdogs where the script itself prints the final message.

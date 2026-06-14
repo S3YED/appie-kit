@@ -31,6 +31,10 @@ assets/*.jpg
 
 # Mailing data — buyer PII, never commit
 mailing/
+# Private fleet access files
+fleet-access.local.yml
+configs/*.local.yml
+manifests/
 
-# Security audit reports — local only
+# Local audit reports
 .security-audit-*.md

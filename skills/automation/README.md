@@ -1,26 +1,32 @@
-# automation
+# Automation - 26 skills
 
-Skills for agent self-management, workflow orchestration, and inter-agent coordination. Use these when you need your Appie to manage its own runtime, sync context across fleet nodes, or delegate work to sub-agents.
-
-Prerequisite tools: Hermes Agent or OpenClaw installed, tmux for persistent sessions, `git` for brain-sync.
+Agent self-management, workflow orchestration, browser automation, coding agents, and inter-agent coordination.
 
 ## Skills
 
-| Skill | Description | Required env | Compat |
-|-------|-------------|-------------|--------|
-| [agentic-video-tools](agentic-video-tools/) | Compare and integrate agentic video editing APIs (Vizard, Submagic, Descript). Automation-first ranking | - | Both |
-| [brain-sync](brain-sync/) | Sync agent memory and context files across fleet nodes via rsync + git | GIT_REMOTE | Hermes |
-| [coding-agent](coding-agent/) | Spawn a focused coding sub-agent for isolated implementation tasks | - | Both |
-| [fleet-dream](fleet-dream/) | Nightly consolidation: compress daily notes, update long-term memory, prune stale context | - | Hermes |
-| [hermes-agent](hermes-agent/) | Configure, extend, and contribute to Hermes Agent. Setup, profiles, skill authoring, gateway | - | Hermes |
-| [hermes-agent-skill-authoring](hermes-agent-skill-authoring/) | Write, test, and publish Hermes skills. Frontmatter spec, SKILL.md format, validation | - | Hermes |
-| [hermes-dream-skill](hermes-dream-skill/) | Dream-cycle skill: self-reflection and memory consolidation at end of session | - | Hermes |
-| [project-context-sync](project-context-sync/) | Sync project context files (SOUL.md, IDENTITY.md, MEMORY.md) to remote fleet hosts | SSH_KEY | Hermes |
-
-## Install
-
-```bash
-cp -r skills/automation/<skill> ~/.hermes/skills/
-# or for OpenClaw:
-cp -r skills/automation/<skill> ~/.openclaw/skills/
-```
+- [`brain-sync`](brain-sync/): Sync knowledge and learnings to the shared agent-brain repo. Every agent commits with their own identity so contributions are traceable. Use after: complex tasks (5+ tool calls), significant discoveries, new skills, or client work. Fleet: each node uses its own traceable git identity.
+- [`claude-code`](autonomous-ai-agents/claude-code/): Delegate coding tasks to Claude Code (Anthropic's CLI agent). Use for building features, refactoring, PR reviews, and iterative coding. Requires the claude CLI installed.
+- [`clawflow`](clawflow/): Use when work should span one or more detached tasks but still behave like one job with a single owner context. ClawFlow is the runtime substrate under authoring layers like Lobster, acpx, or plain code. Keep conditional logic in the caller; use ClawFlow for flow identity, waiting, outputs, and user-facing emergence.
+- [`clawflow-inbox-triage`](clawflow-inbox-triage/): Example ClawFlow authoring pattern for inbox triage. Use when messages need different treatment based on intent, with some routes notifying immediately, some waiting on outside answers, and others rolling into a later summary.
+- [`codex`](autonomous-ai-agents/codex/): Delegate coding tasks to OpenAI Codex CLI agent. Use for building features, refactoring, PR reviews, and batch issue fixing. Requires the codex CLI and a git repository.
+- [`coding`](coding/): Apply Appie coding standards for minimal, readable, maintainable code changes, testing, reviews, and implementation quality.
+- [`coding-agent`](coding-agent/): Delegate coding tasks to Codex, Claude Code, or Pi agents via background process. Use when: (1) building/creating new features or apps, (2) reviewing PRs (spawn in temp dir), (3) refactoring large codebases, (4) iterative coding that needs file exploration. NOT for: simple one-liner fixes (just edit), reading code (use read tool), thread-bound ACP harness requests in chat (for example spawn/run Codex or Claude Code in a Discord thread; use sessions_spawn with runtime:"acp"), or any work in ~/clawd workspace (never spawn agents here). Claude Code: use --print --permission-mode bypassPermissions (no PTY). Codex/Pi/OpenCode: pty:true required.
+- [`fleet-dream`](fleet-dream/): Nightly memory consolidation across an agent fleet running Hermes Agent and/or OpenClaw. Use when: running the nightly dream sweep, checking fleet memory status, or manually triggering consolidation. Collects memory from all fleet nodes, runs LLM analysis (MiniMax M2.7), and writes consolidated insights.
+- [`hermes-dream`](hermes-dream-skill/): Nightly memory consolidation skill for Hermes agents. Consolidates memory each night, writes to ~/hermes-dreams/, and delivers to fleet. Schedule: 03:10 AM daily via Hermes cron.
+- [`kanban-orchestrator`](kanban-orchestrator/): Decomposition playbook + specialist-roster conventions + anti-temptation rules for an orchestrator profile routing work through Kanban. The "don't do the work yourself" rule and the basic lifecycle are auto-injected into every kanban worker's system prompt; this skill is the deeper playbook when you're specifically playing the orchestrator role.
+- [`kanban-worker`](kanban-worker/): Pitfalls, examples, and edge cases for Hermes Kanban workers. The lifecycle itself is auto-injected into every worker's system prompt as KANBAN_GUIDANCE (from agent/prompt_builder.py); this skill is what you load when you want deeper detail on specific scenarios.
+- [`memory-search`](memory-search/): Search and retrieve information from the Appie brain — daily logs, project notes, decisions, topics, and long-term memory files stored in ~/.hermes/memory/. Use this skill whenever you need to recall past conversations, decisions, project context, personal preferences, or anything discussed previously.
+- [`obliteratus`](obliteratus/): OBLITERATUS: abliterate LLM refusals (diff-in-means).
+- [`opencode`](autonomous-ai-agents/opencode/): Delegate coding tasks to OpenCode CLI agent for feature implementation, refactoring, PR review, and long-running autonomous sessions. Requires the opencode CLI installed and authenticated.
+- [`plan`](software-development/plan/): Plan mode for Hermes — inspect context, write a markdown plan into the active workspace's `.hermes/plans/` directory, and do not execute the work.
+- [`playwright`](playwright/): Use Playwright for browser automation, web scraping, form filling, screenshots, authenticated flows, and deployed-site verification.
+- [`pretext`](pretext/): Use when building creative browser demos with @chenglou/pretext — DOM-free text layout for ASCII art, typographic flow around obstacles, text-as-geometry games, kinetic typography, and text-powered generative art. Produces single-file HTML demos by default.
+- [`project-context-sync`](project-context-sync/): Install and use project-context-sync hooks that maintain PROJECT_STATE.md after commits for cross-session project continuity.
+- [`ralph-wiggum`](ralph-wiggum/): Run Ralph Wiggum autonomous coding loops where each fresh agent iteration implements, verifies, commits, and records one task.
+- [`requesting-code-review`](software-development/requesting-code-review/): Pre-commit verification pipeline — static security scan, baseline-aware quality gates, independent reviewer subagent, and auto-fix loop. Use after code changes and before committing, pushing, or opening a PR.
+- [`spike`](spike/): Throwaway experiments to validate an idea before build.
+- [`subagent-driven-development`](software-development/subagent-driven-development/): Use when executing implementation plans with independent tasks. Dispatches fresh delegate_task per task with two-stage review (spec compliance then code quality).
+- [`systematic-debugging`](software-development/systematic-debugging/): Use when encountering any bug, test failure, or unexpected behavior. 4-phase root cause investigation — NO fixes without understanding the problem first.
+- [`test-driven-development`](software-development/test-driven-development/): Use when implementing any feature or bugfix, before writing implementation code. Enforces RED-GREEN-REFACTOR cycle with test-first approach.
+- [`web-scraping-javascript-sites`](web-scraping-javascript-sites/): Scrape TypeScript, React, Next.js, Nuxt, Vue SPA sites. Know when to use raw HTML fetch vs browser automation.
+- [`writing-plans`](software-development/writing-plans/): Use when you have a spec or requirements for a multi-step task. Creates comprehensive implementation plans with bite-sized tasks, exact file paths, and complete code examples.

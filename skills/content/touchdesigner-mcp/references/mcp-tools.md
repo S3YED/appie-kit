@@ -176,7 +176,7 @@ Get a screenshot of an operator's viewer in TouchDesigner (TD). Saves the image 
 | `path` | string | no | Full operator path to screenshot, e.g. '/project1/noise1'. Required for step 1. |
 | `request_id` | string | no | Request ID from step 1 to retrieve the completed screenshot. |
 | `max_size` | integer | no | Max pixel size for the longer side (default 512). Use 0 for original operator resolution (useful for pixel-accurate UI work). Higher values (e.g. 1024) for more detail. |
-| `output_path` | string | no | Optional absolute path where the image should be saved (e.g. '/Users/me/project/render.png'). If omitted, saved to /tmp/pisang_mcp/screenshots/. Use absolute paths — TD's working directory may differ from the agent's. |
+| `output_path` | string | no | Optional absolute path where the image should be saved (e.g. '<absolute-output-path>.png'). If omitted, saved to /tmp/pisang_mcp/screenshots/. Use absolute paths — TD's working directory may differ from the agent's. |
 | `as_top` | boolean | no | If true, captures the operator directly as a TOP (bypasses the viewer renderer), preserving alpha/transparency. Only works for TOP operators — if the target is not a TOP, falls back to the viewer automatically. Use this when you need a clean PNG with alpha, e.g. to save a generated image for use in another project. |
 | `format` | `auto` / `jpg` / `png` | no | Image format. 'auto' (default): JPEG for viewer mode, PNG for as_top=true. 'jpg': always JPEG (smaller). 'png': always PNG (lossless). |
 

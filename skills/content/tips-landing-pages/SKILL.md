@@ -1,7 +1,14 @@
+---
+name: tips-landing-pages
+description: "Build high-converting the brand landing pages using the Dutch TIPS conversion framework for sales, lead-gen, and product pages."
+version: 1.0.0
+category: content
+---
+
 # TIPS Landing Page Skill
 
-**Purpose:** Build high-converting Weblyfe landing pages using the TIPS framework.  
-**Applies to:** Any sales, lead gen, or product page for Weblyfe.ai or client projects.  
+**Purpose:** Build high-converting the brand landing pages using the TIPS framework.
+**Applies to:** Any sales, lead gen, or product page for <brand> or client projects.
 **Last updated:** 2026-04-08
 
 ---
@@ -76,7 +83,7 @@ TIPS is a Dutch conversion framework for landing pages, derived from AIDA. Every
 - Prijzen tonen in relatieve waarde ("minder dan 1 uur freelancer") not just absolute
 - Urgency/schaarste als dat authentiek is
 
-**Pricing structure (Weblyfe):**
+**Pricing structure (the brand):**
 - DIY/Free: €0 — PDF guide only
 - Instant Appie: €250/mo — managed server + AI
 - Custom: vanaf €2,500 — full agency build
@@ -102,7 +109,7 @@ TIPS is a Dutch conversion framework for landing pages, derived from AIDA. Every
 
 ---
 
-## Brand Design System (Weblyfe.ai)
+## Brand Design System (<brand>)
 
 **Colors:**
 - Dark emerald bg: `#031D16`

@@ -536,7 +536,7 @@ n8n_manage_datatable({
 n8n_manage_datatable({
   action: "insertRows",
   tableId: "dt-123",
-  data: [{email: "a@b.com", score: 10}],
+  data: [{email: "<email>", score: 10}],
   returnType: "all"
 })
 
@@ -553,7 +553,7 @@ n8n_manage_datatable({
 n8n_manage_datatable({
   action: "upsertRows",
   tableId: "dt-123",
-  filter: {filters: [{columnName: "email", condition: "eq", value: "a@b.com"}]},
+  filter: {filters: [{columnName: "email", condition: "eq", value: "<email>"}]},
   data: {score: 15},
   returnData: true
 })

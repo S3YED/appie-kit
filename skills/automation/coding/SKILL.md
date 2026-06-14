@@ -1,3 +1,10 @@
+---
+name: coding
+description: "Apply Appie coding standards for minimal, readable, maintainable code changes, testing, reviews, and implementation quality."
+version: 1.0.0
+category: automation
+---
+
 # Coding Skill
 
 *How Appies write code*
@@ -213,7 +220,7 @@ function validateEmail(email) {
 ### 2. Use Environment Variables
 ```javascript
 // ❌ Never
-const apiKey = 'sk-1234567890';
+const hardcodedApiKeyExample = '<api-key>';  // example only, never do this
 
 // ✅ Always
 const apiKey = process.env.API_KEY;

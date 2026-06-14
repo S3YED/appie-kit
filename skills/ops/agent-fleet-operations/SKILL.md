@@ -1,8 +1,8 @@
 ---
 name: agent-fleet-operations
-description: "Operate Hermes/Appie-style agent fleets across machines: provision remote hosts, validate transport/auth, refresh knowledge packs, and recover provider or gateway runtime failures."
+description: "Operate Hermes-style agent fleets across machines: provision remote hosts, validate transport/auth, refresh knowledge packs, and recover provider or gateway runtime failures."
 version: 1.0.0
-author: Appie
+author: agent
 license: MIT
 metadata:
   hermes:
@@ -12,9 +12,9 @@ metadata:
 
 # Agent Fleet Operations
 
-Use this skill when operating Hermes/Appie-style agents across one or more machines: bootstrapping a new node, refreshing an Appie kit or knowledge pack, validating remote access, troubleshooting remote deploy failures, or recovering Hermes provider/gateway failures that prevent the agent from answering.
+Use this skill when operating Hermes-style agents across one or more machines: bootstrapping a new node, refreshing an agent kit or knowledge pack, validating remote access, troubleshooting remote deploy failures, or recovering Hermes provider/gateway failures that prevent the agent from answering.
 
-This is an umbrella skill. It absorbs the former `fleet-provisioning` and `hermes-provider-troubleshooting` skills. Load the protected `hermes-agent` skill first for authoritative Hermes CLI/config commands, then use this skill for fleet-level operational sequence and Appie/Seyed-specific lessons.
+This is an umbrella skill. It absorbs the former `fleet-provisioning` and `hermes-provider-troubleshooting` skills. Load the protected `hermes-agent` skill first for authoritative Hermes CLI/config commands, then use this skill for fleet-level operational sequence and operator-specific lessons.
 
 ## Core operating model
 
@@ -55,13 +55,13 @@ ssh -vvv -o BatchMode=yes -o ConnectTimeout=10 <user>@<host> 'whoami'
 
 ### Remote Mac / Leona lessons
 
-For remote Mac deployments, never trust a deploy script's default login until `ssh ... 'whoami'` proves it. In the Leona Appie-kit case, Tailnet and port 22 were healthy, but the script failed until the SSH user was corrected to `zahedi` via `LEONA_USER=zahedi`.
+For remote Mac deployments, never trust a deploy script's default login until `ssh ... 'whoami'` proves it. In one remote Mac deployment, Tailnet and port 22 were healthy, but the deploy script failed until the SSH user was corrected via an explicit environment variable.
 
 See:
 
-- `references/cross-machine-provisioning.md`
 - `references/ssh-auth-denied-session.md`
-- `references/leona-appie-kit-sync.md`
+
+Keep concrete machine usernames, hostnames, Tailscale IPs, and one-off provisioning logs in private operational notes, not this public skill.
 
 ## Hermes provider and gateway troubleshooting workflow
 

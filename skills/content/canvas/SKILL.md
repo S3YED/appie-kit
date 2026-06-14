@@ -1,3 +1,10 @@
+---
+name: canvas
+description: "Display generated HTML content on connected Appie or OpenClaw canvas nodes for dashboards, demos, games, and visualizations."
+version: 1.0.0
+category: content
+---
+
 # Canvas Skill
 
 Display HTML content on connected OpenClaw nodes (Mac app, iOS, Android).
@@ -64,7 +71,7 @@ In the active OpenClaw config file (`$OPENCLAW_CONFIG_PATH`, default `~/.opencla
   "canvasHost": {
     "enabled": true,
     "port": 18793,
-    "root": "/Users/you/clawd/canvas",
+    "root": "$CANVAS_ROOT",
     "liveReload": true
   },
   "gateway": {
@@ -138,7 +145,7 @@ canvas action:present node:<node-id> target:<full-url>
 **Example:**
 
 ```
-canvas action:present node:mac-63599bc4-b54d-4392-9048-b97abd58343a target:http://peters-mac-studio-1.sheep-coho.ts.net:18793/__openclaw__/canvas/snake.html
+canvas action:present node:<node-id> target:http://<agent-host>/__openclaw__/canvas/snake.html
 ```
 
 ### 5. Navigate, snapshot, or hide

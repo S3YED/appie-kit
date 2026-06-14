@@ -206,7 +206,7 @@ Run these checks sequentially via exec:
      ```
      If it doesn't exist, add it:
      ```
-     git remote add fork https://x-access-token:$GH_TOKEN@github.com/{PUSH_REPO}.git
+     git remote add fork git@github.com:{PUSH_REPO}.git
      ```
    - Also verify origin (the source repo) is reachable:
      ```
@@ -446,7 +446,7 @@ Fixes {SOURCE_REPO}#{number}"
 7. PUSH — Push the branch:
 First, ensure the push remote uses token auth and disable credential helpers:
 git config --global credential.helper ""
-git remote set-url {PUSH_REMOTE} https://x-access-token:$GH_TOKEN@github.com/{PUSH_REPO}.git
+git remote set-url {PUSH_REMOTE} git@github.com:{PUSH_REPO}.git
 Then push:
 GIT_ASKPASS=true git push -u {PUSH_REMOTE} fix/issue-{number}
 
@@ -795,7 +795,7 @@ Addresses review feedback from {reviewer_names}"
 
 6. PUSH — Push the updated branch:
 git config --global credential.helper ""
-git remote set-url {PUSH_REMOTE} https://x-access-token:$GH_TOKEN@github.com/{PUSH_REPO}.git
+git remote set-url {PUSH_REMOTE} git@github.com:{PUSH_REPO}.git
 GIT_ASKPASS=true git push {PUSH_REMOTE} {branch_name}
 
 7. REPLY — For each addressed comment, post a reply:

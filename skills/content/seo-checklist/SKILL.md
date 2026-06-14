@@ -1,3 +1,10 @@
+---
+name: seo-checklist
+description: "Run the Weblyfe pre-publish on-page SEO checklist for pages, blog posts, and landing pages before publication."
+version: 1.0.0
+category: content
+---
+
 # SEO Checklist Skill
 
 ## Purpose

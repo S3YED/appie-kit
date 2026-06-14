@@ -1,3 +1,10 @@
+---
+name: n8n
+description: "List, trigger, monitor, activate, deactivate, and manage n8n workflows through the configured n8n API."
+version: 1.0.0
+category: integrations
+---
+
 # n8n Automation Skill
 
 ## Purpose
@@ -14,7 +21,7 @@ Interact with n8n workflows - list, trigger, monitor, and manage automations.
 
 ### Environment Variables
 ```bash
-N8N_API_URL=https://app.n8n.weblyfe.nl/api/v1
+N8N_API_URL=https://<n8n-host>/api/v1
 N8N_API_KEY=your-api-key-here
 ```
 
@@ -66,7 +73,7 @@ const executions = await n8n.getExecutions(workflowId);
 ### Trigger from Chat
 ```
 User: "Run the morning brief workflow"
-Appie: → n8n.trigger('morning-brief-id', { user: 'Seyed' })
+Appie: → n8n.trigger('morning-brief-id', { user: '<user>' })
 ```
 
 ### Notify on Completion

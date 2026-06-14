@@ -1,10 +1,17 @@
+---
+name: appie-content-intelligence
+description: "Research and monitor Weblyfe content trends, requests, and campaign opportunities for the Appie content pipeline."
+version: 1.0.0
+category: content
+---
+
 # Appie Content Intelligence
 
 ## Purpose
 Research and monitor content trends for Weblyfe. Feed the content pipeline with ideas, insights, and opportunities.
 
 ## Content Factory Integration
-- Notion DB: `124c3321-de60-8098-a0e0-f55416c5f95f`
+- Notion DB: set `NOTION_CONTENT_DB_ID` in the environment
 - Check daily for new entries
 - Pull content requests, client updates, campaign notes
 

@@ -152,7 +152,7 @@ The most common transport. Hermes launches the MCP server as a subprocess and co
 mcp_servers:
   filesystem:
     command: "npx"
-    args: ["-y", "@modelcontextprotocol/server-filesystem", "/home/user/projects"]
+    args: ["-y", "@modelcontextprotocol/server-filesystem", "$PROJECTS_DIR"]
 ```
 
 The subprocess inherits a **filtered** environment (see Security section below) plus any variables you specify in `env`.
@@ -189,14 +189,14 @@ mcp_servers:
     args: ["-y", "@modelcontextprotocol/server-github"]
     env:
       # Only this token is passed to the subprocess
-      GITHUB_PERSONAL_ACCESS_TOKEN: "ghp_..."
+      GITHUB_PERSONAL_ACCESS_TOKEN: "<github-token>"
 ```
 
 ### Credential Stripping in Error Messages
 
 If an MCP tool call fails, any credential-like patterns in the error message are automatically redacted before being shown to the LLM. This covers:
 
-- GitHub PATs (`ghp_...`)
+- GitHub PATs (`<github-token>`)
 - OpenAI-style keys (`sk-...`)
 - Bearer tokens
 - Generic `token=`, `key=`, `API_KEY=`, `password=`, `secret=` patterns
@@ -275,7 +275,7 @@ mcp_servers:
     command: "npx"
     args: ["-y", "@modelcontextprotocol/server-github"]
     env:
-      GITHUB_PERSONAL_ACCESS_TOKEN: "ghp_xxxxxxxxxxxxxxxxxxxx"
+      GITHUB_PERSONAL_ACCESS_TOKEN: "<github-token>"
     timeout: 60
 ```
 
@@ -310,7 +310,7 @@ mcp_servers:
     command: "npx"
     args: ["-y", "@modelcontextprotocol/server-github"]
     env:
-      GITHUB_PERSONAL_ACCESS_TOKEN: "ghp_xxxxxxxxxxxxxxxxxxxx"
+      GITHUB_PERSONAL_ACCESS_TOKEN: "<github-token>"
 
   company_api:
     url: "https://mcp.internal.company.com/mcp"

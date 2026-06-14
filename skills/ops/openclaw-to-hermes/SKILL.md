@@ -68,12 +68,12 @@ CUSTOM_OPENAI_BASE_URL=http://localhost:11434/v1
 CUSTOM_OPENAI_MODEL=gemma4:26b
 TELEGRAM_BOT_TOKEN=...
 TELEGRAM_ALLOWED_USERS=1817919454
-HERMES_WORKING_DIR=/root/workspace
+HERMES_WORKING_DIR=$HOME/workspace
 EXA_API_KEY=...
 NOTION_API_KEY=ntn_...   # Required for Notion access
-NOTION_CONTENT_FACTORY=124c3321-de60-8098-a0e0-f55416c5f95f  # Key DB ID
-NOTION_TASK_LIST=538bdf7b-a506-4c9c-b451-5d2f78b4d544
-NOTION_PROJECTS=60414e0a-cccc-480a-8800-eb3186da93a3
+NOTION_CONTENT_FACTORY=<content-database-id>  # Set from the target workspace
+NOTION_TASK_LIST=<task-database-id>
+NOTION_PROJECTS=<projects-database-id>
 ```
 
 **Note:** Notion token variable name is `NOTION_API_KEY` (from Notion integration setup).

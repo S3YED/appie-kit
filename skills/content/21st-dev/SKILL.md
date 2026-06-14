@@ -122,7 +122,7 @@ API keys come from https://21st.dev/magic/console. The MCP exposes `/ui` for pro
 - **framer-motion 12**: Already installed; many 21st.dev components depend on it and will reuse the existing version rather than re-installing.
 - **Brand preservation**: After every `shadcn add`, scan `globals.css` for newly-added `--background` / `--primary` overrides and re-map to brand vars if needed. The CLI usually only appends `@theme` rules and keyframes (safe), but `init` is the one to watch.
 - **Path aliases**: Components land in `src/components/ui/*.tsx` and import via `@/components/ui/*` and `@/lib/utils`. Already set up in `tsconfig.json`.
-- **Dark mode**: shadcn writes a `.dark` block. We currently do not use dark mode on weblyfe.ai — leave the block in place but do not toggle the class.
+- **Dark mode**: shadcn writes a `.dark` block. We currently do not use dark mode on <project-domain> — leave the block in place but do not toggle the class.
 
 ## Smoke-test pattern
 

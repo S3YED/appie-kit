@@ -1,106 +1,114 @@
-# integrations
+# Integrations - 108 skills
 
-Skills for third-party service integrations, ML tooling, AI model APIs, and platform connectors. This is the largest category - 88 skills covering everything from calendar and email to fine-tuning frameworks, ML inference, and niche SaaS tools.
-
-Prerequisite tools: varies widely per skill. Most web-API skills require `curl`. ML skills typically require Python 3.10+ and specific pip packages. See each skill's SKILL.md for full prerequisites.
+Third-party service integrations: Google Workspace, Notion, GitHub, n8n, fal.ai, Webflow, Spotify, Trello, and more.
 
 ## Skills
 
-| Skill | Description | Required env | Compat |
-|-------|-------------|-------------|--------|
-| [1password](1password/) | 1Password CLI integration for secret retrieval and vault management | OP_SERVICE_ACCOUNT_TOKEN | Both |
-| [appie-content-intelligence](appie-content-intelligence/) | Content performance analysis and distribution intelligence layer | - | Both |
-| [arxiv](arxiv/) | Search and fetch arxiv papers by ID, title, or keyword | - | Both |
-| [axolotl](axolotl/) | Axolotl fine-tuning framework: configure, run, and monitor LoRA/QLoRA jobs | GPU, Python | Both |
-| [blogwatcher](blogwatcher/) | Monitor RSS feeds and blogs for new content, trigger on updates | - | Both |
-| [canvas](canvas/) | HTML5 Canvas API for programmatic drawing and diagram generation | - | Both |
-| [clip](clip/) | OpenAI CLIP model for image-text similarity and zero-shot classification | Python | Both |
-| [code-review](code-review/) | Structured code review checklist and automated review workflow | - | Both |
-| [creative-ideation](creative-ideation/) | Brainstorm and expand creative concepts with structured ideation techniques | - | Both |
-| [dispatch-multiple-agents](dispatch-multiple-agents/) | Spawn and coordinate multiple parallel sub-agents for concurrent tasks | - | Hermes |
-| [doing-tasks](doing-tasks/) | Task execution framework for structured multi-step agent work | - | Both |
-| [fal-ai](fal-ai/) | fal.ai image and video generation: Nano Banana, Kling, Hunyuan3D. Primary image gen | FAL_KEY | Both |
-| [findmy](findmy/) | Apple Find My integration for location tracking (macOS only) | - | OpenClaw |
-| [gguf](gguf/) | Run GGUF quantized models locally via llama.cpp | - | Both |
-| [gh-issues](gh-issues/) | GitHub Issues: create, label, comment, close via gh CLI | GH_TOKEN | Both |
-| [gif-search](gif-search/) | Search and retrieve GIFs via Tenor or Giphy API | GIPHY_API_KEY | Both |
-| [gifgrep](gifgrep/) | Find GIFs matching a description using local embedding search | - | Both |
-| [godmode](godmode/) | Extended agent permissions for trusted autonomous task execution | - | Hermes |
-| [gog](gog/) | Google OAuth token management and refresh for GWS API access | GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET | Both |
-| [gog-calendar-events](gog-calendar-events/) | Google Calendar event management via OAuth token refresh flow | GOOGLE_OAUTH | Both |
-| [goplaces](goplaces/) | Google Places API: search locations, get details, reviews | GOOGLE_PLACES_API_KEY | Both |
-| [grpo-rl-training](grpo-rl-training/) | GRPO reinforcement learning training for LLM fine-tuning | GPU, Python | Both |
-| [gws-calendar](gws-calendar/) | Google Calendar: read events, check availability, manage calendars | GOOGLE_OAUTH | Both |
-| [gws-calendar-agenda](gws-calendar-agenda/) | Fetch and format daily/weekly agenda from Google Calendar | GOOGLE_OAUTH | Both |
-| [gws-calendar-insert](gws-calendar-insert/) | Create and update Google Calendar events with attendees and conferencing | GOOGLE_OAUTH | Both |
-| [gws-classroom](gws-classroom/) | Google Classroom: manage courses, assignments, and student submissions | GOOGLE_OAUTH | Both |
-| [gws-events](gws-events/) | Google Workspace Events: subscribe to resource changes and push notifications | GOOGLE_OAUTH | Both |
-| [gws-events-subscribe](gws-events-subscribe/) | Subscribe to Google Workspace Events for real-time resource change notifications | GOOGLE_OAUTH | Both |
-| [gws-gmail](gws-gmail/) | Gmail full access: read, search, label, archive, delete messages | GOOGLE_OAUTH | Both |
-| [gws-gmail-send](gws-gmail-send/) | Send Gmail messages with attachment support and threading | GOOGLE_OAUTH | Both |
-| [gws-keep](gws-keep/) | Google Keep: create notes, manage lists, add reminders | GOOGLE_OAUTH | Both |
-| [gws-meet](gws-meet/) | Google Meet: create meeting links, manage spaces, invite participants | GOOGLE_OAUTH | Both |
-| [gws-modelarmor](gws-modelarmor/) | Google Cloud Model Armor: prompt and response sanitization | GOOGLE_CLOUD_PROJECT | Both |
-| [gws-people](gws-people/) | Google People API: read contacts, manage directory entries | GOOGLE_OAUTH | Both |
-| [gws-shared](gws-shared/) | Shared Google Workspace utility functions used across GWS skills | GOOGLE_OAUTH | Both |
-| [gws-workflow](gws-workflow/) | Multi-step Google Workspace automation workflows | GOOGLE_OAUTH | Both |
-| [higgsfield-image](higgsfield-image/) | Higgsfield.ai image generation for cinematic-quality visuals | HIGGSFIELD_API_KEY | Both |
-| [huggingface-hub](huggingface-hub/) | HuggingFace Hub: download models, datasets, upload artifacts | HF_TOKEN | Both |
-| [jupyter-live-kernel](jupyter-live-kernel/) | Connect to a running Jupyter kernel for live code execution and inspection | - | Both |
-| [llama-cpp](llama-cpp/) | Run llama.cpp models locally. Server mode, quantization, prompt formatting | - | Both |
-| [llm-wiki](llm-wiki/) | Search and query a local LLM-indexed knowledge wiki | - | Both |
-| [lm-evaluation-harness](lm-evaluation-harness/) | EleutherAI LM Evaluation Harness for benchmarking language models | Python, GPU | Both |
-| [mcporter](mcporter/) | MCP server port manager for running multiple MCP servers concurrently | - | Both |
-| [n8n](n8n/) | Interact with n8n workflows: list, trigger, monitor, manage automations | N8N_API_KEY | Both |
-| [n8n-pro](n8n-pro/) | Advanced n8n fleet management: backup, health monitoring, hardening | N8N_API_KEY | Both |
-| [nano-pdf](nano-pdf/) | Parse and extract content from PDF files | - | Both |
-| [notion](notion/) | Notion workspace: read pages, create entries, update databases | NOTION_API_KEY | Both |
-| [notion-masterclass](notion-masterclass/) | Notion operations: source-of-truth protocol, clarity framework, chaos-to-execution pipeline | NOTION_API_KEY | Both |
-| [obliteratus](obliteratus/) | Bulk delete and cleanup tool for files, records, and data artifacts | - | Both |
-| [openai-whisper](openai-whisper/) | Transcribe audio files using OpenAI Whisper locally via CLI | Python | Both |
-| [openai-whisper-api](openai-whisper-api/) | Transcribe audio using OpenAI Whisper API endpoint | OPENAI_API_KEY | Both |
-| [oracle](oracle/) | Oracle Database connectivity and SQL query execution | ORACLE_DSN | Both |
-| [p5js](p5js/) | Generate p5.js creative coding sketches for visual art and animation | - | Both |
-| [peft](peft/) | HuggingFace PEFT library for parameter-efficient fine-tuning (LoRA, QLoRA, etc.) | Python, GPU | Both |
-| [persona-content-creator](persona-content-creator/) | Create, organize, and distribute content across Google Workspace | GOOGLE_OAUTH | Both |
-| [pokemon-player](pokemon-player/) | Play Pokemon via emulator automation (for fun / demo) | - | Both |
-| [polymarket](polymarket/) | Query Polymarket prediction markets for odds and event data | - | Both |
-| [popular-web-designs](popular-web-designs/) | Reference library of high-converting web design patterns | - | Both |
-| [pretext](pretext/) | PreTeXt document authoring for structured academic and technical content | Python | Both |
-| [python-debugpy](python-debugpy/) | Python debugpy remote debugger integration for live session inspection | Python | Both |
-| [pytorch-fsdp](pytorch-fsdp/) | PyTorch FSDP (Fully Sharded Data Parallel) training configuration | GPU, Python | Both |
-| [ralph-wiggum](ralph-wiggum/) | Absurdist humor and random non-sequitur generation (for entertainment) | - | Both |
-| [recipe-watch-drive-changes](recipe-watch-drive-changes/) | Watch Google Drive for file changes and trigger downstream actions | GOOGLE_OAUTH | Both |
-| [requesting-code-review](requesting-code-review/) | Structured workflow for requesting and incorporating code review feedback | - | Both |
-| [sag](sag/) | Structured agent graph for multi-step reasoning pipelines | - | Both |
-| [segment-anything](segment-anything/) | Meta Segment Anything Model for image segmentation | Python, GPU | Both |
-| [seo-checklist](seo-checklist/) | Pre-publish on-page SEO checklist: title, meta, H1, keywords, images, breadcrumbs | - | Both |
-| [sketch](sketch/) | Sketch vector design file reading and export automation | macOS | OpenClaw |
-| [skill-creator](skill-creator/) | Scaffold new Hermes/OpenClaw skills from templates | - | Both |
-| [spark-comfy](spark-comfy/) | Generate images via Spark Atlas's ComfyUI inference API. Tailnet-only access with X-API-Key auth. | SPARK_API_KEY | Both |
-| [spike](spike/) | Spike.sh incident management and on-call alerting | SPIKE_API_KEY | Both |
-| [spotify](spotify/) | Spotify Web API: search, playback control, playlist management | SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET | Both |
-| [subagent-driven-development](subagent-driven-development/) | Dispatch multiple sub-agents to implement features in parallel with review gates | - | Hermes |
-| [systematic-debugging](systematic-debugging/) | Structured debugging protocol: reproduce, isolate, hypothesize, verify, fix | - | Both |
-| [test-driven-development](test-driven-development/) | TDD workflow: red-green-refactor cycle with coverage enforcement | - | Both |
-| [touchdesigner-mcp](touchdesigner-mcp/) | TouchDesigner MCP server for generative visual and audio programming | TouchDesigner | Both |
-| [trello](trello/) | Trello board management: cards, lists, checklists via Trello API | TRELLO_API_KEY, TRELLO_TOKEN | Both |
-| [trl-fine-tuning](trl-fine-tuning/) | HuggingFace TRL library for RLHF and reward model training | Python, GPU | Both |
-| [unsloth](unsloth/) | Unsloth optimized fine-tuning for 2x faster LoRA training | Python, GPU | Both |
-| [venice](venice/) | Venice.ai API for privacy-focused LLM inference | VENICE_API_KEY | Both |
-| [vllm](vllm/) | vLLM inference server configuration and management for local GPU serving | GPU, Python | Both |
-| [webflow](webflow/) | Webflow CMS and site management via Webflow API | WEBFLOW_API_KEY | Both |
-| [whisper](whisper/) | Whisper transcription skill (faster-whisper backend, large-v3 default) | Python | Both |
-| [write-plan](write-plan/) | Write structured implementation plans before coding | - | Both |
-| [writing-plans](writing-plans/) | Extended planning skill with multi-phase breakdown and risk analysis | - | Both |
-| [xitter](xitter/) | X (Twitter) posting, thread management, and engagement via API | X_API_KEY, X_API_SECRET | Both |
-| [xurl](xurl/) | URL expansion, redirect tracing, and link preview extraction | - | Both |
-| [youtube-content](youtube-content/) | YouTube channel management: upload, update metadata, manage playlists | YOUTUBE_API_KEY | Both |
-
-## Install
-
-```bash
-cp -r skills/integrations/<skill> ~/.hermes/skills/
-# or for OpenClaw:
-cp -r skills/integrations/<skill> ~/.openclaw/skills/
-```
+- [`airtable`](airtable/): Airtable REST API via curl. Records CRUD, filters, upserts.
+- [`blucli`](blucli/): BluOS CLI (blu) for discovery, playback, grouping, and volume.
+- [`ckm:slides`](slides/): Create strategic HTML presentations with Chart.js, design tokens, responsive layouts, copywriting formulas, and contextual slide strategies.
+- [`claude`](n8n-workflows/claude/): Claude Code-specific n8n v2.0 workflow reference. Use when building n8n workflows — creating workflow JSON, implementing Wait node approval flows, troubleshooting Execute Sub-Workflow issues, setting up API credentials, building orchestrator patterns, using expressions, or any n8n workflow task.
+- [`eightctl`](eightctl/): Control Eight Sleep pods (status, temperature, alarms, schedules).
+- [`exa-plus`](exa-plus/): Neural web search via Exa AI. Search people, companies, news, research, code. Supports deep search, domain filters, date ranges.
+- [`fal-ai`](fal-ai/): Use fal.ai for pay-per-use image, video, voice, and generative-media model workflows in Weblyfe content production.
+- [`gemini`](gemini/): Gemini CLI for one-shot Q&A, summaries, and generation.
+- [`gh-issues`](gh-issues/): Fetch GitHub issues, spawn sub-agents to implement fixes and open PRs, then monitor and address PR review comments. Usage: /gh-issues [owner/repo] [--label bug] [--limit 5] [--milestone v1.0] [--assignee @me] [--fork user/repo] [--watch] [--interval 5] [--reviews-only] [--cron] [--dry-run] [--model glm-5] [--notify-channel -1002381931352]
+- [`gifgrep`](gifgrep/): Search GIF providers with CLI/TUI, download results, and extract stills/sheets.
+- [`github`](github/): GitHub operations via `gh` CLI: issues, PRs, CI runs, code review, API queries. Use when: (1) checking PR status or CI, (2) creating/commenting on issues, (3) listing/filtering PRs or issues, (4) viewing run logs. NOT for: complex web UI interactions requiring manual browser flows (use browser tooling when available), bulk operations across many repos (script with gh api), or when gh auth is not configured.
+- [`gog`](gog/): Google Workspace CLI for Gmail, Calendar, Drive, Contacts, Sheets, and Docs.
+- [`gog-calendar-events`](gog-calendar-events/): Lists Google Calendar events using the gog CLI tool.
+- [`goplaces`](goplaces/): Query Google Places API (New) via the goplaces CLI for text search, place details, resolve, and reviews. Use for human-friendly place lookup or JSON output for scripts.
+- [`gws-admin-reports`](gws-admin-reports/): Google Workspace Admin SDK: Audit logs and usage reports.
+- [`gws-calendar-agenda`](gws-calendar-agenda/): Google Calendar: Show upcoming events across all calendars.
+- [`gws-calendar-insert`](gws-calendar-insert/): Google Calendar: Create a new event.
+- [`gws-docs`](gws-docs/): Read and write Google Docs.
+- [`gws-drive-upload`](gws-drive-upload/): Google Drive: Upload a file with automatic metadata.
+- [`gws-events-renew`](gws-events-renew/): Google Workspace Events: Renew/reactivate Workspace Events subscriptions.
+- [`gws-gmail`](gws-gmail/): Gmail: Send, read, and manage email.
+- [`gws-gmail-forward`](gws-gmail-forward/): Gmail: Forward a message to new recipients.
+- [`gws-gmail-reply`](gws-gmail-reply/): Gmail: Reply to a message (handles threading automatically).
+- [`gws-gmail-reply-all`](gws-gmail-reply-all/): Gmail: Reply-all to a message (handles threading automatically).
+- [`gws-gmail-triage`](gws-gmail-triage/): Gmail: Show unread inbox summary (sender, subject, date).
+- [`gws-gmail-watch`](gws-gmail-watch/): Gmail: Watch for new emails and stream them as NDJSON.
+- [`gws-meet`](gws-meet/): Manage Google Meet conferences.
+- [`gws-modelarmor`](gws-modelarmor/): Google Model Armor: Filter user-generated content for safety.
+- [`gws-modelarmor-create-template`](gws-modelarmor-create-template/): Google Model Armor: Create a new Model Armor template.
+- [`gws-modelarmor-sanitize-response`](gws-modelarmor-sanitize-response/): Google Model Armor: Sanitize a model response through a Model Armor template.
+- [`gws-people`](gws-people/): Google People: Manage contacts and profiles.
+- [`gws-shared`](gws-shared/): gws CLI: Shared patterns for authentication, global flags, and output formatting.
+- [`gws-sheets-append`](gws-sheets-append/): Google Sheets: Append a row to a spreadsheet.
+- [`gws-sheets-read`](gws-sheets-read/): Google Sheets: Read values from a spreadsheet.
+- [`gws-slides`](gws-slides/): Google Slides: Read and write presentations.
+- [`gws-tasks`](gws-tasks/): Google Tasks: Manage task lists and tasks.
+- [`gws-workflow`](gws-workflow/): Google Workflow: Cross-service productivity workflows.
+- [`gws-workflow-email-to-task`](gws-workflow-email-to-task/): Google Workflow: Convert a Gmail message into a Google Tasks entry.
+- [`gws-workflow-meeting-prep`](gws-workflow-meeting-prep/): Google Workflow: Prepare for your next meeting: agenda, attendees, and linked docs.
+- [`gws-workspace-personas`](gws-workspace-personas/): Use when acting as a Google Workspace operating persona such as executive assistant, project manager, researcher, customer support, sales ops, HR, IT admin, content creator, event coordinator, or team lead. Consolidates role-specific habits, workflows, and tool combinations on top of the `gws` CLI.
+- [`gws-workspace-recipes`](gws-workspace-recipes/): Use when the task is a reusable Google Workspace multi-step recipe rather than a single API call: scheduling from sheets, inbox-to-task flows, file sharing, doc generation, team announcements, event management, Drive organization, and cross-service automations built on the `gws` CLI.
+- [`linear`](linear/): Manage Linear issues, projects, and teams via the GraphQL API. Create, update, search, and organize issues. Uses API key auth (no OAuth needed). All operations via curl — no dependencies.
+- [`maps`](maps/): Geocode, POIs, routes, timezones via OpenStreetMap/OSRM.
+- [`mcporter`](mcporter/): Use the mcporter CLI to list, configure, auth, and call MCP servers/tools directly (HTTP or stdio), including ad-hoc servers, config edits, and CLI/type generation.
+- [`modal-serverless-gpu`](modal/): Serverless GPU cloud platform for running ML workloads. Use when you need on-demand GPU access without infrastructure management, deploying ML models as APIs, or running batch jobs with automatic scaling.
+- [`n8n`](n8n/): List, trigger, monitor, activate, deactivate, and manage n8n workflows through the configured n8n API.
+- [`n8n-code-javascript`](n8n-workflows/n8n-code-javascript/): Write JavaScript code in n8n Code nodes. Use when writing JavaScript in n8n, using $input/$json/$node syntax, making HTTP requests with $helpers, working with dates using DateTime, troubleshooting Code node errors, choosing between Code node modes, or doing any custom data transformation in n8n. Always use this skill when a workflow needs a Code node — whether for data aggregation, filtering, API calls, format conversion, batch processing logic, or any custom JavaScript. Covers SplitInBatches loop patterns, cross-iteration data, pairedItem, and real-world production patterns.
+- [`n8n-code-python`](n8n-workflows/n8n-code-python/): Write Python code in n8n Code nodes. Use when writing Python in n8n, using _input/_json/_node syntax, working with standard library, or need to understand Python limitations in n8n Code nodes. Use this skill when the user specifically requests Python for an n8n Code node. Note — JavaScript is recommended for 95% of use cases — only use Python when the user explicitly prefers it or the task requires Python-specific standard library capabilities (regex, hashlib, statistics).
+- [`n8n-expression-syntax`](n8n-workflows/n8n-expression-syntax/): Validate n8n expression syntax and fix common errors. Use when writing n8n expressions, using {{}} syntax, accessing $json/$node variables, troubleshooting expression errors, mapping data between nodes, or referencing webhook data in workflows. Use this skill whenever configuring node fields that reference data from previous nodes — expressions are how n8n passes data between nodes, and getting the syntax wrong is the most common source of workflow errors.
+- [`n8n-mcp-tools-expert`](n8n-workflows/n8n-mcp-tools-expert/): Expert guide for using n8n-mcp MCP tools effectively. Use when searching for nodes, validating configurations, accessing templates, managing workflows, managing credentials, auditing instance security, or using any n8n-mcp tool. Provides tool selection guidance, parameter formats, and common patterns. IMPORTANT — Always consult this skill before calling any n8n-mcp tool — it prevents common mistakes like wrong nodeType formats, incorrect parameter structures, and inefficient tool usage. If the user mentions n8n, workflows, nodes, or automation and you have n8n MCP tools available, use this skill first.
+- [`n8n-node-configuration`](n8n-workflows/n8n-node-configuration/): Operation-aware node configuration guidance. Use when configuring nodes, understanding property dependencies, determining required fields, choosing between get_node detail levels, or learning common configuration patterns by node type. Always use this skill when setting up node parameters — it explains which fields are required for each operation, how displayOptions control field visibility, and when to use patchNodeField for surgical edits vs full node updates.
+- [`n8n-v2`](n8n-workflows/n8n-v2/): Comprehensive n8n v2.0 reference for building workflow automation. Use this skill when working with n8n workflows, especially for (1) creating workflow JSON files for import, (2) implementing human-in-the-loop approval workflows with Wait nodes, (3) troubleshooting Execute Sub-Workflow node issues, (4) setting up API credentials (LinkedIn, Anthropic, NewsAPI), (5) building orchestrator patterns with sub-workflows, (6) using expressions in nodes, (7) understanding MCP server limitations, or (8) any n8n workflow development task.
+- [`n8n-validation-expert`](n8n-workflows/n8n-validation-expert/): Interpret validation errors and guide fixing them. Use when encountering validation errors, validation warnings, false positives, operator structure issues, or need help understanding validation results. Also use when asking about validation profiles, error types, the validation loop process, or auto-fix capabilities. Consult this skill whenever a validate_node or validate_workflow call returns errors or warnings — it knows which warnings are false positives and which errors need real fixes.
+- [`n8n-workflow-automation`](n8n-workflows/n8n-workflow-automation/): Designs and outputs n8n workflow JSON with robust triggers, idempotency, error handling, logging, retries, and human-in-the-loop review queues. Use when you need an auditable automation that won’t silently fail.
+- [`n8n-workflow-patterns`](n8n-workflows/n8n-workflow-patterns/): Proven workflow architectural patterns from real n8n workflows. Use when building new workflows, designing workflow structure, choosing workflow patterns, planning workflow architecture, or asking about webhook processing, HTTP API integration, database operations, AI agent workflows, batch processing, or scheduled tasks. Always consult this skill when the user asks to create, build, or design an n8n workflow, automate a process, or connect services — even if they don't explicitly mention 'patterns'. Covers webhook, API, database, AI, batch processing, and scheduled automation architectures.
+- [`native-mcp`](native-mcp/): Built-in MCP (Model Context Protocol) client that connects to external MCP servers, discovers their tools, and registers them as native Hermes Agent tools. Supports stdio and HTTP transports with automatic reconnection, security filtering, and zero-config tool injection.
+- [`notion-masterclass`](notion-masterclass/): Operate Notion workspaces in a Notion-native way: find source-of-truth pages, edit databases safely, and preserve workspace structure.
+- [`notion-tasks`](notion-tasks/): Create, manage, and complete tasks in Seyed and Appie Notion task databases while preserving task schemas and conventions.
+- [`openhue`](openhue/): Control Philips Hue lights, rooms, and scenes via the OpenHue CLI. Turn lights on/off, adjust brightness, color, color temperature, and activate scenes.
+- [`oracle`](oracle/): Best practices for using the oracle CLI (prompt + file bundling, engines, sessions, and file attachment patterns).
+- [`ordercli`](ordercli/): Foodora-only CLI for checking past orders and active order status (Deliveroo WIP).
+- [`peekaboo`](peekaboo/): Capture and automate macOS UI with the Peekaboo CLI.
+- [`read-github`](read-github/): Read GitHub repos the RIGHT way - via gitmcp.io instead of raw scraping. Why this beats web search: (1) Semantic search across docs, not just keyword matching, (2) Smart code navigation with accurate file structure - zero hallucinations on repo layout, (3) Proper markdown output optimized for LLMs, not raw HTML/JSON garbage, (4) Aggregates README + /docs + code in one clean interface, (5) Respects rate limits and robots.txt. Stop pasting raw GitHub URLs - use this instead.
+- [`recipe-backup-sheet-as-csv`](gws-recipes/recipe-backup-sheet-as-csv/): Export a Google Sheets spreadsheet as a CSV file for local backup or processing.
+- [`recipe-batch-invite-to-event`](gws-recipes/recipe-batch-invite-to-event/): Add a list of attendees to an existing Google Calendar event and send notifications.
+- [`recipe-block-focus-time`](gws-recipes/recipe-block-focus-time/): Create recurring focus time blocks on Google Calendar to protect deep work hours.
+- [`recipe-bulk-download-folder`](gws-recipes/recipe-bulk-download-folder/): List and download all files from a Google Drive folder.
+- [`recipe-compare-sheet-tabs`](gws-recipes/recipe-compare-sheet-tabs/): Read data from two tabs in a Google Sheet to compare and identify differences.
+- [`recipe-copy-sheet-for-new-month`](gws-recipes/recipe-copy-sheet-for-new-month/): Duplicate a Google Sheets template tab for a new month of tracking.
+- [`recipe-create-doc-from-template`](gws-recipes/recipe-create-doc-from-template/): Copy a Google Docs template, fill in content, and share with collaborators.
+- [`recipe-create-events-from-sheet`](gws-recipes/recipe-create-events-from-sheet/): Read event data from a Google Sheets spreadsheet and create Google Calendar entries for each row.
+- [`recipe-create-expense-tracker`](gws-recipes/recipe-create-expense-tracker/): Set up a Google Sheets spreadsheet for tracking expenses with headers and initial entries.
+- [`recipe-create-feedback-form`](gws-recipes/recipe-create-feedback-form/): Create a Google Form for feedback and share it via Gmail.
+- [`recipe-create-gmail-filter`](gws-recipes/recipe-create-gmail-filter/): Create a Gmail filter to automatically label, star, or categorize incoming messages.
+- [`recipe-create-meet-space`](gws-recipes/recipe-create-meet-space/): Create a Google Meet meeting space and share the join link.
+- [`recipe-create-presentation`](gws-recipes/recipe-create-presentation/): Create a new Google Slides presentation and add initial slides.
+- [`recipe-create-shared-drive`](gws-recipes/recipe-create-shared-drive/): Create a Google Shared Drive and add members with appropriate roles.
+- [`recipe-create-task-list`](gws-recipes/recipe-create-task-list/): Set up a new Google Tasks list with initial tasks.
+- [`recipe-create-vacation-responder`](gws-recipes/recipe-create-vacation-responder/): Enable a Gmail out-of-office auto-reply with a custom message and date range.
+- [`recipe-draft-email-from-doc`](gws-recipes/recipe-draft-email-from-doc/): Read content from a Google Doc and use it as the body of a Gmail message.
+- [`recipe-email-drive-link`](gws-recipes/recipe-email-drive-link/): Share a Google Drive file and email the link with a message to recipients.
+- [`recipe-find-free-time`](gws-recipes/recipe-find-free-time/): Query Google Calendar free/busy status for multiple users to find a meeting slot.
+- [`recipe-find-large-files`](gws-recipes/recipe-find-large-files/): Identify large Google Drive files consuming storage quota.
+- [`recipe-forward-labeled-emails`](gws-recipes/recipe-forward-labeled-emails/): Find Gmail messages with a specific label and forward them to another address.
+- [`recipe-generate-report-from-sheet`](gws-recipes/recipe-generate-report-from-sheet/): Read data from a Google Sheet and create a formatted Google Docs report.
+- [`recipe-label-and-archive-emails`](gws-recipes/recipe-label-and-archive-emails/): Apply Gmail labels to matching messages and archive them to keep your inbox clean.
+- [`recipe-log-deal-update`](gws-recipes/recipe-log-deal-update/): Append a deal status update to a Google Sheets sales tracking spreadsheet.
+- [`recipe-organize-drive-folder`](gws-recipes/recipe-organize-drive-folder/): Create a Google Drive folder structure and move files into the right locations.
+- [`recipe-plan-weekly-schedule`](gws-recipes/recipe-plan-weekly-schedule/): Review your Google Calendar week, identify gaps, and add events to fill them.
+- [`recipe-post-mortem-setup`](gws-recipes/recipe-post-mortem-setup/): Create a Google Docs post-mortem, schedule a Google Calendar review, and notify via Chat.
+- [`recipe-reschedule-meeting`](gws-recipes/recipe-reschedule-meeting/): Move a Google Calendar event to a new time and automatically notify all attendees.
+- [`recipe-review-meet-participants`](gws-recipes/recipe-review-meet-participants/): Review who attended a Google Meet conference and for how long.
+- [`recipe-review-overdue-tasks`](gws-recipes/recipe-review-overdue-tasks/): Find Google Tasks that are past due and need attention.
+- [`recipe-save-email-attachments`](gws-recipes/recipe-save-email-attachments/): Find Gmail messages with attachments and save them to a Google Drive folder.
+- [`recipe-save-email-to-doc`](gws-recipes/recipe-save-email-to-doc/): Save a Gmail message body into a Google Doc for archival or reference.
+- [`recipe-schedule-recurring-event`](gws-recipes/recipe-schedule-recurring-event/): Create a recurring Google Calendar event with attendees.
+- [`recipe-send-team-announcement`](gws-recipes/recipe-send-team-announcement/): Send a team announcement via both Gmail and a Google Chat space.
+- [`recipe-share-folder-with-team`](gws-recipes/recipe-share-folder-with-team/): Share a Google Drive folder and all its contents with a list of collaborators.
+- [`recipe-watch-drive-changes`](gws-recipes/recipe-watch-drive-changes/): Subscribe to change notifications on a Google Drive file or folder.
+- [`slack`](slack/): Use when you need to control Slack from OpenClaw via the slack tool, including reacting to messages or pinning/unpinning items in Slack channels or DMs.
+- [`sonoscli`](sonoscli/): Control Sonos speakers (discover/status/play/volume/group).
+- [`spark-comfy`](spark-comfy/): Generate images via Spark Atlas's ComfyUI inference API. SDXL + FLUX schnell, style presets, queue + status polling, Tailnet-only access with X-API-Key auth.
+- [`spotify`](spotify/): Spotify: play, search, queue, manage playlists and devices.
+- [`trello`](trello/): Manage Trello boards, lists, and cards via the Trello REST API.
+- [`venice`](venice/): Run Venice AI research through an isolated subagent workflow and return summarized results without blocking the main session.
+- [`webflow`](webflow/): Operate Webflow CMS for Weblyfe client sites, including collections, item updates, image fields, publishing, and asset-upload fallbacks.
+- [`xurl`](xurl/): X/Twitter via xurl CLI: post, search, DM, media, v2 API.
+- [`yuanbao`](yuanbao/): Yuanbao (元宝) groups: @mention users, query info/members.

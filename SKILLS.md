@@ -1,60 +1,69 @@
 # Appie Kit - Skill Discovery
 
-514 public skills, 9 categories. Sourced from a live 7-agent fleet running Hermes Agent and OpenClaw, plus the ECC engineering/agentic-ops set (imported, MIT).
+526 public skills, 9 categories. Sourced from a sanitized agent-fleet library plus imported ECC engineering/agentic-ops skills.
 
-Each skill is a directory with a `SKILL.md` file. Drop any skill folder into `~/.hermes/skills/` or `~/.openclaw/skills/` and it is immediately available in your next session.
+Each skill is a directory with a `SKILL.md` file. Drop any skill folder into `~/.hermes/skills/` or `~/.openclaw/skills/` and it is available in your next session.
 
 ---
 
 ## Categories
 
-### automation (29 skills)
-Agent self-management, fleet coordination, workflow orchestration, and inter-agent dispatch.
+### automation (26 skills)
+Agent self-management, workflow orchestration, browser automation, coding agents, and inter-agent coordination.
 
 [Browse automation skills](skills/automation/INDEX.md) | [Readme](skills/automation/README.md)
 
-Highlights: `clawflow`, `kanban-orchestrator`, `dispatch-multiple-agents`, `brain-sync`, `memory-search`, `coding-agent`
+Highlights: `clawflow`, `kanban-orchestrator`, `brain-sync`, `memory-search`, `coding-agent`, `web-scraping-javascript-sites`
 
 ---
 
-### communication (7 skills)
-Messaging platform integrations: Telegram, Discord, Slack, iMessage, WhatsApp, voice calls.
+### communication (6 skills)
+Messaging, email, voice, and chat-platform integrations.
 
 [Browse communication skills](skills/communication/INDEX.md) | [Readme](skills/communication/README.md)
 
-Highlights: `discord`, `slack`, `bluebubbles` (iMessage), `wacli` (WhatsApp), `voice-call`
+Highlights: `discord`, `bluebubbles`, `himalaya`, `wacli`, `voice-call`
 
 ---
 
-### content (53 skills)
-UI/UX design, image generation, video production, SEO, copywriting, Next.js, TTS, and more. The largest creative category.
+### content (49 skills)
+Design, frontend, media, SEO, copywriting, image/video/audio generation, and creative workflows.
 
 [Browse content skills](skills/content/INDEX.md) | [Readme](skills/content/README.md)
 
-Highlights: `frontend-design-3`, `ui-ux-pro-max`, `tips-landing-pages`, `design`, `nextjs-expert`, `video-editing-pro`, `seo-checklist`, `stable-diffusion`, `comfyui`, `sherpa-onnx-tts`
+Highlights: `frontend-design`, `ui-ux-pro-max`, `tips-landing-pages`, `nextjs-expert`, `video-editing-pro`, `web-design-pipeline`, `seo-checklist`, `comfyui`
 
 ---
 
-### integrations (84 skills)
-Third-party service integrations: Airtable, Notion, Google Workspace, GitHub, n8n, fal.ai, Spotify, Webflow, Trello, and more.
+### ecc (250 skills)
+Imported ECC engineering and agentic-ops skills: language/framework patterns, testing, security, agents, and ops.
+
+[Browse ecc skills](skills/ecc/INDEX.md) | [Readme](skills/ecc/README.md)
+
+Highlights: `agent-harness-construction`, `autonomous-loops`, `continuous-learning-v2`, `cost-aware-llm-pipeline`, `api-design`, `browser-qa`, `security-review`, `tdd-workflow`
+
+---
+
+### integrations (108 skills)
+Third-party service integrations: Google Workspace, Notion, GitHub, n8n, fal.ai, Webflow, Spotify, Trello, and more.
 
 [Browse integrations skills](skills/integrations/INDEX.md) | [Readme](skills/integrations/README.md)
 
-Highlights: `exa-plus`, `n8n`, `n8n-pro`, `github`, `gog`, `google-drive`, `airtable`, `notion-masterclass`, `fal-ai`, `webflow`, `spotify`, `spark-comfy`
+Highlights: `exa-plus`, `n8n`, `github`, `gog`, `airtable`, `notion-masterclass`, `fal-ai`, `webflow`, `spotify`, `spark-comfy`
 
 ---
 
 ### knowledge (31 skills)
-LLM fine-tuning (LoRA, GRPO, DPO), quantization (GGUF, llama.cpp), vLLM inference, Whisper STT, DSPy, AudioCraft, and model evaluation.
+Model, ML, research, fine-tuning, quantization, inference, evaluation, and technical reference skills.
 
 [Browse knowledge skills](skills/knowledge/INDEX.md) | [Readme](skills/knowledge/README.md)
 
-Highlights: `vllm`, `unsloth`, `axolotl`, `llama-cpp`, `gguf`, `whisper`, `dspy`, `audiocraft`, `lm-evaluation-harness`
+Highlights: `serving-llms-vllm`, `unsloth`, `axolotl`, `llama-cpp`, `gguf-quantization`, `whisper`, `dspy`
 
 ---
 
-### meta (14 skills)
-Skills about the skill system itself: authoring, registry, planning, QA, and brainstorming.
+### meta (11 skills)
+Skills about skills: authoring, planning, QA, dogfooding, and agent workflow meta-processes.
 
 [Browse meta skills](skills/meta/INDEX.md) | [Readme](skills/meta/README.md)
 
@@ -63,29 +72,20 @@ Highlights: `skill-creator`, `hermes-agent-skill-authoring`, `clawhub`, `clawlis
 ---
 
 ### ops (23 skills)
-Infrastructure management, DevOps, git workflows, tmux, 1Password, fleet health, and system administration.
+Infrastructure, DevOps, git, fleet operations, security hardening, deployment, and maintenance.
 
 [Browse ops skills](skills/ops/INDEX.md) | [Readme](skills/ops/README.md)
 
-Highlights: `agent-fleet-operations`, `fleet-skill-sync`, `fleet-infra-fixes`, `client-bot-security`, `digital-ocean`, `gitclaw`, `healthcheck`, `tmux`, `1password`, `git-sync`
+Highlights: `agent-fleet-operations`, `fleet-skill-sync`, `fleet-infra-fixes`, `client-bot-security`, `digital-ocean`, `gitclaw`, `healthcheck`, `tmux`, `1password`
 
 ---
 
 ### personal (22 skills)
-Personal productivity and lifestyle integrations (primarily macOS).
+Personal productivity, smart-home, lifestyle, and macOS-centered helper skills.
 
 [Browse personal skills](skills/personal/INDEX.md) | [Readme](skills/personal/README.md)
 
 Highlights: `bear-notes`, `things-mac`, `spotify-player`, `weather`
-
----
-
-### ecc (251 skills, imported · MIT)
-Engineering and agentic-ops skills imported from [affaan-m/ecc](https://github.com/affaan-m/ecc) v2.0.0-rc.1. Complements our fleet-sourced skills with language/framework patterns, agent-harness construction, autonomous loops, continuous learning, cost-aware LLM pipelines, security review, and cross-harness conventions. See [ecc/PROVENANCE.md](skills/ecc/PROVENANCE.md) for attribution.
-
-[Browse ecc skills](skills/ecc/INDEX.md)
-
-Highlights: `agent-harness-construction`, `autonomous-loops`, `continuous-learning`, `cost-aware-llm-pipeline`, `api-design`, `browser-qa`, `security-review`, `deep-research`, `tdd-workflow`, `iterative-retrieval`
 
 ---
 
@@ -111,7 +111,7 @@ cp -r skills/knowledge/* ~/.hermes/skills/
 Hermes Agent loads skills from `~/.hermes/skills/` at session start.
 OpenClaw loads skills from `~/.openclaw/skills/`.
 
-No restart required if you copy skills while the agent is idle; they are picked up at the start of the next conversation.
+No restart required if you copy skills while the agent is idle. They are picked up at the start of the next conversation.
 
 ---
 

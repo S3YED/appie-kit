@@ -125,8 +125,6 @@ mkdir -p ~/.ssh && chmod 700 ~/.ssh
 - [ ] Local alias works if one is expected
 - [ ] No password was stored in notes, memory, or skill files
 
-## Session-specific reference
+## Session-specific references
 
-See:
-- `references/appie1-recovery-2026-05-11.md` for a concrete Tailscale + macOS recovery example where a transient password was used only once to restore Appie-2 key trust and then discarded.
-- `references/appie1-connectivity-vs-auth.md` for a later case where SSH and Tailscale both timed out, showing this skill must stop at connectivity classification when no shell path exists.
+Do not store concrete hostnames, usernames, Tailscale IPs, key paths, or one-off recovery logs in this public skill. Keep those in private operational notes. This skill should only preserve the reusable recovery procedure.

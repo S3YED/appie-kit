@@ -1,3 +1,10 @@
+---
+name: fal-ai
+description: "Use fal.ai for pay-per-use image, video, voice, and generative-media model workflows in Weblyfe content production."
+version: 1.0.0
+category: integrations
+---
+
 # SKILL.md - fal.ai Content Creation
 
 **Owner:** Appie-2 (CMO)

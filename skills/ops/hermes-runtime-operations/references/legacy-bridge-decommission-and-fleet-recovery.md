@@ -50,7 +50,7 @@ A Telegram/gateway-triggered tool shell may run inside the `hermes-gateway.servi
 
 5. From a normal SSH shell, optionally archive and remove the launcher files:
    ```bash
-   backup_dir="/root/decommissioned-services/ccgram-$(date -u +%Y%m%d-%H%M%S)"
+   backup_dir="$DECOMMISSIONED_SERVICES_DIR/ccgram-$(date -u +%Y%m%d-%H%M%S)"
    mkdir -p "$backup_dir"
    cp -a /etc/systemd/system/ccgram.service "$backup_dir/" 2>/dev/null || true
    cp -a /etc/systemd/system/ccgram.service.d "$backup_dir/" 2>/dev/null || true

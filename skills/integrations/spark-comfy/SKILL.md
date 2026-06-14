@@ -15,7 +15,7 @@ metadata:
 
 # Spark Atlas — Fleet Image Generation
 
-Spark Atlas is the Weblyfe fleet's on-prem DGX Spark inference box (Tailscale `100.69.197.43`). It runs ComfyUI behind a FastAPI wrapper called `spark-api` on port `8190`. Any Appie on the tailnet can render images by hitting it.
+Spark Atlas is the Weblyfe fleet's on-prem DGX Spark inference box (Tailscale-only endpoint set by `SPARK_BASE`). It runs ComfyUI behind a FastAPI wrapper called `spark-api` on port `8190`. Any Appie on the tailnet can render images by hitting it.
 
 This skill is the client side: a thin Python helper and copy-paste curl examples.
 
@@ -23,7 +23,7 @@ This skill is the client side: a thin Python helper and copy-paste curl examples
 
 1. Be on the same Tailnet as Spark Atlas. Test with:
    ```bash
-   curl -s http://100.69.197.43:8190/health | jq .
+   curl -s $SPARK_BASE/health | jq .
    ```
    Should return `{"status": "healthy", "comfyui": "connected", ...}`.
 
@@ -58,10 +58,10 @@ This skill is the client side: a thin Python helper and copy-paste curl examples
 
 ```bash
 # Health
-curl -s http://100.69.197.43:8190/health | jq .
+curl -s $SPARK_BASE/health | jq .
 
 # Generate with SDXL
-JOB=$(curl -s -X POST http://100.69.197.43:8190/generate \
+JOB=$(curl -s -X POST $SPARK_BASE/generate \
   -H "Content-Type: application/json" \
   -H "X-API-Key: $SPARK_API_KEY" \
   -d '{
@@ -72,18 +72,18 @@ JOB=$(curl -s -X POST http://100.69.197.43:8190/generate \
 
 # Poll until done
 while true; do
-  STATUS=$(curl -s "http://100.69.197.43:8190/status/$JOB" | jq -r .status)
+  STATUS=$(curl -s "$SPARK_BASE/status/$JOB" | jq -r .status)
   echo "$STATUS"
   [[ "$STATUS" == "completed" || "$STATUS" == "failed" ]] && break
   sleep 3
 done
 
 # Get the image URL
-curl -s "http://100.69.197.43:8190/status/$JOB" | jq -r '.image_urls[0]'
+curl -s "$SPARK_BASE/status/$JOB" | jq -r '.image_urls[0]'
 # → /output/job_xxx_SparkAtlas_..._00001.png
 
 # Download it
-curl -s -o out.png "http://100.69.197.43:8190/output/job_xxx_..._00001.png"
+curl -s -o out.png "$SPARK_BASE/output/job_xxx_..._00001.png"
 ```
 
 ## Quick start (Python)
@@ -155,7 +155,7 @@ Only `prompt` is required.
 | `429 Max concurrent jobs reached (2)` | Queue full | Wait, or check `/jobs` for active work |
 | `503 ComfyUI not reachable` | ComfyUI process down on Spark | Page Seyed; check `/health` |
 | `422 validation error` | Bad request body | Check `/docs` for exact schema |
-| timeout >30s on `/health` | Network/Tailscale issue | `tailscale ping 100.69.197.43` |
+| timeout >30s on `/health` | Network/Tailscale issue | `tailscale ping <spark-tailscale-ip>` |
 
 ## Files in this skill
 
@@ -166,5 +166,5 @@ Only `prompt` is required.
 ## See also
 
 - `docs/CLAUDE-CODE-PATH.md` in the appie-kit for general Claude Code orchestrator setup.
-- `~/spark/docs/diddy-spark-api-instructions.md` on Spark itself (operator-side instructions targeted at Diddy specifically).
-- Diddy's discipline doc: `ultimate-dgx-spark-comfyui-setup.md` (the philosophy that drives Spark's operator layer).
+- `$SPARK_DOCS_DIR/spark-api-instructions.md` on the Spark host.
+- Operator discipline doc: `$SPARK_DOCS_DIR/operator-discipline.md`.

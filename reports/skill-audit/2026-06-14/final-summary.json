@@ -1,0 +1,40 @@
+{
+  "generated_at_utc": "2026-06-14T12:29:46.462357Z",
+  "production_skill_files": 526,
+  "unique_skill_names": 526,
+  "duplicate_groups": {},
+  "category_counts": {
+    "automation": 26,
+    "communication": 6,
+    "content": 49,
+    "ecc": 250,
+    "integrations": 108,
+    "knowledge": 31,
+    "meta": 11,
+    "ops": 23,
+    "personal": 22
+  },
+  "private_quarantine_path": "<private-quarantine-path>",
+  "private_quarantine_file_count": 241,
+  "private_quarantine_subdirs": [
+    "<private-quarantine-path>/_quarantine",
+    "<private-quarantine-path>/root-category-fix",
+    "<private-quarantine-path>/raw-reports",
+    "<private-quarantine-path>/full-private-dirs",
+    "<private-quarantine-path>/duplicates",
+    "<private-quarantine-path>/additional-private-references"
+  ],
+  "verification": {
+    "frontmatter_and_duplicate_validation": "pass",
+    "index_link_validation": "pass",
+    "custom_secret_private_pattern_scan": "pass, 0 findings",
+    "syntax_checks": "pass for touched Python and Node scripts",
+    "gitleaks_no_git_redacted": "pass, 0 findings"
+  },
+  "git_status_counts": {
+    "M": 90,
+    "D": 239,
+    "??": 3
+  },
+  "note": "Private raw findings and quarantined material were moved outside the repository. Reports kept in repo are redacted."
+}

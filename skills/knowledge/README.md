@@ -1,76 +1,37 @@
-# knowledge
+# Knowledge - 31 skills
 
-Skills for research, search, web scraping, email triage workflows, memory management, and documentation reference. Use these when your Appie needs to find information, process inbound content, or maintain a knowledge base.
-
-Prerequisite tools: `EXA_API_KEY` for exa-plus, Google OAuth for gws-gmail-* skills, Python + playwright for browser-based scraping.
+Model, ML, research, fine-tuning, quantization, inference, evaluation, and technical reference skills.
 
 ## Skills
 
-| Skill | Description | Required env | Compat |
-|-------|-------------|-------------|--------|
-| [anthropics-frontend-design](anthropics-frontend-design/) | Anthropic design system reference for building Anthropic-style UI components | - | Both |
-| [audiocraft](audiocraft/) | Meta AudioCraft for AI music and audio generation (MusicGen, AudioGen) | Python, GPU | Both |
-| [blucli](blucli/) | Bluetooth CLI device management and pairing automation | macOS/Linux | Both |
-| [browser-use](browser-use/) | Web scraping, screenshots, form filling, Google/YT/TikTok image/video download with Playwright | Python | Both |
-| [claude-code](claude-code/) | Claude Code (Claude Code CLI) reference: commands, tool use, slash commands, MCP | - | Both |
-| [clawflow](clawflow/) | OpenClaw workflow engine for defining and running multi-step agent pipelines | - | OpenClaw |
-| [clawflow-inbox-triage](clawflow-inbox-triage/) | Automated email inbox triage workflow using OpenClaw flow engine | GOOGLE_OAUTH | OpenClaw |
-| [codex](codex/) | OpenAI Codex CLI reference and best practices for code generation | OPENAI_API_KEY | Both |
-| [content-creation](content-creation/) | Structured content creation: outlines, drafts, SEO, distribution checklist | - | Both |
-| [exa-plus](exa-plus/) | Neural web search via Exa AI. People, companies, news, research, code. Deep search, date/domain filters | EXA_API_KEY | Both |
-| [gemini](gemini/) | Google Gemini API reference: models, multimodal, grounding, code execution | GOOGLE_API_KEY | Both |
-| [gws-events-renew](gws-events-renew/) | Renew Google Workspace Event subscriptions before they expire | GOOGLE_OAUTH | Both |
-| [gws-gmail-forward](gws-gmail-forward/) | Forward Gmail messages to addresses or lists with optional transformation | GOOGLE_OAUTH | Both |
-| [gws-gmail-reply](gws-gmail-reply/) | Compose and send Gmail replies with threading and signature handling | GOOGLE_OAUTH | Both |
-| [gws-gmail-reply-all](gws-gmail-reply-all/) | Reply-all to Gmail threads with smart recipient deduplication | GOOGLE_OAUTH | Both |
-| [gws-gmail-triage](gws-gmail-triage/) | Automated Gmail triage: label, archive, prioritize, draft responses | GOOGLE_OAUTH | Both |
-| [gws-gmail-watch](gws-gmail-watch/) | Set up Gmail push notifications for real-time message processing | GOOGLE_OAUTH | Both |
-| [gws-modelarmor-create-template](gws-modelarmor-create-template/) | Create Model Armor sanitization templates via Google Cloud API | GOOGLE_CLOUD_PROJECT | Both |
-| [gws-modelarmor-sanitize-prompt](gws-modelarmor-sanitize-prompt/) | Sanitize user prompts through Model Armor before LLM submission | GOOGLE_CLOUD_PROJECT | Both |
-| [gws-modelarmor-sanitize-response](gws-modelarmor-sanitize-response/) | Sanitize LLM responses through Model Armor before delivery | GOOGLE_CLOUD_PROJECT | Both |
-| [gws-workflow-email-to-task](gws-workflow-email-to-task/) | Convert Gmail messages to tasks in Google Tasks or Notion | GOOGLE_OAUTH | Both |
-| [gws-workflow-file-announce](gws-workflow-file-announce/) | Announce new Drive files to team channels automatically | GOOGLE_OAUTH | Both |
-| [gws-workflow-meeting-prep](gws-workflow-meeting-prep/) | Auto-prepare meeting briefs from calendar events and Drive docs | GOOGLE_OAUTH | Both |
-| [gws-workflow-standup-report](gws-workflow-standup-report/) | Generate daily standup reports from task and calendar data | GOOGLE_OAUTH | Both |
-| [gws-workflow-weekly-digest](gws-workflow-weekly-digest/) | Compile and send weekly activity digest from Workspace activity | GOOGLE_OAUTH | Both |
-| [healthcheck](healthcheck/) | Agent health monitoring: check service status, report anomalies | - | Both |
-| [heartmula](heartmula/) | Heartbeat + mula (money) monitoring: track revenue metrics and uptime | - | Both |
-| [manim-video](manim-video/) | Generate animated math/concept explainer videos using Manim | Python | Both |
-| [memory-search](memory-search/) | Search Hermes agent memory across sessions for past context | - | Hermes |
-| [minecraft-modpack-server](minecraft-modpack-server/) | Set up and manage Minecraft modpack servers (for fun / client use) | Java | Both |
-| [node-connect](node-connect/) | Node.js debugger connection via CDP for live inspection | Node.js | Both |
-| [node-inspect-debugger](node-inspect-debugger/) | Node.js inspect-mode debugger integration for runtime debugging | Node.js | Both |
-| [obsidian](obsidian/) | Obsidian vault operations: read notes, create entries, search graph | - | Both |
-| [ocr-and-documents](ocr-and-documents/) | OCR extraction from images and PDFs, document parsing workflows | Python | Both |
-| [opencode](opencode/) | OpenCode CLI reference: commands, configuration, provider setup | - | Both |
-| [openhue](openhue/) | Philips Hue smart light control via openhue CLI | OPENHUE_TOKEN | Both |
-| [ordercli](ordercli/) | E-commerce order management CLI for tracking and fulfillment | - | Both |
-| [peekaboo](peekaboo/) | macOS screenshot and screen observation tool for vision-based agent tasks | macOS | OpenClaw |
-| [persona-researcher](persona-researcher/) | Research persona: organize references, notes, source validation, collaboration | - | Both |
-| [plan](plan/) | Structured planning skill: break goals into phases, tasks, and dependencies | - | Both |
-| [playwright](playwright/) | Playwright browser automation: navigation, interaction, scraping, testing | Python/Node.js | Both |
-| [read-github](read-github/) | Read GitHub repos via gitmcp.io. Semantic search, smart code navigation | GH_TOKEN | Both |
-| [recipe-create-gmail-filter](recipe-create-gmail-filter/) | Create Gmail filters for automatic labeling and archiving | GOOGLE_OAUTH | Both |
-| [recipe-draft-email-from-doc](recipe-draft-email-from-doc/) | Draft Gmail message from a Google Doc template | GOOGLE_OAUTH | Both |
-| [recipe-email-drive-link](recipe-email-drive-link/) | Email a Google Drive file link to recipients | GOOGLE_OAUTH | Both |
-| [recipe-label-and-archive-emails](recipe-label-and-archive-emails/) | Bulk label and archive emails matching criteria | GOOGLE_OAUTH | Both |
-| [recipe-save-email-attachments](recipe-save-email-attachments/) | Save Gmail attachments to specified Google Drive folder | GOOGLE_OAUTH | Both |
-| [remotion-best-practices](remotion-best-practices/) | Remotion video-in-React patterns: composition, rendering, lambda deploy | Node.js | Both |
-| [research-paper-writing](research-paper-writing/) | Academic research paper structure, citation management, LaTeX workflow | - | Both |
-| [seo-backlinks](seo-backlinks/) | Backlink research and link-building strategy workflow | EXA_API_KEY | Both |
-| [seo-bezoekersmagneet](seo-bezoekersmagneet/) | Dutch-language SEO content framework for attracting organic traffic | - | Both |
-| [seo-keyword-strategie](seo-keyword-strategie/) | Keyword research: long-tail focus, placement rules, search volume validation | - | Both |
-| [seo-smart-content](seo-smart-content/) | AI-assisted SEO content writing with keyword integration | - | Both |
-| [seo-technische-seo](seo-technische-seo/) | Technical SEO audit: Core Web Vitals, crawlability, structured data | - | Both |
-| [songwriting-and-ai-music](songwriting-and-ai-music/) | Songwriting frameworks and AI music generation (Suno, Udio, AudioCraft) | - | Both |
-| [summarize](summarize/) | Summarize long documents, transcripts, or web pages into structured bullets | - | Both |
-| [web-scraping-javascript-sites](web-scraping-javascript-sites/) | Scrape SPA/TypeScript sites. urllib-first strategy, Playwright fallback, stealth mode | Python | Both |
-| [yuanbao](yuanbao/) | Yuanbao (Tencent AI) API integration reference | YUANBAO_API_KEY | Both |
-
-## Install
-
-```bash
-cp -r skills/knowledge/<skill> ~/.hermes/skills/
-# or for OpenClaw:
-cp -r skills/knowledge/<skill> ~/.openclaw/skills/
-```
+- [`arxiv`](research/arxiv/): Search and retrieve academic papers from arXiv using their free REST API. No API key needed. Search by keyword, author, category, or ID. Combine with web_extract or the ocr-and-documents skill to read full paper content.
+- [`audiocraft-audio-generation`](audiocraft/): AudioCraft: MusicGen text-to-music, AudioGen text-to-sound.
+- [`axolotl`](axolotl/): Axolotl: YAML LLM fine-tuning (LoRA, DPO, GRPO).
+- [`blogwatcher`](research/blogwatcher/): Monitor blogs and RSS/Atom feeds for updates using the blogwatcher CLI. Add blogs, scan for new articles, and track what you've read.
+- [`dspy`](dspy/): DSPy: declarative LM programs, auto-optimize prompts, RAG.
+- [`evaluating-llms-harness`](lm-evaluation-harness/): lm-eval-harness: benchmark LLMs (MMLU, GSM8K, etc.).
+- [`exa-web-search-free`](research/exa-web-search-free/): Free AI search via Exa MCP. Web search for news/info, code search for docs/examples from GitHub/StackOverflow, company research for business intel. No API key needed.
+- [`fine-tuning-with-trl`](trl-fine-tuning/): TRL: SFT, DPO, PPO, GRPO, reward modeling for LLM RLHF.
+- [`gguf-quantization`](gguf/): GGUF format and llama.cpp quantization for efficient CPU/GPU inference. Use when deploying models on consumer hardware, Apple Silicon, or when needing flexible quantization from 2-8 bit without GPU requirements.
+- [`grpo-rl-training`](grpo-rl-training/): Expert guidance for GRPO/RL fine-tuning with TRL for reasoning and task-specific model training
+- [`guidance`](guidance/): Control LLM output with regex and grammars, guarantee valid JSON/XML/code generation, enforce structured formats, and build multi-step workflows with Guidance - Microsoft Research's constrained generation framework
+- [`humanizer`](humanizer/): Humanize text: strip AI-isms and add real voice.
+- [`jupyter-live-kernel`](data-science/jupyter-live-kernel/): Use a live Jupyter kernel for stateful, iterative Python execution via hamelnb. Load this skill when the task involves exploration, iteration, or inspecting intermediate results — data science, ML experimentation, API exploration, or building up complex code step-by-step. Uses terminal to run CLI commands against a live Jupyter kernel. No new tools required.
+- [`llama-cpp`](llama-cpp/): llama.cpp local GGUF inference + HF Hub model discovery.
+- [`llm-wiki`](llm-wiki/): Karpathy's LLM Wiki: build/query interlinked markdown KB.
+- [`onchain-analysis`](data-science/onchain-analysis/): Analyze blockchain/on-chain transaction flows for repeated counterparties, high-value transfers, wallet behavior, whale movement, exchange/mixer/bridge patterns, and chain-wide Ethereum scans. Use when the user asks to scan Etherscan, Ethereum, wallets, transactions, crypto flows, repeated from-to payments, $5k+ filters, whale tracking, or suspicious on-chain patterns.
+- [`openai-whisper`](openai-whisper/): Local speech-to-text with the Whisper CLI (no API key).
+- [`openai-whisper-api`](openai-whisper-api/): Transcribe audio via OpenAI Audio Transcriptions API (Whisper).
+- [`outlines`](outlines/): Outlines: structured JSON/regex/Pydantic LLM generation.
+- [`peft-fine-tuning`](peft/): Parameter-efficient fine-tuning for LLMs using LoRA, QLoRA, and 25+ methods. Use when fine-tuning large models (7B-70B) with limited GPU memory, when you need to train <1% of parameters with minimal accuracy loss, or for multi-adapter serving. HuggingFace's official library integrated with transformers ecosystem.
+- [`polymarket`](research/polymarket/): Query Polymarket prediction market data — search markets, get prices, orderbooks, and price history. Read-only via public REST APIs, no API key needed.
+- [`pytorch-fsdp`](pytorch-fsdp/): Expert guidance for Fully Sharded Data Parallel training with PyTorch FSDP - parameter sharding, mixed precision, CPU offloading, FSDP2
+- [`research-paper-writing`](research/research-paper-writing/): End-to-end pipeline for writing ML/AI research papers — from experiment design through analysis, drafting, revision, and submission. Covers NeurIPS, ICML, ICLR, ACL, AAAI, COLM. Integrates automated experiment monitoring, statistical analysis, iterative writing, and citation verification.
+- [`sag`](sag/): ElevenLabs text-to-speech with mac-style say UX.
+- [`serving-llms-vllm`](vllm/): vLLM: high-throughput LLM serving, OpenAI API, quantization.
+- [`summarize`](summarize/): Summarize or extract text/transcripts from URLs, podcasts, and local files (great fallback for “transcribe this YouTube/video”).
+- [`travel-flight-research`](travel-flight-research/): Research flight options, compare route families, and present clean booking links and concise recommendations.
+- [`turbovec`](turbovec/): Local vector search with turbovec (Google TurboQuant, Rust+Python). Use for embeddings indexing, semantic search, local RAG, or filtered vector retrieval without external services like Pinecone.
+- [`unsloth`](unsloth/): Unsloth: 2-5x faster LoRA/QLoRA fine-tuning, less VRAM.
+- [`weights-and-biases`](weights-and-biases/): W&B: log ML experiments, sweeps, model registry, dashboards.
+- [`whisper`](whisper/): OpenAI's general-purpose speech recognition model. Supports 99 languages, transcription, translation to English, and language identification. Six model sizes from tiny (39M params) to large (1550M params). Use for speech-to-text, podcast transcription, or multilingual audio processing. Best for robust, multilingual ASR.

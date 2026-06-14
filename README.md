@@ -1,10 +1,10 @@
 # 🧙🏽‍♂️ Appie Kit: Build Your Own AI Employee
 
-> The same system that runs a real web design agency, now with 514 production skills extracted from a live 7-agent fleet.
+> The same system that runs a real web design agency, now with 526 production skills extracted from a live 7-agent fleet.
 
 [![Hermes Agent](https://img.shields.io/badge/Powered%20by-Hermes%20Agent-031D16?style=for-the-badge)](https://github.com/NousResearch/hermes-agent)
 [![OpenClaw](https://img.shields.io/badge/Also%20works%20with-OpenClaw-0a4020?style=for-the-badge)](https://github.com/openclaw/openclaw)
-[![Skills](https://img.shields.io/badge/Skills-514%20production-DFB771?style=for-the-badge)](skills/INDEX.md)
+[![Skills](https://img.shields.io/badge/Skills-526%20production-DFB771?style=for-the-badge)](skills/INDEX.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-555?style=for-the-badge)](LICENSE)
 
 ## What Is This?
@@ -28,7 +28,7 @@ This is the **exact configuration, tools, and skills** extracted from running [W
 
 Released June 2026.
 
-- **514 production skills** extracted from the live Appie fleet (Mac Mini, Spark Atlas, Hetzner nodes, Wolfdiddy). Up from 156 in v4.4.
+- **526 production skills** extracted from the live Appie fleet (Mac Mini, GPU/media workers, VPS nodes, and approved client-bot hosts). Up from 156 in v4.4.
 - **Hermes Agent compatibility** across the board. Skills were originally OpenClaw-only; the fleet now runs primarily on [Hermes Agent](https://github.com/NousResearch/hermes-agent).
 - **MiniMax M2.7 as the default model** via OpenRouter: 17x cheaper than Claude at GPT-4 class quality.
 - **fal.ai + RunPod media stack** for image and video generation (Kling, Nano Banana, ComfyUI workers).
@@ -109,21 +109,21 @@ That's it. Your AI employee is live.
 
 ## Skills by Category
 
-514 public skills across 9 categories. Each category has its own index.
+526 public skills across 9 categories. Each category has its own index.
 
 | Category | Net Skills | What it covers |
 |---|---|---|
-| [automation](skills/automation/INDEX.md) | 29 | Agent self-management, fleet coordination, brain sync, sub-agent spawning, ClawFlow workflows |
-| [communication](skills/communication/INDEX.md) | 7 | Telegram, Discord, Slack, iMessage (BlueBubbles), WhatsApp (wacli), voice calls |
-| [content](skills/content/INDEX.md) | 53 | UI/UX design, image gen, video production, SEO, copywriting, Next.js, TTS, stable diffusion |
-| [integrations](skills/integrations/INDEX.md) | 84 | Airtable, Notion, Google Workspace, GitHub, n8n, fal.ai, Spotify, Webflow, Trello, Gemini |
+| [automation](skills/automation/INDEX.md) | 26 | Agent self-management, fleet coordination, brain sync, sub-agent spawning, ClawFlow workflows |
+| [communication](skills/communication/INDEX.md) | 6 | Telegram, Discord, Slack, iMessage (BlueBubbles), WhatsApp (wacli), voice calls |
+| [content](skills/content/INDEX.md) | 49 | UI/UX design, image gen, video production, SEO, copywriting, Next.js, TTS, stable diffusion |
+| [integrations](skills/integrations/INDEX.md) | 108 | Airtable, Notion, Google Workspace, GitHub, n8n, fal.ai, Spotify, Webflow, Trello, Gemini |
 | [knowledge](skills/knowledge/INDEX.md) | 31 | LLM fine-tuning (LoRA/GRPO), quantization, vLLM, Whisper STT, DSPy, model evaluation |
-| [meta](skills/meta/INDEX.md) | 14 | Skill authoring, ClawHub registry, task planning, dogfood QA, brainstorming frameworks |
+| [meta](skills/meta/INDEX.md) | 11 | Skill authoring, ClawHub registry, task planning, dogfood QA, brainstorming frameworks |
 | [ops](skills/ops/INDEX.md) | 23 | GitHub/git, DigitalOcean, tmux, 1Password, healthcheck, session management, fleet maintenance |
 | [personal](skills/personal/INDEX.md) | 22 | Bear Notes, Spotify, Things 3 (macOS), weather |
-| [ecc](skills/ecc/INDEX.md) | 251 | Imported MIT engineering and agentic-ops skills |
+| [ecc](skills/ecc/INDEX.md) | 250 | Imported MIT engineering and agentic-ops skills |
 
-514 ready-to-drop-in skills across 9 categories. The full skill library from the live fleet is larger; this kit contains the skills that transfer cleanly to any Hermes or OpenClaw setup.
+526 ready-to-drop-in skills across 9 categories. The full skill library from the live fleet is larger; this kit contains the skills that transfer cleanly to any Hermes or OpenClaw setup.
 
 ---
 
@@ -133,7 +133,7 @@ That's it. Your AI employee is live.
 
 | Skill | Description |
 |---|---|
-| [frontend-design-3](skills/content/frontend-design-3/) | Production-grade UI (React, HTML/CSS, Next.js, Vue). Bold typography, motion systems, gradient meshes |
+| [frontend-design](skills/content/frontend-design/) | Production-grade UI (React, HTML/CSS, Next.js, Vue). Bold typography, motion systems, gradient meshes |
 | [ui-ux-pro-max](skills/content/ui-ux-pro-max/) | Design decision engine: 67+ UI styles, 161 palettes, 57 font pairings, 99 UX guidelines |
 | [tips-landing-pages](skills/content/tips-landing-pages/) | Conversion-optimized landing pages using the TIPS framework |
 | [21st-dev](skills/content/21st-dev/) | Install shadcn/ui-compatible React components from 21st.dev registry |
@@ -161,8 +161,6 @@ That's it. Your AI employee is live.
 |---|---|
 | [agentic-video-tools](skills/content/agentic-video-tools/) | Compare and automate agentic video editing APIs (Vizard, Submagic, Descript) |
 | [video-editing-pro](skills/content/video-editing-pro/) | Cut-decision framework for short-form video. Hook precision, energy curve, captions |
-| [appie-video-production](skills/content/appie-video-production/) | End-to-end AI video production pipeline |
-| [viral-shorts-course](skills/content/viral-shorts-course/) | System for producing viral short-form video content |
 | [seo-checklist](skills/content/seo-checklist/) | Pre-publish on-page SEO checklist: title, meta, H1, images, breadcrumbs |
 | [content-creation](skills/content/content-creation/) | Structured content creation across formats and platforms |
 
@@ -172,7 +170,6 @@ That's it. Your AI employee is live.
 |---|---|
 | [digital-ocean](skills/ops/digital-ocean/) | Manage DigitalOcean droplets, domains, infrastructure via DO API |
 | [n8n](skills/integrations/n8n/) | Interact with n8n workflows: list, trigger, monitor, manage automations |
-| [n8n-pro](skills/integrations/n8n-pro/) | Advanced n8n operations, backup, hardening, Telegram alerts |
 | [healthcheck](skills/ops/healthcheck/) | Fleet health monitoring and alerting |
 | [web-scraping-javascript-sites](skills/automation/web-scraping-javascript-sites/) | Scrape SPA/React sites. urllib-first strategy, Playwright fallback, stealth mode |
 
@@ -189,9 +186,9 @@ That's it. Your AI employee is live.
 |---|---|
 | [clawflow](skills/automation/clawflow/) | Multi-step task execution spanning detached background jobs |
 | [kanban-orchestrator](skills/automation/kanban-orchestrator/) | Decomposition playbook and specialist-roster conventions for parallel work |
-| [dispatch-multiple-agents](skills/automation/dispatch-multiple-agents/) | Spawn 2+ independent agents in parallel for independent tasks |
-| [brain-sync](skills/automation/brain-sync/) | Sync knowledge and learnings to the shared appie-brain repo |
-| [memory-search](skills/automation/memory-search/) | Search and retrieve from the Appie brain: daily logs, project notes, topics |
+| [dispatch-multiple-agents](skills/meta/clawlist/dispatch-multiple-agents/) | Spawn 2+ independent agents in parallel for independent tasks |
+| [brain-sync](skills/automation/brain-sync/) | Sync knowledge and learnings to the shared agent-brain repo |
+| [memory-search](skills/automation/memory-search/) | Search and retrieve from the agent brain: daily logs, project notes, topics |
 
 ---
 
@@ -207,7 +204,7 @@ appie-kit/
 │   ├── IDENTITY.md     # Multi-agent identity (for fleets)
 │   ├── HEARTBEAT.md    # Proactive check-in configuration
 │   └── memory/         # Persistent memory directory
-├── skills/             # 514 public skills, 9 categories
+├── skills/             # 526 public skills, 9 categories
 │   ├── automation/     # Agent self-management, fleet coordination
 │   ├── communication/  # Messaging platform integrations
 │   ├── content/        # Design, video, SEO, copywriting, frontend
@@ -218,6 +215,7 @@ appie-kit/
 │   ├── personal/       # Notes, tasks, music (macOS)
 │   └── INDEX.md        # Master skill index with counts
 ├── tools/              # Production shell scripts
+│   ├── validate-public-skills.py # Pre-publish skill validation
 │   ├── setup-openclaw-mac.sh    # Full Mac setup
 │   ├── setup-openclaw-vps.sh    # VPS setup (Ubuntu/Debian)
 │   ├── hermes-agent-install.sh  # Install Hermes Agent on VPS
@@ -225,7 +223,8 @@ appie-kit/
 │   ├── health-check.sh          # Fleet health monitoring
 │   ├── session-manager.sh       # Clean stale sessions
 │   └── safe-gateway-restart.sh  # Zero-downtime gateway restart
-├── configs/            # Platform configuration examples
+├── configs/            # Platform and fleet configuration examples
+│   ├── fleet-access.example.yml # Private fleet-access template
 │   ├── telegram.example.yml
 │   ├── discord.example.yml
 │   ├── whatsapp.example.yml
@@ -309,17 +308,20 @@ Before going live:
 - Review `workspace/SOUL.md` for any personal information
 - Verify `.env.secrets` has no real keys committed
 - Run `tools/security-scan.sh` after setup
+- Run `python3 tools/validate-public-skills.py` before publishing changes
 - Set file permissions: `chmod 600 .env.secrets`
 - Use Tailscale for remote access, never expose SSH publicly
+- Keep filled fleet access files private. Use `configs/fleet-access.example.yml` only as a placeholder template
 
 ---
 
 ## Resources
 
 - [Getting Started](GETTING-STARTED.md): 20-minute walk-through from clone to first agent response
+- [Fleet Access](docs/FLEET-ACCESS.md): safely add worker/client-bot hosts for skill inventory without leaking private data
 - [FAQ](FAQ.md): setup, skills, models, privacy, hardware, use cases
 - [Troubleshooting](TROUBLESHOOTING.md): symptom-first index for common issues
-- [Skills Catalog](SKILLS.md): browse 514 skills by category
+- [Skills Catalog](SKILLS.md): browse 526 skills by category
 - [Contributing](CONTRIBUTING.md): how to add skills and submit changes
 - [Changelog](CHANGELOG.md): version history
 - [Code of Conduct](CODE_OF_CONDUCT.md): community standards

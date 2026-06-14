@@ -1,6 +1,6 @@
 ---
 name: brain-sync
-description: "Sync knowledge and learnings to the shared appie-brain repo. Every Appie commits with their own identity so contributions are traceable. Use after: complex tasks (5+ tool calls), significant discoveries, new skills, or client work. Fleet: Appie-1 (Orchestrator/MacMini), Appie-2 (CMO/DO), Appie-3 (CTO/VPS)."
+description: "Sync knowledge and learnings to the shared agent-brain repo. Every agent commits with their own identity so contributions are traceable. Use after: complex tasks (5+ tool calls), significant discoveries, new skills, or client work. Fleet: each node uses its own traceable git identity."
 tags: [git, knowledge, fleet, sync, brain]
 ---
 
@@ -11,9 +11,9 @@ Sync knowledge and learnings to the shared `appie-brain` GitHub repo so all Appi
 ## Why This Matters
 
 Every Appie has their own git identity. When you commit, it shows up in the git log as:
-- `appie1@yourdomain.com` - Appie-1 (Orchestrator, Mac Mini)
-- `appie2@yourdomain.com` - Appie-2 (CMO/Herald, DO VPS)
-- `appie3@yourdomain.com` - Appie-3 (CTO/Worker, DO VPS)
+- `<agent-1-email>` - Agent-1 (orchestrator)
+- `<agent-2-email>` - Agent-2 (worker)
+- `<agent-3-email>` - Agent-3 (worker)
 
 This makes contributions traceable across the fleet.
 
@@ -36,7 +36,7 @@ This makes contributions traceable across the fleet.
 ## How to Sync
 
 ```bash
-cd /root/.hermes/appie-brain
+cd $AGENT_BRAIN_DIR
 
 # Check what changed
 git status
@@ -44,8 +44,8 @@ git status
 # Add files (be selective - don't expose secrets)
 git add path/to/your/changes/
 
-# Commit with Appie-3 identity
-git commit -m "🪽 Appie-3: Your learning/change description"
+# Commit with Agent-3 identity
+git commit -m "🪽 Agent-3: Your learning/change description"
 
 # Push to remote
 git push origin master
@@ -58,18 +58,18 @@ git push origin master
 ```
 
 **Emoji per Appie:**
-- Appie-1: 🧙 (Wizard/Orchestrator)
-- Appie-2: 📊 (CMO/Data)
-- Appie-3: 🪽 (Wing/Hermes - messenger)
+- Agent-1: 🧙 (Wizard/Orchestrator)
+- Agent-2: 📊 (CMO/Data)
+- Agent-3: 🪽 (Wing/Hermes - messenger)
 
 **Examples:**
 ```
-🪽 Appie-3: Added viral marketing strategy for Weblyfe Appie
-🪽 Appie-3: New skill: brain-sync for fleet knowledge sharing
-🪽 Appie-3: Exa research: AI agent market 2026 trends
-🪽 Appie-3: Fixed: PDF reading with pymupdf instead of pdftotext
-📊 Appie-2: Content calendar for April 2026
-🧙 Appie-1: New client onboarding: Baraka Arbitrage
+🪽 Agent-3: Added viral marketing strategy for the product
+🪽 Agent-3: New skill: brain-sync for fleet knowledge sharing
+🪽 Agent-3: Exa research: AI agent market 2026 trends
+🪽 Agent-3: Fixed: PDF reading with pymupdf instead of pdftotext
+📊 Agent-2: Content calendar update
+🧙 Agent-1: New client onboarding: Baraka Arbitrage
 ```
 
 ## What to Sync
@@ -100,24 +100,24 @@ Before committing:
 
 ```bash
 # Sync specific file
-cd /root/.hermes/appie-brain
+cd $AGENT_BRAIN_DIR
 git add path/file.md
-git commit -m "🪽 Appie-3: Updated X"
+git commit -m "🪽 Agent-3: Updated X"
 git push
 
 # Sync entire skills directory
-cd /root/.hermes/appie-brain
+cd $AGENT_BRAIN_DIR
 git add skills/
-git commit -m "🪽 Appie-3: Skills update"
+git commit -m "🪽 Agent-3: Skills update"
 git push
 
 # Check recent commits from all Appies
-cd /root/.hermes/appie-brain
+cd $AGENT_BRAIN_DIR
 git log --format="%h %ae %s" -20
 
 # Check only my commits
-cd /root/.hermes/appie-brain
-git log --format="%h %ae %s" --author="appie3@yourdomain.com" -10
+cd $AGENT_BRAIN_DIR
+git log --format="%h %ae %s" --author="<agent-3-email>" -10
 ```
 
 ## Git Identity Setup (REQUIRED First Time)
@@ -125,9 +125,9 @@ git log --format="%h %ae %s" --author="appie3@yourdomain.com" -10
 If you get "Author identity unknown" error, configure your identity:
 
 ```bash
-cd /root/.hermes/appie-brain
-git config user.email "appie3@yourdomain.com"
-git config user.name "Appie-3 (Wing)"
+cd $AGENT_BRAIN_DIR
+git config user.email "<agent-3-email>"
+git config user.name "Agent-3 (Wing)"
 ```
 
 Each Appie MUST use their own email to maintain traceability.
@@ -138,7 +138,7 @@ When `git push` fails because remote has new commits:
 
 ```bash
 # Option 1: Pull with merge (creates merge commit)
-cd /root/.hermes/appie-brain
+cd $AGENT_BRAIN_DIR
 git fetch origin
 git pull origin master
 
@@ -149,7 +149,7 @@ git commit -m "Merge: resolved conflicts with remote"
 git push
 
 # Option 2: Rebase (cleaner history but can get stuck)
-cd /root/.hermes/appie-brain
+cd $AGENT_BRAIN_DIR
 git fetch origin
 git pull --rebase origin master
 
@@ -167,7 +167,7 @@ git rebase --abort
 ## Fleet Contribution Stats
 To see who's contributing what:
 ```bash
-cd /root/.hermes/appie-brain
+cd $AGENT_BRAIN_DIR
 git log --format="%ae" | sort | uniq -c | sort -rn
 ```
 

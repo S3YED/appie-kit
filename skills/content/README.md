@@ -1,48 +1,55 @@
-# content
+# Content - 49 skills
 
-Skills for design, visual production, code generation, and content creation. Use these when your Appie needs to produce UI components, generate images, write structured content, edit video, or apply design systems.
-
-Prerequisite tools: varies per skill - Node.js/React for frontend skills, Python for image/video pipeline skills, `fal.ai` API key for AI image generation.
+Design, frontend, media, SEO, copywriting, image/video/audio generation, and creative workflows.
 
 ## Skills
 
-| Skill | Description | Required env | Compat |
-|-------|-------------|-------------|--------|
-| [21st-dev](21st-dev/) | Install shadcn/ui-compatible React components from 21st.dev registry (Magic UI, Aceternity, etc.) | - | Both |
-| [ai-course-supplements](ai-course-supplements/) | 17-lesson AI course supplement covering 2025-2026 model advances | - | Both |
-| [ai-course-transcripts](ai-course-transcripts/) | 164 Herman Carter AI course transcripts for reference and study | - | Both |
-| [appie-video-production](appie-video-production/) | End-to-end video production workflow: script, voiceover, b-roll, export | ELEVENLABS_API_KEY | Both |
-| [architecture-diagram](architecture-diagram/) | Generate system architecture diagrams from descriptions via Mermaid or Excalidraw | - | Both |
-| [ascii-art](ascii-art/) | Convert images or text to ASCII art for terminal display or plain-text output | - | Both |
-| [ascii-video](ascii-video/) | Render video frames as ASCII animation in terminal | - | Both |
-| [banner-design](banner-design/) | Multi-format banners across 22 art styles for social, ads, web, and print | FAL_API_KEY | Both |
-| [baoyu-comic](baoyu-comic/) | Generate comic strips and sequential art panels | FAL_API_KEY | Both |
-| [baoyu-infographic](baoyu-infographic/) | Generate structured infographics from data or bullet points | FAL_API_KEY | Both |
-| [brand](brand/) | Brand identity, voice, messaging frameworks, asset management, design tokens | - | Both |
-| [claude-design](claude-design/) | Claude-specific design patterns and component library for Anthropic-style UI | - | Both |
-| [comfyui](comfyui/) | ComfyUI workflow automation for local Stable Diffusion pipelines | COMFYUI_URL | Both |
-| [content-safe-zones](content-safe-zones/) | Safe zone guides for social media crop boundaries across platforms | - | Both |
-| [design](design/) | Unified design skill: logo generation (55 styles), CIP mockups, banners, icons, social photos | FAL_API_KEY | Both |
-| [design-mastery](design-mastery/) | Core design knowledge: hierarchy, spacing, typography, color, depth, UX laws | - | Both |
-| [design-md](design-md/) | Markdown-to-designed-document pipeline with custom CSS themes | - | Both |
-| [design-system](design-system/) | Token architecture: three-layer tokens (primitive/semantic/component), CSS variables, slide generation | - | Both |
-| [excalidraw](excalidraw/) | Create and edit Excalidraw diagrams programmatically | - | Both |
-| [frontend-design](frontend-design/) | Production-grade frontend UI patterns for React and HTML/CSS | - | Both |
-| [frontend-design-3](frontend-design-3/) | Production-grade UI (React, HTML/CSS, Next.js, Vue). Bold typography, motion systems, gradient meshes | - | Both |
-| [humanizer](humanizer/) | Rewrite AI-generated text to read more naturally for human audiences | - | Both |
-| [nextjs-expert](nextjs-expert/) | Next.js 15 App Router specialist. Server Components, Server Actions, auth, caching, streaming | - | Both |
-| [thumbnails](thumbnails/) | Generate YouTube and social media thumbnails with consistent branding | FAL_API_KEY | Both |
-| [tips-landing-pages](tips-landing-pages/) | TIPS conversion framework (Tempt, Influence, Persuade, Sell) for landing pages | - | Both |
-| [ui-styling](ui-styling/) | shadcn/ui + Tailwind CSS. Accessible components, dark mode, responsive layouts | - | Both |
-| [ui-ux-pro-max](ui-ux-pro-max/) | Design decision engine. 67+ UI styles, 161 palettes, 57 font pairings, 99 UX guidelines | - | Both |
-| [video-editing-pro](video-editing-pro/) | Cut-decision framework for short-form video. Pause thresholds, hook precision, energy curve, caption strategy | - | Both |
-| [video-frames](video-frames/) | Extract, label, and process video frames for AI pipeline input | - | Both |
-| [viral-shorts-course](viral-shorts-course/) | Framework for producing viral short-form video content (Reels, TikTok, Shorts) | - | Both |
-
-## Install
-
-```bash
-cp -r skills/content/<skill> ~/.hermes/skills/
-# or for OpenClaw:
-cp -r skills/content/<skill> ~/.openclaw/skills/
-```
+- [`21st-dev`](21st-dev/): Install and use 21st.dev components — the largest shadcn/ui-compatible registry of React + Tailwind + Framer Motion components (Magic UI, Aceternity UI, originui, eldoraui, kokonutui, Skiper UI, etc.). Use when the user wants Awwwards-tier homepage polish, animated heroes, marquees, bento grids, scroll reveals, pricing cards, testimonials, FAQ accordions, or any high-quality landing-page block. Stack: Next.js + Tailwind 4 + React 19 + framer-motion.
+- [`agentic-video-tools`](agentic-video-tools/): Compare and integrate agentic short-form video editing SaaS tools and OSS alternatives for the content factory pipeline. Use when the agent needs to automate: raw clip → Reel/Short/TikTok with captions/SFX/music/transitions → publish to IG/TikTok/YT with zero human editor in the loop. Covers automation depth ranking, API integration recipes, OSS alternatives, and anti-patterns.
+- [`appie-content-intelligence`](appie-content-intelligence/): Research and monitor Weblyfe content trends, requests, and campaign opportunities for the Appie content pipeline.
+- [`architecture-diagram`](architecture-diagram/): Dark-themed SVG architecture/cloud/infra diagrams as HTML.
+- [`baoyu-comic`](baoyu-comic/): Knowledge comics (知识漫画): educational, biography, tutorial.
+- [`baoyu-infographic`](baoyu-infographic/): Infographics: 21 layouts x 21 styles (信息图, 可视化).
+- [`canvas`](canvas/): Display generated HTML content on connected Appie or OpenClaw canvas nodes for dashboards, demos, games, and visualizations.
+- [`ckm:banner-design`](banner-design/): Design banners for social media, ads, website heroes, creative assets, and print. Multiple art direction options with AI-generated visuals. Actions: design, create, generate banner. Platforms: Facebook, Twitter/X, LinkedIn, YouTube, Instagram, Google Display, website hero, print. Styles: minimalist, gradient, bold typography, photo-based, illustrated, geometric, retro, glassmorphism, 3D, neon, duotone, editorial, collage. Uses ui-ux-pro-max, frontend-design, ai-artist, ai-multimodal skills.
+- [`ckm:brand`](brand/): Brand voice, visual identity, messaging frameworks, asset management, brand consistency. Activate for branded content, tone of voice, marketing assets, brand compliance, style guides.
+- [`ckm:design`](design/): Comprehensive design skill: brand identity, design tokens, UI styling, logo generation (55 styles, Gemini AI), corporate identity program (50 deliverables, CIP mockups), HTML presentations (Chart.js), banner design (22 styles, social/ads/web/print), icon design (15 styles, SVG, Gemini 3.1 Pro), social photos (HTML→screenshot, multi-platform). Actions: design logo, create CIP, generate mockups, build slides, design banner, generate icon, create social photos, social media images, brand identity, design system. Platforms: Facebook, Twitter, LinkedIn, YouTube, Instagram, Pinterest, TikTok, Threads, Google Ads.
+- [`ckm:design-system`](design-system/): Token architecture, component specifications, and slide generation. Three-layer tokens (primitive→semantic→component), CSS variables, spacing/typography scales, component specs, strategic slide creation. Use for design tokens, systematic design, brand-compliant presentations.
+- [`ckm:ui-styling`](ui-styling/): Create beautiful, accessible user interfaces with shadcn/ui components (built on Radix UI + Tailwind), Tailwind CSS utility-first styling, and canvas-based visual designs. Use when building user interfaces, implementing design systems, creating responsive layouts, adding accessible components (dialogs, dropdowns, forms, tables), customizing themes and colors, implementing dark mode, generating visual designs and posters, or establishing consistent styling patterns across applications.
+- [`claude-design`](claude-design/): Design one-off HTML artifacts (landing, deck, prototype).
+- [`clip`](clip/): OpenAI's model connecting vision and language. Enables zero-shot image classification, image-text matching, and cross-modal retrieval. Trained on 400M image-text pairs. Use for image search, content moderation, or vision-language tasks without fine-tuning. Best for general-purpose image understanding.
+- [`comfyui`](comfyui/): Generate images, video, and audio with ComfyUI — install, launch, manage nodes/models, run workflows with parameter injection. Uses the official comfy-cli for lifecycle and direct REST/WebSocket API for execution.
+- [`content-creation`](content-creation/): Create viral Instagram content for @appie.ai and @seyed.jpg — carousels, Reels scripts, hooks, captions in Dutch + English. Use when: (1) writing Instagram captions (NL+EN bilingual), (2) creating carousels (8-10 slides, save-optimized), (3) writing viral Reels scripts (Hook→Tension→Payload→CTA 0-30s structure), (4) generating hooks from 75+ templates, (5) building content calendars, (6) planning weekly/monthly content. Triggers: "write post", "create carousel", "viral hook", "content calendar", "write caption", "Instagram script", "make content", "plan content", "social media".
+- [`content-safe-zones`](content-safe-zones/): Place text, captions, CTAs, and overlays safely for Instagram Reels, TikTok, and YouTube Shorts vertical-video layouts.
+- [`design-mastery`](design-mastery/): Apply Appie and Weblyfe design principles for hierarchy, spacing, typography, color, UI polish, and premium minimal interfaces.
+- [`design-md`](design-md/): Author/validate/export Google's DESIGN.md token spec files.
+- [`frontend-design`](frontend-design/): Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, or applications. Generates creative, polished code that avoids generic AI aesthetics.
+- [`higgsfield-image`](higgsfield-image/): Generate images using Higgsfield's Nano Banana Pro (nano_banana_2) via the mcporter MCP server. Use for product photos, character-consistent fashion photography, and creative assets. Primary image generation tool for TracyToronto e-commerce content.
+- [`ideation`](creative-ideation/): Generate project ideas via creative constraints.
+- [`manim-video`](manim-video/): Manim CE animations: 3Blue1Brown math/algo videos.
+- [`nextjs-expert`](nextjs-expert/): Use when building Next.js 14/15 applications with the App Router. Invoke for routing, layouts, Server Components, Client Components, Server Actions, Route Handlers, authentication, middleware, data fetching, caching, revalidation, streaming, Suspense, loading states, error boundaries, dynamic routes, parallel routes, intercepting routes, or any Next.js architecture question.
+- [`p5js`](p5js/): p5.js sketches: gen art, shaders, interactive, 3D.
+- [`pixel-art`](pixel-art/): Pixel art w/ era palettes (NES, Game Boy, PICO-8).
+- [`popular-web-designs`](popular-web-designs/): 54 real design systems (Stripe, Linear, Vercel) as HTML/CSS.
+- [`powerpoint`](powerpoint-2/): Use this skill any time a .pptx file is involved in any way — as input, output, or both. This includes: creating slide decks, pitch decks, or presentations; reading, parsing, or extracting text from any .pptx file (even if the extracted content will be used elsewhere, like in an email or summary); editing, modifying, or updating existing presentations; combining or splitting slide files; working with templates, layouts, speaker notes, or comments. Trigger whenever the user mentions \"deck,\" \"slides,\" \"presentation,\" or references a .pptx filename, regardless of what they plan to do with the content afterward. If a .pptx file needs to be opened, created, or touched, use this skill.
+- [`productized-service-business`](productized-service-business/): Validate, launch, and deliver productized service businesses, service-first SaaS wedges, managed marketplaces, and audit/retainer offers. Use when the user asks which business idea is worth doing, wants competitor or Dutch/NL market validation, wants a monetization ladder, wants to validate a service before building software, or wants delivery SOPs/templates for a first paid client offer such as Review-to-Revenue / Customer Voice Conversion Audits.
+- [`segment-anything-model`](segment-anything/): SAM: zero-shot image segmentation via points, boxes, masks.
+- [`seo-backlinks`](seo-backlinks/): Build, evaluate, and audit external backlink profiles for Weblyfe client SEO campaigns and competitor authority-gap analysis.
+- [`seo-bezoekersmagneet`](seo-bezoekersmagneet/): Explain and audit foundational SEO strategy for Weblyfe clients, including why organic ranking matters and what Google evaluates.
+- [`seo-checklist`](seo-checklist/): Run the Weblyfe pre-publish on-page SEO checklist for pages, blog posts, and landing pages before publication.
+- [`seo-keyword-strategie`](seo-keyword-strategie/): Select, validate, and place SEO keywords for Weblyfe pages, blog posts, and site content architecture.
+- [`seo-landing-page-audit`](seo-landing-page-audit/): Audit and improve landing pages using SEO fundamentals from the Tornado/IMU PDFs: bezoekersmagneet, zoekwoorden, backlinks, smart content, technische SEO, and on-page checklist.
+- [`seo-smart-content`](seo-smart-content/): Plan SEO content networks and internal-link architectures that compound authority across Weblyfe client sites.
+- [`seo-technische-seo`](seo-technische-seo/): Audit and fix technical SEO for Weblyfe sites, including crawling, indexing, structured data, speed, and launch readiness.
+- [`seo-weblyfe`](seo-weblyfe/): Use when planning, auditing, or explaining SEO for Weblyfe sites: keyword strategy, on-page optimization, technical SEO, backlinks, internal-link content architecture, and the foundational ranking model from Seyed's Weblyfe University materials.
+- [`sherpa-onnx-tts`](sherpa-onnx-tts/): Local text-to-speech via sherpa-onnx (offline, no cloud)
+- [`sketch`](sketch/): Throwaway HTML mockups: 2-3 design variants to compare.
+- [`stable-diffusion-image-generation`](stable-diffusion/): State-of-the-art text-to-image generation with Stable Diffusion models via HuggingFace Diffusers. Use when generating images from text prompts, performing image-to-image translation, inpainting, or building custom diffusion pipelines.
+- [`thumbnails`](thumbnails/): Generate branded YouTube thumbnails using approved photo assets, brand guidelines, and HTML thumbnail templates.
+- [`tips-landing-pages`](tips-landing-pages/): Build high-converting the brand landing pages using the Dutch TIPS conversion framework for sales, lead-gen, and product pages.
+- [`touchdesigner-mcp`](touchdesigner-mcp/): Control a running TouchDesigner instance via twozero MCP — create operators, set parameters, wire connections, execute Python, build real-time visuals. 36 native tools.
+- [`ui-ux-pro-max`](ui-ux-pro-max/): AI-powered design intelligence with 67+ UI styles, 161 color palettes, 57 font pairings, 99 UX guidelines, and 25 chart types. Use for UI/UX design decisions, color schemes, typography, design systems, landing pages, and pre-delivery checklists.
+- [`video-editing-pro`](video-editing-pro/): Make decision-level edits for talking-head short-form video, including hook selection, pacing, filler removal, and retention checks.
+- [`video-frames`](video-frames/): Extract frames or short clips from videos using ffmpeg.
+- [`web-design-pipeline`](web-design-pipeline/): Build premium, multi-page, animated websites fast and with real design rigor — design-system-first, Claude Design + Claude Code, Next.js + GSAP, deploy to Vercel. Use for any client site, landing page, or premium brand properties.
+- [`xitter`](social-media/xitter/): Interact with X/Twitter via the x-cli terminal client using official X API credentials. Use for posting, reading timelines, searching tweets, liking, retweeting, bookmarks, mentions, and user lookups.

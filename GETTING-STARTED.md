@@ -18,7 +18,7 @@ The default model is **MiniMax M2.7**: approximately $0.01/1M tokens. For contex
 
 ### 2. Telegram bot token
 
-Open Telegram and message [@BotFather](https://t.me/botfather). Send `/newbot`, give it a name and username, and copy the token it gives you. It looks like `123456789:ABCdefGHIjklMNOpqrsTUVwxyz`.
+Open Telegram and message [@BotFather](https://t.me/botfather). Send `/newbot`, give it a name and username, and copy the token it gives you. It looks like `<telegram-bot-token>`.
 
 ### 3. Install Hermes Agent
 
@@ -132,7 +132,7 @@ Direct and technical. I prefer bullet points over paragraphs.
 
 ## Step 5: Install your starter skill pack (5 minutes)
 
-155 skills are included. Start with five that cover the basics:
+526 public skills are included. Start with five that cover the basics:
 
 ```bash
 # Google Calendar: schedule, check, add events
@@ -174,7 +174,7 @@ cp workspace/TOOLS.md ~/.hermes/TOOLS.md
 ## Step 7: Start the agent (1 minute)
 
 ```bash
-hermes start
+hermes
 ```
 
 You should see output like:

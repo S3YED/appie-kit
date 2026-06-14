@@ -1,3 +1,10 @@
+---
+name: seo-backlinks
+description: "Build, evaluate, and audit external backlink profiles for Weblyfe client SEO campaigns and competitor authority-gap analysis."
+version: 1.0.0
+category: content
+---
+
 # SEO Backlinks Skill
 
 ## Purpose

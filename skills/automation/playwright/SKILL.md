@@ -1,3 +1,10 @@
+---
+name: playwright
+description: "Use Playwright for browser automation, web scraping, form filling, screenshots, authenticated flows, and deployed-site verification."
+version: 1.0.0
+category: automation
+---
+
 # SKILL.md - Playwright Browser Automation
 
 **Owner:** Appie-3 (CTO)

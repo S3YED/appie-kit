@@ -1,11 +1,11 @@
 #!/bin/bash
-# brain-sync.sh - Sync knowledge to appie-brain repo
+# brain-sync.sh - Sync knowledge to agent-brain repo
 # Usage: ./brain-sync.sh "Your commit message"
 # Emoji: 🪽 (Appie-3)
 
 set -e
 
-REPO="/root/.hermes/appie-brain"
+REPO="${AGENT_BRAIN_DIR:-$HOME/.hermes/agent-brain}"
 MSG="${1:-Auto-sync: Brain evolution update}"
 
 cd "$REPO"

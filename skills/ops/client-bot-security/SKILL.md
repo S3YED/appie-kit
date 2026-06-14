@@ -40,23 +40,23 @@ ls ~/clawd/projects/ | grep -iE '(bot|telegram|notify|agent)'
 ### 3. Find Bot Configs & Secrets
 
 Three layers of secret storage:
-- `.weblyfe-secrets/` — central secrets vault (appie-1 only)
-- Hermes `.env` files — per-node (appie-2: `/root/.hermes/.env`)
-- OpenClaw config — (eugi: `/root/.openclaw/openclaw.json`)
+- `<secrets-vault>/` — central secrets vault (primary admin host only)
+- Hermes `.env` files — per-node (<node>: `$HERMES_HOME/.env`)
+- OpenClaw config — (<legacy-node>: `$OPENCLAW_CONFIG`)
 
 ```bash
 # Central vault
-ls -la ~/.weblyfe-secrets/
+ls -la ~/<secrets-vault>/
 # → bot-provisioning-ledger.json (token_ref map)
 # → bot-provisioning-pool.env (raw tokens for free pool)
 # → telegram-bot.env (current bot token for this agent)
 # → .env (all other API keys)
 
 # Fleet node Hermes
-ssh <user>@<tailscale_ip> "cat /root/.hermes/.env | grep -iE 'BOT|TOKEN'"
+ssh <user>@<tailscale_ip> "cat $HERMES_HOME/.env | grep -iE 'BOT|TOKEN'"
 
 # Fleet node OpenClaw
-ssh <user>@<tailscale_ip> "cat /root/.openclaw/openclaw.json"
+ssh <user>@<tailscale_ip> "cat $OPENCLAW_CONFIG"
 ```
 
 ### 4. Bot Topology Map
@@ -65,8 +65,8 @@ Document per bot:
 
 | Field | Example |
 |-------|---------|
-| name | Appie-3 CTO |
-| handle | @eppieweblyfebot |
+| name | <bot-role> |
+| handle | @examplebot |
 | token_ref | TELEGRAM_BOT_TOKEN (in telegram-bot.env) |
 | host | appie-1 (this Mac Mini) |
 | gateway | Hermes |
@@ -75,11 +75,11 @@ Document per bot:
 The bot-provisioning-ledger.json tracks:
 ```json
 {
-  "name": "Appie Doctor",
-  "handle": "@weblyfebot",
+  "name": "<bot-name>",
+  "handle": "@examplebot",
   "token_ref": "APPIE_DOCTOR_BOT_TOKEN",
   "status": "assigned",
-  "box": "mac-mini (appie-1)",
+  "box": "<host>",
   "sale": null,
   "assigned_at": "2026-06-11",
   "notes": "..."
@@ -114,7 +114,7 @@ for host in "<user>@<ip1>" "<user>@<ip2>"; do
   echo "=== $host ==="
   ssh -o ConnectTimeout=5 -o BatchMode=yes -o StrictHostKeyChecking=no \
     -i "$HOME/.ssh/<key>" "$host" \
-    "cat /root/.ssh/authorized_keys | awk '{print \$3}'"
+    "cat ~/.ssh/authorized_keys | awk '{print \$3}'"
 done
 ```
 
@@ -126,7 +126,7 @@ This reveals:
 ### 2. Check for Deploy Keys
 
 ```bash
-ssh <host> "ls -la /root/.ssh/ | grep -v authorized_keys | grep -v known_hosts"
+ssh <host> "ls -la ~/.ssh/ | grep -v authorized_keys | grep -v known_hosts"
 ```
 
 Deploy keys (for CI/CD or service accounts) should be in separate files with clear filenames.
@@ -134,7 +134,7 @@ Deploy keys (for CI/CD or service accounts) should be in separate files with cle
 ### 3. Audit SSH Config
 
 ```bash
-ssh <host> "cat /root/.ssh/config"
+ssh <host> "cat ~/.ssh/config"
 ```
 
 Check for:
@@ -155,9 +155,9 @@ ssh <host> "grep -i 'permitrootlogin\|passwordauthentication' /etc/ssh/sshd_conf
 
 | Location | Risk | Mitigation |
 |----------|------|------------|
-| `~/.weblyfe-secrets/` (appie-1) | Medium (local machine compromise) | chmod 600, no git track |
-| `/root/.hermes/.env` (appie-2) | Medium (VPS compromise) | chmod 600, root-only read |
-| OpenClaw config (eugi) | Medium (VPS compromise) | chmod 600 on config dir |
+| `~/<secrets-vault>/` (appie-1) | Medium (local machine compromise) | chmod 600, no git track |
+| `$HERMES_HOME/.env` (<node>) | Medium (VPS compromise) | chmod 600, root-only read |
+| OpenClaw config (<legacy-node>) | Medium (VPS compromise) | chmod 600 on config dir |
 | Bot provisioning pool | High (bulk token leak) | Never echo to chat/logs |
 
 ### Token Discipline Rules
@@ -200,15 +200,15 @@ Format:
 ```markdown
 | Secret | Location | Access | Scope |
 |--------|----------|--------|-------|
-| TELEGRAM_BOT_TOKEN (Appie-3) | `~/.weblyfe-secrets/telegram-bot.env` | root@appie-1 | Appie-3 CTO |
-| TELEGRAM_BOT_TOKEN (Appie-2) | `/root/.hermes/.env` | root@appie-2 | Appie-2 gateway |
+| TELEGRAM_BOT_TOKEN (<bot-role>) | `~/<secrets-vault>/telegram-bot.env` | <remote-user>@<node> | <bot-role> |
+| TELEGRAM_BOT_TOKEN (<bot-gateway>) | `$HERMES_HOME/.env` | <remote-user>@<node> | <bot-gateway> |
 ```
 
 ## Client Bot Security Checklist
 
 Run this checklist for each new client bot deployment:
 
-- [ ] Bot token in `.weblyfe-secrets/bot-provisioning-pool.env` (not tracked)
+- [ ] Bot token in `<secrets-vault>/bot-provisioning-pool.env` (not tracked)
 - [ ] Bot registered in `bot-provisioning-ledger.json` with token_ref
 - [ ] Status set to `assigned` (with box, sale, assigned_at)
 - [ ] SSH access to host verified (key + user)
@@ -222,8 +222,8 @@ Run this checklist for each new client bot deployment:
 
 ## Pitfalls
 
-- **spark-atlas SSH key broken**: Key `id_ed25519_spark` for root@100.69.197.43 returns `Permission denied`. May need a different user/key. Don't assume all fleet nodes are reachable.
-- **Bot provisioning pool leak**: The pool env has 5 unassigned bot tokens. If leaked, all 5 are compromised. Guard with chmod 600.
+- **Remote SSH key mismatch**: Key `<ssh-key-name>` for <user>@<spark-tailscale-ip> returns `Permission denied`. May need a different user/key. Don't assume all fleet nodes are reachable.
+- **Bot provisioning pool leak**: If leaked, every unassigned token in the pool is compromised. Guard with chmod 600.
 - **OpenClaw vs Hermes configs are different**: OpenClaw stores tokens in `openclaw.json` (JSON), not `.env`. Know which gateway runs on which node before looking.
 - **Ghost nodes return**: Nodes that were offline >30d may have different SSH keys when they come back. Verify before re-adding to active scan.
 - **authorized_keys drift**: Manual SSH key additions by other agents/users can go undocumented. Compare against a known-good baseline.
