@@ -1,10 +1,10 @@
 # Appie Kit Skills Index
 
-**Production skills in appie-kit:** 526
+**Production skills in appie-kit:** 527
 
-**Unique skill names:** 526
+**Unique skill names:** 527
 
-_Regenerated 2026-06-14 12:22 UTC_
+_Regenerated 2026-06-15 02:10 UTC_
 
 ## Categories
 
@@ -12,7 +12,7 @@ _Regenerated 2026-06-14 12:22 UTC_
 - [communication](communication/INDEX.md): 6 skills
 - [content](content/INDEX.md): 49 skills
 - [ecc](ecc/INDEX.md): 250 skills
-- [integrations](integrations/INDEX.md): 108 skills
+- [integrations](integrations/INDEX.md): 109 skills
 - [knowledge](knowledge/INDEX.md): 31 skills
 - [meta](meta/INDEX.md): 11 skills
 - [ops](ops/INDEX.md): 23 skills
@@ -363,7 +363,7 @@ _Regenerated 2026-06-14 12:22 UTC_
 - [`workspace-surface-audit`](ecc/workspace-surface-audit/): Audit the active repo, MCP servers, plugins, connectors, env surfaces, and harness setup, then recommend the highest-value ECC-native skills, hooks, agents, and operator workflows. Use when the user wants help setting up Claude Code or understanding what capabilities are actually available in their environment.
 - [`x-api`](ecc/x-api/): X/Twitter API integration for posting tweets, threads, reading timelines, search, and analytics. Covers OAuth auth patterns, rate limits, and platform-native content posting. Use when the user wants to interact with X programmatically.
 
-### integrations (108)
+### integrations (109)
 
 - [`airtable`](integrations/airtable/): Airtable REST API via curl. Records CRUD, filters, upserts.
 - [`blucli`](integrations/blucli/): BluOS CLI (blu) for discovery, playback, grouping, and volume.
@@ -468,6 +468,7 @@ _Regenerated 2026-06-14 12:22 UTC_
 - [`sonoscli`](integrations/sonoscli/): Control Sonos speakers (discover/status/play/volume/group).
 - [`spark-comfy`](integrations/spark-comfy/): Generate images via Spark Atlas's ComfyUI inference API. SDXL + FLUX schnell, style presets, queue + status polling, Tailnet-only access with X-API-Key auth.
 - [`spotify`](integrations/spotify/): Spotify: play, search, queue, manage playlists and devices.
+- [`stripe-operations`](integrations/stripe-operations/): Operate Stripe safely from an agent or VPS: verify access, install/use Stripe CLI, inspect products/prices/customers/subscriptions/checkout sessions/webhooks, and perform guarded payment operations. Use when the user asks about Stripe access, Stripe CLI setup, billing audits, products/prices, subscriptions, checkout, webhooks, refunds, coupons, or payment configuration.
 - [`trello`](integrations/trello/): Manage Trello boards, lists, and cards via the Trello REST API.
 - [`venice`](integrations/venice/): Run Venice AI research through an isolated subagent workflow and return summarized results without blocking the main session.
 - [`webflow`](integrations/webflow/): Operate Webflow CMS for Weblyfe client sites, including collections, item updates, image fields, publishing, and asset-upload fallbacks.

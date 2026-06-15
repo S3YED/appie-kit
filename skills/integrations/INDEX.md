@@ -1,4 +1,4 @@
-# Integrations - 108 skills
+# Integrations - 109 skills
 
 Third-party service integrations: Google Workspace, Notion, GitHub, n8n, fal.ai, Webflow, Spotify, Trello, and more.
 
@@ -107,6 +107,7 @@ Third-party service integrations: Google Workspace, Notion, GitHub, n8n, fal.ai,
 - [`sonoscli`](sonoscli/): Control Sonos speakers (discover/status/play/volume/group).
 - [`spark-comfy`](spark-comfy/): Generate images via Spark Atlas's ComfyUI inference API. SDXL + FLUX schnell, style presets, queue + status polling, Tailnet-only access with X-API-Key auth.
 - [`spotify`](spotify/): Spotify: play, search, queue, manage playlists and devices.
+- [`stripe-operations`](stripe-operations/): Operate Stripe safely from an agent or VPS: verify access, install/use Stripe CLI, inspect products/prices/customers/subscriptions/checkout sessions/webhooks, and perform guarded payment operations. Use when the user asks about Stripe access, Stripe CLI setup, billing audits, products/prices, subscriptions, checkout, webhooks, refunds, coupons, or payment configuration.
 - [`trello`](trello/): Manage Trello boards, lists, and cards via the Trello REST API.
 - [`venice`](venice/): Run Venice AI research through an isolated subagent workflow and return summarized results without blocking the main session.
 - [`webflow`](webflow/): Operate Webflow CMS for Weblyfe client sites, including collections, item updates, image fields, publishing, and asset-upload fallbacks.

@@ -1,6 +1,6 @@
 # Appie Kit - Skill Discovery
 
-526 public skills, 9 categories. Sourced from a sanitized agent-fleet library plus imported ECC engineering/agentic-ops skills.
+527 public skills, 9 categories. Sourced from a sanitized agent-fleet library plus imported ECC engineering/agentic-ops skills.
 
 Each skill is a directory with a `SKILL.md` file. Drop any skill folder into `~/.hermes/skills/` or `~/.openclaw/skills/` and it is available in your next session.
 
@@ -44,7 +44,7 @@ Highlights: `agent-harness-construction`, `autonomous-loops`, `continuous-learni
 
 ---
 
-### integrations (108 skills)
+### integrations (109 skills)
 Third-party service integrations: Google Workspace, Notion, GitHub, n8n, fal.ai, Webflow, Spotify, Trello, and more.
 
 [Browse integrations skills](skills/integrations/INDEX.md) | [Readme](skills/integrations/README.md)
