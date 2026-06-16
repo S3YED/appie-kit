@@ -1,4 +1,4 @@
-# Content - 49 skills
+# Content - 54 skills
 
 Design, frontend, media, SEO, copywriting, image/video/audio generation, and creative workflows.
 
@@ -10,6 +10,7 @@ Design, frontend, media, SEO, copywriting, image/video/audio generation, and cre
 - [`architecture-diagram`](architecture-diagram/): Dark-themed SVG architecture/cloud/infra diagrams as HTML.
 - [`baoyu-comic`](baoyu-comic/): Knowledge comics (知识漫画): educational, biography, tutorial.
 - [`baoyu-infographic`](baoyu-infographic/): Infographics: 21 layouts x 21 styles (信息图, 可视化).
+- [`building-ai-websites-that-dont-look-ai`](building-ai-websites-that-dont-look-ai/): Use when building or reviewing a website with AI (Claude Design/Claude Code/Next.js) and it risks looking generic or "AI-generated" - flat backgrounds, no hover states, inconsistent spacing, dead static pages, single accent color, wall-of-text sections
 - [`canvas`](canvas/): Display generated HTML content on connected Appie or OpenClaw canvas nodes for dashboards, demos, games, and visualizations.
 - [`ckm:banner-design`](banner-design/): Design banners for social media, ads, website heroes, creative assets, and print. Multiple art direction options with AI-generated visuals. Actions: design, create, generate banner. Platforms: Facebook, Twitter/X, LinkedIn, YouTube, Instagram, Google Display, website hero, print. Styles: minimalist, gradient, bold typography, photo-based, illustrated, geometric, retro, glassmorphism, 3D, neon, duotone, editorial, collage. Uses ui-ux-pro-max, frontend-design, ai-artist, ai-multimodal skills.
 - [`ckm:brand`](brand/): Brand voice, visual identity, messaging frameworks, asset management, brand consistency. Activate for branded content, tone of voice, marketing assets, brand compliance, style guides.
@@ -23,7 +24,9 @@ Design, frontend, media, SEO, copywriting, image/video/audio generation, and cre
 - [`content-safe-zones`](content-safe-zones/): Place text, captions, CTAs, and overlays safely for Instagram Reels, TikTok, and YouTube Shorts vertical-video layouts.
 - [`design-mastery`](design-mastery/): Apply Appie and Weblyfe design principles for hierarchy, spacing, typography, color, UI polish, and premium minimal interfaces.
 - [`design-md`](design-md/): Author/validate/export Google's DESIGN.md token spec files.
+- [`excalidraw`](excalidraw/): Create hand-drawn style diagrams using Excalidraw JSON format. Generate .excalidraw files for architecture diagrams, flowcharts, sequence diagrams, concept maps, and more. Files can be opened at excalidraw.com or uploaded for shareable links.
 - [`frontend-design`](frontend-design/): Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, or applications. Generates creative, polished code that avoids generic AI aesthetics.
+- [`gamma`](gamma/): Create presentations, documents, social posts, and websites using Gamma's AI API. Use when asked to create slides, presentations, decks, documents, or web content via Gamma.
 - [`higgsfield-image`](higgsfield-image/): Generate images using Higgsfield's Nano Banana Pro (nano_banana_2) via the mcporter MCP server. Use for product photos, character-consistent fashion photography, and creative assets. Primary image generation tool for TracyToronto e-commerce content.
 - [`ideation`](creative-ideation/): Generate project ideas via creative constraints.
 - [`manim-video`](manim-video/): Manim CE animations: 3Blue1Brown math/algo videos.
@@ -33,6 +36,7 @@ Design, frontend, media, SEO, copywriting, image/video/audio generation, and cre
 - [`popular-web-designs`](popular-web-designs/): 54 real design systems (Stripe, Linear, Vercel) as HTML/CSS.
 - [`powerpoint`](powerpoint-2/): Use this skill any time a .pptx file is involved in any way — as input, output, or both. This includes: creating slide decks, pitch decks, or presentations; reading, parsing, or extracting text from any .pptx file (even if the extracted content will be used elsewhere, like in an email or summary); editing, modifying, or updating existing presentations; combining or splitting slide files; working with templates, layouts, speaker notes, or comments. Trigger whenever the user mentions \"deck,\" \"slides,\" \"presentation,\" or references a .pptx filename, regardless of what they plan to do with the content afterward. If a .pptx file needs to be opened, created, or touched, use this skill.
 - [`productized-service-business`](productized-service-business/): Validate, launch, and deliver productized service businesses, service-first SaaS wedges, managed marketplaces, and audit/retainer offers. Use when the user asks which business idea is worth doing, wants competitor or Dutch/NL market validation, wants a monetization ladder, wants to validate a service before building software, or wants delivery SOPs/templates for a first paid client offer such as Review-to-Revenue / Customer Voice Conversion Audits.
+- [`remotion-best-practices`](remotion-best-practices/): Best practices for Remotion - Video creation in React
 - [`segment-anything-model`](segment-anything/): SAM: zero-shot image segmentation via points, boxes, masks.
 - [`seo-backlinks`](seo-backlinks/): Build, evaluate, and audit external backlink profiles for Weblyfe client SEO campaigns and competitor authority-gap analysis.
 - [`seo-bezoekersmagneet`](seo-bezoekersmagneet/): Explain and audit foundational SEO strategy for Weblyfe clients, including why organic ranking matters and what Google evaluates.
@@ -53,3 +57,4 @@ Design, frontend, media, SEO, copywriting, image/video/audio generation, and cre
 - [`video-frames`](video-frames/): Extract frames or short clips from videos using ffmpeg.
 - [`web-design-pipeline`](web-design-pipeline/): Build premium, multi-page, animated websites fast and with real design rigor — design-system-first, Claude Design + Claude Code, Next.js + GSAP, deploy to Vercel. Use for any client site, landing page, or premium brand properties.
 - [`xitter`](social-media/xitter/): Interact with X/Twitter via the x-cli terminal client using official X API credentials. Use for posting, reading timelines, searching tweets, liking, retweeting, bookmarks, mentions, and user lookups.
+- [`youtube-content`](youtube-content/): Fetch YouTube video transcripts and transform them into structured content (chapters, summaries, threads, blog posts). Use when the user shares a YouTube URL or video link, asks to summarize a video, requests a transcript, or wants to extract and reformat content from any YouTube video.

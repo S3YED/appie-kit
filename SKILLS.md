@@ -1,6 +1,6 @@
 # Appie Kit - Skill Discovery
 
-527 public skills, 9 categories. Sourced from a sanitized agent-fleet library plus imported ECC engineering/agentic-ops skills.
+540 public skills, 9 categories. Sourced from a sanitized agent-fleet library plus imported ECC engineering/agentic-ops skills.
 
 Each skill is a directory with a `SKILL.md` file. Drop any skill folder into `~/.hermes/skills/` or `~/.openclaw/skills/` and it is available in your next session.
 
@@ -8,7 +8,7 @@ Each skill is a directory with a `SKILL.md` file. Drop any skill folder into `~/
 
 ## Categories
 
-### automation (26 skills)
+### automation (27 skills)
 Agent self-management, workflow orchestration, browser automation, coding agents, and inter-agent coordination.
 
 [Browse automation skills](skills/automation/INDEX.md) | [Readme](skills/automation/README.md)
@@ -26,7 +26,7 @@ Highlights: `discord`, `bluebubbles`, `himalaya`, `wacli`, `voice-call`
 
 ---
 
-### content (49 skills)
+### content (54 skills)
 Design, frontend, media, SEO, copywriting, image/video/audio generation, and creative workflows.
 
 [Browse content skills](skills/content/INDEX.md) | [Readme](skills/content/README.md)
@@ -53,7 +53,7 @@ Highlights: `exa-plus`, `n8n`, `github`, `gog`, `airtable`, `notion-masterclass`
 
 ---
 
-### knowledge (31 skills)
+### knowledge (33 skills)
 Model, ML, research, fine-tuning, quantization, inference, evaluation, and technical reference skills.
 
 [Browse knowledge skills](skills/knowledge/INDEX.md) | [Readme](skills/knowledge/README.md)
@@ -71,7 +71,7 @@ Highlights: `skill-creator`, `hermes-agent-skill-authoring`, `clawhub`, `clawlis
 
 ---
 
-### ops (23 skills)
+### ops (28 skills)
 Infrastructure, DevOps, git, fleet operations, security hardening, deployment, and maintenance.
 
 [Browse ops skills](skills/ops/INDEX.md) | [Readme](skills/ops/README.md)

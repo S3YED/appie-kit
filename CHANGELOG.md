@@ -8,6 +8,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## v4.5 (2026-06-06)
 
 ### Added
+- 3 curated fleet skills from `appie-3-hermes`: `deployment-inspection`, `webhook-subscriptions`, and `web-research`; normalized `agent-browser` and `rtk-token-killer` into category directories. (added 2026-06-16)
 - `configs/fleet-access.example.yml`, `docs/FLEET-ACCESS.md`, and `tools/validate-public-skills.py` for public-safe fleet host onboarding and pre-publish validation. (added 2026-06-14)
 - `skills/integrations/spark-comfy/`: GPU/media worker ComfyUI client for Tailnet-only image generation via SDXL + FLUX schnell; style presets, queue + status polling, X-API-Key auth. (added 2026-05-26)
 - 6 additional skills synced from live fleet across automation and meta categories, bringing total to **162 production skills**.
@@ -16,6 +17,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - `skills/ops/fleet-infra-fixes/`: recurring Appie fleet infrastructure fixes from `appie-2` / external worker, covering Node/simdjson breakage, deploy-key isolation, token reauth, and Tailscale Serve discipline. (added 2026-06-14)
 
 ### Changed
+- Public skill indexes updated to **540** after the 2026-06-16 fleet sync.
 - README and SKILLS.md skill count updated from 156 to 162 (verified by `find skills -name SKILL.md | wc -l`).
 - Public skill indexes reconciled with tracked `SKILL.md` files; total count is now **510** including the imported ECC set. (2026-06-13)
 - Public skill indexes updated to **513** after the 2026-06-14 fleet sync.

@@ -1,9 +1,9 @@
 ---
 name: agent-browser
-description: Browser automation CLI built for AI agents — compact ref-based text output (200-400 tokens vs 3000-5000 for full DOM), native Rust, 50+ commands. Default browser-automation tool for the fleet. Use for any web navigation, scraping, form-filling, screenshots, or testing from the shell.
+description: Browser automation CLI built for AI agents - compact ref-based text output (200-400 tokens vs 3000-5000 for full DOM), native Rust, 50+ commands. Default browser-automation tool for the fleet. Use for any web navigation, scraping, form-filling, screenshots, or testing from the shell.
 ---
 
-# agent-browser — fleet default for browser automation
+# agent-browser - fleet default for browser automation
 
 A native-Rust browser-automation CLI designed for AI agents. Compact text output minimises context usage. Use it instead of heavier browser stacks for shell-driven web tasks.
 
@@ -32,7 +32,7 @@ agent-browser close
 - Fast: no DOM re-query. AI-friendly: text output parses naturally.
 
 ## What it covers (50+ commands)
-Navigation, forms, screenshots, network control, storage/cookies/auth-state, file upload/download, tabs, frames, debugging. Built-in: video recording, streaming, profiler, diffing. First-class docs for React/Web Vitals, init scripts, and Next.js + Vercel. Stateful: sessions, profiles, proxy, security controls — good for long-running agents.
+Navigation, forms, screenshots, network control, storage/cookies/auth-state, file upload/download, tabs, frames, debugging. Built-in: video recording, streaming, profiler, diffing. First-class docs for React/Web Vitals, init scripts, and Next.js + Vercel. Stateful: sessions, profiles, proxy, security controls - good for long-running agents.
 
 ## Architecture
 Client-daemon: a Rust CLI talks to a native Rust daemon that drives Chrome over CDP. The daemon starts automatically and persists between commands.

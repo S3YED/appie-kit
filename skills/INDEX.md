@@ -1,27 +1,28 @@
 # Appie Kit Skills Index
 
-**Production skills in appie-kit:** 527
+**Production skills in appie-kit:** 540
 
-**Unique skill names:** 527
+**Unique skill names:** 540
 
-_Regenerated 2026-06-15 02:10 UTC_
+_Regenerated 2026-06-16 02:18 UTC_
 
 ## Categories
 
-- [automation](automation/INDEX.md): 26 skills
+- [automation](automation/INDEX.md): 27 skills
 - [communication](communication/INDEX.md): 6 skills
-- [content](content/INDEX.md): 49 skills
+- [content](content/INDEX.md): 54 skills
 - [ecc](ecc/INDEX.md): 250 skills
 - [integrations](integrations/INDEX.md): 109 skills
-- [knowledge](knowledge/INDEX.md): 31 skills
+- [knowledge](knowledge/INDEX.md): 33 skills
 - [meta](meta/INDEX.md): 11 skills
-- [ops](ops/INDEX.md): 23 skills
+- [ops](ops/INDEX.md): 28 skills
 - [personal](personal/INDEX.md): 22 skills
 
 ## Skills
 
-### automation (26)
+### automation (27)
 
+- [`agent-browser`](automation/agent-browser/): Browser automation CLI built for AI agents - compact ref-based text output (200-400 tokens vs 3000-5000 for full DOM), native Rust, 50+ commands. Default browser-automation tool for the fleet. Use for any web navigation, scraping, form-filling, screenshots, or testing from the shell.
 - [`brain-sync`](automation/brain-sync/): Sync knowledge and learnings to the shared agent-brain repo. Every agent commits with their own identity so contributions are traceable. Use after: complex tasks (5+ tool calls), significant discoveries, new skills, or client work. Fleet: each node uses its own traceable git identity.
 - [`claude-code`](automation/autonomous-ai-agents/claude-code/): Delegate coding tasks to Claude Code (Anthropic's CLI agent). Use for building features, refactoring, PR reviews, and iterative coding. Requires the claude CLI installed.
 - [`clawflow`](automation/clawflow/): Use when work should span one or more detached tasks but still behave like one job with a single owner context. ClawFlow is the runtime substrate under authoring layers like Lobster, acpx, or plain code. Keep conditional logic in the caller; use ClawFlow for flow identity, waiting, outputs, and user-facing emergence.
@@ -58,7 +59,7 @@ _Regenerated 2026-06-15 02:10 UTC_
 - [`voice-call`](communication/voice-call/): Start voice calls via the OpenClaw voice-call plugin.
 - [`wacli`](communication/wacli/): Send WhatsApp messages to other people or search/sync WhatsApp history via the wacli CLI (not for normal user chats).
 
-### content (49)
+### content (54)
 
 - [`21st-dev`](content/21st-dev/): Install and use 21st.dev components — the largest shadcn/ui-compatible registry of React + Tailwind + Framer Motion components (Magic UI, Aceternity UI, originui, eldoraui, kokonutui, Skiper UI, etc.). Use when the user wants Awwwards-tier homepage polish, animated heroes, marquees, bento grids, scroll reveals, pricing cards, testimonials, FAQ accordions, or any high-quality landing-page block. Stack: Next.js + Tailwind 4 + React 19 + framer-motion.
 - [`agentic-video-tools`](content/agentic-video-tools/): Compare and integrate agentic short-form video editing SaaS tools and OSS alternatives for the content factory pipeline. Use when the agent needs to automate: raw clip → Reel/Short/TikTok with captions/SFX/music/transitions → publish to IG/TikTok/YT with zero human editor in the loop. Covers automation depth ranking, API integration recipes, OSS alternatives, and anti-patterns.
@@ -66,6 +67,7 @@ _Regenerated 2026-06-15 02:10 UTC_
 - [`architecture-diagram`](content/architecture-diagram/): Dark-themed SVG architecture/cloud/infra diagrams as HTML.
 - [`baoyu-comic`](content/baoyu-comic/): Knowledge comics (知识漫画): educational, biography, tutorial.
 - [`baoyu-infographic`](content/baoyu-infographic/): Infographics: 21 layouts x 21 styles (信息图, 可视化).
+- [`building-ai-websites-that-dont-look-ai`](content/building-ai-websites-that-dont-look-ai/): Use when building or reviewing a website with AI (Claude Design/Claude Code/Next.js) and it risks looking generic or "AI-generated" - flat backgrounds, no hover states, inconsistent spacing, dead static pages, single accent color, wall-of-text sections
 - [`canvas`](content/canvas/): Display generated HTML content on connected Appie or OpenClaw canvas nodes for dashboards, demos, games, and visualizations.
 - [`ckm:banner-design`](content/banner-design/): Design banners for social media, ads, website heroes, creative assets, and print. Multiple art direction options with AI-generated visuals. Actions: design, create, generate banner. Platforms: Facebook, Twitter/X, LinkedIn, YouTube, Instagram, Google Display, website hero, print. Styles: minimalist, gradient, bold typography, photo-based, illustrated, geometric, retro, glassmorphism, 3D, neon, duotone, editorial, collage. Uses ui-ux-pro-max, frontend-design, ai-artist, ai-multimodal skills.
 - [`ckm:brand`](content/brand/): Brand voice, visual identity, messaging frameworks, asset management, brand consistency. Activate for branded content, tone of voice, marketing assets, brand compliance, style guides.
@@ -79,7 +81,9 @@ _Regenerated 2026-06-15 02:10 UTC_
 - [`content-safe-zones`](content/content-safe-zones/): Place text, captions, CTAs, and overlays safely for Instagram Reels, TikTok, and YouTube Shorts vertical-video layouts.
 - [`design-mastery`](content/design-mastery/): Apply Appie and Weblyfe design principles for hierarchy, spacing, typography, color, UI polish, and premium minimal interfaces.
 - [`design-md`](content/design-md/): Author/validate/export Google's DESIGN.md token spec files.
+- [`excalidraw`](content/excalidraw/): Create hand-drawn style diagrams using Excalidraw JSON format. Generate .excalidraw files for architecture diagrams, flowcharts, sequence diagrams, concept maps, and more. Files can be opened at excalidraw.com or uploaded for shareable links.
 - [`frontend-design`](content/frontend-design/): Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, or applications. Generates creative, polished code that avoids generic AI aesthetics.
+- [`gamma`](content/gamma/): Create presentations, documents, social posts, and websites using Gamma's AI API. Use when asked to create slides, presentations, decks, documents, or web content via Gamma.
 - [`higgsfield-image`](content/higgsfield-image/): Generate images using Higgsfield's Nano Banana Pro (nano_banana_2) via the mcporter MCP server. Use for product photos, character-consistent fashion photography, and creative assets. Primary image generation tool for TracyToronto e-commerce content.
 - [`ideation`](content/creative-ideation/): Generate project ideas via creative constraints.
 - [`manim-video`](content/manim-video/): Manim CE animations: 3Blue1Brown math/algo videos.
@@ -89,6 +93,7 @@ _Regenerated 2026-06-15 02:10 UTC_
 - [`popular-web-designs`](content/popular-web-designs/): 54 real design systems (Stripe, Linear, Vercel) as HTML/CSS.
 - [`powerpoint`](content/powerpoint-2/): Use this skill any time a .pptx file is involved in any way — as input, output, or both. This includes: creating slide decks, pitch decks, or presentations; reading, parsing, or extracting text from any .pptx file (even if the extracted content will be used elsewhere, like in an email or summary); editing, modifying, or updating existing presentations; combining or splitting slide files; working with templates, layouts, speaker notes, or comments. Trigger whenever the user mentions \"deck,\" \"slides,\" \"presentation,\" or references a .pptx filename, regardless of what they plan to do with the content afterward. If a .pptx file needs to be opened, created, or touched, use this skill.
 - [`productized-service-business`](content/productized-service-business/): Validate, launch, and deliver productized service businesses, service-first SaaS wedges, managed marketplaces, and audit/retainer offers. Use when the user asks which business idea is worth doing, wants competitor or Dutch/NL market validation, wants a monetization ladder, wants to validate a service before building software, or wants delivery SOPs/templates for a first paid client offer such as Review-to-Revenue / Customer Voice Conversion Audits.
+- [`remotion-best-practices`](content/remotion-best-practices/): Best practices for Remotion - Video creation in React
 - [`segment-anything-model`](content/segment-anything/): SAM: zero-shot image segmentation via points, boxes, masks.
 - [`seo-backlinks`](content/seo-backlinks/): Build, evaluate, and audit external backlink profiles for Weblyfe client SEO campaigns and competitor authority-gap analysis.
 - [`seo-bezoekersmagneet`](content/seo-bezoekersmagneet/): Explain and audit foundational SEO strategy for Weblyfe clients, including why organic ranking matters and what Google evaluates.
@@ -109,6 +114,7 @@ _Regenerated 2026-06-15 02:10 UTC_
 - [`video-frames`](content/video-frames/): Extract frames or short clips from videos using ffmpeg.
 - [`web-design-pipeline`](content/web-design-pipeline/): Build premium, multi-page, animated websites fast and with real design rigor — design-system-first, Claude Design + Claude Code, Next.js + GSAP, deploy to Vercel. Use for any client site, landing page, or premium brand properties.
 - [`xitter`](content/social-media/xitter/): Interact with X/Twitter via the x-cli terminal client using official X API credentials. Use for posting, reading timelines, searching tweets, liking, retweeting, bookmarks, mentions, and user lookups.
+- [`youtube-content`](content/youtube-content/): Fetch YouTube video transcripts and transform them into structured content (chapters, summaries, threads, blog posts). Use when the user shares a YouTube URL or video link, asks to summarize a video, requests a transcript, or wants to extract and reformat content from any YouTube video.
 
 ### ecc (250)
 
@@ -475,7 +481,7 @@ _Regenerated 2026-06-15 02:10 UTC_
 - [`xurl`](integrations/xurl/): X/Twitter via xurl CLI: post, search, DM, media, v2 API.
 - [`yuanbao`](integrations/yuanbao/): Yuanbao (元宝) groups: @mention users, query info/members.
 
-### knowledge (31)
+### knowledge (33)
 
 - [`arxiv`](knowledge/research/arxiv/): Search and retrieve academic papers from arXiv using their free REST API. No API key needed. Search by keyword, author, category, or ID. Combine with web_extract or the ocr-and-documents skill to read full paper content.
 - [`audiocraft-audio-generation`](knowledge/audiocraft/): AudioCraft: MusicGen text-to-music, AudioGen text-to-sound.
@@ -490,6 +496,7 @@ _Regenerated 2026-06-15 02:10 UTC_
 - [`guidance`](knowledge/guidance/): Control LLM output with regex and grammars, guarantee valid JSON/XML/code generation, enforce structured formats, and build multi-step workflows with Guidance - Microsoft Research's constrained generation framework
 - [`humanizer`](knowledge/humanizer/): Humanize text: strip AI-isms and add real voice.
 - [`jupyter-live-kernel`](knowledge/data-science/jupyter-live-kernel/): Use a live Jupyter kernel for stateful, iterative Python execution via hamelnb. Load this skill when the task involves exploration, iteration, or inspecting intermediate results — data science, ML experimentation, API exploration, or building up complex code step-by-step. Uses terminal to run CLI commands against a live Jupyter kernel. No new tools required.
+- [`knowledge-pipeline Skill`](knowledge/knowledge-pipeline/):
 - [`llama-cpp`](knowledge/llama-cpp/): llama.cpp local GGUF inference + HF Hub model discovery.
 - [`llm-wiki`](knowledge/llm-wiki/): Karpathy's LLM Wiki: build/query interlinked markdown KB.
 - [`onchain-analysis`](knowledge/data-science/onchain-analysis/): Analyze blockchain/on-chain transaction flows for repeated counterparties, high-value transfers, wallet behavior, whale movement, exchange/mixer/bridge patterns, and chain-wide Ethereum scans. Use when the user asks to scan Etherscan, Ethereum, wallets, transactions, crypto flows, repeated from-to payments, $5k+ filters, whale tracking, or suspicious on-chain patterns.
@@ -506,6 +513,7 @@ _Regenerated 2026-06-15 02:10 UTC_
 - [`travel-flight-research`](knowledge/travel-flight-research/): Research flight options, compare route families, and present clean booking links and concise recommendations.
 - [`turbovec`](knowledge/turbovec/): Local vector search with turbovec (Google TurboQuant, Rust+Python). Use for embeddings indexing, semantic search, local RAG, or filtered vector retrieval without external services like Pinecone.
 - [`unsloth`](knowledge/unsloth/): Unsloth: 2-5x faster LoRA/QLoRA fine-tuning, less VRAM.
+- [`web-research`](knowledge/research/web-research/): Research any topic via web search, content extraction, and multi-source synthesis. Covers DuckDuckGo lite scraping, browser-based extraction, and parallel delegated research.
 - [`weights-and-biases`](knowledge/weights-and-biases/): W&B: log ML experiments, sweeps, model registry, dashboards.
 - [`whisper`](knowledge/whisper/): OpenAI's general-purpose speech recognition model. Supports 99 languages, transcription, translation to English, and language identification. Six model sizes from tiny (39M params) to large (1550M params). Use for speech-to-text, podcast transcription, or multilingual audio processing. Best for robust, multilingual ASR.
 
@@ -523,7 +531,7 @@ _Regenerated 2026-06-15 02:10 UTC_
 - [`verify-task`](meta/verify-task/): MUST use after completing any multi-step task or project. Verifies completion against the original plan, checks quality criteria, and documents outcomes.
 - [`write-plan`](meta/write-plan/): MUST use after brainstorming and before executing. Creates detailed implementation plans with checkpoints, verification criteria, and execution options.
 
-### ops (23)
+### ops (28)
 
 - [`1password`](ops/1password/): Set up and use 1Password CLI (op). Use when installing the CLI, enabling desktop app integration, signing in (single or multi-account), or reading/injecting/running secrets via op.
 - [`agent-fleet-operations`](ops/agent-fleet-operations/): Operate Hermes-style agent fleets across machines: provision remote hosts, validate transport/auth, refresh knowledge packs, and recover provider or gateway runtime failures.
@@ -532,6 +540,7 @@ _Regenerated 2026-06-15 02:10 UTC_
 - [`camsnap`](ops/camsnap/): Capture frames or clips from RTSP/ONVIF cameras.
 - [`client-bot-security`](ops/client-bot-security/): Full-spectrum security audit for client Telegram bots across a multi-gateway fleet (Hermes + OpenClaw). Covers bot inventory & topology mapping, token provisioning security, SSH key hygiene, authorized_keys audit, secrets map documentation, and bot lifecycle management (free→assigned→active→retired).
 - [`debugging-hermes-tui-commands`](ops/debugging-hermes-tui-commands/): Debug Hermes TUI slash commands: Python, gateway, Ink UI.
+- [`deployment-inspection`](ops/deployment-inspection/): End-to-end investigation of a live client deployment - platform detection, subdomain discovery, deployment API access (Netlify), JS bundle analysis, repo discovery.
 - [`digital-ocean`](ops/digital-ocean/): Manage Digital Ocean droplets, domains, and infrastructure via DO API.
 - [`fleet-infra-fixes`](ops/fleet-infra-fixes/): Resolve recurring Appie fleet infrastructure issues including Node/Homebrew breakage, pnpm install blockers, deploy keys, secrets, browser auth, Tailscale serve, and local model routing.
 - [`fleet-skill-sync`](ops/fleet-skill-sync/): Use when pulling, comparing, de-duping, curating or syncing skills across the agent fleet (primary nodes, worker nodes, media hosts, and approved client-bot profiles), or when asked to consolidate fleet skills into the clawd master library
@@ -540,14 +549,18 @@ _Regenerated 2026-06-15 02:10 UTC_
 - [`healthcheck`](ops/healthcheck/): Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).
 - [`hermes-runtime-operations`](ops/hermes-runtime-operations/): Operate and troubleshoot Hermes runtime health in production-like environments. Use for routine environment maintenance (gateway/cron/disk/workspace checks) and auth incident response (OAuth/API-key failures, refresh-token issues, headless device-code recovery).
 - [`model-usage`](ops/model-usage/): Use CodexBar CLI local cost usage to summarize per-model usage for Codex or Claude, including the current (most recent) model or a full model breakdown. Trigger when asked for model-level usage/cost data from codexbar, or when you need a scriptable per-model summary from codexbar cost JSON.
+- [`nano-pdf`](ops/nano-pdf/): Edit PDFs with natural-language instructions using the nano-pdf CLI. Modify text, fix typos, update titles, and make content changes to specific pages without manual editing.
 - [`node-connect`](ops/node-connect/): Diagnose OpenClaw node connection and pairing failures for Android, iOS, and macOS companion apps. Use when QR/setup code/manual connect fails, local Wi-Fi works but VPS/tailnet does not, or errors mention pairing required, unauthorized, bootstrap token invalid or expired, gateway.bind, gateway.remote.url, Tailscale, or plugins.entries.device-pair.config.publicUrl.
 - [`node-inspect-debugger`](ops/node-inspect-debugger/): Debug Node.js via --inspect + Chrome DevTools Protocol CLI.
+- [`ocr-and-documents`](ops/ocr-and-documents/): Extract text from PDFs and scanned documents. Use web_extract for remote URLs, pymupdf for local text-based PDFs, marker-pdf for OCR/scanned docs. For DOCX use python-docx, for PPTX see the powerpoint skill.
 - [`openclaw-to-hermes`](ops/openclaw-to-hermes/): Port OpenClaw Appie to Hermes Agent and spawn new instances. Clone appie-brain, configure identity files (SOUL.md, USER.md, IDENTITY.md, AGENTS.md), set up git sync, copy secrets, and start Hermes gateway.
 - [`python-debugpy`](ops/python-debugpy/): Debug Python: pdb REPL + debugpy remote (DAP).
+- [`rtk-token-killer`](ops/rtk-token-killer/): rtk (Rust Token Killer) - CLI proxy that filters/compresses command output before it reaches the LLM, cutting tokens 60-90% on ls/cat/grep/git/tests/etc. Fleet token-discipline tool. Prefix heavy read/inspect commands with `rtk`.
 - [`session-logs`](ops/session-logs/): Search and analyze your own session logs (older/parent conversations) using jq.
 - [`ssh-access-recovery`](ops/ssh-access-recovery/): Restore SSH access when the host is reachable but authentication fails. Diagnose the real failure mode, use the smallest safe break-glass path, convert back to key-based auth, and verify from the source machine.
 - [`tmux`](ops/tmux/): Remote-control tmux sessions for interactive CLIs by sending keystrokes and scraping pane output.
 - [`vercel-deploy`](ops/vercel-deploy/): Deploy projects to Vercel via CLI with token auth. Use when deploying Next.js, static sites, or any project to Vercel from the terminal.
+- [`webhook-subscriptions`](ops/webhook-subscriptions/): Webhook subscriptions: event-driven agent runs.
 
 ### personal (22)
 

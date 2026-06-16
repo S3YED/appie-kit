@@ -1,9 +1,10 @@
-# Automation - 26 skills
+# Automation - 27 skills
 
 Agent self-management, workflow orchestration, browser automation, coding agents, and inter-agent coordination.
 
 ## Skills
 
+- [`agent-browser`](agent-browser/): Browser automation CLI built for AI agents - compact ref-based text output (200-400 tokens vs 3000-5000 for full DOM), native Rust, 50+ commands. Default browser-automation tool for the fleet. Use for any web navigation, scraping, form-filling, screenshots, or testing from the shell.
 - [`brain-sync`](brain-sync/): Sync knowledge and learnings to the shared agent-brain repo. Every agent commits with their own identity so contributions are traceable. Use after: complex tasks (5+ tool calls), significant discoveries, new skills, or client work. Fleet: each node uses its own traceable git identity.
 - [`claude-code`](autonomous-ai-agents/claude-code/): Delegate coding tasks to Claude Code (Anthropic's CLI agent). Use for building features, refactoring, PR reviews, and iterative coding. Requires the claude CLI installed.
 - [`clawflow`](clawflow/): Use when work should span one or more detached tasks but still behave like one job with a single owner context. ClawFlow is the runtime substrate under authoring layers like Lobster, acpx, or plain code. Keep conditional logic in the caller; use ClawFlow for flow identity, waiting, outputs, and user-facing emergence.

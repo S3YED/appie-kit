@@ -1,9 +1,9 @@
 ---
 name: rtk-token-killer
-description: rtk (Rust Token Killer) — CLI proxy that filters/compresses command output before it reaches the LLM, cutting tokens 60-90% on ls/cat/grep/git/tests/etc. Fleet token-discipline tool. Prefix heavy read/inspect commands with `rtk`.
+description: rtk (Rust Token Killer) - CLI proxy that filters/compresses command output before it reaches the LLM, cutting tokens 60-90% on ls/cat/grep/git/tests/etc. Fleet token-discipline tool. Prefix heavy read/inspect commands with `rtk`.
 ---
 
-# rtk — Rust Token Killer (fleet token discipline)
+# rtk - Rust Token Killer (fleet token discipline)
 
 A single Rust binary that filters and summarises command output before it hits the LLM context. ~80% fewer tokens on common dev commands, <10ms overhead, 100+ commands. Apache-2.0. Directly serves our token-reduction doctrine.
 
@@ -33,7 +33,7 @@ Without the hook, just prefix manually with `rtk`.
 
 ## When to use
 - DEFAULT for any read-only inspect command whose raw output is large (file reads, listings, grep, git status/diff/log, test runs, logs, docker ps, json).
-- Pairs with [[token discipline]]: reference-over-inline, deltas-over-dumps — rtk enforces it at the shell layer.
+- Pairs with [[token discipline]]: reference-over-inline, deltas-over-dumps - rtk enforces it at the shell layer.
 - Not for commands whose full output you genuinely need verbatim (then run the raw command).
 
 ## Verified
