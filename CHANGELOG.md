@@ -17,6 +17,8 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - `skills/ops/fleet-infra-fixes/`: recurring Appie fleet infrastructure fixes from `appie-2` / external worker, covering Node/simdjson breakage, deploy-key isolation, token reauth, and Tailscale Serve discipline. (added 2026-06-14)
 
 ### Changed
+- Public skill indexes corrected to **545** after the 2026-06-19 fleet sync found 5 committed Higgsfield/viral-shorts content skills missing from category indexes.
+- Removed duplicate `skills/ops/modal-serverless-gpu`; canonical `modal-serverless-gpu` remains under `skills/integrations/modal`.
 - Public skill indexes updated to **540** after the 2026-06-16 fleet sync.
 - README and SKILLS.md skill count updated from 156 to 162 (verified by `find skills -name SKILL.md | wc -l`).
 - Public skill indexes reconciled with tracked `SKILL.md` files; total count is now **510** including the imported ECC set. (2026-06-13)

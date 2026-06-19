@@ -1,6 +1,6 @@
 # Appie Kit - Skill Discovery
 
-540 public skills, 9 categories. Sourced from a sanitized agent-fleet library plus imported ECC engineering/agentic-ops skills.
+545 public skills, 9 categories. Sourced from a sanitized agent-fleet library plus imported ECC engineering/agentic-ops skills.
 
 Each skill is a directory with a `SKILL.md` file. Drop any skill folder into `~/.hermes/skills/` or `~/.openclaw/skills/` and it is available in your next session.
 
@@ -26,12 +26,12 @@ Highlights: `discord`, `bluebubbles`, `himalaya`, `wacli`, `voice-call`
 
 ---
 
-### content (54 skills)
+### content (59 skills)
 Design, frontend, media, SEO, copywriting, image/video/audio generation, and creative workflows.
 
 [Browse content skills](skills/content/INDEX.md) | [Readme](skills/content/README.md)
 
-Highlights: `frontend-design`, `ui-ux-pro-max`, `tips-landing-pages`, `nextjs-expert`, `video-editing-pro`, `web-design-pipeline`, `seo-checklist`, `comfyui`
+Highlights: `frontend-design`, `ui-ux-pro-max`, `higgsfield-generate`, `higgsfield-product-photoshoot`, `viral-shorts-course`, `video-editing-pro`, `web-design-pipeline`, `seo-checklist`
 
 ---
 

@@ -1,3 +1,8 @@
+---
+name: viral-shorts-course
+description: Decision framework for creating YouTube Shorts, Reels, and TikTok videos that go viral consistently, distilled from creators with verified analytics track records.
+---
+
 # viral-shorts-course Skill v2
 
 ## Purpose

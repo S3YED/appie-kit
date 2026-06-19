@@ -1,16 +1,16 @@
 # Appie Kit Skills Index
 
-**Production skills in appie-kit:** 540
+**Production skills in appie-kit:** 545
 
-**Unique skill names:** 540
+**Unique skill names:** 545
 
-_Regenerated 2026-06-16 02:18 UTC_
+_Regenerated 2026-06-19 02:10 UTC_
 
 ## Categories
 
 - [automation](automation/INDEX.md): 27 skills
 - [communication](communication/INDEX.md): 6 skills
-- [content](content/INDEX.md): 54 skills
+- [content](content/INDEX.md): 59 skills
 - [ecc](ecc/INDEX.md): 250 skills
 - [integrations](integrations/INDEX.md): 109 skills
 - [knowledge](knowledge/INDEX.md): 33 skills
@@ -59,7 +59,7 @@ _Regenerated 2026-06-16 02:18 UTC_
 - [`voice-call`](communication/voice-call/): Start voice calls via the OpenClaw voice-call plugin.
 - [`wacli`](communication/wacli/): Send WhatsApp messages to other people or search/sync WhatsApp history via the wacli CLI (not for normal user chats).
 
-### content (54)
+### content (59)
 
 - [`21st-dev`](content/21st-dev/): Install and use 21st.dev components — the largest shadcn/ui-compatible registry of React + Tailwind + Framer Motion components (Magic UI, Aceternity UI, originui, eldoraui, kokonutui, Skiper UI, etc.). Use when the user wants Awwwards-tier homepage polish, animated heroes, marquees, bento grids, scroll reveals, pricing cards, testimonials, FAQ accordions, or any high-quality landing-page block. Stack: Next.js + Tailwind 4 + React 19 + framer-motion.
 - [`agentic-video-tools`](content/agentic-video-tools/): Compare and integrate agentic short-form video editing SaaS tools and OSS alternatives for the content factory pipeline. Use when the agent needs to automate: raw clip → Reel/Short/TikTok with captions/SFX/music/transitions → publish to IG/TikTok/YT with zero human editor in the loop. Covers automation depth ranking, API integration recipes, OSS alternatives, and anti-patterns.
@@ -84,6 +84,10 @@ _Regenerated 2026-06-16 02:18 UTC_
 - [`excalidraw`](content/excalidraw/): Create hand-drawn style diagrams using Excalidraw JSON format. Generate .excalidraw files for architecture diagrams, flowcharts, sequence diagrams, concept maps, and more. Files can be opened at excalidraw.com or uploaded for shareable links.
 - [`frontend-design`](content/frontend-design/): Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, or applications. Generates creative, polished code that avoids generic AI aesthetics.
 - [`gamma`](content/gamma/): Create presentations, documents, social posts, and websites using Gamma's AI API. Use when asked to create slides, presentations, decks, documents, or web content via Gamma.
+- [`higgsfield-generate`](content/higgsfield-generate/): Generate images/videos/3D assets/audio via Higgsfield AI: GPT Image 2, Seedance 2.0, Nano Banana, Marketing Studio, Soul models, Kling, audio, 3D, workflows, references, and virality analysis.
+- [`higgsfield-marketplace-cards`](content/higgsfield-marketplace-cards/): Generate marketplace product image cards through Higgsfield: compliant main image, secondary product images, A+ style content modules, listing visuals, infographics, and sales-ready product image sets.
+- [`higgsfield-product-photoshoot`](content/higgsfield-product-photoshoot/): Generate brand-quality product images through Higgsfield product-photoshoot prompt enhancement on GPT Image 2. Use for product photos, studio shots, lifestyle images, ads, hero banners, carousels, virtual try-on, and product creative.
+- [`higgsfield-soul-id`](content/higgsfield-soul-id/): Train a Soul Character, a personalized face model for identity-faithful Higgsfield image and video generation. Use for digital twins, avatars, face-consistent images, and reusable Soul references.
 - [`higgsfield-image`](content/higgsfield-image/): Generate images using Higgsfield's Nano Banana Pro (nano_banana_2) via the mcporter MCP server. Use for product photos, character-consistent fashion photography, and creative assets. Primary image generation tool for TracyToronto e-commerce content.
 - [`ideation`](content/creative-ideation/): Generate project ideas via creative constraints.
 - [`manim-video`](content/manim-video/): Manim CE animations: 3Blue1Brown math/algo videos.
@@ -112,6 +116,7 @@ _Regenerated 2026-06-16 02:18 UTC_
 - [`ui-ux-pro-max`](content/ui-ux-pro-max/): AI-powered design intelligence with 67+ UI styles, 161 color palettes, 57 font pairings, 99 UX guidelines, and 25 chart types. Use for UI/UX design decisions, color schemes, typography, design systems, landing pages, and pre-delivery checklists.
 - [`video-editing-pro`](content/video-editing-pro/): Make decision-level edits for talking-head short-form video, including hook selection, pacing, filler removal, and retention checks.
 - [`video-frames`](content/video-frames/): Extract frames or short clips from videos using ffmpeg.
+- [`viral-shorts-course`](content/viral-shorts-course/): Decision framework for creating YouTube Shorts, Reels, and TikTok videos that go viral consistently, distilled from Jenny Hoyos, Logan Smith, heyDominik, MrBeast, and Colin and Samir patterns.
 - [`web-design-pipeline`](content/web-design-pipeline/): Build premium, multi-page, animated websites fast and with real design rigor — design-system-first, Claude Design + Claude Code, Next.js + GSAP, deploy to Vercel. Use for any client site, landing page, or premium brand properties.
 - [`xitter`](content/social-media/xitter/): Interact with X/Twitter via the x-cli terminal client using official X API credentials. Use for posting, reading timelines, searching tweets, liking, retweeting, bookmarks, mentions, and user lookups.
 - [`youtube-content`](content/youtube-content/): Fetch YouTube video transcripts and transform them into structured content (chapters, summaries, threads, blog posts). Use when the user shares a YouTube URL or video link, asks to summarize a video, requests a transcript, or wants to extract and reformat content from any YouTube video.

@@ -1,10 +1,10 @@
 # 🧙🏽‍♂️ Appie Kit: Build Your Own AI Employee
 
-> The same system that runs a real web design agency, now with 540 production skills extracted from a live 7-agent fleet.
+> The same system that runs a real web design agency, now with 545 production skills extracted from a live 7-agent fleet.
 
 [![Hermes Agent](https://img.shields.io/badge/Powered%20by-Hermes%20Agent-031D16?style=for-the-badge)](https://github.com/NousResearch/hermes-agent)
 [![OpenClaw](https://img.shields.io/badge/Also%20works%20with-OpenClaw-0a4020?style=for-the-badge)](https://github.com/openclaw/openclaw)
-[![Skills](https://img.shields.io/badge/Skills-540%20production-DFB771?style=for-the-badge)](skills/INDEX.md)
+[![Skills](https://img.shields.io/badge/Skills-545%20production-DFB771?style=for-the-badge)](skills/INDEX.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-555?style=for-the-badge)](LICENSE)
 
 ## What Is This?
@@ -28,7 +28,7 @@ This is the **exact configuration, tools, and skills** extracted from running [W
 
 Released June 2026.
 
-- **540 production skills** extracted from the live Appie fleet (Mac Mini, GPU/media workers, VPS nodes, and approved client-bot hosts). Up from 156 in v4.4.
+- **545 production skills** extracted from the live Appie fleet (Mac Mini, GPU/media workers, VPS nodes, and approved client-bot hosts). Up from 156 in v4.4.
 - **Hermes Agent compatibility** across the board. Skills were originally OpenClaw-only; the fleet now runs primarily on [Hermes Agent](https://github.com/NousResearch/hermes-agent).
 - **MiniMax M2.7 as the default model** via OpenRouter: 17x cheaper than Claude at GPT-4 class quality.
 - **fal.ai + RunPod media stack** for image and video generation (Kling, Nano Banana, ComfyUI workers).
@@ -109,13 +109,13 @@ That's it. Your AI employee is live.
 
 ## Skills by Category
 
-540 public skills across 9 categories. Each category has its own index.
+545 public skills across 9 categories. Each category has its own index.
 
 | Category | Net Skills | What it covers |
 |---|---|---|
 | [automation](skills/automation/INDEX.md) | 27 | Agent self-management, fleet coordination, brain sync, sub-agent spawning, ClawFlow workflows |
 | [communication](skills/communication/INDEX.md) | 6 | Telegram, Discord, Slack, iMessage (BlueBubbles), WhatsApp (wacli), voice calls |
-| [content](skills/content/INDEX.md) | 54 | UI/UX design, image gen, video production, SEO, copywriting, Next.js, TTS, stable diffusion |
+| [content](skills/content/INDEX.md) | 59 | UI/UX design, image gen, video production, SEO, copywriting, Next.js, TTS, stable diffusion |
 | [integrations](skills/integrations/INDEX.md) | 109 | Airtable, Notion, Google Workspace, GitHub, n8n, fal.ai, Spotify, Webflow, Trello, Gemini |
 | [knowledge](skills/knowledge/INDEX.md) | 33 | LLM fine-tuning (LoRA/GRPO), quantization, vLLM, Whisper STT, DSPy, model evaluation |
 | [meta](skills/meta/INDEX.md) | 11 | Skill authoring, ClawHub registry, task planning, dogfood QA, brainstorming frameworks |
@@ -123,7 +123,7 @@ That's it. Your AI employee is live.
 | [personal](skills/personal/INDEX.md) | 22 | Bear Notes, Spotify, Things 3 (macOS), weather |
 | [ecc](skills/ecc/INDEX.md) | 250 | Imported MIT engineering and agentic-ops skills |
 
-540 ready-to-drop-in skills across 9 categories. The full skill library from the live fleet is larger; this kit contains the skills that transfer cleanly to any Hermes or OpenClaw setup.
+545 ready-to-drop-in skills across 9 categories. The full skill library from the live fleet is larger; this kit contains the skills that transfer cleanly to any Hermes or OpenClaw setup.
 
 ---
 
@@ -204,7 +204,7 @@ appie-kit/
 │   ├── IDENTITY.md     # Multi-agent identity (for fleets)
 │   ├── HEARTBEAT.md    # Proactive check-in configuration
 │   └── memory/         # Persistent memory directory
-├── skills/             # 540 public skills, 9 categories
+├── skills/             # 545 public skills, 9 categories
 │   ├── automation/     # Agent self-management, fleet coordination
 │   ├── communication/  # Messaging platform integrations
 │   ├── content/        # Design, video, SEO, copywriting, frontend
@@ -321,7 +321,7 @@ Before going live:
 - [Fleet Access](docs/FLEET-ACCESS.md): safely add worker/client-bot hosts for skill inventory without leaking private data
 - [FAQ](FAQ.md): setup, skills, models, privacy, hardware, use cases
 - [Troubleshooting](TROUBLESHOOTING.md): symptom-first index for common issues
-- [Skills Catalog](SKILLS.md): browse 540 skills by category
+- [Skills Catalog](SKILLS.md): browse 545 skills by category
 - [Contributing](CONTRIBUTING.md): how to add skills and submit changes
 - [Changelog](CHANGELOG.md): version history
 - [Code of Conduct](CODE_OF_CONDUCT.md): community standards

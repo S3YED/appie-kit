@@ -1,4 +1,4 @@
-# Content - 54 skills
+# Content - 59 skills
 
 Design, frontend, media, SEO, copywriting, image/video/audio generation, and creative workflows.
 
@@ -27,6 +27,10 @@ Design, frontend, media, SEO, copywriting, image/video/audio generation, and cre
 - [`excalidraw`](excalidraw/): Create hand-drawn style diagrams using Excalidraw JSON format. Generate .excalidraw files for architecture diagrams, flowcharts, sequence diagrams, concept maps, and more. Files can be opened at excalidraw.com or uploaded for shareable links.
 - [`frontend-design`](frontend-design/): Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, or applications. Generates creative, polished code that avoids generic AI aesthetics.
 - [`gamma`](gamma/): Create presentations, documents, social posts, and websites using Gamma's AI API. Use when asked to create slides, presentations, decks, documents, or web content via Gamma.
+- [`higgsfield-generate`](higgsfield-generate/): Generate images/videos/3D assets/audio via Higgsfield AI: GPT Image 2, Seedance 2.0, Nano Banana, Marketing Studio, Soul models, Kling, audio, 3D, workflows, references, and virality analysis.
+- [`higgsfield-marketplace-cards`](higgsfield-marketplace-cards/): Generate marketplace product image cards through Higgsfield: compliant main image, secondary product images, A+ style content modules, listing visuals, infographics, and sales-ready product image sets.
+- [`higgsfield-product-photoshoot`](higgsfield-product-photoshoot/): Generate brand-quality product images through Higgsfield product-photoshoot prompt enhancement on GPT Image 2. Use for product photos, studio shots, lifestyle images, ads, hero banners, carousels, virtual try-on, and product creative.
+- [`higgsfield-soul-id`](higgsfield-soul-id/): Train a Soul Character, a personalized face model for identity-faithful Higgsfield image and video generation. Use for digital twins, avatars, face-consistent images, and reusable Soul references.
 - [`higgsfield-image`](higgsfield-image/): Generate images using Higgsfield's Nano Banana Pro (nano_banana_2) via the mcporter MCP server. Use for product photos, character-consistent fashion photography, and creative assets. Primary image generation tool for TracyToronto e-commerce content.
 - [`ideation`](creative-ideation/): Generate project ideas via creative constraints.
 - [`manim-video`](manim-video/): Manim CE animations: 3Blue1Brown math/algo videos.
@@ -55,6 +59,7 @@ Design, frontend, media, SEO, copywriting, image/video/audio generation, and cre
 - [`ui-ux-pro-max`](ui-ux-pro-max/): AI-powered design intelligence with 67+ UI styles, 161 color palettes, 57 font pairings, 99 UX guidelines, and 25 chart types. Use for UI/UX design decisions, color schemes, typography, design systems, landing pages, and pre-delivery checklists.
 - [`video-editing-pro`](video-editing-pro/): Make decision-level edits for talking-head short-form video, including hook selection, pacing, filler removal, and retention checks.
 - [`video-frames`](video-frames/): Extract frames or short clips from videos using ffmpeg.
+- [`viral-shorts-course`](viral-shorts-course/): Decision framework for creating YouTube Shorts, Reels, and TikTok videos that go viral consistently, distilled from Jenny Hoyos, Logan Smith, heyDominik, MrBeast, and Colin and Samir patterns.
 - [`web-design-pipeline`](web-design-pipeline/): Build premium, multi-page, animated websites fast and with real design rigor — design-system-first, Claude Design + Claude Code, Next.js + GSAP, deploy to Vercel. Use for any client site, landing page, or premium brand properties.
 - [`xitter`](social-media/xitter/): Interact with X/Twitter via the x-cli terminal client using official X API credentials. Use for posting, reading timelines, searching tweets, liking, retweeting, bookmarks, mentions, and user lookups.
 - [`youtube-content`](youtube-content/): Fetch YouTube video transcripts and transform them into structured content (chapters, summaries, threads, blog posts). Use when the user shares a YouTube URL or video link, asks to summarize a video, requests a transcript, or wants to extract and reformat content from any YouTube video.
