@@ -132,7 +132,7 @@ Direct and technical. I prefer bullet points over paragraphs.
 
 ## Step 5: Install your starter skill pack (5 minutes)
 
-545 public skills are included. Start with five that cover the basics:
+557 public skills are included. Start with five that cover the basics:
 
 ```bash
 # Google Calendar: schedule, check, add events

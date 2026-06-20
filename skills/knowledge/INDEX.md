@@ -17,7 +17,7 @@ Model, ML, research, fine-tuning, quantization, inference, evaluation, and techn
 - [`guidance`](guidance/): Control LLM output with regex and grammars, guarantee valid JSON/XML/code generation, enforce structured formats, and build multi-step workflows with Guidance - Microsoft Research's constrained generation framework
 - [`humanizer`](humanizer/): Humanize text: strip AI-isms and add real voice.
 - [`jupyter-live-kernel`](data-science/jupyter-live-kernel/): Use a live Jupyter kernel for stateful, iterative Python execution via hamelnb. Load this skill when the task involves exploration, iteration, or inspecting intermediate results — data science, ML experimentation, API exploration, or building up complex code step-by-step. Uses terminal to run CLI commands against a live Jupyter kernel. No new tools required.
-- [`knowledge-pipeline Skill`](knowledge-pipeline/):
+- [`knowledge-pipeline`](knowledge-pipeline/): Operate the local-first Weblyfe knowledge pipeline for ingesting documents and workspace content, embedding locally, semantic search, and graph exploration.
 - [`llama-cpp`](llama-cpp/): llama.cpp local GGUF inference + HF Hub model discovery.
 - [`llm-wiki`](llm-wiki/): Karpathy's LLM Wiki: build/query interlinked markdown KB.
 - [`onchain-analysis`](data-science/onchain-analysis/): Analyze blockchain/on-chain transaction flows for repeated counterparties, high-value transfers, wallet behavior, whale movement, exchange/mixer/bridge patterns, and chain-wide Ethereum scans. Use when the user asks to scan Etherscan, Ethereum, wallets, transactions, crypto flows, repeated from-to payments, $5k+ filters, whale tracking, or suspicious on-chain patterns.

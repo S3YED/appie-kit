@@ -1,4 +1,4 @@
-# Ops - 28 skills
+# Ops - 30 skills
 
 Infrastructure, DevOps, git, fleet operations, security hardening, deployment, and maintenance.
 
@@ -18,7 +18,9 @@ Infrastructure, DevOps, git, fleet operations, security hardening, deployment, a
 - [`git-sync`](git-sync/): Automatically syncs local workspace changes to the remote GitHub repository. Use after significant changes or periodically.
 - [`gitclaw`](gitclaw/): Back up the OpenClaw agent workspace to a GitHub repo and keep it synced via a cron-driven commit/push script.
 - [`healthcheck`](healthcheck/): Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).
+- [`heartmula`](heartmula/): Set up and run HeartMuLa, the open-source music generation model family (Suno-like). Generates full songs from lyrics + tags with multilingual support.
 - [`hermes-runtime-operations`](hermes-runtime-operations/): Operate and troubleshoot Hermes runtime health in production-like environments. Use for routine environment maintenance (gateway/cron/disk/workspace checks) and auth incident response (OAuth/API-key failures, refresh-token issues, headless device-code recovery).
+- [`huggingface-hub`](huggingface-hub/): Hugging Face Hub CLI (hf) — search, download, and upload models and datasets, manage repos, query datasets with SQL, deploy inference endpoints, manage Spaces and buckets.
 - [`model-usage`](model-usage/): Use CodexBar CLI local cost usage to summarize per-model usage for Codex or Claude, including the current (most recent) model or a full model breakdown. Trigger when asked for model-level usage/cost data from codexbar, or when you need a scriptable per-model summary from codexbar cost JSON.
 - [`nano-pdf`](nano-pdf/): Edit PDFs with natural-language instructions using the nano-pdf CLI. Modify text, fix typos, update titles, and make content changes to specific pages without manual editing.
 - [`node-connect`](node-connect/): Diagnose OpenClaw node connection and pairing failures for Android, iOS, and macOS companion apps. Use when QR/setup code/manual connect fails, local Wi-Fi works but VPS/tailnet does not, or errors mention pairing required, unauthorized, bootstrap token invalid or expired, gateway.bind, gateway.remote.url, Tailscale, or plugins.entries.device-pair.config.publicUrl.

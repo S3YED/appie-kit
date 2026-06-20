@@ -1,12 +1,15 @@
-# Personal - 22 skills
+# Personal - 25 skills
 
 Personal productivity, smart-home, lifestyle, and macOS-centered helper skills.
 
 ## Skills
 
+- [`apple-notes`](apple-notes/): Manage Apple Notes via the memo CLI on macOS (create, view, search, edit).
+- [`apple-reminders`](apple-reminders/): Manage Apple Reminders via remindctl CLI (list, add, complete, delete).
 - [`bear-notes`](bear-notes/): Create, search, and manage Bear notes via grizzly CLI.
 - [`client-success-and-retention`](client-acquisition/client-success-and-retention/): Use when designing client delivery for a coaching/agency program, hiring or running a Client Success Manager / success coach, handling a struggling or refund-requesting client, setting onboarding-call and check-in cadence, or improving retention and continuity. Source - Grow Acquisition 3.0 (Nikk Kleinherenbrink).
 - [`consulting-offer-and-pricing`](client-acquisition/consulting-offer-and-pricing/): Use when defining or repricing a consulting/agency/coaching offer (DWY/DFY/DIY), positioning a service, packaging tiers, or running discovery before building a landing page or sales script - turns a vague service into a positioned, value-priced offer with a deliverables list. Source - Grow Acquisition 3.0 (Nikk Kleinherenbrink), distilled for Weblyfe.
+- [`findmy`](findmy/): Track Apple devices and AirTags via FindMy.app on macOS using AppleScript and screen capture.
 - [`hiring-and-managing-a-team`](client-acquisition/hiring-and-managing-a-team/): Use when hiring or onboarding an appointment setter (growth specialist), a virtual assistant, or any remote team member for an agency/coaching business - covers role definition, pay structures, onboarding cadence, management rhythm, and how to fire correctly. Source - Grow Acquisition 3.0 (Nikk Kleinherenbrink).
 - [`instagram-organic-content`](client-acquisition/instagram-organic-content/): Use when scripting Instagram reels or story sequences for a personal/founder brand, optimizing an IG bio for conversion, or building a content calendar that turns a cold audience into DM leads - the value/educational/credibility content system plus story-sequence frameworks. Source - Grow Acquisition 3.0 (Nikk Kleinherenbrink).
 - [`minecraft-modpack-server`](gaming/minecraft-modpack-server/): Set up a modded Minecraft server from a CurseForge/Modrinth server pack zip. Covers NeoForge/Forge install, Java version, JVM tuning, firewall, LAN config, backups, and launch scripts.

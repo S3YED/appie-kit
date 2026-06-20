@@ -1,6 +1,6 @@
 # Appie Kit - Skill Discovery
 
-545 public skills, 9 categories. Sourced from a sanitized agent-fleet library plus imported ECC engineering/agentic-ops skills.
+557 public skills, 9 categories. Sourced from a sanitized agent-fleet library plus imported ECC engineering/agentic-ops skills.
 
 Each skill is a directory with a `SKILL.md` file. Drop any skill folder into `~/.hermes/skills/` or `~/.openclaw/skills/` and it is available in your next session.
 
@@ -17,7 +17,7 @@ Highlights: `clawflow`, `kanban-orchestrator`, `brain-sync`, `memory-search`, `c
 
 ---
 
-### communication (6 skills)
+### communication (7 skills)
 Messaging, email, voice, and chat-platform integrations.
 
 [Browse communication skills](skills/communication/INDEX.md) | [Readme](skills/communication/README.md)
@@ -26,7 +26,7 @@ Highlights: `discord`, `bluebubbles`, `himalaya`, `wacli`, `voice-call`
 
 ---
 
-### content (59 skills)
+### content (65 skills)
 Design, frontend, media, SEO, copywriting, image/video/audio generation, and creative workflows.
 
 [Browse content skills](skills/content/INDEX.md) | [Readme](skills/content/README.md)
@@ -71,7 +71,7 @@ Highlights: `skill-creator`, `hermes-agent-skill-authoring`, `clawhub`, `clawlis
 
 ---
 
-### ops (28 skills)
+### ops (30 skills)
 Infrastructure, DevOps, git, fleet operations, security hardening, deployment, and maintenance.
 
 [Browse ops skills](skills/ops/INDEX.md) | [Readme](skills/ops/README.md)
@@ -80,7 +80,7 @@ Highlights: `agent-fleet-operations`, `fleet-skill-sync`, `fleet-infra-fixes`, `
 
 ---
 
-### personal (22 skills)
+### personal (25 skills)
 Personal productivity, smart-home, lifestyle, and macOS-centered helper skills.
 
 [Browse personal skills](skills/personal/INDEX.md) | [Readme](skills/personal/README.md)

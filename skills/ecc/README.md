@@ -4,7 +4,7 @@ Imported ECC engineering and agentic-ops skills: language/framework patterns, te
 
 ## Skills
 
-- [`accessibility`](accessibility/): Design, implement, and audit inclusive digital products using WCAG 2.2 Level AA
+- [`accessibility`](accessibility/): Design, implement, and audit inclusive digital products using WCAG 2.2 Level AA standards. Use this skill to generate semantic ARIA for Web and accessibility traits for Web and Native platforms (iOS/Android).
 - [`agent-architecture-audit`](agent-architecture-audit/): Full-stack diagnostic for agent and LLM applications. Audits the 12-layer agent stack for wrapper regression, memory pollution, tool discipline failures, hidden repair loops, and rendering corruption. Produces severity-ranked findings with code-first fixes. Essential for developers building agent applications, autonomous loops, or any LLM-powered feature.
 - [`agent-eval`](agent-eval/): Head-to-head comparison of coding agents (Claude Code, Aider, Codex, etc.) on custom tasks with pass rate, cost, time, and consistency metrics
 - [`agent-harness-construction`](agent-harness-construction/): Design and optimize AI agent action spaces, tool definitions, and observation formatting for higher completion rates.

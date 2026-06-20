@@ -1,22 +1,22 @@
 # Appie Kit Skills Index
 
-**Production skills in appie-kit:** 545
+**Production skills in appie-kit:** 557
 
-**Unique skill names:** 545
+**Unique skill names:** 557
 
-_Regenerated 2026-06-19 02:10 UTC_
+_Regenerated 2026-06-20 02:09 UTC_
 
 ## Categories
 
 - [automation](automation/INDEX.md): 27 skills
-- [communication](communication/INDEX.md): 6 skills
-- [content](content/INDEX.md): 59 skills
+- [communication](communication/INDEX.md): 7 skills
+- [content](content/INDEX.md): 65 skills
 - [ecc](ecc/INDEX.md): 250 skills
 - [integrations](integrations/INDEX.md): 109 skills
 - [knowledge](knowledge/INDEX.md): 33 skills
 - [meta](meta/INDEX.md): 11 skills
-- [ops](ops/INDEX.md): 28 skills
-- [personal](personal/INDEX.md): 22 skills
+- [ops](ops/INDEX.md): 30 skills
+- [personal](personal/INDEX.md): 25 skills
 
 ## Skills
 
@@ -50,21 +50,25 @@ _Regenerated 2026-06-19 02:10 UTC_
 - [`web-scraping-javascript-sites`](automation/web-scraping-javascript-sites/): Scrape TypeScript, React, Next.js, Nuxt, Vue SPA sites. Know when to use raw HTML fetch vs browser automation.
 - [`writing-plans`](automation/software-development/writing-plans/): Use when you have a spec or requirements for a multi-step task. Creates comprehensive implementation plans with bite-sized tasks, exact file paths, and complete code examples.
 
-### communication (6)
+### communication (7)
 
 - [`bluebubbles`](communication/bluebubbles/): Use when you need to send or manage iMessages via BlueBubbles (recommended iMessage integration). Calls go through the generic message tool with channel="bluebubbles".
 - [`discord`](communication/discord/): Discord ops via the message tool (channel=discord).
 - [`himalaya`](communication/email/himalaya/): CLI to manage emails via IMAP/SMTP. Use himalaya to list, read, write, reply, forward, search, and organize emails from the terminal. Supports multiple accounts and message composition with MML (MIME Meta Language).
+- [`imessage`](communication/imessage/): Send and receive iMessages/SMS via the imsg CLI on macOS.
 - [`imsg`](communication/imsg/): iMessage/SMS CLI for listing chats, history, and sending messages via Messages.app.
 - [`voice-call`](communication/voice-call/): Start voice calls via the OpenClaw voice-call plugin.
 - [`wacli`](communication/wacli/): Send WhatsApp messages to other people or search/sync WhatsApp history via the wacli CLI (not for normal user chats).
 
-### content (59)
+### content (65)
 
 - [`21st-dev`](content/21st-dev/): Install and use 21st.dev components — the largest shadcn/ui-compatible registry of React + Tailwind + Framer Motion components (Magic UI, Aceternity UI, originui, eldoraui, kokonutui, Skiper UI, etc.). Use when the user wants Awwwards-tier homepage polish, animated heroes, marquees, bento grids, scroll reveals, pricing cards, testimonials, FAQ accordions, or any high-quality landing-page block. Stack: Next.js + Tailwind 4 + React 19 + framer-motion.
 - [`agentic-video-tools`](content/agentic-video-tools/): Compare and integrate agentic short-form video editing SaaS tools and OSS alternatives for the content factory pipeline. Use when the agent needs to automate: raw clip → Reel/Short/TikTok with captions/SFX/music/transitions → publish to IG/TikTok/YT with zero human editor in the loop. Covers automation depth ranking, API integration recipes, OSS alternatives, and anti-patterns.
+- [`ai-operated-business-building`](content/ai-operated-business-building/): Build AI-operated side hustles and online businesses, especially high-ticket B2B service/productized-service models in the user's existing sectors.
 - [`appie-content-intelligence`](content/appie-content-intelligence/): Research and monitor Weblyfe content trends, requests, and campaign opportunities for the Appie content pipeline.
 - [`architecture-diagram`](content/architecture-diagram/): Dark-themed SVG architecture/cloud/infra diagrams as HTML.
+- [`ascii-art`](content/ascii-art/): Generate ASCII art using pyfiglet (571 fonts), cowsay, boxes, toilet, image-to-ascii, remote APIs (asciified, ascii.co.uk), and LLM fallback. No API keys required.
+- [`ascii-video`](content/ascii-video/): Production pipeline for ASCII art video — any format. Converts video/audio/images/generative input into colored ASCII character video output (MP4, GIF, image sequence). Covers: video-to-ASCII conversion, audio-reactive music visualizers, generative ASCII art animations, hybrid video+audio reactive, text/lyrics overlays, real-time terminal rendering. Use when users request: ASCII video, text art video, terminal-style video, character art animation, retro text visualization, audio visualizer in ASCII, converting video to ASCII art, matrix-style effects, or any animated ASCII output.
 - [`baoyu-comic`](content/baoyu-comic/): Knowledge comics (知识漫画): educational, biography, tutorial.
 - [`baoyu-infographic`](content/baoyu-infographic/): Infographics: 21 layouts x 21 styles (信息图, 可视化).
 - [`building-ai-websites-that-dont-look-ai`](content/building-ai-websites-that-dont-look-ai/): Use when building or reviewing a website with AI (Claude Design/Claude Code/Next.js) and it risks looking generic or "AI-generated" - flat backgrounds, no hover states, inconsistent spacing, dead static pages, single accent color, wall-of-text sections
@@ -79,23 +83,24 @@ _Regenerated 2026-06-19 02:10 UTC_
 - [`comfyui`](content/comfyui/): Generate images, video, and audio with ComfyUI — install, launch, manage nodes/models, run workflows with parameter injection. Uses the official comfy-cli for lifecycle and direct REST/WebSocket API for execution.
 - [`content-creation`](content/content-creation/): Create viral Instagram content for @appie.ai and @seyed.jpg — carousels, Reels scripts, hooks, captions in Dutch + English. Use when: (1) writing Instagram captions (NL+EN bilingual), (2) creating carousels (8-10 slides, save-optimized), (3) writing viral Reels scripts (Hook→Tension→Payload→CTA 0-30s structure), (4) generating hooks from 75+ templates, (5) building content calendars, (6) planning weekly/monthly content. Triggers: "write post", "create carousel", "viral hook", "content calendar", "write caption", "Instagram script", "make content", "plan content", "social media".
 - [`content-safe-zones`](content/content-safe-zones/): Place text, captions, CTAs, and overlays safely for Instagram Reels, TikTok, and YouTube Shorts vertical-video layouts.
+- [`creative-review-gate`](content/creative-review-gate/): Review-pack and approval-gate workflow for short-form creative production when the user wants oversight before continuing.
 - [`design-mastery`](content/design-mastery/): Apply Appie and Weblyfe design principles for hierarchy, spacing, typography, color, UI polish, and premium minimal interfaces.
 - [`design-md`](content/design-md/): Author/validate/export Google's DESIGN.md token spec files.
 - [`excalidraw`](content/excalidraw/): Create hand-drawn style diagrams using Excalidraw JSON format. Generate .excalidraw files for architecture diagrams, flowcharts, sequence diagrams, concept maps, and more. Files can be opened at excalidraw.com or uploaded for shareable links.
 - [`frontend-design`](content/frontend-design/): Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, or applications. Generates creative, polished code that avoids generic AI aesthetics.
 - [`gamma`](content/gamma/): Create presentations, documents, social posts, and websites using Gamma's AI API. Use when asked to create slides, presentations, decks, documents, or web content via Gamma.
-- [`higgsfield-generate`](content/higgsfield-generate/): Generate images/videos/3D assets/audio via Higgsfield AI: GPT Image 2, Seedance 2.0, Nano Banana, Marketing Studio, Soul models, Kling, audio, 3D, workflows, references, and virality analysis.
-- [`higgsfield-marketplace-cards`](content/higgsfield-marketplace-cards/): Generate marketplace product image cards through Higgsfield: compliant main image, secondary product images, A+ style content modules, listing visuals, infographics, and sales-ready product image sets.
-- [`higgsfield-product-photoshoot`](content/higgsfield-product-photoshoot/): Generate brand-quality product images through Higgsfield product-photoshoot prompt enhancement on GPT Image 2. Use for product photos, studio shots, lifestyle images, ads, hero banners, carousels, virtual try-on, and product creative.
-- [`higgsfield-soul-id`](content/higgsfield-soul-id/): Train a Soul Character, a personalized face model for identity-faithful Higgsfield image and video generation. Use for digital twins, avatars, face-consistent images, and reusable Soul references.
+- [`higgsfield-generate`](content/higgsfield-generate/): Generate images/videos/3D assets/audio via Higgsfield AI. Defaults: GPT Image 2 for image/design/text, Seedance 2.0 for video, Nano Banana 2/Pro for character/reference images, Marketing Studio for ads, Sonilo/Mirelo for audio, plus Soul models and Kling 3.0. Use when: "generate an image", "make a video", "animate this photo", "image-to-video", "edit/stylize/remix this image", "produce a clip", "reframe this video", "edit this video from a sketch", "create a 3D model", "make a GLB/mesh", "create a sound effect", "make music", "text-to-audio", "create an ad", "make a UGC video", "product demo", "unboxing", "brand video", "presenter video", "import product from URL", "create avatar for ad", or "analyze video virality". Supports image-to-image, image-to-video, image-to-3D (`multi_image_to_3d`), text-to-audio (`mirelo_text_to_audio`), text-to-music (`sonilo_music`), workflow generation (`draw_to_video`, `reframe`), references, job/upload IDs, Marketing Studio, and Virality Predictor (`brain_activity`). Chain with higgsfield-soul-id for face/identity consistency. NOT for: Soul Character training (use higgsfield-soul-id), product photoshoots, marketplace listing cards, text/chat/TTS tasks.
 - [`higgsfield-image`](content/higgsfield-image/): Generate images using Higgsfield's Nano Banana Pro (nano_banana_2) via the mcporter MCP server. Use for product photos, character-consistent fashion photography, and creative assets. Primary image generation tool for TracyToronto e-commerce content.
+- [`higgsfield-marketplace-cards`](content/higgsfield-marketplace-cards/): Generate marketplace product image cards through Higgsfield: compliant main image, secondary product images, and A+ style content modules. Use when the user asks for marketplace listing images, product detail cards, secondary product images, product infographics, lifestyle listing shots, A+ style content, marketplace image sets, or sales-ready product visuals. Backend owns marketplace compliance references and prompt templates; this skill only routes user intent to the CLI. NOT for generic brand product photography without marketplace/listing context (use higgsfield-product-photoshoot), video generation or UGC ads (use higgsfield-generate), or Soul Character training (use higgsfield-soul-id).
+- [`higgsfield-product-photoshoot`](content/higgsfield-product-photoshoot/): Generate brand-quality product images through Higgsfield product-photoshoot prompt enhancement on GPT Image 2 / gpt_image_2. Entry point for professional brand/product visuals. Use when: "product photo", "studio shot", "lifestyle image", "Pinterest pin", "hero/banner", "carousel", "ad creative", "Meta ads", "virtual try-on", "model wearing", "person holding product", "closeup with hands", "levitating/floating/splash product", "CGI/surreal product", "restyle", "seasonal/aesthetic variation", or any product, brand, or paid-social creative. Modes: product_shot, lifestyle_scene, closeup_product_with_person, moodboard_pin, hero_banner, social_carousel, ad_creative_pack, virtual_model_tryout, conceptual_product, restyle. Backend assembles the final prompt; never freehand it. NOT for: no-product text-to-image (use higgsfield-generate), branded avatar video (use higgsfield-generate Marketing Studio), marketplace listing cards (use higgsfield-marketplace-cards), Soul Character training (use higgsfield-soul-id).
+- [`higgsfield-soul-id`](content/higgsfield-soul-id/): Train a Soul Character — a personalized model on a person's face that Higgsfield uses for identity-faithful image and video generation. Use when: "create my Soul", "train my face", "make my digital twin", "build me an avatar", "learn my appearance", "create a character of me", "set up identity for video", "I want my face in generated images". Chain: train Soul (one-time, returns reference_id) → use in higgsfield-generate via `--soul-id <id>` with models like `text2image_soul_v2` or `soul_cinema_studio`. NOT for: one-shot face swaps (use higgsfield-generate with --image), named-character / non-photo avatars (use higgsfield-generate with prompt).
 - [`ideation`](content/creative-ideation/): Generate project ideas via creative constraints.
 - [`manim-video`](content/manim-video/): Manim CE animations: 3Blue1Brown math/algo videos.
 - [`nextjs-expert`](content/nextjs-expert/): Use when building Next.js 14/15 applications with the App Router. Invoke for routing, layouts, Server Components, Client Components, Server Actions, Route Handlers, authentication, middleware, data fetching, caching, revalidation, streaming, Suspense, loading states, error boundaries, dynamic routes, parallel routes, intercepting routes, or any Next.js architecture question.
 - [`p5js`](content/p5js/): p5.js sketches: gen art, shaders, interactive, 3D.
 - [`pixel-art`](content/pixel-art/): Pixel art w/ era palettes (NES, Game Boy, PICO-8).
 - [`popular-web-designs`](content/popular-web-designs/): 54 real design systems (Stripe, Linear, Vercel) as HTML/CSS.
-- [`powerpoint`](content/powerpoint-2/): Use this skill any time a .pptx file is involved in any way — as input, output, or both. This includes: creating slide decks, pitch decks, or presentations; reading, parsing, or extracting text from any .pptx file (even if the extracted content will be used elsewhere, like in an email or summary); editing, modifying, or updating existing presentations; combining or splitting slide files; working with templates, layouts, speaker notes, or comments. Trigger whenever the user mentions \"deck,\" \"slides,\" \"presentation,\" or references a .pptx filename, regardless of what they plan to do with the content afterward. If a .pptx file needs to be opened, created, or touched, use this skill.
+- [`powerpoint`](content/powerpoint-2/): Use this skill any time a .pptx file is involved in any way — as input, output, or both. This includes: creating slide decks, pitch decks, or presentations; reading, parsing, or extracting text from any .pptx file (even if the extracted content will be used elsewhere, like in an email or summary); editing, modifying, or updating existing presentations; combining or splitting slide files; working with templates, layouts, speaker notes, or comments. Trigger whenever the user mentions "deck," "slides," "presentation," or references a .pptx filename, regardless of what they plan to do with the content afterward. If a .pptx file needs to be opened, created, or touched, use this skill.
 - [`productized-service-business`](content/productized-service-business/): Validate, launch, and deliver productized service businesses, service-first SaaS wedges, managed marketplaces, and audit/retainer offers. Use when the user asks which business idea is worth doing, wants competitor or Dutch/NL market validation, wants a monetization ladder, wants to validate a service before building software, or wants delivery SOPs/templates for a first paid client offer such as Review-to-Revenue / Customer Voice Conversion Audits.
 - [`remotion-best-practices`](content/remotion-best-practices/): Best practices for Remotion - Video creation in React
 - [`segment-anything-model`](content/segment-anything/): SAM: zero-shot image segmentation via points, boxes, masks.
@@ -109,6 +114,8 @@ _Regenerated 2026-06-19 02:10 UTC_
 - [`seo-weblyfe`](content/seo-weblyfe/): Use when planning, auditing, or explaining SEO for Weblyfe sites: keyword strategy, on-page optimization, technical SEO, backlinks, internal-link content architecture, and the foundational ranking model from Seyed's Weblyfe University materials.
 - [`sherpa-onnx-tts`](content/sherpa-onnx-tts/): Local text-to-speech via sherpa-onnx (offline, no cloud)
 - [`sketch`](content/sketch/): Throwaway HTML mockups: 2-3 design variants to compare.
+- [`songsee`](content/songsee/): Generate spectrograms and audio feature visualizations (mel, chroma, MFCC, tempogram, etc.) from audio files via CLI. Useful for audio analysis, music production debugging, and visual documentation.
+- [`songwriting-and-ai-music`](content/songwriting-and-ai-music/): Songwriting craft, AI music generation prompts (Suno focus), parody/adaptation techniques, phonetic tricks, and lessons learned. These are tools and ideas, not rules. Break any of them when the art calls for it.
 - [`stable-diffusion-image-generation`](content/stable-diffusion/): State-of-the-art text-to-image generation with Stable Diffusion models via HuggingFace Diffusers. Use when generating images from text prompts, performing image-to-image translation, inpainting, or building custom diffusion pipelines.
 - [`thumbnails`](content/thumbnails/): Generate branded YouTube thumbnails using approved photo assets, brand guidelines, and HTML thumbnail templates.
 - [`tips-landing-pages`](content/tips-landing-pages/): Build high-converting the brand landing pages using the Dutch TIPS conversion framework for sales, lead-gen, and product pages.
@@ -116,14 +123,14 @@ _Regenerated 2026-06-19 02:10 UTC_
 - [`ui-ux-pro-max`](content/ui-ux-pro-max/): AI-powered design intelligence with 67+ UI styles, 161 color palettes, 57 font pairings, 99 UX guidelines, and 25 chart types. Use for UI/UX design decisions, color schemes, typography, design systems, landing pages, and pre-delivery checklists.
 - [`video-editing-pro`](content/video-editing-pro/): Make decision-level edits for talking-head short-form video, including hook selection, pacing, filler removal, and retention checks.
 - [`video-frames`](content/video-frames/): Extract frames or short clips from videos using ffmpeg.
-- [`viral-shorts-course`](content/viral-shorts-course/): Decision framework for creating YouTube Shorts, Reels, and TikTok videos that go viral consistently, distilled from Jenny Hoyos, Logan Smith, heyDominik, MrBeast, and Colin and Samir patterns.
+- [`viral-shorts-course`](content/viral-shorts-course/): Decision framework for creating YouTube Shorts, Reels, and TikTok videos that go viral consistently, distilled from creators with verified analytics track records.
 - [`web-design-pipeline`](content/web-design-pipeline/): Build premium, multi-page, animated websites fast and with real design rigor — design-system-first, Claude Design + Claude Code, Next.js + GSAP, deploy to Vercel. Use for any client site, landing page, or premium brand properties.
 - [`xitter`](content/social-media/xitter/): Interact with X/Twitter via the x-cli terminal client using official X API credentials. Use for posting, reading timelines, searching tweets, liking, retweeting, bookmarks, mentions, and user lookups.
 - [`youtube-content`](content/youtube-content/): Fetch YouTube video transcripts and transform them into structured content (chapters, summaries, threads, blog posts). Use when the user shares a YouTube URL or video link, asks to summarize a video, requests a transcript, or wants to extract and reformat content from any YouTube video.
 
 ### ecc (250)
 
-- [`accessibility`](ecc/accessibility/): Design, implement, and audit inclusive digital products using WCAG 2.2 Level AA
+- [`accessibility`](ecc/accessibility/): Design, implement, and audit inclusive digital products using WCAG 2.2 Level AA standards. Use this skill to generate semantic ARIA for Web and accessibility traits for Web and Native platforms (iOS/Android).
 - [`agent-architecture-audit`](ecc/agent-architecture-audit/): Full-stack diagnostic for agent and LLM applications. Audits the 12-layer agent stack for wrapper regression, memory pollution, tool discipline failures, hidden repair loops, and rendering corruption. Produces severity-ranked findings with code-first fixes. Essential for developers building agent applications, autonomous loops, or any LLM-powered feature.
 - [`agent-eval`](ecc/agent-eval/): Head-to-head comparison of coding agents (Claude Code, Aider, Codex, etc.) on custom tasks with pass rate, cost, time, and consistency metrics
 - [`agent-harness-construction`](ecc/agent-harness-construction/): Design and optimize AI agent action spaces, tool definitions, and observation formatting for higher completion rates.
@@ -501,7 +508,7 @@ _Regenerated 2026-06-19 02:10 UTC_
 - [`guidance`](knowledge/guidance/): Control LLM output with regex and grammars, guarantee valid JSON/XML/code generation, enforce structured formats, and build multi-step workflows with Guidance - Microsoft Research's constrained generation framework
 - [`humanizer`](knowledge/humanizer/): Humanize text: strip AI-isms and add real voice.
 - [`jupyter-live-kernel`](knowledge/data-science/jupyter-live-kernel/): Use a live Jupyter kernel for stateful, iterative Python execution via hamelnb. Load this skill when the task involves exploration, iteration, or inspecting intermediate results — data science, ML experimentation, API exploration, or building up complex code step-by-step. Uses terminal to run CLI commands against a live Jupyter kernel. No new tools required.
-- [`knowledge-pipeline Skill`](knowledge/knowledge-pipeline/):
+- [`knowledge-pipeline`](knowledge/knowledge-pipeline/): Operate the local-first Weblyfe knowledge pipeline for ingesting documents and workspace content, embedding locally, semantic search, and graph exploration.
 - [`llama-cpp`](knowledge/llama-cpp/): llama.cpp local GGUF inference + HF Hub model discovery.
 - [`llm-wiki`](knowledge/llm-wiki/): Karpathy's LLM Wiki: build/query interlinked markdown KB.
 - [`onchain-analysis`](knowledge/data-science/onchain-analysis/): Analyze blockchain/on-chain transaction flows for repeated counterparties, high-value transfers, wallet behavior, whale movement, exchange/mixer/bridge patterns, and chain-wide Ethereum scans. Use when the user asks to scan Etherscan, Ethereum, wallets, transactions, crypto flows, repeated from-to payments, $5k+ filters, whale tracking, or suspicious on-chain patterns.
@@ -536,7 +543,7 @@ _Regenerated 2026-06-19 02:10 UTC_
 - [`verify-task`](meta/verify-task/): MUST use after completing any multi-step task or project. Verifies completion against the original plan, checks quality criteria, and documents outcomes.
 - [`write-plan`](meta/write-plan/): MUST use after brainstorming and before executing. Creates detailed implementation plans with checkpoints, verification criteria, and execution options.
 
-### ops (28)
+### ops (30)
 
 - [`1password`](ops/1password/): Set up and use 1Password CLI (op). Use when installing the CLI, enabling desktop app integration, signing in (single or multi-account), or reading/injecting/running secrets via op.
 - [`agent-fleet-operations`](ops/agent-fleet-operations/): Operate Hermes-style agent fleets across machines: provision remote hosts, validate transport/auth, refresh knowledge packs, and recover provider or gateway runtime failures.
@@ -552,7 +559,9 @@ _Regenerated 2026-06-19 02:10 UTC_
 - [`git-sync`](ops/git-sync/): Automatically syncs local workspace changes to the remote GitHub repository. Use after significant changes or periodically.
 - [`gitclaw`](ops/gitclaw/): Back up the OpenClaw agent workspace to a GitHub repo and keep it synced via a cron-driven commit/push script.
 - [`healthcheck`](ops/healthcheck/): Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).
+- [`heartmula`](ops/heartmula/): Set up and run HeartMuLa, the open-source music generation model family (Suno-like). Generates full songs from lyrics + tags with multilingual support.
 - [`hermes-runtime-operations`](ops/hermes-runtime-operations/): Operate and troubleshoot Hermes runtime health in production-like environments. Use for routine environment maintenance (gateway/cron/disk/workspace checks) and auth incident response (OAuth/API-key failures, refresh-token issues, headless device-code recovery).
+- [`huggingface-hub`](ops/huggingface-hub/): Hugging Face Hub CLI (hf) — search, download, and upload models and datasets, manage repos, query datasets with SQL, deploy inference endpoints, manage Spaces and buckets.
 - [`model-usage`](ops/model-usage/): Use CodexBar CLI local cost usage to summarize per-model usage for Codex or Claude, including the current (most recent) model or a full model breakdown. Trigger when asked for model-level usage/cost data from codexbar, or when you need a scriptable per-model summary from codexbar cost JSON.
 - [`nano-pdf`](ops/nano-pdf/): Edit PDFs with natural-language instructions using the nano-pdf CLI. Modify text, fix typos, update titles, and make content changes to specific pages without manual editing.
 - [`node-connect`](ops/node-connect/): Diagnose OpenClaw node connection and pairing failures for Android, iOS, and macOS companion apps. Use when QR/setup code/manual connect fails, local Wi-Fi works but VPS/tailnet does not, or errors mention pairing required, unauthorized, bootstrap token invalid or expired, gateway.bind, gateway.remote.url, Tailscale, or plugins.entries.device-pair.config.publicUrl.
@@ -567,11 +576,14 @@ _Regenerated 2026-06-19 02:10 UTC_
 - [`vercel-deploy`](ops/vercel-deploy/): Deploy projects to Vercel via CLI with token auth. Use when deploying Next.js, static sites, or any project to Vercel from the terminal.
 - [`webhook-subscriptions`](ops/webhook-subscriptions/): Webhook subscriptions: event-driven agent runs.
 
-### personal (22)
+### personal (25)
 
+- [`apple-notes`](personal/apple-notes/): Manage Apple Notes via the memo CLI on macOS (create, view, search, edit).
+- [`apple-reminders`](personal/apple-reminders/): Manage Apple Reminders via remindctl CLI (list, add, complete, delete).
 - [`bear-notes`](personal/bear-notes/): Create, search, and manage Bear notes via grizzly CLI.
 - [`client-success-and-retention`](personal/client-acquisition/client-success-and-retention/): Use when designing client delivery for a coaching/agency program, hiring or running a Client Success Manager / success coach, handling a struggling or refund-requesting client, setting onboarding-call and check-in cadence, or improving retention and continuity. Source - Grow Acquisition 3.0 (Nikk Kleinherenbrink).
 - [`consulting-offer-and-pricing`](personal/client-acquisition/consulting-offer-and-pricing/): Use when defining or repricing a consulting/agency/coaching offer (DWY/DFY/DIY), positioning a service, packaging tiers, or running discovery before building a landing page or sales script - turns a vague service into a positioned, value-priced offer with a deliverables list. Source - Grow Acquisition 3.0 (Nikk Kleinherenbrink), distilled for Weblyfe.
+- [`findmy`](personal/findmy/): Track Apple devices and AirTags via FindMy.app on macOS using AppleScript and screen capture.
 - [`hiring-and-managing-a-team`](personal/client-acquisition/hiring-and-managing-a-team/): Use when hiring or onboarding an appointment setter (growth specialist), a virtual assistant, or any remote team member for an agency/coaching business - covers role definition, pay structures, onboarding cadence, management rhythm, and how to fire correctly. Source - Grow Acquisition 3.0 (Nikk Kleinherenbrink).
 - [`instagram-organic-content`](personal/client-acquisition/instagram-organic-content/): Use when scripting Instagram reels or story sequences for a personal/founder brand, optimizing an IG bio for conversion, or building a content calendar that turns a cold audience into DM leads - the value/educational/credibility content system plus story-sequence frameworks. Source - Grow Acquisition 3.0 (Nikk Kleinherenbrink).
 - [`minecraft-modpack-server`](personal/gaming/minecraft-modpack-server/): Set up a modded Minecraft server from a CurseForge/Modrinth server pack zip. Covers NeoForge/Forge install, Java version, JVM tuning, firewall, LAN config, backups, and launch scripts.
