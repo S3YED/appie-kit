@@ -1,21 +1,21 @@
 # Appie Kit Skills Index
 
-**Production skills in appie-kit:** 557
+**Production skills in appie-kit:** 564
 
-**Unique skill names:** 557
+**Unique skill names:** 564
 
-_Regenerated 2026-06-20 02:09 UTC_
+_Regenerated 2026-06-22 06:10 UTC_
 
 ## Categories
 
 - [automation](automation/INDEX.md): 27 skills
 - [communication](communication/INDEX.md): 7 skills
-- [content](content/INDEX.md): 65 skills
+- [content](content/INDEX.md): 67 skills
 - [ecc](ecc/INDEX.md): 250 skills
 - [integrations](integrations/INDEX.md): 109 skills
-- [knowledge](knowledge/INDEX.md): 33 skills
+- [knowledge](knowledge/INDEX.md): 35 skills
 - [meta](meta/INDEX.md): 11 skills
-- [ops](ops/INDEX.md): 30 skills
+- [ops](ops/INDEX.md): 32 skills
 - [personal](personal/INDEX.md): 25 skills
 
 ## Skills
@@ -60,7 +60,7 @@ _Regenerated 2026-06-20 02:09 UTC_
 - [`voice-call`](communication/voice-call/): Start voice calls via the OpenClaw voice-call plugin.
 - [`wacli`](communication/wacli/): Send WhatsApp messages to other people or search/sync WhatsApp history via the wacli CLI (not for normal user chats).
 
-### content (65)
+### content (66)
 
 - [`21st-dev`](content/21st-dev/): Install and use 21st.dev components — the largest shadcn/ui-compatible registry of React + Tailwind + Framer Motion components (Magic UI, Aceternity UI, originui, eldoraui, kokonutui, Skiper UI, etc.). Use when the user wants Awwwards-tier homepage polish, animated heroes, marquees, bento grids, scroll reveals, pricing cards, testimonials, FAQ accordions, or any high-quality landing-page block. Stack: Next.js + Tailwind 4 + React 19 + framer-motion.
 - [`agentic-video-tools`](content/agentic-video-tools/): Compare and integrate agentic short-form video editing SaaS tools and OSS alternatives for the content factory pipeline. Use when the agent needs to automate: raw clip → Reel/Short/TikTok with captions/SFX/music/transitions → publish to IG/TikTok/YT with zero human editor in the loop. Covers automation depth ranking, API integration recipes, OSS alternatives, and anti-patterns.
@@ -125,6 +125,7 @@ _Regenerated 2026-06-20 02:09 UTC_
 - [`video-frames`](content/video-frames/): Extract frames or short clips from videos using ffmpeg.
 - [`viral-shorts-course`](content/viral-shorts-course/): Decision framework for creating YouTube Shorts, Reels, and TikTok videos that go viral consistently, distilled from creators with verified analytics track records.
 - [`web-design-pipeline`](content/web-design-pipeline/): Build premium, multi-page, animated websites fast and with real design rigor — design-system-first, Claude Design + Claude Code, Next.js + GSAP, deploy to Vercel. Use for any client site, landing page, or premium brand properties.
+- [`webflow-seo-audit`](content/webflow-seo-audit/): Run a comprehensive SEO audit on Webflow sites via API + live browser crawling. Checks meta tags, alt text, headings, schema, sitemap, technical SEO, and backlink opportunities.
 - [`xitter`](content/social-media/xitter/): Interact with X/Twitter via the x-cli terminal client using official X API credentials. Use for posting, reading timelines, searching tweets, liking, retweeting, bookmarks, mentions, and user lookups.
 - [`youtube-content`](content/youtube-content/): Fetch YouTube video transcripts and transform them into structured content (chapters, summaries, threads, blog posts). Use when the user shares a YouTube URL or video link, asks to summarize a video, requests a transcript, or wants to extract and reformat content from any YouTube video.
 
@@ -493,7 +494,7 @@ _Regenerated 2026-06-20 02:09 UTC_
 - [`xurl`](integrations/xurl/): X/Twitter via xurl CLI: post, search, DM, media, v2 API.
 - [`yuanbao`](integrations/yuanbao/): Yuanbao (元宝) groups: @mention users, query info/members.
 
-### knowledge (33)
+### knowledge (35)
 
 - [`arxiv`](knowledge/research/arxiv/): Search and retrieve academic papers from arXiv using their free REST API. No API key needed. Search by keyword, author, category, or ID. Combine with web_extract or the ocr-and-documents skill to read full paper content.
 - [`audiocraft-audio-generation`](knowledge/audiocraft/): AudioCraft: MusicGen text-to-music, AudioGen text-to-sound.
@@ -523,6 +524,8 @@ _Regenerated 2026-06-20 02:09 UTC_
 - [`serving-llms-vllm`](knowledge/vllm/): vLLM: high-throughput LLM serving, OpenAI API, quantization.
 - [`summarize`](knowledge/summarize/): Summarize or extract text/transcripts from URLs, podcasts, and local files (great fallback for “transcribe this YouTube/video”).
 - [`travel-flight-research`](knowledge/travel-flight-research/): Research flight options, compare route families, and present clean booking links and concise recommendations.
+- [`travel-accommodation`](knowledge/travel-accommodation/): Research and recommend hotels, resorts, Airbnbs, and villas for client travel. Covers family-friendliness assessment, luxury evaluation, price-range estimation, and compiling with booking links.
+- [`travel-booking`](knowledge/travel-booking/): Research and book multi-leg travel (flights, ferries, trains, buses) via online aggregators using browser tools. Covers itinerary construction, transfer timing, and presenting realistic connection options.
 - [`turbovec`](knowledge/turbovec/): Local vector search with turbovec (Google TurboQuant, Rust+Python). Use for embeddings indexing, semantic search, local RAG, or filtered vector retrieval without external services like Pinecone.
 - [`unsloth`](knowledge/unsloth/): Unsloth: 2-5x faster LoRA/QLoRA fine-tuning, less VRAM.
 - [`web-research`](knowledge/research/web-research/): Research any topic via web search, content extraction, and multi-source synthesis. Covers DuckDuckGo lite scraping, browser-based extraction, and parallel delegated research.
@@ -543,7 +546,7 @@ _Regenerated 2026-06-20 02:09 UTC_
 - [`verify-task`](meta/verify-task/): MUST use after completing any multi-step task or project. Verifies completion against the original plan, checks quality criteria, and documents outcomes.
 - [`write-plan`](meta/write-plan/): MUST use after brainstorming and before executing. Creates detailed implementation plans with checkpoints, verification criteria, and execution options.
 
-### ops (30)
+### ops (32)
 
 - [`1password`](ops/1password/): Set up and use 1Password CLI (op). Use when installing the CLI, enabling desktop app integration, signing in (single or multi-account), or reading/injecting/running secrets via op.
 - [`agent-fleet-operations`](ops/agent-fleet-operations/): Operate Hermes-style agent fleets across machines: provision remote hosts, validate transport/auth, refresh knowledge packs, and recover provider or gateway runtime failures.
@@ -551,6 +554,7 @@ _Regenerated 2026-06-20 02:09 UTC_
 - [`ashp`](ops/ashp/): Use Appie Secure Handshake Protocol patterns for authenticated inter-agent communication and secure Appie-family coordination.
 - [`camsnap`](ops/camsnap/): Capture frames or clips from RTSP/ONVIF cameras.
 - [`client-bot-security`](ops/client-bot-security/): Full-spectrum security audit for client Telegram bots across a multi-gateway fleet (Hermes + OpenClaw). Covers bot inventory & topology mapping, token provisioning security, SSH key hygiene, authorized_keys audit, secrets map documentation, and bot lifecycle management (free→assigned→active→retired).
+- [`cto-intelligence`](ops/cto-intelligence/): Set up recurring cron jobs that monitor a technology domain and deliver formatted briefings. Covers search strategy, domain categorization, briefing format, and delivery via Telegram.
 - [`debugging-hermes-tui-commands`](ops/debugging-hermes-tui-commands/): Debug Hermes TUI slash commands: Python, gateway, Ink UI.
 - [`deployment-inspection`](ops/deployment-inspection/): End-to-end investigation of a live client deployment - platform detection, subdomain discovery, deployment API access (Netlify), JS bundle analysis, repo discovery.
 - [`digital-ocean`](ops/digital-ocean/): Manage Digital Ocean droplets, domains, and infrastructure via DO API.
@@ -560,6 +564,7 @@ _Regenerated 2026-06-20 02:09 UTC_
 - [`gitclaw`](ops/gitclaw/): Back up the OpenClaw agent workspace to a GitHub repo and keep it synced via a cron-driven commit/push script.
 - [`healthcheck`](ops/healthcheck/): Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).
 - [`heartmula`](ops/heartmula/): Set up and run HeartMuLa, the open-source music generation model family (Suno-like). Generates full songs from lyrics + tags with multilingual support.
+- [`hermes-gateway-troubleshooting`](ops/hermes-gateway-troubleshooting/): Troubleshoot Hermes Agent gateway/runtime issues: messaging sessions, model/provider switches, auth, logs, and state.db consistency.
 - [`hermes-runtime-operations`](ops/hermes-runtime-operations/): Operate and troubleshoot Hermes runtime health in production-like environments. Use for routine environment maintenance (gateway/cron/disk/workspace checks) and auth incident response (OAuth/API-key failures, refresh-token issues, headless device-code recovery).
 - [`huggingface-hub`](ops/huggingface-hub/): Hugging Face Hub CLI (hf) — search, download, and upload models and datasets, manage repos, query datasets with SQL, deploy inference endpoints, manage Spaces and buckets.
 - [`model-usage`](ops/model-usage/): Use CodexBar CLI local cost usage to summarize per-model usage for Codex or Claude, including the current (most recent) model or a full model breakdown. Trigger when asked for model-level usage/cost data from codexbar, or when you need a scriptable per-model summary from codexbar cost JSON.

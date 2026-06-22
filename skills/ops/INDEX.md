@@ -1,4 +1,4 @@
-# Ops - 30 skills
+# Ops - 32 skills
 
 Infrastructure, DevOps, git, fleet operations, security hardening, deployment, and maintenance.
 
@@ -10,6 +10,7 @@ Infrastructure, DevOps, git, fleet operations, security hardening, deployment, a
 - [`ashp`](ashp/): Use Appie Secure Handshake Protocol patterns for authenticated inter-agent communication and secure Appie-family coordination.
 - [`camsnap`](camsnap/): Capture frames or clips from RTSP/ONVIF cameras.
 - [`client-bot-security`](client-bot-security/): Full-spectrum security audit for client Telegram bots across a multi-gateway fleet (Hermes + OpenClaw). Covers bot inventory & topology mapping, token provisioning security, SSH key hygiene, authorized_keys audit, secrets map documentation, and bot lifecycle management (free→assigned→active→retired).
+- [`cto-intelligence`](cto-intelligence/): Set up recurring cron jobs that monitor a technology domain and deliver formatted briefings. Covers search strategy, domain categorization, briefing format, and delivery via Telegram.
 - [`debugging-hermes-tui-commands`](debugging-hermes-tui-commands/): Debug Hermes TUI slash commands: Python, gateway, Ink UI.
 - [`deployment-inspection`](deployment-inspection/): End-to-end investigation of a live client deployment - platform detection, subdomain discovery, deployment API access (Netlify), JS bundle analysis, repo discovery.
 - [`digital-ocean`](digital-ocean/): Manage Digital Ocean droplets, domains, and infrastructure via DO API.
@@ -19,6 +20,7 @@ Infrastructure, DevOps, git, fleet operations, security hardening, deployment, a
 - [`gitclaw`](gitclaw/): Back up the OpenClaw agent workspace to a GitHub repo and keep it synced via a cron-driven commit/push script.
 - [`healthcheck`](healthcheck/): Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).
 - [`heartmula`](heartmula/): Set up and run HeartMuLa, the open-source music generation model family (Suno-like). Generates full songs from lyrics + tags with multilingual support.
+- [`hermes-gateway-troubleshooting`](hermes-gateway-troubleshooting/): Troubleshoot Hermes Agent gateway/runtime issues: messaging sessions, model/provider switches, auth, logs, and state.db consistency.
 - [`hermes-runtime-operations`](hermes-runtime-operations/): Operate and troubleshoot Hermes runtime health in production-like environments. Use for routine environment maintenance (gateway/cron/disk/workspace checks) and auth incident response (OAuth/API-key failures, refresh-token issues, headless device-code recovery).
 - [`huggingface-hub`](huggingface-hub/): Hugging Face Hub CLI (hf) — search, download, and upload models and datasets, manage repos, query datasets with SQL, deploy inference endpoints, manage Spaces and buckets.
 - [`model-usage`](model-usage/): Use CodexBar CLI local cost usage to summarize per-model usage for Codex or Claude, including the current (most recent) model or a full model breakdown. Trigger when asked for model-level usage/cost data from codexbar, or when you need a scriptable per-model summary from codexbar cost JSON.

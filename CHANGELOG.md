@@ -8,6 +8,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## v4.5 (2026-06-06)
 
 ### Added
+- 5 fleet skills from `appie-3-hermes`: `cto-intelligence` (cron-based tech monitoring), `hermes-gateway-troubleshooting` (Hermes gateway diagnostics), `travel-accommodation` (hotel/resort research), `travel-booking` (multi-leg SE Asia travel), and `webflow-seo-audit` (Webflow-specific SEO audit). Imported 2026-06-22.
 - 3 curated fleet skills from `appie-3-hermes`: `deployment-inspection`, `webhook-subscriptions`, and `web-research`; normalized `agent-browser` and `rtk-token-killer` into category directories. (added 2026-06-16)
 - `configs/fleet-access.example.yml`, `docs/FLEET-ACCESS.md`, and `tools/validate-public-skills.py` for public-safe fleet host onboarding and pre-publish validation. (added 2026-06-14)
 - `skills/integrations/spark-comfy/`: GPU/media worker ComfyUI client for Tailnet-only image generation via SDXL + FLUX schnell; style presets, queue + status polling, X-API-Key auth. (added 2026-05-26)

@@ -1,4 +1,4 @@
-# Knowledge - 33 skills
+# Knowledge - 35 skills
 
 Model, ML, research, fine-tuning, quantization, inference, evaluation, and technical reference skills.
 
@@ -32,6 +32,8 @@ Model, ML, research, fine-tuning, quantization, inference, evaluation, and techn
 - [`serving-llms-vllm`](vllm/): vLLM: high-throughput LLM serving, OpenAI API, quantization.
 - [`summarize`](summarize/): Summarize or extract text/transcripts from URLs, podcasts, and local files (great fallback for “transcribe this YouTube/video”).
 - [`travel-flight-research`](travel-flight-research/): Research flight options, compare route families, and present clean booking links and concise recommendations.
+- [`travel-accommodation`](travel-accommodation/): Research and recommend hotels, resorts, Airbnbs, and villas for client travel. Covers family-friendliness assessment, luxury evaluation, price-range estimation, and compiling with booking links.
+- [`travel-booking`](travel-booking/): Research and book multi-leg travel (flights, ferries, trains, buses) via online aggregators using browser tools. Covers itinerary construction, transfer timing, and presenting realistic connection options.
 - [`turbovec`](turbovec/): Local vector search with turbovec (Google TurboQuant, Rust+Python). Use for embeddings indexing, semantic search, local RAG, or filtered vector retrieval without external services like Pinecone.
 - [`unsloth`](unsloth/): Unsloth: 2-5x faster LoRA/QLoRA fine-tuning, less VRAM.
 - [`web-research`](research/web-research/): Research any topic via web search, content extraction, and multi-source synthesis. Covers DuckDuckGo lite scraping, browser-based extraction, and parallel delegated research.

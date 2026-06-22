@@ -1,4 +1,4 @@
-# Content - 65 skills
+# Content - 66 skills
 
 Design, frontend, media, SEO, copywriting, image/video/audio generation, and creative workflows.
 
@@ -67,5 +67,6 @@ Design, frontend, media, SEO, copywriting, image/video/audio generation, and cre
 - [`video-frames`](video-frames/): Extract frames or short clips from videos using ffmpeg.
 - [`viral-shorts-course`](viral-shorts-course/): Decision framework for creating YouTube Shorts, Reels, and TikTok videos that go viral consistently, distilled from creators with verified analytics track records.
 - [`web-design-pipeline`](web-design-pipeline/): Build premium, multi-page, animated websites fast and with real design rigor — design-system-first, Claude Design + Claude Code, Next.js + GSAP, deploy to Vercel. Use for any client site, landing page, or premium brand properties.
+- [`webflow-seo-audit`](webflow-seo-audit/): Run a comprehensive SEO audit on Webflow sites via API + live browser crawling. Checks meta tags, alt text, headings, schema, sitemap, technical SEO, and backlink opportunities.
 - [`xitter`](social-media/xitter/): Interact with X/Twitter via the x-cli terminal client using official X API credentials. Use for posting, reading timelines, searching tweets, liking, retweeting, bookmarks, mentions, and user lookups.
 - [`youtube-content`](youtube-content/): Fetch YouTube video transcripts and transform them into structured content (chapters, summaries, threads, blog posts). Use when the user shares a YouTube URL or video link, asks to summarize a video, requests a transcript, or wants to extract and reformat content from any YouTube video.
