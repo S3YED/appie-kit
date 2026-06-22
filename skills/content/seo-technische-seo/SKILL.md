@@ -80,3 +80,4 @@ Minimal `WebSite` JSON-LD:
 - `seo-checklist`: technical items (sitemap, canonical, mobile) are in the pre-launch checklist
 - `seo-bezoekersmagneet`: technical SEO enables the 6 quality signals Google checks
 - `seo-smart-content`: internal link network only works if Google can crawl all pages
+- `ai-search-optimization`: indexability/crawlability/schema here is also what makes pages eligible for AI Overviews & AI Mode (same index + ranking)

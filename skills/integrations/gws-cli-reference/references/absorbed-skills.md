@@ -1,0 +1,45 @@
+# Absorbed micro-skills
+
+Services and helper micro-skills absorbed into this umbrella:
+
+- gws-admin-reports
+- gws-calendar
+- gws-calendar-agenda
+- gws-calendar-insert
+- gws-chat
+- gws-chat-send
+- gws-classroom
+- gws-docs
+- gws-docs-write
+- gws-drive
+- gws-drive-upload
+- gws-events
+- gws-events-renew
+- gws-events-subscribe
+- gws-forms
+- gws-gmail
+- gws-gmail-forward
+- gws-gmail-reply
+- gws-gmail-reply-all
+- gws-gmail-send
+- gws-gmail-triage
+- gws-gmail-watch
+- gws-keep
+- gws-meet
+- gws-modelarmor
+- gws-modelarmor-create-template
+- gws-modelarmor-sanitize-prompt
+- gws-modelarmor-sanitize-response
+- gws-people
+- gws-shared
+- gws-sheets
+- gws-sheets-append
+- gws-sheets-read
+- gws-slides
+- gws-tasks
+- gws-workflow
+- gws-workflow-email-to-task
+- gws-workflow-file-announce
+- gws-workflow-meeting-prep
+- gws-workflow-standup-report
+- gws-workflow-weekly-digest
