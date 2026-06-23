@@ -1,4 +1,4 @@
-# Content - 66 skills
+# Content - 68 skills
 
 Design, frontend, media, SEO, copywriting, image/video/audio generation, and creative workflows.
 
@@ -54,6 +54,7 @@ Design, frontend, media, SEO, copywriting, image/video/audio generation, and cre
 - [`seo-smart-content`](seo-smart-content/): Plan SEO content networks and internal-link architectures that compound authority across Weblyfe client sites.
 - [`seo-technische-seo`](seo-technische-seo/): Audit and fix technical SEO for Weblyfe sites, including crawling, indexing, structured data, speed, and launch readiness.
 - [`seo-weblyfe`](seo-weblyfe/): Use when planning, auditing, or explaining SEO for Weblyfe sites: keyword strategy, on-page optimization, technical SEO, backlinks, internal-link content architecture, and the foundational ranking model from Seyed's Weblyfe University materials.
+- [`short-form-video-production`](short-form-video-production/): Umbrella skill for Reels, Shorts, and TikTok production: ideation, retention structure, editing decisions, captions, thumbnails, tooling (FFmpeg, Remotion, HyperFrames), and delivery verification. Use for any end-to-end short-form video workflow.
 - [`sherpa-onnx-tts`](sherpa-onnx-tts/): Local text-to-speech via sherpa-onnx (offline, no cloud)
 - [`sketch`](sketch/): Throwaway HTML mockups: 2-3 design variants to compare.
 - [`songsee`](songsee/): Generate spectrograms and audio feature visualizations (mel, chroma, MFCC, tempogram, etc.) from audio files via CLI. Useful for audio analysis, music production debugging, and visual documentation.

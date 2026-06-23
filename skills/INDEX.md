@@ -1,16 +1,16 @@
 # Appie Kit Skills Index
 
-**Production skills in appie-kit:** 564
+**Production skills in appie-kit:** 566
 
-**Unique skill names:** 564
+**Unique skill names:** 566
 
-_Regenerated 2026-06-22 06:10 UTC_
+_Regenerated 2026-06-23 06:10 UTC_
 
 ## Categories
 
 - [automation](automation/INDEX.md): 27 skills
 - [communication](communication/INDEX.md): 7 skills
-- [content](content/INDEX.md): 67 skills
+- [content](content/INDEX.md): 68 skills
 - [ecc](ecc/INDEX.md): 250 skills
 - [integrations](integrations/INDEX.md): 109 skills
 - [knowledge](knowledge/INDEX.md): 35 skills
@@ -60,7 +60,7 @@ _Regenerated 2026-06-22 06:10 UTC_
 - [`voice-call`](communication/voice-call/): Start voice calls via the OpenClaw voice-call plugin.
 - [`wacli`](communication/wacli/): Send WhatsApp messages to other people or search/sync WhatsApp history via the wacli CLI (not for normal user chats).
 
-### content (66)
+### content (68)
 
 - [`21st-dev`](content/21st-dev/): Install and use 21st.dev components — the largest shadcn/ui-compatible registry of React + Tailwind + Framer Motion components (Magic UI, Aceternity UI, originui, eldoraui, kokonutui, Skiper UI, etc.). Use when the user wants Awwwards-tier homepage polish, animated heroes, marquees, bento grids, scroll reveals, pricing cards, testimonials, FAQ accordions, or any high-quality landing-page block. Stack: Next.js + Tailwind 4 + React 19 + framer-motion.
 - [`agentic-video-tools`](content/agentic-video-tools/): Compare and integrate agentic short-form video editing SaaS tools and OSS alternatives for the content factory pipeline. Use when the agent needs to automate: raw clip → Reel/Short/TikTok with captions/SFX/music/transitions → publish to IG/TikTok/YT with zero human editor in the loop. Covers automation depth ranking, API integration recipes, OSS alternatives, and anti-patterns.
@@ -112,6 +112,7 @@ _Regenerated 2026-06-22 06:10 UTC_
 - [`seo-smart-content`](content/seo-smart-content/): Plan SEO content networks and internal-link architectures that compound authority across Weblyfe client sites.
 - [`seo-technische-seo`](content/seo-technische-seo/): Audit and fix technical SEO for Weblyfe sites, including crawling, indexing, structured data, speed, and launch readiness.
 - [`seo-weblyfe`](content/seo-weblyfe/): Use when planning, auditing, or explaining SEO for Weblyfe sites: keyword strategy, on-page optimization, technical SEO, backlinks, internal-link content architecture, and the foundational ranking model from Seyed's Weblyfe University materials.
+- [`short-form-video-production`](content/short-form-video-production/): Umbrella skill for Reels, Shorts, and TikTok production: ideation, retention structure, editing decisions, captions, thumbnails, tooling (FFmpeg, Remotion, HyperFrames), and delivery verification. Use for any end-to-end short-form video workflow.
 - [`sherpa-onnx-tts`](content/sherpa-onnx-tts/): Local text-to-speech via sherpa-onnx (offline, no cloud)
 - [`sketch`](content/sketch/): Throwaway HTML mockups: 2-3 design variants to compare.
 - [`songsee`](content/songsee/): Generate spectrograms and audio feature visualizations (mel, chroma, MFCC, tempogram, etc.) from audio files via CLI. Useful for audio analysis, music production debugging, and visual documentation.
