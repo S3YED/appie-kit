@@ -25,6 +25,7 @@ Agent self-management, workflow orchestration, browser automation, coding agents
 - [`project-context-sync`](project-context-sync/): Install and use project-context-sync hooks that maintain PROJECT_STATE.md after commits for cross-session project continuity.
 - [`ralph-wiggum`](ralph-wiggum/): Run Ralph Wiggum autonomous coding loops where each fresh agent iteration implements, verifies, commits, and records one task.
 - [`requesting-code-review`](software-development/requesting-code-review/): Pre-commit verification pipeline — static security scan, baseline-aware quality gates, independent reviewer subagent, and auto-fix loop. Use after code changes and before committing, pushing, or opening a PR.
+- [`rtk-token-killer`](rtk-token-killer/): rtk (Rust Token Killer) — CLI proxy that filters/compresses command output before it reaches the LLM, cutting tokens 60-90% on ls/cat/grep/git/tests/etc. Prefix heavy read/inspect commands with `rtk` to enforce reference-over-inline token discipline at the shell layer.
 - [`spike`](spike/): Throwaway experiments to validate an idea before build.
 - [`subagent-driven-development`](software-development/subagent-driven-development/): Use when executing implementation plans with independent tasks. Dispatches fresh delegate_task per task with two-stage review (spec compliance then code quality).
 - [`systematic-debugging`](software-development/systematic-debugging/): Use when encountering any bug, test failure, or unexpected behavior. 4-phase root cause investigation — NO fixes without understanding the problem first.
