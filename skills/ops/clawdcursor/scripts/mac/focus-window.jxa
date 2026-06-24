@@ -1,0 +1,172 @@
+#!/usr/bin/env osascript -l JavaScript
+
+/**
+ * focus-window.jxa
+ * 
+ * Brings a window to the front by title substring or process ID.
+ * 
+ * Parameters:
+ *   -title <string>      - Substring match against window titles (case-insensitive)
+ *   -processId <number>  - Exact process ID to focus
+ * 
+ * Returns JSON result with success status and window info.
+ * 
+ * Note: At least one of -title or -processId must be specified.
+ * 
+ * Usage: osascript -l JavaScript focus-window.jxa -title "Safari"
+ *        osascript -l JavaScript focus-window.jxa -processId 1234
+ */
+
+// Utility function to safely get property values
+function safeGet(obj, property, defaultValue) {
+    try {
+        var val = obj[property]();
+        return val !== undefined && val !== null ? val : defaultValue;
+    } catch (e) {
+        return defaultValue;
+    }
+}
+
+// run(argv) is the JXA entry point — osascript calls it and its return value becomes stdout.
+// argv receives command-line arguments passed after the script path.
+function run(argv) {
+    try {
+        // Parse arguments from argv array
+        var params = { title: null, processId: null };
+        for (var i = 0; i < argv.length; i++) {
+            var a = argv[i];
+            var hasNext = i + 1 < argv.length;
+            if ((a === '-title' || a === '-Title') && hasNext) {
+                params.title = argv[++i];
+            } else if ((a === '-processId' || a === '-ProcessId') && hasNext) {
+                params.processId = parseInt(argv[++i], 10);
+            }
+            // -Restore has no direct macOS equivalent; silently ignore
+        }
+
+        // Validate parameters
+        if (!params.title && !params.processId) {
+            return JSON.stringify({ 
+                success: false, 
+                error: 'Must specify -title or -processId' 
+            });
+        }
+        
+        var SystemEvents = Application('System Events');
+        SystemEvents.includeStandardAdditions = true;
+        
+        // Get all processes with UI
+        var processes = SystemEvents.processes.where({ backgroundOnly: false });
+        var targetWindow = null;
+        var targetProcess = null;
+        
+        // Search for matching window
+        for (var i = 0; i < processes.length; i++) {
+            try {
+                var process = processes[i];
+                var processId = safeGet(process, 'unixId', 0);
+                var processName = safeGet(process, 'name', 'unknown');
+                
+                // Check process ID match first
+                if (params.processId && processId === params.processId) {
+                    targetProcess = process;
+                    // Get the first window of this process
+                    var windows = process.windows;
+                    if (windows.length > 0) {
+                        targetWindow = windows[0];
+                        break;
+                    }
+                }
+                
+                // Check title match
+                if (params.title) {
+                    var windows = process.windows;
+                    var titleLower = params.title.toLowerCase();
+                    
+                    for (var j = 0; j < windows.length; j++) {
+                        try {
+                            var win = windows[j];
+                            var winTitle = '';
+                            try {
+                                winTitle = win.name() || '';
+                            } catch (e) {}
+                            
+                            if (winTitle && winTitle.toLowerCase().indexOf(titleLower) !== -1) {
+                                targetWindow = win;
+                                targetProcess = process;
+                                break;
+                            }
+                        } catch (e) {
+                            // Window not accessible
+                        }
+                    }
+                    
+                    if (targetWindow) break;
+                }
+            } catch (e) {
+                // Process not accessible
+            }
+        }
+        
+        if (!targetWindow) {
+            return JSON.stringify({ 
+                success: false, 
+                error: 'Window not found matching title="' + (params.title || '') + '" processId=' + (params.processId || 0) 
+            });
+        }
+        
+        // Bring window to front
+        // Method 1: Use System Events to set frontmost
+        try {
+            if (targetProcess) {
+                targetProcess.frontmost = true;
+            }
+        } catch (e) {
+            // Continue with other methods
+        }
+        
+        // Method 2: Focus the window
+        try {
+            targetWindow.focused = true;
+        } catch (e) {
+            // Continue
+        }
+        
+        // Method 3: Use application level activation (if we can get the app name)
+        try {
+            if (targetProcess) {
+                var appName = safeGet(targetProcess, 'name', '');
+                if (appName) {
+                    var app = Application(appName);
+                    app.activate();
+                }
+            }
+        } catch (e) {
+            // Continue
+        }
+        
+        // Get final window info
+        var winTitle = '';
+        var winProcessId = 0;
+        var winProcessName = 'unknown';
+        
+        try {
+            winTitle = targetWindow.name() || '';
+        } catch (e) {}
+        
+        if (targetProcess) {
+            winProcessId = safeGet(targetProcess, 'unixId', 0);
+            winProcessName = safeGet(targetProcess, 'name', 'unknown');
+        }
+        
+        return JSON.stringify({
+            success: true,
+            title: winTitle,
+            processId: winProcessId,
+            processName: winProcessName
+        });
+        
+    } catch (error) {
+        return JSON.stringify({ success: false, error: error.toString() });
+    }
+}
