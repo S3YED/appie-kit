@@ -1,26 +1,26 @@
 # Appie Kit Skills Index
 
-**Production skills in appie-kit:** 566
+**Production skills in appie-kit:** 585
 
-**Unique skill names:** 566
+**Unique skill names:** 573
 
-_Regenerated 2026-06-23 06:10 UTC_
+_Regenerated 2026-06-25 02:27 UTC_
 
 ## Categories
 
-- [automation](automation/INDEX.md): 27 skills
-- [communication](communication/INDEX.md): 7 skills
-- [content](content/INDEX.md): 68 skills
-- [ecc](ecc/INDEX.md): 250 skills
-- [integrations](integrations/INDEX.md): 109 skills
-- [knowledge](knowledge/INDEX.md): 35 skills
-- [meta](meta/INDEX.md): 11 skills
-- [ops](ops/INDEX.md): 32 skills
-- [personal](personal/INDEX.md): 25 skills
+- [Automation & AI Agents](automation/INDEX.md): 28 skills
+- [Communication](communication/INDEX.md): 8 skills
+- [Content & Media](content/INDEX.md): 71 skills
+- [ECC (External Skill Collection)](ecc/INDEX.md): 250 skills
+- [Integrations](integrations/INDEX.md): 113 skills
+- [Knowledge & Research](knowledge/INDEX.md): 35 skills
+- [Meta & Utility](meta/INDEX.md): 13 skills
+- [Operations & DevOps](ops/INDEX.md): 36 skills
+- [Personal & Lifestyle](personal/INDEX.md): 31 skills
 
 ## Skills
 
-### automation (27)
+### automation (28)
 
 - [`agent-browser`](automation/agent-browser/): Browser automation CLI built for AI agents - compact ref-based text output (200-400 tokens vs 3000-5000 for full DOM), native Rust, 50+ commands. Default browser-automation tool for the fleet. Use for any web navigation, scraping, form-filling, screenshots, or testing from the shell.
 - [`brain-sync`](automation/brain-sync/): Sync knowledge and learnings to the shared agent-brain repo. Every agent commits with their own identity so contributions are traceable. Use after: complex tasks (5+ tool calls), significant discoveries, new skills, or client work. Fleet: each node uses its own traceable git identity.
@@ -43,6 +43,7 @@ _Regenerated 2026-06-23 06:10 UTC_
 - [`project-context-sync`](automation/project-context-sync/): Install and use project-context-sync hooks that maintain PROJECT_STATE.md after commits for cross-session project continuity.
 - [`ralph-wiggum`](automation/ralph-wiggum/): Run Ralph Wiggum autonomous coding loops where each fresh agent iteration implements, verifies, commits, and records one task.
 - [`requesting-code-review`](automation/software-development/requesting-code-review/): Pre-commit verification pipeline — static security scan, baseline-aware quality gates, independent reviewer subagent, and auto-fix loop. Use after code changes and before committing, pushing, or opening a PR.
+- [`rtk-token-killer`](automation/rtk-token-killer/): rtk (Rust Token Killer) — CLI proxy that filters/compresses command output before it reaches the LLM, cutting tokens 60-90% on ls/cat/grep/git/tests/etc. Token-discipline tool. Prefix heavy read/inspect commands with `rtk`.
 - [`spike`](automation/spike/): Throwaway experiments to validate an idea before build.
 - [`subagent-driven-development`](automation/software-development/subagent-driven-development/): Use when executing implementation plans with independent tasks. Dispatches fresh delegate_task per task with two-stage review (spec compliance then code quality).
 - [`systematic-debugging`](automation/software-development/systematic-debugging/): Use when encountering any bug, test failure, or unexpected behavior. 4-phase root cause investigation — NO fixes without understanding the problem first.
@@ -50,27 +51,30 @@ _Regenerated 2026-06-23 06:10 UTC_
 - [`web-scraping-javascript-sites`](automation/web-scraping-javascript-sites/): Scrape TypeScript, React, Next.js, Nuxt, Vue SPA sites. Know when to use raw HTML fetch vs browser automation.
 - [`writing-plans`](automation/software-development/writing-plans/): Use when you have a spec or requirements for a multi-step task. Creates comprehensive implementation plans with bite-sized tasks, exact file paths, and complete code examples.
 
-### communication (7)
+### communication (8)
 
 - [`bluebubbles`](communication/bluebubbles/): Use when you need to send or manage iMessages via BlueBubbles (recommended iMessage integration). Calls go through the generic message tool with channel="bluebubbles".
 - [`discord`](communication/discord/): Discord ops via the message tool (channel=discord).
 - [`himalaya`](communication/email/himalaya/): CLI to manage emails via IMAP/SMTP. Use himalaya to list, read, write, reply, forward, search, and organize emails from the terminal. Supports multiple accounts and message composition with MML (MIME Meta Language).
 - [`imessage`](communication/imessage/): Send and receive iMessages/SMS via the imsg CLI on macOS.
 - [`imsg`](communication/imsg/): iMessage/SMS CLI for listing chats, history, and sending messages via Messages.app.
+- [`peekaboo`](communication/peekaboo/): Capture and automate macOS UI with the Peekaboo CLI.
 - [`voice-call`](communication/voice-call/): Start voice calls via the OpenClaw voice-call plugin.
 - [`wacli`](communication/wacli/): Send WhatsApp messages to other people or search/sync WhatsApp history via the wacli CLI (not for normal user chats).
 
-### content (68)
+### content (71)
 
 - [`21st-dev`](content/21st-dev/): Install and use 21st.dev components — the largest shadcn/ui-compatible registry of React + Tailwind + Framer Motion components (Magic UI, Aceternity UI, originui, eldoraui, kokonutui, Skiper UI, etc.). Use when the user wants Awwwards-tier homepage polish, animated heroes, marquees, bento grids, scroll reveals, pricing cards, testimonials, FAQ accordions, or any high-quality landing-page block. Stack: Next.js + Tailwind 4 + React 19 + framer-motion.
 - [`agentic-video-tools`](content/agentic-video-tools/): Compare and integrate agentic short-form video editing SaaS tools and OSS alternatives for the content factory pipeline. Use when the agent needs to automate: raw clip → Reel/Short/TikTok with captions/SFX/music/transitions → publish to IG/TikTok/YT with zero human editor in the loop. Covers automation depth ranking, API integration recipes, OSS alternatives, and anti-patterns.
 - [`ai-operated-business-building`](content/ai-operated-business-building/): Build AI-operated side hustles and online businesses, especially high-ticket B2B service/productized-service models in the user's existing sectors.
+- [`ai-search-optimization`](content/ai-search-optimization/): Use when building or auditing a site for SEO visibility in AI Overviews, AI Mode, or generative search (AEO / GEO / answer-engine optimization), or when someone asks how to "optimize for ChatGPT/Gemini/AI search", whether to add llms.txt or AI text files, how grounding / query fan-out / RAG pick pages, indexability and snippet-eligibility for AI features, structured data for AI, or agentic/UCP commerce readiness. Codifies Google's official AI-optimization guidance and debunks AI-SEO myths.
 - [`appie-content-intelligence`](content/appie-content-intelligence/): Research and monitor Weblyfe content trends, requests, and campaign opportunities for the Appie content pipeline.
 - [`architecture-diagram`](content/architecture-diagram/): Dark-themed SVG architecture/cloud/infra diagrams as HTML.
 - [`ascii-art`](content/ascii-art/): Generate ASCII art using pyfiglet (571 fonts), cowsay, boxes, toilet, image-to-ascii, remote APIs (asciified, ascii.co.uk), and LLM fallback. No API keys required.
 - [`ascii-video`](content/ascii-video/): Production pipeline for ASCII art video — any format. Converts video/audio/images/generative input into colored ASCII character video output (MP4, GIF, image sequence). Covers: video-to-ASCII conversion, audio-reactive music visualizers, generative ASCII art animations, hybrid video+audio reactive, text/lyrics overlays, real-time terminal rendering. Use when users request: ASCII video, text art video, terminal-style video, character art animation, retro text visualization, audio visualizer in ASCII, converting video to ASCII art, matrix-style effects, or any animated ASCII output.
 - [`baoyu-comic`](content/baoyu-comic/): Knowledge comics (知识漫画): educational, biography, tutorial.
 - [`baoyu-infographic`](content/baoyu-infographic/): Infographics: 21 layouts x 21 styles (信息图, 可视化).
+- [`branded-reel-pipeline`](content/branded-reel-pipeline/): Use when producing a PREMIUM short-form BRAND reel end to end with real on-brand visuals and (optionally) live dashboard/analytics data baked in — e.g. 'make a branded reel', 'cut a premium reel for <brand>', 'turn this dashboard into a reel', 'make an analytics reel', 'reel from the Content Factory brief', 'show our real numbers in a 9:16'. The reusable framework + presets + scripts: script → Higgsfield visuals + music → ElevenLabs VO → Playwright live-data capture → Remotion brand-preset assembly → MP4 + ffprobe verify. Runs gated (human approves script, then assets, before final render) or auto. This is the premium-reel LAYER on top of short-form-video-production; do not duplicate that skill — cross-reference it for ideation/hook/retention craft.
 - [`building-ai-websites-that-dont-look-ai`](content/building-ai-websites-that-dont-look-ai/): Use when building or reviewing a website with AI (Claude Design/Claude Code/Next.js) and it risks looking generic or "AI-generated" - flat backgrounds, no hover states, inconsistent spacing, dead static pages, single accent color, wall-of-text sections
 - [`canvas`](content/canvas/): Display generated HTML content on connected Appie or OpenClaw canvas nodes for dashboards, demos, games, and visualizations.
 - [`ckm:banner-design`](content/banner-design/): Design banners for social media, ads, website heroes, creative assets, and print. Multiple art direction options with AI-generated visuals. Actions: design, create, generate banner. Platforms: Facebook, Twitter/X, LinkedIn, YouTube, Instagram, Google Display, website hero, print. Styles: minimalist, gradient, bold typography, photo-based, illustrated, geometric, retro, glassmorphism, 3D, neon, duotone, editorial, collage. Uses ui-ux-pro-max, frontend-design, ai-artist, ai-multimodal skills.
@@ -96,11 +100,12 @@ _Regenerated 2026-06-23 06:10 UTC_
 - [`higgsfield-soul-id`](content/higgsfield-soul-id/): Train a Soul Character — a personalized model on a person's face that Higgsfield uses for identity-faithful image and video generation. Use when: "create my Soul", "train my face", "make my digital twin", "build me an avatar", "learn my appearance", "create a character of me", "set up identity for video", "I want my face in generated images". Chain: train Soul (one-time, returns reference_id) → use in higgsfield-generate via `--soul-id <id>` with models like `text2image_soul_v2` or `soul_cinema_studio`. NOT for: one-shot face swaps (use higgsfield-generate with --image), named-character / non-photo avatars (use higgsfield-generate with prompt).
 - [`ideation`](content/creative-ideation/): Generate project ideas via creative constraints.
 - [`manim-video`](content/manim-video/): Manim CE animations: 3Blue1Brown math/algo videos.
+- [`manim-video`](content/video-use/skills/manim-video/): Production pipeline for mathematical and technical animations using Manim Community Edition. Creates 3Blue1Brown-style explainer videos, algorithm visualizations, equation derivations, architecture diagrams, and data stories. Use when users request: animated explanations, math animations, concept visualizations, algorithm walkthroughs, technical explainers, 3Blue1Brown style videos, or any programmatic animation with geometric/mathematical content.
 - [`nextjs-expert`](content/nextjs-expert/): Use when building Next.js 14/15 applications with the App Router. Invoke for routing, layouts, Server Components, Client Components, Server Actions, Route Handlers, authentication, middleware, data fetching, caching, revalidation, streaming, Suspense, loading states, error boundaries, dynamic routes, parallel routes, intercepting routes, or any Next.js architecture question.
 - [`p5js`](content/p5js/): p5.js sketches: gen art, shaders, interactive, 3D.
 - [`pixel-art`](content/pixel-art/): Pixel art w/ era palettes (NES, Game Boy, PICO-8).
 - [`popular-web-designs`](content/popular-web-designs/): 54 real design systems (Stripe, Linear, Vercel) as HTML/CSS.
-- [`powerpoint`](content/powerpoint-2/): Use this skill any time a .pptx file is involved in any way — as input, output, or both. This includes: creating slide decks, pitch decks, or presentations; reading, parsing, or extracting text from any .pptx file (even if the extracted content will be used elsewhere, like in an email or summary); editing, modifying, or updating existing presentations; combining or splitting slide files; working with templates, layouts, speaker notes, or comments. Trigger whenever the user mentions "deck," "slides," "presentation," or references a .pptx filename, regardless of what they plan to do with the content afterward. If a .pptx file needs to be opened, created, or touched, use this skill.
+- [`powerpoint`](content/powerpoint-2/): Use this skill any time a .pptx file is involved in any way — as input, output, or both. This includes: creating slide decks, pitch decks, or presentations; reading, parsing, or extracting text from any .pptx file (even if the extracted content will be used elsewhere, like in an email or summary); editing, modifying, or updating existing presentations; combining or splitting slide files; working with templates, layouts, speaker notes, or comments. Trigger whenever the user mentions \"deck,\" \"slides,\" \"presentation,\" or references a .pptx filename, regardless of what they plan to do with the content afterward. If a .pptx file needs to be opened, created, or touched, use this skill.
 - [`productized-service-business`](content/productized-service-business/): Validate, launch, and deliver productized service businesses, service-first SaaS wedges, managed marketplaces, and audit/retainer offers. Use when the user asks which business idea is worth doing, wants competitor or Dutch/NL market validation, wants a monetization ladder, wants to validate a service before building software, or wants delivery SOPs/templates for a first paid client offer such as Review-to-Revenue / Customer Voice Conversion Audits.
 - [`remotion-best-practices`](content/remotion-best-practices/): Best practices for Remotion - Video creation in React
 - [`segment-anything-model`](content/segment-anything/): SAM: zero-shot image segmentation via points, boxes, masks.
@@ -112,8 +117,8 @@ _Regenerated 2026-06-23 06:10 UTC_
 - [`seo-smart-content`](content/seo-smart-content/): Plan SEO content networks and internal-link architectures that compound authority across Weblyfe client sites.
 - [`seo-technische-seo`](content/seo-technische-seo/): Audit and fix technical SEO for Weblyfe sites, including crawling, indexing, structured data, speed, and launch readiness.
 - [`seo-weblyfe`](content/seo-weblyfe/): Use when planning, auditing, or explaining SEO for Weblyfe sites: keyword strategy, on-page optimization, technical SEO, backlinks, internal-link content architecture, and the foundational ranking model from Seyed's Weblyfe University materials.
-- [`short-form-video-production`](content/short-form-video-production/): Umbrella skill for Reels, Shorts, and TikTok production: ideation, retention structure, editing decisions, captions, thumbnails, tooling (FFmpeg, Remotion, HyperFrames), and delivery verification. Use for any end-to-end short-form video workflow.
 - [`sherpa-onnx-tts`](content/sherpa-onnx-tts/): Local text-to-speech via sherpa-onnx (offline, no cloud)
+- [`short-form-video-production`](content/short-form-video-production/): Use when producing short-form video end to end: idea selection, hook and retention structure, sentence-level edit decisions, captions, thumbnails/first-frame communication, Remotion or FFmpeg implementation, and Appie/Weblyfe production workflows.
 - [`sketch`](content/sketch/): Throwaway HTML mockups: 2-3 design variants to compare.
 - [`songsee`](content/songsee/): Generate spectrograms and audio feature visualizations (mel, chroma, MFCC, tempogram, etc.) from audio files via CLI. Useful for audio analysis, music production debugging, and visual documentation.
 - [`songwriting-and-ai-music`](content/songwriting-and-ai-music/): Songwriting craft, AI music generation prompts (Suno focus), parody/adaptation techniques, phonetic tricks, and lessons learned. These are tools and ideas, not rules. Break any of them when the art calls for it.
@@ -124,6 +129,7 @@ _Regenerated 2026-06-23 06:10 UTC_
 - [`ui-ux-pro-max`](content/ui-ux-pro-max/): AI-powered design intelligence with 67+ UI styles, 161 color palettes, 57 font pairings, 99 UX guidelines, and 25 chart types. Use for UI/UX design decisions, color schemes, typography, design systems, landing pages, and pre-delivery checklists.
 - [`video-editing-pro`](content/video-editing-pro/): Make decision-level edits for talking-head short-form video, including hook selection, pacing, filler removal, and retention checks.
 - [`video-frames`](content/video-frames/): Extract frames or short clips from videos using ffmpeg.
+- [`video-use`](content/video-use/): Edit any video by conversation. Transcribe, cut, color grade, generate overlay animations, burn subtitles — for talking heads, montages, tutorials, travel, interviews. No presets, no menus. Ask questions, confirm the plan, execute, iterate, persist. Production-correctness rules are hard; everything else is artistic freedom.
 - [`viral-shorts-course`](content/viral-shorts-course/): Decision framework for creating YouTube Shorts, Reels, and TikTok videos that go viral consistently, distilled from creators with verified analytics track records.
 - [`web-design-pipeline`](content/web-design-pipeline/): Build premium, multi-page, animated websites fast and with real design rigor — design-system-first, Claude Design + Claude Code, Next.js + GSAP, deploy to Vercel. Use for any client site, landing page, or premium brand properties.
 - [`webflow-seo-audit`](content/webflow-seo-audit/): Run a comprehensive SEO audit on Webflow sites via API + live browser crawling. Checks meta tags, alt text, headings, schema, sitemap, technical SEO, and backlink opportunities.
@@ -132,7 +138,7 @@ _Regenerated 2026-06-23 06:10 UTC_
 
 ### ecc (250)
 
-- [`accessibility`](ecc/accessibility/): Design, implement, and audit inclusive digital products using WCAG 2.2 Level AA standards. Use this skill to generate semantic ARIA for Web and accessibility traits for Web and Native platforms (iOS/Android).
+- [`accessibility`](ecc/accessibility/): Design, implement, and audit inclusive digital products using WCAG 2.2 Level AA
 - [`agent-architecture-audit`](ecc/agent-architecture-audit/): Full-stack diagnostic for agent and LLM applications. Audits the 12-layer agent stack for wrapper regression, memory pollution, tool discipline failures, hidden repair loops, and rendering corruption. Produces severity-ranked findings with code-first fixes. Essential for developers building agent applications, autonomous loops, or any LLM-powered feature.
 - [`agent-eval`](ecc/agent-eval/): Head-to-head comparison of coding agents (Claude Code, Aider, Codex, etc.) on custom tasks with pass rate, cost, time, and consistency metrics
 - [`agent-harness-construction`](ecc/agent-harness-construction/): Design and optimize AI agent action spaces, tool definitions, and observation formatting for higher completion rates.
@@ -383,7 +389,7 @@ _Regenerated 2026-06-23 06:10 UTC_
 - [`workspace-surface-audit`](ecc/workspace-surface-audit/): Audit the active repo, MCP servers, plugins, connectors, env surfaces, and harness setup, then recommend the highest-value ECC-native skills, hooks, agents, and operator workflows. Use when the user wants help setting up Claude Code or understanding what capabilities are actually available in their environment.
 - [`x-api`](ecc/x-api/): X/Twitter API integration for posting tweets, threads, reading timelines, search, and analytics. Covers OAuth auth patterns, rate limits, and platform-native content posting. Use when the user wants to interact with X programmatically.
 
-### integrations (109)
+### integrations (113)
 
 - [`airtable`](integrations/airtable/): Airtable REST API via curl. Records CRUD, filters, upserts.
 - [`blucli`](integrations/blucli/): BluOS CLI (blu) for discovery, playback, grouping, and volume.
@@ -398,10 +404,12 @@ _Regenerated 2026-06-23 06:10 UTC_
 - [`github`](integrations/github/): GitHub operations via `gh` CLI: issues, PRs, CI runs, code review, API queries. Use when: (1) checking PR status or CI, (2) creating/commenting on issues, (3) listing/filtering PRs or issues, (4) viewing run logs. NOT for: complex web UI interactions requiring manual browser flows (use browser tooling when available), bulk operations across many repos (script with gh api), or when gh auth is not configured.
 - [`gog`](integrations/gog/): Google Workspace CLI for Gmail, Calendar, Drive, Contacts, Sheets, and Docs.
 - [`gog-calendar-events`](integrations/gog-calendar-events/): Lists Google Calendar events using the gog CLI tool.
+- [`google-drive`](integrations/google-drive/): Interact with Google Drive - list files, upload, download, and manage sharing.
 - [`goplaces`](integrations/goplaces/): Query Google Places API (New) via the goplaces CLI for text search, place details, resolve, and reviews. Use for human-friendly place lookup or JSON output for scripts.
 - [`gws-admin-reports`](integrations/gws-admin-reports/): Google Workspace Admin SDK: Audit logs and usage reports.
 - [`gws-calendar-agenda`](integrations/gws-calendar-agenda/): Google Calendar: Show upcoming events across all calendars.
 - [`gws-calendar-insert`](integrations/gws-calendar-insert/): Google Calendar: Create a new event.
+- [`gws-cli-reference`](integrations/gws-cli-reference/): Use when working with the Google Workspace `gws` CLI across Gmail, Calendar, Drive, Docs, Sheets, Chat, Tasks, Meet, Forms, Classroom, Events, Model Armor, People, and cross-service workflows. This is the class-level umbrella for command discovery, auth, helper-command selection, and safe execution patterns.
 - [`gws-docs`](integrations/gws-docs/): Read and write Google Docs.
 - [`gws-drive-upload`](integrations/gws-drive-upload/): Google Drive: Upload a file with automatic metadata.
 - [`gws-events-renew`](integrations/gws-events-renew/): Google Workspace Events: Renew/reactivate Workspace Events subscriptions.
@@ -428,6 +436,7 @@ _Regenerated 2026-06-23 06:10 UTC_
 - [`gws-workspace-recipes`](integrations/gws-workspace-recipes/): Use when the task is a reusable Google Workspace multi-step recipe rather than a single API call: scheduling from sheets, inbox-to-task flows, file sharing, doc generation, team announcements, event management, Drive organization, and cross-service automations built on the `gws` CLI.
 - [`linear`](integrations/linear/): Manage Linear issues, projects, and teams via the GraphQL API. Create, update, search, and organize issues. Uses API key auth (no OAuth needed). All operations via curl — no dependencies.
 - [`maps`](integrations/maps/): Geocode, POIs, routes, timezones via OpenStreetMap/OSRM.
+- [`mcporter`](integrations/mcp/mcporter/): Use the mcporter CLI to list, configure, auth, and call MCP servers/tools directly (HTTP or stdio), including ad-hoc servers, config edits, and CLI/type generation.
 - [`mcporter`](integrations/mcporter/): Use the mcporter CLI to list, configure, auth, and call MCP servers/tools directly (HTTP or stdio), including ad-hoc servers, config edits, and CLI/type generation.
 - [`modal-serverless-gpu`](integrations/modal/): Serverless GPU cloud platform for running ML workloads. Use when you need on-demand GPU access without infrastructure management, deploying ML models as APIs, or running batch jobs with automatic scaling.
 - [`n8n`](integrations/n8n/): List, trigger, monitor, activate, deactivate, and manage n8n workflows through the configured n8n API.
@@ -440,6 +449,7 @@ _Regenerated 2026-06-23 06:10 UTC_
 - [`n8n-validation-expert`](integrations/n8n-workflows/n8n-validation-expert/): Interpret validation errors and guide fixing them. Use when encountering validation errors, validation warnings, false positives, operator structure issues, or need help understanding validation results. Also use when asking about validation profiles, error types, the validation loop process, or auto-fix capabilities. Consult this skill whenever a validate_node or validate_workflow call returns errors or warnings — it knows which warnings are false positives and which errors need real fixes.
 - [`n8n-workflow-automation`](integrations/n8n-workflows/n8n-workflow-automation/): Designs and outputs n8n workflow JSON with robust triggers, idempotency, error handling, logging, retries, and human-in-the-loop review queues. Use when you need an auditable automation that won’t silently fail.
 - [`n8n-workflow-patterns`](integrations/n8n-workflows/n8n-workflow-patterns/): Proven workflow architectural patterns from real n8n workflows. Use when building new workflows, designing workflow structure, choosing workflow patterns, planning workflow architecture, or asking about webhook processing, HTTP API integration, database operations, AI agent workflows, batch processing, or scheduled tasks. Always consult this skill when the user asks to create, build, or design an n8n workflow, automate a process, or connect services — even if they don't explicitly mention 'patterns'. Covers webhook, API, database, AI, batch processing, and scheduled automation architectures.
+- [`native-mcp`](integrations/mcp/native-mcp/): Built-in MCP (Model Context Protocol) client that connects to external MCP servers, discovers their tools, and registers them as native Hermes Agent tools. Supports stdio and HTTP transports with automatic reconnection, security filtering, and zero-config tool injection.
 - [`native-mcp`](integrations/native-mcp/): Built-in MCP (Model Context Protocol) client that connects to external MCP servers, discovers their tools, and registers them as native Hermes Agent tools. Supports stdio and HTTP transports with automatic reconnection, security filtering, and zero-config tool injection.
 - [`notion-masterclass`](integrations/notion-masterclass/): Operate Notion workspaces in a Notion-native way: find source-of-truth pages, edit databases safely, and preserve workspace structure.
 - [`notion-tasks`](integrations/notion-tasks/): Create, manage, and complete tasks in Seyed and Appie Notion task databases while preserving task schemas and conventions.
@@ -524,16 +534,16 @@ _Regenerated 2026-06-23 06:10 UTC_
 - [`sag`](knowledge/sag/): ElevenLabs text-to-speech with mac-style say UX.
 - [`serving-llms-vllm`](knowledge/vllm/): vLLM: high-throughput LLM serving, OpenAI API, quantization.
 - [`summarize`](knowledge/summarize/): Summarize or extract text/transcripts from URLs, podcasts, and local files (great fallback for “transcribe this YouTube/video”).
-- [`travel-flight-research`](knowledge/travel-flight-research/): Research flight options, compare route families, and present clean booking links and concise recommendations.
 - [`travel-accommodation`](knowledge/travel-accommodation/): Research and recommend hotels, resorts, Airbnbs, and villas for client travel. Covers family-friendliness assessment, luxury evaluation, price-range estimation, and compiling with booking links.
 - [`travel-booking`](knowledge/travel-booking/): Research and book multi-leg travel (flights, ferries, trains, buses) via online aggregators using browser tools. Covers itinerary construction, transfer timing, and presenting realistic connection options.
+- [`travel-flight-research`](knowledge/travel-flight-research/): Research flight options, compare route families, and present clean booking links and concise recommendations.
 - [`turbovec`](knowledge/turbovec/): Local vector search with turbovec (Google TurboQuant, Rust+Python). Use for embeddings indexing, semantic search, local RAG, or filtered vector retrieval without external services like Pinecone.
 - [`unsloth`](knowledge/unsloth/): Unsloth: 2-5x faster LoRA/QLoRA fine-tuning, less VRAM.
 - [`web-research`](knowledge/research/web-research/): Research any topic via web search, content extraction, and multi-source synthesis. Covers DuckDuckGo lite scraping, browser-based extraction, and parallel delegated research.
 - [`weights-and-biases`](knowledge/weights-and-biases/): W&B: log ML experiments, sweeps, model registry, dashboards.
 - [`whisper`](knowledge/whisper/): OpenAI's general-purpose speech recognition model. Supports 99 languages, transcription, translation to English, and language identification. Six model sizes from tiny (39M params) to large (1550M params). Use for speech-to-text, podcast transcription, or multilingual audio processing. Best for robust, multilingual ASR.
 
-### meta (11)
+### meta (13)
 
 - [`brainstorming`](meta/brainstorming/): MUST use before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.
 - [`clawhub`](meta/clawhub/): Use the ClawHub CLI to search, install, update, and publish agent skills from clawhub.com. Use when you need to fetch new skills on the fly, sync installed skills to latest or a specific version, or publish new/updated skill folders with the npm-installed clawhub CLI.
@@ -543,23 +553,27 @@ _Regenerated 2026-06-23 06:10 UTC_
 - [`doing-tasks`](meta/clawlist/doing-tasks/): Use when executing any task. Work through plans systematically, tracking progress, handling blockers, and coordinating with other skills. The central execution skill.
 - [`hermes-agent-skill-authoring`](meta/hermes-agent-skill-authoring/): Author in-repo SKILL.md: frontmatter, validator, structure.
 - [`never-relay-uncaptured-output`](meta/never-relay-uncaptured-output/): Guard-rail against fabricating or relaying command output, URLs, tokens, deploy status, or API data that was not literally captured from a real tool call in this session. Born from a recurring fabrication loop (2026-05-30) where a session claimed successful Vercel deploys and Brevo API responses without real tool output. Use whenever you are about to relay a result to the user or report a task as complete.
+- [`notion`](meta/notion-3/): Notion API for creating and managing pages, databases, and blocks via curl. Search, create, update, and query Notion workspaces directly from the terminal.
 - [`skill-creator`](meta/skill-creator/): Create, edit, improve, or audit AgentSkills. Use when creating a new skill from scratch or when asked to improve, review, audit, tidy up, or clean up an existing skill or SKILL.md file. Also use when editing or restructuring a skill directory (moving files to references/ or scripts/, removing stale content, validating against the AgentSkills spec). Triggers on phrases like "create a skill", "author a skill", "tidy up a skill", "improve this skill", "review the skill", "clean up the skill", "audit the skill".
 - [`verify-task`](meta/verify-task/): MUST use after completing any multi-step task or project. Verifies completion against the original plan, checks quality criteria, and documents outcomes.
+- [`webinarninja`](meta/webinarninja/): Beheer WebinarNinja webinars voor Dubai Property via Playwright automation.
 - [`write-plan`](meta/write-plan/): MUST use after brainstorming and before executing. Creates detailed implementation plans with checkpoints, verification criteria, and execution options.
 
-### ops (32)
+### ops (36)
 
 - [`1password`](ops/1password/): Set up and use 1Password CLI (op). Use when installing the CLI, enabling desktop app integration, signing in (single or multi-account), or reading/injecting/running secrets via op.
 - [`agent-fleet-operations`](ops/agent-fleet-operations/): Operate Hermes-style agent fleets across machines: provision remote hosts, validate transport/auth, refresh knowledge packs, and recover provider or gateway runtime failures.
 - [`appie-self-maintenance`](ops/appie-self-maintenance/): Daily healthcheck and low-risk maintenance for a Hermes/OpenClaw agent host.
 - [`ashp`](ops/ashp/): Use Appie Secure Handshake Protocol patterns for authenticated inter-agent communication and secure Appie-family coordination.
 - [`camsnap`](ops/camsnap/): Capture frames or clips from RTSP/ONVIF cameras.
+- [`clawdcursor`](ops/clawdcursor/): AI desktop agent — control any app on Windows/macOS from your OpenClaw agent. Send natural language tasks to the Clawd Cursor API and it handles everything: opening apps, clicking buttons, typing text, navigating browsers, filling forms. If you can click it, your agent can too.
 - [`client-bot-security`](ops/client-bot-security/): Full-spectrum security audit for client Telegram bots across a multi-gateway fleet (Hermes + OpenClaw). Covers bot inventory & topology mapping, token provisioning security, SSH key hygiene, authorized_keys audit, secrets map documentation, and bot lifecycle management (free→assigned→active→retired).
 - [`cto-intelligence`](ops/cto-intelligence/): Set up recurring cron jobs that monitor a technology domain and deliver formatted briefings. Covers search strategy, domain categorization, briefing format, and delivery via Telegram.
 - [`debugging-hermes-tui-commands`](ops/debugging-hermes-tui-commands/): Debug Hermes TUI slash commands: Python, gateway, Ink UI.
 - [`deployment-inspection`](ops/deployment-inspection/): End-to-end investigation of a live client deployment - platform detection, subdomain discovery, deployment API access (Netlify), JS bundle analysis, repo discovery.
 - [`digital-ocean`](ops/digital-ocean/): Manage Digital Ocean droplets, domains, and infrastructure via DO API.
 - [`fleet-infra-fixes`](ops/fleet-infra-fixes/): Resolve recurring Appie fleet infrastructure issues including Node/Homebrew breakage, pnpm install blockers, deploy keys, secrets, browser auth, Tailscale serve, and local model routing.
+- [`fleet-self-review`](ops/fleet-self-review/): Daily fleet self-review — audit the Appie fleet for safety, errors/fabrications, and improvement opportunities; propose fixes and author custom skills capturing the learning. Read-only on systems; only writes reports + skills. Use when running the daily self-review routine (cron) or on demand.
 - [`fleet-skill-sync`](ops/fleet-skill-sync/): Use when pulling, comparing, de-duping, curating or syncing skills across the agent fleet (primary nodes, worker nodes, media hosts, and approved client-bot profiles), or when asked to consolidate fleet skills into the clawd master library
 - [`git-sync`](ops/git-sync/): Automatically syncs local workspace changes to the remote GitHub repository. Use after significant changes or periodically.
 - [`gitclaw`](ops/gitclaw/): Back up the OpenClaw agent workspace to a GitHub repo and keep it synced via a cron-driven commit/push script.
@@ -568,6 +582,7 @@ _Regenerated 2026-06-23 06:10 UTC_
 - [`hermes-gateway-troubleshooting`](ops/hermes-gateway-troubleshooting/): Troubleshoot Hermes Agent gateway/runtime issues: messaging sessions, model/provider switches, auth, logs, and state.db consistency.
 - [`hermes-runtime-operations`](ops/hermes-runtime-operations/): Operate and troubleshoot Hermes runtime health in production-like environments. Use for routine environment maintenance (gateway/cron/disk/workspace checks) and auth incident response (OAuth/API-key failures, refresh-token issues, headless device-code recovery).
 - [`huggingface-hub`](ops/huggingface-hub/): Hugging Face Hub CLI (hf) — search, download, and upload models and datasets, manage repos, query datasets with SQL, deploy inference endpoints, manage Spaces and buckets.
+- [`modal-serverless-gpu`](ops/modal-serverless-gpu/): Serverless GPU cloud platform for running ML workloads. Use when you need on-demand GPU access without infrastructure management, deploying ML models as APIs, or running batch jobs with automatic scaling.
 - [`model-usage`](ops/model-usage/): Use CodexBar CLI local cost usage to summarize per-model usage for Codex or Claude, including the current (most recent) model or a full model breakdown. Trigger when asked for model-level usage/cost data from codexbar, or when you need a scriptable per-model summary from codexbar cost JSON.
 - [`nano-pdf`](ops/nano-pdf/): Edit PDFs with natural-language instructions using the nano-pdf CLI. Modify text, fix typos, update titles, and make content changes to specific pages without manual editing.
 - [`node-connect`](ops/node-connect/): Diagnose OpenClaw node connection and pairing failures for Android, iOS, and macOS companion apps. Use when QR/setup code/manual connect fails, local Wi-Fi works but VPS/tailnet does not, or errors mention pairing required, unauthorized, bootstrap token invalid or expired, gateway.bind, gateway.remote.url, Tailscale, or plugins.entries.device-pair.config.publicUrl.
@@ -576,24 +591,29 @@ _Regenerated 2026-06-23 06:10 UTC_
 - [`openclaw-to-hermes`](ops/openclaw-to-hermes/): Port OpenClaw Appie to Hermes Agent and spawn new instances. Clone appie-brain, configure identity files (SOUL.md, USER.md, IDENTITY.md, AGENTS.md), set up git sync, copy secrets, and start Hermes gateway.
 - [`python-debugpy`](ops/python-debugpy/): Debug Python: pdb REPL + debugpy remote (DAP).
 - [`rtk-token-killer`](ops/rtk-token-killer/): rtk (Rust Token Killer) - CLI proxy that filters/compresses command output before it reaches the LLM, cutting tokens 60-90% on ls/cat/grep/git/tests/etc. Fleet token-discipline tool. Prefix heavy read/inspect commands with `rtk`.
+- [`seo-landing-page-audit`](ops/seo-landing-page-audit/): Audit and improve landing pages using SEO fundamentals from the Tornado/IMU PDFs: bezoekersmagneet, zoekwoorden, backlinks, smart content, technische SEO, and on-page checklist.
 - [`session-logs`](ops/session-logs/): Search and analyze your own session logs (older/parent conversations) using jq.
 - [`ssh-access-recovery`](ops/ssh-access-recovery/): Restore SSH access when the host is reachable but authentication fails. Diagnose the real failure mode, use the smallest safe break-glass path, convert back to key-based auth, and verify from the source machine.
 - [`tmux`](ops/tmux/): Remote-control tmux sessions for interactive CLIs by sending keystrokes and scraping pane output.
 - [`vercel-deploy`](ops/vercel-deploy/): Deploy projects to Vercel via CLI with token auth. Use when deploying Next.js, static sites, or any project to Vercel from the terminal.
 - [`webhook-subscriptions`](ops/webhook-subscriptions/): Webhook subscriptions: event-driven agent runs.
 
-### personal (25)
+### personal (31)
 
 - [`apple-notes`](personal/apple-notes/): Manage Apple Notes via the memo CLI on macOS (create, view, search, edit).
 - [`apple-reminders`](personal/apple-reminders/): Manage Apple Reminders via remindctl CLI (list, add, complete, delete).
 - [`bear-notes`](personal/bear-notes/): Create, search, and manage Bear notes via grizzly CLI.
 - [`client-success-and-retention`](personal/client-acquisition/client-success-and-retention/): Use when designing client delivery for a coaching/agency program, hiring or running a Client Success Manager / success coach, handling a struggling or refund-requesting client, setting onboarding-call and check-in cadence, or improving retention and continuity. Source - Grow Acquisition 3.0 (Nikk Kleinherenbrink).
 - [`consulting-offer-and-pricing`](personal/client-acquisition/consulting-offer-and-pricing/): Use when defining or repricing a consulting/agency/coaching offer (DWY/DFY/DIY), positioning a service, packaging tiers, or running discovery before building a landing page or sales script - turns a vague service into a positioned, value-priced offer with a deliverables list. Source - Grow Acquisition 3.0 (Nikk Kleinherenbrink), distilled for Weblyfe.
+- [`eightctl`](personal/smart-home/eightctl/): Control Eight Sleep pods (status, temperature, alarms, schedules).
+- [`find-nearby`](personal/leisure/find-nearby/): Find nearby places (restaurants, cafes, bars, pharmacies, etc.) using OpenStreetMap. Works with coordinates, addresses, cities, zip codes, or Telegram location pins. No API keys needed.
+- [`find-nearby`](personal/find-nearby/): Find nearby places (restaurants, cafes, bars, pharmacies, etc.) using OpenStreetMap. Works with coordinates, addresses, cities, zip codes, or Telegram location pins. No API keys needed.
 - [`findmy`](personal/findmy/): Track Apple devices and AirTags via FindMy.app on macOS using AppleScript and screen capture.
 - [`hiring-and-managing-a-team`](personal/client-acquisition/hiring-and-managing-a-team/): Use when hiring or onboarding an appointment setter (growth specialist), a virtual assistant, or any remote team member for an agency/coaching business - covers role definition, pay structures, onboarding cadence, management rhythm, and how to fire correctly. Source - Grow Acquisition 3.0 (Nikk Kleinherenbrink).
 - [`instagram-organic-content`](personal/client-acquisition/instagram-organic-content/): Use when scripting Instagram reels or story sequences for a personal/founder brand, optimizing an IG bio for conversion, or building a content calendar that turns a cold audience into DM leads - the value/educational/credibility content system plus story-sequence frameworks. Source - Grow Acquisition 3.0 (Nikk Kleinherenbrink).
 - [`minecraft-modpack-server`](personal/gaming/minecraft-modpack-server/): Set up a modded Minecraft server from a CurseForge/Modrinth server pack zip. Covers NeoForge/Forge install, Java version, JVM tuning, firewall, LAN config, backups, and launch scripts.
 - [`obsidian`](personal/note-taking/obsidian/): Read, search, and create notes in the Obsidian vault.
+- [`openhue`](personal/smart-home/openhue/): Control Philips Hue lights, rooms, and scenes via the OpenHue CLI. Turn lights on/off, adjust brightness, color, color temperature, and activate scenes.
 - [`persona-content-creator`](personal/personas/persona-content-creator/): Create, organize, and distribute content across Workspace.
 - [`persona-customer-support`](personal/personas/persona-customer-support/): Manage customer support — track tickets, respond, escalate issues.
 - [`persona-event-coordinator`](personal/personas/persona-event-coordinator/): Plan and manage events — scheduling, invitations, and logistics.
@@ -606,6 +626,9 @@ _Regenerated 2026-06-23 06:10 UTC_
 - [`persona-team-lead`](personal/personas/persona-team-lead/): Lead a team — run standups, coordinate tasks, and communicate.
 - [`pokemon-player`](personal/gaming/pokemon-player/): Play Pokemon games autonomously via headless emulation. Starts a game server, reads structured game state from RAM, makes strategic decisions, and sends button inputs — all from the terminal.
 - [`profile-funnel-meta-ads`](personal/client-acquisition/profile-funnel-meta-ads/): Use when setting up or scaling Meta (Facebook/Instagram) direct-response ads that send paid traffic to an IG profile instead of a landing page, scripting ad creatives, or launching campaigns in Business Manager - the Profile Funnel system plus the ad-creative scripts and the Business Manager launch SOP. Source - Grow Acquisition 3.0 (Nikk Kleinherenbrink).
+- [`sonoscli`](personal/smart-home/sonoscli/): Control Sonos speakers (discover/status/play/volume/group).
+- [`spotify-player`](personal/leisure/spotify-player/): Terminal Spotify playback/search via spogo (preferred) or spotify_player.
 - [`spotify-player`](personal/spotify-player/): Terminal Spotify playback/search via spogo (preferred) or spotify_player.
 - [`things-mac`](personal/things-mac/): Manage Things 3 via the `things` CLI on macOS (add/update projects+todos via URL scheme; read/search/list from the local Things database). Use when a user asks OpenClaw to add a task to Things, list inbox/today/upcoming, search tasks, or inspect projects/areas/tags.
 - [`weather`](personal/weather/): Get current weather and forecasts via wttr.in or Open-Meteo. Use when: user asks about weather, temperature, or forecasts for any location. NOT for: historical weather data, severe weather alerts, or detailed meteorological analysis. No API key needed.
+
