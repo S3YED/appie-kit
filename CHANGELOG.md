@@ -7,6 +7,11 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## v4.5 (2026-06-06)
 
+### Changed 2026-06-26
+- INDEX.md, SKILLS.md, CHANGELOG.md counts updated to reflect 598 skills (585 → 598) following yesterday's 13-skill commit (GitHub workflows, media gen, mlops, persona).
+
+
+
 ### Added
 - 5 fleet skills from `appie-3-hermes`: `cto-intelligence` (cron-based tech monitoring), `hermes-gateway-troubleshooting` (Hermes gateway diagnostics), `travel-accommodation` (hotel/resort research), `travel-booking` (multi-leg SE Asia travel), and `webflow-seo-audit` (Webflow-specific SEO audit). Imported 2026-06-22.
 ### Added 2026-06-23

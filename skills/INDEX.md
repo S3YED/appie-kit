@@ -1,22 +1,22 @@
 # Appie Kit Skills Index
 
-**Production skills in appie-kit:** 585
+**Production skills in appie-kit:** 598
 
-**Unique skill names:** 573
+**Unique skill names:** 586
 
-_Regenerated 2026-06-25 02:27 UTC_
+_Regenerated 2026-06-26 02:23 UTC_
 
 ## Categories
 
 - [Automation & AI Agents](automation/INDEX.md): 28 skills
 - [Communication](communication/INDEX.md): 8 skills
-- [Content & Media](content/INDEX.md): 71 skills
+- [Content & Media](content/INDEX.md): 75 skills
 - [ECC (External Skill Collection)](ecc/INDEX.md): 250 skills
-- [Integrations](integrations/INDEX.md): 113 skills
-- [Knowledge & Research](knowledge/INDEX.md): 35 skills
+- [Integrations](integrations/INDEX.md): 119 skills
+- [Knowledge & Research](knowledge/INDEX.md): 36 skills
 - [Meta & Utility](meta/INDEX.md): 13 skills
 - [Operations & DevOps](ops/INDEX.md): 36 skills
-- [Personal & Lifestyle](personal/INDEX.md): 31 skills
+- [Personal & Lifestyle](personal/INDEX.md): 33 skills
 
 ## Skills
 

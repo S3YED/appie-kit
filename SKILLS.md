@@ -1,6 +1,6 @@
 # Appie Kit - Skill Discovery
 
-557 public skills, 9 categories. Sourced from a sanitized agent-fleet library plus imported ECC engineering/agentic-ops skills.
+598 public skills, 9 categories. Sourced from a sanitized agent-fleet library plus imported ECC engineering/agentic-ops skills.
 
 Each skill is a directory with a `SKILL.md` file. Drop any skill folder into `~/.hermes/skills/` or `~/.openclaw/skills/` and it is available in your next session.
 
@@ -8,7 +8,7 @@ Each skill is a directory with a `SKILL.md` file. Drop any skill folder into `~/
 
 ## Categories
 
-### automation (27 skills)
+### automation (28 skills)
 Agent self-management, workflow orchestration, browser automation, coding agents, and inter-agent coordination.
 
 [Browse automation skills](skills/automation/INDEX.md) | [Readme](skills/automation/README.md)
@@ -17,7 +17,7 @@ Highlights: `clawflow`, `kanban-orchestrator`, `brain-sync`, `memory-search`, `c
 
 ---
 
-### communication (7 skills)
+### communication (8 skills)
 Messaging, email, voice, and chat-platform integrations.
 
 [Browse communication skills](skills/communication/INDEX.md) | [Readme](skills/communication/README.md)
@@ -26,7 +26,7 @@ Highlights: `discord`, `bluebubbles`, `himalaya`, `wacli`, `voice-call`
 
 ---
 
-### content (65 skills)
+### content (75 skills)
 Design, frontend, media, SEO, copywriting, image/video/audio generation, and creative workflows.
 
 [Browse content skills](skills/content/INDEX.md) | [Readme](skills/content/README.md)
@@ -44,7 +44,7 @@ Highlights: `agent-harness-construction`, `autonomous-loops`, `continuous-learni
 
 ---
 
-### integrations (109 skills)
+### integrations (119 skills)
 Third-party service integrations: Google Workspace, Notion, GitHub, n8n, fal.ai, Webflow, Spotify, Trello, and more.
 
 [Browse integrations skills](skills/integrations/INDEX.md) | [Readme](skills/integrations/README.md)
@@ -53,7 +53,7 @@ Highlights: `exa-plus`, `n8n`, `github`, `gog`, `airtable`, `notion-masterclass`
 
 ---
 
-### knowledge (33 skills)
+### knowledge (36 skills)
 Model, ML, research, fine-tuning, quantization, inference, evaluation, and technical reference skills.
 
 [Browse knowledge skills](skills/knowledge/INDEX.md) | [Readme](skills/knowledge/README.md)
@@ -80,7 +80,7 @@ Highlights: `agent-fleet-operations`, `fleet-skill-sync`, `fleet-infra-fixes`, `
 
 ---
 
-### personal (25 skills)
+### personal (33 skills)
 Personal productivity, smart-home, lifestyle, and macOS-centered helper skills.
 
 [Browse personal skills](skills/personal/INDEX.md) | [Readme](skills/personal/README.md)
