@@ -117,6 +117,16 @@ Initial release (commit `873c83f`).
 - Case studies: lead capture automation, multi-agent fleet, content pipeline.
 - `install.sh` one-command installer.
 - MIT license.
+## 2026-06-28 — Fleet skill sync: 48 new skills imported from appie-2 and appie-3
+
+- Imported 48 new skills across 13 categories (646 total, +48).
+- Sources: appie-2 (30 skills: 14 active + 16 GWS/OpenClaw imports), appie-3 (14 skills), appie-1-local (5 skills).
+- New categories added: autonomous-ai-agents, content-creation, creative, design, devops, github, media, openclaw-imports, productivity, red-teaming, research, seo, software-development.
+- Updated google-drive with proper frontmatter and expanded capabilities.
+- Created 13 category INDEX files for the new directories.
+- Skipped: cto-intelligence (role-specific, 46KB), 2 archived skills.
+- Fleet broadcast: pending — no appie-kit clone on fleet hosts (git push required).
+
 ## 2026-06-14 - Skill audit and hygiene pass
 
 - Added evidence-backed origin/quality audit reports under `reports/skill-audit/2026-06-14/`.

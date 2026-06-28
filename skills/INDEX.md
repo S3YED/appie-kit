@@ -1,22 +1,35 @@
 # Appie Kit Skills Index
 
-**Production skills in appie-kit:** 598
+**Production skills in appie-kit:** 646
 
-**Unique skill names:** 586
+**Unique skill names:** 633
 
-_Regenerated 2026-06-26 02:23 UTC_
+_Regenerated 2026-06-28 UTC — fleet sync batch import_
 
 ## Categories
 
-- [Automation & AI Agents](automation/INDEX.md): 28 skills
+- [Automation & AI Agents](automation/INDEX.md): 30 skills
+- [Autonomous AI Agents](autonomous-ai-agents/INDEX.md): 3 skills
 - [Communication](communication/INDEX.md): 8 skills
 - [Content & Media](content/INDEX.md): 75 skills
+- [Content Creation](content-creation/INDEX.md): 1 skill
+- [Creative](creative/INDEX.md): 2 skills
+- [Design](design/INDEX.md): 1 skill
+- [DevOps](devops/INDEX.md): 5 skills
 - [ECC (External Skill Collection)](ecc/INDEX.md): 250 skills
+- [GitHub](github/INDEX.md): 1 skill
 - [Integrations](integrations/INDEX.md): 119 skills
-- [Knowledge & Research](knowledge/INDEX.md): 36 skills
-- [Meta & Utility](meta/INDEX.md): 13 skills
-- [Operations & DevOps](ops/INDEX.md): 36 skills
+- [Knowledge & Research](knowledge/INDEX.md): 39 skills
+- [Media](media/INDEX.md): 1 skill
+- [Meta & Utility](meta/INDEX.md): 14 skills
+- [OpenClaw Imports](openclaw-imports/INDEX.md): 16 skills
+- [Operations & DevOps](ops/INDEX.md): 40 skills
 - [Personal & Lifestyle](personal/INDEX.md): 33 skills
+- [Productivity](productivity/INDEX.md): 2 skills
+- [Red Teaming](red-teaming/INDEX.md): 1 skill
+- [Research](research/INDEX.md): 1 skill
+- [SEO](seo/INDEX.md): 1 skill
+- [Software Development](software-development/INDEX.md): 3 skills
 
 ## Skills
 
