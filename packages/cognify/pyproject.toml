@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cognify-kg"
+version = "0.1.0"
+description = "Lightweight document-ingestion + typed knowledge-graph engine for agents"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "numpy>=1.24",
+    "requests>=2.31",
+    "sentence-transformers>=2.2",
+]
+
+[project.optional-dependencies]
+local = ["chromadb>=0.5", "networkx>=3.0", "pypdf>=4.0"]
+neo4j = ["neo4j>=5.0", "turbovec>=0.1", "pypdf>=4.0"]
+claude = ["mcp>=1.2"]                       # MCP server for Claude Code / Desktop
+serve = ["fastapi>=0.110", "uvicorn>=0.27"] # HTTP server (Hermes / any runtime)
+all = ["chromadb>=0.5", "networkx>=3.0", "neo4j>=5.0", "turbovec>=0.1", "pypdf>=4.0",
+       "mcp>=1.2", "fastapi>=0.110", "uvicorn>=0.27"]
+
+[project.scripts]
+cognify = "cognify.cli:main"
+cognify-mcp = "cognify.mcp_server:main"
+cognify-serve = "cognify.server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
