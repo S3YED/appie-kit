@@ -2,7 +2,7 @@
 
 **Production skills in appie-kit:** 646
 
-**Unique skill names:** 633
+**Unique skill names:** 634
 
 _Regenerated 2026-06-28 UTC — fleet sync batch import_
 

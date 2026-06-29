@@ -7,6 +7,10 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## v4.5 (2026-06-06)
 
+### Added 2026-06-29
+- `kanban-codex-lane` from appie-2 fleet sync: Hermes Kanban + Codex dual-lane pattern for bounded implementation tasks. Added to `skills/autonomous-ai-agents/`.
+- Cleaned up duplicate `skills/knowledge/research/web-research/` — canonical copy at `skills/research/web-research/`.
+
 ### Changed 2026-06-26
 - INDEX.md, SKILLS.md, CHANGELOG.md counts updated to reflect 598 skills (585 → 598) following yesterday's 13-skill commit (GitHub workflows, media gen, mlops, persona).
 
