@@ -1,4 +1,4 @@
-# Changelog
+## 2026-06-30 — Fleet sync import from eugi\n\n- Imported 10 new agentic and operations skills from eugi (total 656).\n- Created 'Agentic  Loops' category index.\n- Verified reachability for appie-2, appie-3, eugi.\n\n# Changelog
 
 All notable changes to Appie Kit are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
