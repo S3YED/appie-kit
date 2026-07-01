@@ -1,9 +1,9 @@
 # Appie Kit Skills Index
 
-**Production skills in appie-kit:** 656
+**Production skills in appie-kit:** 666
 **Unique categories:** 24
 
-_Regenerated 2026-06-30 02:09 UTC — fleet sync daily curation_
+_Regenerated 2026-07-01 04:30 UTC — fleet sync daily curation_
 
 ## Categories
 
@@ -18,13 +18,13 @@ _Regenerated 2026-06-30 02:09 UTC — fleet sync daily curation_
 - [Devops](devops/INDEX.md): 5 skills
 - [Ecc](ecc/INDEX.md): 250 skills
 - [Github](github/INDEX.md): 1 skills
-- [Integrations](integrations/INDEX.md): 119 skills
+- [Integrations](integrations/INDEX.md): 126 skills
 - [Intelligence](intelligence/INDEX.md): 0 skills
 - [Knowledge](knowledge/INDEX.md): 38 skills
 - [Media](media/INDEX.md): 1 skills
 - [Meta](meta/INDEX.md): 14 skills
-- [Openclaw & Imports](openclaw-imports/INDEX.md): 16 skills
-- [Ops](ops/INDEX.md): 40 skills
+- [Openclaw & Imports](openclaw-imports/INDEX.md): 18 skills
+- [Ops](ops/INDEX.md): 41 skills
 - [Personal](personal/INDEX.md): 33 skills
 - [Productivity](productivity/INDEX.md): 2 skills
 - [Red & Teaming](red-teaming/INDEX.md): 1 skills

@@ -1,3 +1,12 @@
+## 2026-07-01 — Fleet sync import: n8n deep skills, macOS Computer Use, GWS recipes
+
+- Imported 10 new skills across 3 categories (656 → 666 total).
+- From **appie-2**: 7 n8n technical deep-dive skills (agents, binary/data, code tool, error handling, multi-instance, self-hosting, subworkflows).
+- From **eugi**: `macos-computer-use` — background macOS desktop automation driver (added to ops).
+- From **appie-2**: 2 GWS recipes (collect form responses, create classroom course) added to openclaw-imports.
+- Skipped: `jenny-voice` (personal to eugi), `fleet-inventory` (embedded in security-scanning, not standalone).
+- **Fleet refresh:** appie-2, appie-3-hermes, eugi all reachable. Broadcast pending.
+
 ## 2026-06-30 — Fleet sync import from eugi\n\n- Imported 10 new agentic and operations skills from eugi (total 656).\n- Created 'Agentic  Loops' category index.\n- Verified reachability for appie-2, appie-3, eugi.\n\n# Changelog
 
 All notable changes to Appie Kit are documented here.

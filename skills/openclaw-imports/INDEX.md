@@ -1,6 +1,6 @@
 # openclaw-imports Skills
 
-**Skill count:** 16
+**Skill count:** 18
 
 - [`gws-calendar`](gws-calendar/): "Google Calendar: Manage calendars and events."
 - [`gws-chat-send`](gws-chat-send/): "Google Chat: Send a message to a space."
@@ -18,3 +18,5 @@
 - [`gws-workflow-file-announce`](gws-workflow-file-announce/): "Google Workflow: Announce a Drive file in a Chat space."
 - [`gws-workflow-standup-report`](gws-workflow-standup-report/): "Google Workflow: Today's meetings + open tasks as a standup summary."
 - [`gws-workflow-weekly-digest`](gws-workflow-weekly-digest/): "Google Workflow: Weekly summary: this week's meetings + unread email count."
+- [`recipe-collect-form-responses`](recipe-collect-form-responses/): "Retrieve and review responses from a Google Form."
+- [`recipe-create-classroom-course`](recipe-create-classroom-course/): "Create a Google Classroom course and invite students."
