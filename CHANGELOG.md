@@ -1,3 +1,11 @@
+## 2026-07-03 — Fleet sync import: refero-design, creative ideation, component refactoring, content intelligence
+
+- Imported 4 new skills (667 → 671 SKILL.md, 632 → 636 unique names).
+- From **appie-2 (Seyed's agent)**: `refero-design` — Seyed's primary research-first design methodology (skills/design); `react-component-refactoring` — safe large-React-component splitting patterns (skills/software-development); `short-form-content-intelligence` — reels-only opportunity market research (skills/content).
+- From **eugi**: `creative-ideation` — 20+ named ideation methods from creative practice, authored by SHL0MS (skills/creative). Created 2026-07-02.
+- Skipped: `weblyfe-landing-page` (Weblyfe-specific, not generic enough for fleet reuse), `world-solutions-project` and `petdex` (personal), `wai-tenant-provisioning` (client secrets), `computer-use` (already covered by `macos-computer-use`), `google-maps-*` (niche prospecting), all archived skills on appie-2, `czΩa-database-migrations` and `n8n-pro` (host-specific).
+- **Fleet broadcast:** pending (appie-2 already has these skills; eugi needs `refero-design` and `react-component-refactoring`).
+
 ## 2026-07-01 — Fleet sync import: n8n deep skills, macOS Computer Use, GWS recipes
 
 - Imported 10 new skills across 3 categories (656 → 666 total).

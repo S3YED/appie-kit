@@ -1,9 +1,9 @@
 # Appie Kit Skills Index
 
-**Production skills in appie-kit:** 666
+**Production skills in appie-kit:** 671
 **Unique categories:** 24
 
-_Regenerated 2026-07-01 04:30 UTC — fleet sync daily curation_
+_Regenerated 2026-07-03 01:00 UTC — fleet sync daily curation_
 
 ## Categories
 
@@ -12,9 +12,9 @@ _Regenerated 2026-07-01 04:30 UTC — fleet sync daily curation_
 - [Autonomous & Ai & Agents](autonomous-ai-agents/INDEX.md): 4 skills
 - [Communication](communication/INDEX.md): 8 skills
 - [Content & Creation](content-creation/INDEX.md): 1 skills
-- [Content](content/INDEX.md): 75 skills
-- [Creative](creative/INDEX.md): 2 skills
-- [Design](design/INDEX.md): 1 skills
+- [Content](content/INDEX.md): 76 skills
+- [Creative](creative/INDEX.md): 3 skills
+- [Design](design/INDEX.md): 2 skills
 - [Devops](devops/INDEX.md): 5 skills
 - [Ecc](ecc/INDEX.md): 250 skills
 - [Github](github/INDEX.md): 1 skills
@@ -30,4 +30,4 @@ _Regenerated 2026-07-01 04:30 UTC — fleet sync daily curation_
 - [Red & Teaming](red-teaming/INDEX.md): 1 skills
 - [Research](research/INDEX.md): 1 skills
 - [Seo](seo/INDEX.md): 1 skills
-- [Software & Development](software-development/INDEX.md): 3 skills
+- [Software & Development](software-development/INDEX.md): 4 skills
