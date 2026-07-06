@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Creed · [CLIENT NAME]'s Transformation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:          #0F2D55;
+      --dark-navy:     #072A42;
+      --silver:        #B4B4BC;
+      --royal:         #004CC8;
+      --royal-bright:  #4A8CFF;
+      --white:         #FFFFFF;
+      --near-black:    #212121;
+    }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body {
+      font-family: 'Montserrat', 'Plus Jakarta Sans', sans-serif;
+      background: var(--dark-navy);
+      color: var(--silver);
+      line-height: 1.6;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    .page { max-width: 210mm; margin: 0 auto; background: var(--dark-navy); overflow: hidden; }
+
+    /* ===== TOP ROW (compact) ===== */
+    .top-row {
+      background: linear-gradient(160deg, #072A42 0%, #0A1E35 50%, #0F2D55 100%);
+      position: relative; overflow: hidden;
+    }
+    .top-content { padding: 20px 36px 0; position: relative; z-index: 2; }
+    .crest {
+      font-size: 9px; letter-spacing: 5px; text-transform: uppercase;
+      color: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.1);
+      padding: 6px 18px; display: inline-block; font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .top-row h1 {
+      font-size: 30px; font-weight: 900; color: var(--white);
+      line-height: 1.1; letter-spacing: -0.5px; margin-bottom: 4px;
+    }
+    .top-row h1 .accent { color: var(--royal); }
+    .top-row .header-sub {
+      font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+      color: rgba(255,255,255,0.25); margin-bottom: 14px;
+    }
+
+    /* Photo — height-constrained so quote fits page 1 */
+    .photo-wrap {
+      width: 100%; background: #000; line-height: 0;
+      max-height: 40vh; overflow: hidden; display: flex; flex-direction: column;
+    }
+    .photo-wrap img {
+      width: auto; height: 38vh; object-fit: contain; margin: 0 auto;
+    }
+    .photo-labels {
+      display: flex; justify-content: center; gap: 36px;
+      padding: 4px 20px; background: #000;
+      font-size: 8px; letter-spacing: 3px; text-transform: uppercase;
+      border-top: 1px solid rgba(255,255,255,0.04);
+    }
+    .photo-labels .before { color: rgba(255,255,255,0.25); }
+    .photo-labels .after  { color: var(--royal); font-weight: 600; }
+
+    /* ===== INLINE QUOTE ===== */
+    .quote-inline {
+      padding: 14px 36px 18px; background: var(--navy);
+      display: flex; gap: 14px; align-items: flex-start;
+    }
+    .quote-inline .qmark {
+      font-size: 40px; font-family: Georgia, serif;
+      color: var(--royal); opacity: 0.25; line-height: 0.7; flex-shrink: 0;
+    }
+    .quote-inline .qtext {
+      font-size: 15px; font-weight: 400; line-height: 1.6;
+      color: rgba(255,255,255,0.9); font-style: italic;
+    }
+    .quote-inline .qattr {
+      display: block; margin-top: 6px; font-size: 11px;
+      font-weight: 600; color: var(--silver);
+      letter-spacing: 2px; text-transform: uppercase; font-style: normal;
+    }
+    .quote-inline .qattr::before {
+      content: ''; display: inline-block;
+      width: 18px; height: 1px; background: var(--royal);
+      margin-right: 8px; vertical-align: middle;
+    }
+
+    /* ===== SECTIONS ===== */
+    .sec { padding: 28px 40px; }
+    .eyebrow {
+      font-size: 9px; letter-spacing: 4px; text-transform: uppercase;
+      color: var(--royal); font-weight: 600; margin-bottom: 6px;
+    }
+    .sec-title {
+      font-size: 20px; font-weight: 800; color: var(--white); margin-bottom: 16px;
+    }
+
+    /* Struggle + Fix — 2-column card row */
+    .card-row {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+    }
+    .card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 10px; padding: 24px;
+    }
+    .card .icon-line { width: 22px; height: 2px; margin-bottom: 10px; }
+    .card .icon-line.danger  { background: #E74C3C; }
+    .card .icon-line.primary { background: var(--royal-bright); }
+    .card .icon-line.success { background: #2ECC71; }
+
+    .card h3 {
+      font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .card h3.danger  { color: #E74C3C; }
+    .card h3.primary { color: var(--royal-bright); font-weight: 700; }
+    .card h3.success { color: #2ECC71; }
+
+    .card h4 {
+      font-size: 16px; font-weight: 700; color: var(--white);
+      line-height: 1.3; margin-bottom: 8px;
+    }
+    .card p {
+      font-size: 12px; color: rgba(255,255,255,0.55); line-height: 1.7;
+    }
+
+    .obj-block {
+      background: rgba(231,76,60,0.05); border-left: 3px solid #E74C3C;
+      padding: 12px 16px; margin-top: 12px; border-radius: 0 6px 6px 0;
+    }
+    .obj-block p { font-size: 12px; font-style: italic; color: rgba(255,255,255,0.7); }
+    .obj-block .obj-label {
+      font-size: 8px; letter-spacing: 2px; text-transform: uppercase;
+      color: #E74C3C; font-weight: 600; margin-bottom: 3px;
+    }
+
+    .fix-items { list-style: none; padding: 0; margin-top: 10px; }
+    .fix-items li {
+      padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.04);
+      font-size: 12px; color: rgba(255,255,255,0.7); display: flex; gap: 8px;
+    }
+    .fix-items li:last-child { border-bottom: none; }
+    .fix-items li .check { color: #2ECC71; }
+
+    /* Feelings + Results — must stay together */
+    .feelings-row {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+      background: #1A1A2E;
+      page-break-inside: avoid;
+    }
+    .feelings-row .card { background: rgba(255,255,255,0.03); border-radius: 10px; padding: 24px; }
+
+    .rtable { width: 100%; border-collapse: collapse; }
+    .rtable tr { border-bottom: 1px solid rgba(255,255,255,0.04); }
+    .rtable tr:last-child { border-bottom: none; }
+    .rtable td {
+      padding: 8px 4px; font-size: 12px; vertical-align: top;
+    }
+    .rtable td:first-child {
+      color: rgba(255,255,255,0.35); font-weight: 500; width: 42%;
+    }
+    .rtable td:nth-child(2) {
+      text-align: center; color: rgba(255,255,255,0.12); width: 8%;
+    }
+    .rtable td:last-child {
+      text-align: right; font-weight: 700; color: var(--white); width: 50%;
+    }
+    .rtable td:last-child .gain { color: #2ECC71; }
+
+    /* How We Broke It — 2x2 step grid */
+    .steps-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+    }
+    .step-box {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 10px; padding: 16px 18px;
+    }
+    .step-box .num {
+      font-size: 24px; font-weight: 900; color: var(--royal);
+      opacity: 0.3; line-height: 1; margin-bottom: 4px;
+    }
+    .step-box h4 { font-size: 13px; font-weight: 700; color: var(--white); margin-bottom: 3px; }
+    .step-box p { font-size: 11px; color: rgba(255,255,255,0.5); line-height: 1.5; }
+
+    /* CTA */
+    .cta {
+      text-align: center; padding: 40px;
+      background: linear-gradient(160deg, #0F2D55 0%, #072A42 100%);
+      position: relative; overflow: hidden;
+    }
+    .cta h2 {
+      font-size: 24px; font-weight: 800; color: var(--white);
+      margin-bottom: 4px; position: relative; z-index: 2;
+    }
+    .cta p {
+      font-size: 12px; color: rgba(255,255,255,0.4);
+      margin-bottom: 20px; position: relative; z-index: 2;
+    }
+    .cta-btn {
+      display: inline-block; background: var(--royal); color: var(--white);
+      padding: 12px 36px; font-size: 11px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 2px; border-radius: 6px;
+      position: relative; z-index: 2;
+    }
+    .cta-link {
+      display: block; margin-top: 8px; font-size: 9px;
+      color: rgba(255,255,255,0.2); position: relative; z-index: 2;
+    }
+
+    .footer {
+      text-align: center; padding: 14px 40px;
+      background: var(--near-black); font-size: 8px;
+      letter-spacing: 2px; color: rgba(255,255,255,0.1); text-transform: uppercase;
+    }
+
+    @media print { .feelings-row { page-break-inside: avoid; } }
+    @media (max-width: 600px) {
+      .card-row, .feelings-row { grid-template-columns: 1fr; }
+      .steps-grid { grid-template-columns: 1fr; }
+      .top-content, .sec, .quote-inline { padding-left: 20px; padding-right: 20px; }
+      .cta { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ===== CREST + NAME + PHOTO + QUOTE (all page 1) ===== -->
+  <div class="top-row">
+    <div class="top-content">
+      <div class="crest">✦ THE CREED ✦</div>
+      <h1>[CLIENT NAME]'S <span class="accent">TRANSFORMATION</span></h1>
+      <p class="header-sub">Cali Creed · Client Story</p>
+    </div>
+    <div class="photo-wrap">
+      <img src="[HOSTED_IMAGE_URL]" alt="[Client] Before & After" />
+      <div class="photo-labels">
+        <span class="before">● BEFORE</span>
+        <span class="after">● AFTER</span>
+      </div>
+    </div>
+    <div class="quote-inline">
+      <div class="qmark">"</div>
+      <div>
+        <p class="qtext">[Full testimonial quote from client. Keep it clean — no em dashes.]</p>
+        <span class="qattr">[Client Name]</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== STRUGGLE + FIX ===== -->
+  <section class="sec">
+    <div class="card-row">
+      <div class="card">
+        <div class="icon-line danger"></div>
+        <h3 class="danger">The Struggle</h3>
+        <h4>"[Struggle headline — the objection in their words]"</h4>
+        <p>[2-3 sentences describing their specific obstacle. What were they stuck on? What had they tried?]</p>
+        <div class="obj-block">
+          <p class="obj-label">▲ Their Objection</p>
+          <p>"[Exact quote — what they said before starting]"</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="icon-line primary"></div>
+        <h3 class="primary">The Fix</h3>
+        <h4>[How The Creed solved it — e.g. "A system built for them, not a template"]</h4>
+        <p>[2-3 sentences describing the solution — what changed, how it was different from past attempts]</p>
+        <ul class="fix-items">
+          <li><span class="check">✓</span> [Specific action 1]</li>
+          <li><span class="check">✓</span> [Specific action 2]</li>
+          <li><span class="check">✓</span> [Specific action 3]</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW THEY FELT + RESULTS ===== -->
+  <section class="feelings-row sec">
+    <div class="card">
+      <div class="icon-line success"></div>
+      <h3 class="success">How They Felt After</h3>
+      <h4 style="font-size:15px;font-weight:700;color:var(--white);margin-bottom:10px;">[Benefit headline — e.g. "Freedom to train, live, and still win"]</h4>
+      <p style="font-size:12px;color:rgba(255,255,255,0.55);">[2-3 sentences about the outcome — how they feel now, what changed in their lifestyle]</p>
+    </div>
+    <div class="card">
+      <div class="eyebrow">● The Results</div>
+      <table class="rtable">
+        <tr>
+          <td>[Before state 1 — e.g. "Plateaued muscle growth"]</td>
+          <td>→</td>
+          <td><span class="gain">[After state 1 — e.g. "Consistent progression"]</span></td>
+        </tr>
+        <tr>
+          <td>[Before state 2]</td>
+          <td>→</td>
+          <td><span class="gain">[After state 2]</span></td>
+        </tr>
+        <tr>
+          <td>[Before state 3]</td>
+          <td>→</td>
+          <td><span class="gain">[After state 3]</span></td>
+        </tr>
+        <tr>
+          <td>[Before state 4]</td>
+          <td>→</td>
+          <td><span class="gain">[After state 4]</span></td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== HOW WE BROKE IT ===== -->
+  <section class="sec" style="background:var(--dark-navy);">
+    <div class="eyebrow">● The System</div>
+    <h2 class="sec-title">How We Broke [the Plateau/it]</h2>
+    <div class="steps-grid">
+      <div class="step-box">
+        <div class="num">01</div>
+        <h4>[Step 1 title]</h4>
+        <p>[1-2 sentences explaining what was done and why it worked.]</p>
+      </div>
+      <div class="step-box">
+        <div class="num">02</div>
+        <h4>[Step 2 title]</h4>
+        <p>[1-2 sentences.]</p>
+      </div>
+      <div class="step-box">
+        <div class="num">03</div>
+        <h4>[Step 3 title]</h4>
+        <p>[1-2 sentences.]</p>
+      </div>
+      <div class="step-box">
+        <div class="num">04</div>
+        <h4>[Step 4 title]</h4>
+        <p>[1-2 sentences.]</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta">
+    <h2>Your Transformation Is Next</h2>
+    <p>Same system. Your results. Book your free call today.</p>
+    <a class="cta-btn" href="https://calendly.com/ramzy-cali-creed/30min">Book Your Call →</a>
+    <span class="cta-link">calendly.com/ramzy-cali-creed/30min</span>
+  </section>
+
+  <div class="footer">THE CREED · CALI CREED · GRATEFUL NEVER SATISFIED</div>
+
+</div>
+</body>
+</html>
