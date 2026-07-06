@@ -1,0 +1,1 @@
+Save this as a landing page template for The Creed Code. Sections: announcement bar, hero, VSL, 90s timer gate (locks/unlocks CTA), testimonial grid, FAQ accordion, Typeform embed. Brand colours injected: navy, silver, royal blue CTAs.
