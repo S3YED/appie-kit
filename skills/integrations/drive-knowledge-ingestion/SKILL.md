@@ -198,3 +198,107 @@ Every dashboard should carry the client's own visual identity. The workflow:
 6. **Dual-mode fetch** so HTML works both locally and on Vercel:
    ```js
    let res = await fetch('/data').catch(() => fetch('data.json'));
+   ```
+7. **Auto-refresh pipeline**: cron → collector → copy → vercel deploy
+
+See `references/dashboard-branding-guide.md` for the full step-by-step.
+
+### Vercel deployment
+
+The static dashboard + data.json can be deployed to Vercel:
+`vercel deploy --prod --yes` from the project dir.
+See `references/dashboard-vercel-deployment.md` for the full workflow.
+
+Cron job `dashboard-data-refresh` should copy both the HTML and data.json to the Vercel
+project directory before deploying, so branding changes propagate automatically.
+
+---
+
+## Stage 5: Cognify Memory Integration
+
+After the SQLite knowledge base is built, **ingest into Cognify** (Clark's LLM-powered
+knowledge-graph memory). This bridges the raw document index with typed entity/relation
+extraction, vector search, and hybrid recall.
+
+### Why
+
+The SQLite FTS5 knowledge base is a text search index. Cognify adds:
+- Typed entity extraction (Person, Organization, Project) via LLM
+- Relation extraction (WORKS_AT, OWNS, PART_OF) between entities
+- Vector embeddings for semantic search
+- Graph traversal for multi-hop recall
+
+### Workflow
+
+```
+SQLite knowledge DB → filter by business domain → export .md files → Cognify ingest-dir
+```
+
+### Step-by-step
+
+1. **Query the knowledge DB** for documents with extracted text:
+   ```sql
+   SELECT f.id, f.name, d.content FROM files f
+   JOIN documents d ON d.file_id = f.id
+   WHERE d.content IS NOT NULL AND d.char_count > 100
+   ```
+
+2. **Filter by business domain** — exclude unrelated businesses.
+   For Solaiman: include TGE/infobusiness, exclude Wethlete/Wheatleet.
+   See `references/tge-cognify-export-guide.md` for keyword lists.
+
+3. **Export as .md with YAML frontmatter**:
+   ```python
+   frontmatter = f"---\nname: {name}\ntags: [{categories}]\ntype: {mime}\n---\n\n"
+   ```
+
+4. **Batch ingest into Cognify** — use background mode for 50+ files
+   (LLM entity extraction per chunk is slow):
+   ```bash
+   python3 /root/.hermes/scripts/cognify-cli.py \
+     --tenant solaiman ingest-dir /path/to/export/dir --glob "*.md"
+   ```
+
+5. **Verify**:
+   ```bash
+   cognify --tenant solaiman stats
+   cognify --tenant solaiman recall "Wat zijn de coaching pakketten?"
+   ```
+
+### Pitfalls
+
+- **Deduplicate first.** The knowledge DB often has duplicate versions of the same doc.
+  Group by normalized name and keep highest `char_count`.
+- **Filter businesses.** Multiple businesses in one Drive = always keyword-filter
+  to avoid polluting the knowledge graph.
+- **LLM cost.** Every chunk triggers entity extraction. Expected and correct.
+- **`--tenant` before subcommand** — required by argparse.
+
+### Related
+
+- `cognify` skill — Core Cognify commands
+- `references/tge-cognify-export-guide.md` — TGE filter keywords and patterns
+
+---
+
+## Disk-Safe Design Principles (8GB constraint)
+
+| Rule | Why |
+|---|---|
+| Never store media locally | Video (2.5K files) + images (1.8K) = 500+ GB in Drive |
+| Download docs to /tmp, extract, delete | Each doc is <1MB, temp footprint stays under 50MB |
+| SQLite instead of heavy vector DB | FTS5 fits in 2MB vs ChromaDB+Torch = 2GB+ |
+| Heuristics over LLM for entity extraction | 0 API cost, 0 disk, 0 latency per file |
+| Single-page HTML dashboard | No build step, no node_modules, no framework |
+
+## References
+
+- `references/drive-research-workflow.md` — Systematic Drive exploration steps
+  (in google-workspace skill, shared reference)
+- `references/entity-extraction-methodology.md` — Known person lists,
+  keyword maps, and extraction patterns for this client's ecosystem
+
+## Related skills
+
+- `google-workspace` — Raw Drive/Gmail/Calendar CLI ops (pre-pipeline)
+- `srt-subtitles` — Parsing .srt subtitle files from Drive
