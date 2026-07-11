@@ -22,6 +22,16 @@ Query the CRM to understand:
 - Top sources
 - Monetary value assigned
 
+**CRITICAL: Data integrity rule — never fabricate.** 
+Only report data you have actually observed (queried from CRM, read from a file, confirmed by the user). If you do not know a field (e.g. welcome message date for a lead in the "no reply" group), mark it as **unknown / N/A** — do not infer, estimate, or backfill from other records. A blank cell is always better than a wrong one. The user will notice incorrect data immediately and it erodes trust in the entire report. When in doubt, report "No data" or leave the cell empty.
+
+**How to structure a lead status report:**
+- Group leads by verified stage only (completed call / booked no call / no reply / out of funnel)
+- For each lead, include: name, contact info, verified stage
+- Only include dates/fields you have direct evidence for
+- If a lead's status changed since your last report, note the change explicitly so the user can confirm
+- Before sending, scan for: any fabricated dates, assumed call statuses, or guessed data. Remove those.
+
 **GHL API quirks (v2):**
 - Base: `services.leadconnectorhq.com` (v1 at `rest.gohighlevel.com` is Cloudflare-blocked)
 - Required header: `Version: 2021-07-28`

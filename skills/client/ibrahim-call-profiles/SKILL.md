@@ -24,6 +24,13 @@ Use when a triage call recording is uploaded or Ibrahim says he finished a call 
 
 Extract these fields from every triage call:
 
+**5-Point Lead Extraction (Value Delivery Format):**
+1. **PAIN**: #1 pain in their own words — quote it directly from transcript
+2. **CURRENT**: Where they are now (weight, routine, situation)
+3. **FUTURE**: Where they want to be (goal weight, desired state, outcome)
+4. **WHY NOW**: What makes change urgent (trigger event, deadline, health scare)
+5. **ALREADY SENT**: What Ibrahim already sent them via WhatsApp (never repeat)
+
 **Lead Info:**
 - Name, location, age range
 - Gender (for "brother/sister" usage)
