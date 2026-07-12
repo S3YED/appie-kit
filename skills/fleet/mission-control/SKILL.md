@@ -6,109 +6,125 @@ tags: [fleet, dashboard, mission-control, nextjs, deployment]
 
 # Mission Control — Fleet Dashboard
 
-Open-source agent orchestration dashboard (Next.js 16). Runs on Mac Mini, accessible fleet-wide via Tailscale.
+Open-source agent orchestration dashboard (Next.js 16, builderz-labs fork with Weblyfe skin). **Canonical deployment runs on `appie-mc-1` (Hetzner), NOT the Mac Mini.** Systemd service `mission-control`, port 3000, tailnet-only via `tailscale serve`.
 
-## Quickstart
-
-```bash
-cd /Users/appie/mission-control
-pnpm run start --port 3480
-```
-
-If `pnpm run start` fails on `verify:node` or `pnpm install` checks, bypass it:
-```bash
-npx next start --hostname 0.0.0.0 --port 3480
-```
+The Mac Mini runs the **heartbeat** (`mc-heartbeat-manifest.py`, `~/clawd/tools/`) that pushes agent status to MC-1. Local MC clones on the mini are planning/staging copies only — never run production tasks against them.
 
 ## Access
 
-Dashboard: `http://100.101.29.56:3480` (Tailscale IP of Mac Mini)
-Default creds: see `references/credentials.md`
+- **Canonical URL:** `https://appie-mc-1.tail61f54b.ts.net` (tailnet-only)
+- **Tailnet IP:** `100.107.179.3` (reachable via appie-2 hop if MagicDNS is off on mini)
+- **Access pattern:** `ssh appie-2 "curl -s http://100.107.179.3:3000/api/health"`
+- Default creds: see `references/credentials.md`
+
+## Deploy model (NEVER edit `/opt/mission-control` directly on mc-1)
+
+MC-1 uses a gated wave-deploy with auto-rollback. The full process, branch naming conventions, and verification checklist are in `references/mc-deploy-handoff.md`. Key rules:
+- Hardlink copy (`cp -al`) to `/opt/mc-build`, overlay changed source files, build with pnpm, atomic swap → `systemctl restart`
+- Backup DB before every deploy
+- Verify: health 200, correct BUILD_ID, agents ≥21, `/api/knowledge/graph source=cognify-kb`
+- Preserve `.env.local` across deploys (contains FLEET_MEMORY_URL, LOCAL_LLM_API_KEY, MC_DISPATCH_MODEL, etc.)
+
+## Heartbeat (Mac Mini → MC-1)
+
+The fleet heartbeat daemon lives on the Mac Mini at `~/clawd/tools/mc-heartbeat-manifest.py` (301 lines, Python 3). It POSTs agent status (crons, skills, integrations) to MC-1's `/api/agents/<agent>/heartbeat` endpoint every 60s.
+
+**Mac Mini agents run via launchd (60s interval):**
+- `com.weblyfe.mc-heartbeat-appie1` — Appie-1
+- `com.weblyfe.mc-heartbeat-opus` — Appie-Opus
+- `com.weblyfe.mc-heartbeat-appie4` — Appie-4 (CFO, separate Hermes instance)
+
+**Remote agents run via systemd timer (60s):**
+- Appie-2 (Hetzner): `/etc/systemd/system/mc-heartbeat-appie2.{service,timer}` — runs `/opt/mc-heartbeat-manifest.py --agent Appie-2`
+- Appie-3 (Hetzner): same pattern via appie-2 hop — `/opt/mc-heartbeat-manifest.py --agent Appie-3`
+
+**Critical script detail — `MC_TAILSCALE_IP`:** The script's IP fallback must point to MC-1's Tailscale IP (`100.107.179.3`). If the Mac Mini has MagicDNS off, the script falls back to a direct HTTPS connection to this IP. A wrong IP here (e.g., the mini's own `100.101.29.56`) causes SSL errors on every heartbeat.
+
+**Sync to remote agents after script changes:**
+```bash
+scp ~/clawd/tools/mc-heartbeat-manifest.py appie-2:/opt/mc-heartbeat-manifest.py
+ssh appie-2 "scp /opt/mc-heartbeat-manifest.py root@100.69.131.51:/opt/mc-heartbeat-manifest.py"
+```
+
+**Diagnose heartbeats:**
+```bash
+# Mac Mini: check launchd logs
+cat ~/Library/Logs/mc-heartbeat-appie1.log
+cat ~/Library/Logs/mc-heartbeat-appie1.err.log
+
+# Remote: check systemd logs
+ssh appie-2 "journalctl -u mc-heartbeat-appie2 --no-pager -n 5"
+ssh appie-2 "ssh -n root@100.69.131.51 'journalctl -u mc-heartbeat-appie3 --no-pager -n 5'"
+
+# Dry-run test (no POST, just collect and print)
+python3 ~/clawd/tools/mc-heartbeat-manifest.py --agent Appie-1 --dry-run
+```
+
+## Accessing MC-1 from the Mac Mini
+
+The Mac Mini has **MagicDNS off** — `appie-mc-1.tail61f54b.ts.net` won't resolve. Use the Tailnet IP directly, or hop through appie-2:
+
+```bash
+# Direct (from mini, if Tailnet IP is reachable)
+curl http://100.107.179.3:3000/api/health
+
+# Via appie-2 hop
+ssh appie-2 "curl -s --max-time 5 http://100.107.179.3:3000/api/health"
 
 ## Pitfalls
 
-### 0. AUTH_USER/AUTH_PASS from .env doesn't propagate to database on first run
+### 0. MC-1 unreachable from Mac Mini
 
-**Root cause:** Setting `AUTH_USER` and `AUTH_PASS` in `.env` seeds the admin credentials into MC's config but does NOT create a user record in the database. The `/api/login` endpoint checks the DB, not the env vars, so returns 401 even with correct creds.
+**Root cause:** Mac Mini has MagicDNS off. `appie-mc-1.tail61f54b.ts.net` won't resolve.
 
-**Fix:** Visit `http://localhost:3480/setup` in a browser on first run to complete the admin account creation wizard. The env vars only take effect if the setup has already seeded from them — if the setup page was never visited, no DB user exists.
+**Fix:** Use Tailnet IP directly (`100.107.179.3`) or hop through appie-2 (`ssh appie-2 "curl http://100.107.179.3:3000/api/health"`).
 
-**Workaround (headless):** Post to `/api/setup` endpoint with the same credentials to create the DB record.
+### 1. All agents show "idle" / stale status
 
-### 1. External access returns 403 Forbidden
+### 1. All agents show "idle" / stale status
 
-**Root cause:** `MC_ALLOWED_HOSTS` in `.env` defaults to `localhost,127.0.0.1,::1`. In production (`NODE_ENV=production`), the proxy (src/proxy.ts:163) blocks any host not in the allowlist.
+**Root cause:** Heartbeat not running on the Mac Mini. `mc-heartbeat-manifest.py` is NOT in launchd.
 
-**Fix:** Add Tailscale and local network ranges to `.env`:
-```
-MC_ALLOWED_HOSTS=localhost,127.0.0.1,::1,100.*,192.168.*
-```
+**Fix:** Start it manually or add to launchd (see Heartbeat section above). Without heartbeats, MC-1 stores the last known status but never updates.
 
-Patterns supported: exact match, `*.example.com` (subdomain), `100.*` (prefix wildcard).
+### 2. MC-1 server appears DOWN
 
-**Then restart the server** — `.env` changes are read at startup, not hot-reloaded.
+**Root cause:** The `mission-control` systemd service on appie-mc-1 may have stopped. The box itself is usually alive on Tailscale.
 
-### 2. pnpm verify:node fails
-
-`pnpm run start` runs `verify:node` first which may fail on `pnpm install` checks. Workaround: skip pnpm entirely with `npx next start --hostname 0.0.0.0 --port 3480`.
-
-### 3. Server process not found after restart
-
-Check what's listening:
+**Diagnose:**
 ```bash
-lsof -i :3480
+ssh appie-2 "ssh -n root@100.107.179.3 'systemctl is-active mission-control'"
+ssh appie-2 "curl -s --max-time 5 http://100.107.179.3:3000/api/health"
 ```
 
-Find project dir of running process:
+**Fix:**
 ```bash
-lsof -p <PID> | grep cwd
-# or:
-ps aux | grep <PID>
-# gives path like: /Users/appie/mission-control
+ssh appie-2 "ssh -n root@100.107.179.3 'systemctl restart mission-control'"
+# Wait 5s, then verify health check
+ssh appie-2 "curl -s --max-time 10 http://100.107.179.3:3000/login"
 ```
 
-### 4. DeepSeek models fail on vision/image tools
+### 3. Dispatch not working (tasks stuck)
 
-DeepSeek V4 Pro (and likely other DeepSeek models) return `404 - No endpoints found that support image input`. For vision tasks, use `anthropic/claude-opus-4-6` or another vision-capable model.
+**Root cause:** `MC_DISPATCH_MODEL` pointing at wrong provider, or dispatch routing stripped prefix → routes to Anthropic with no key.
 
-## Connecting session tasks/context to Mission Control
-
-Mission Control's agent task surface is the bundled Hermes Kanban dashboard plugin at `/kanban`, backed by `hermes_cli/kanban_db.py`. When Seyed asks to put tasks/context into Mission Control, mirror the active session objective into the Hermes Kanban board rather than only keeping an in-chat todo.
-
-Recommended flow:
-1. Inspect boards with `./hermes kanban boards list` from the Hermes Agent repo, or `hermes kanban boards list` if the CLI is on PATH.
-2. Create a task with a concise title and rich `--body` containing: user request, current repo/workdir, active goal/session identifier if available, relevant constraints, and a short checklist of mirrored tasks.
-3. Use numeric priority values, not labels. Example: `--priority 80`, not `--priority high`.
-4. Prefer `--workspace dir:<absolute-path>` when the context belongs to an existing checkout.
-5. Verify with `./hermes kanban list` and `./hermes kanban show <task-id>` so Mission Control has the expected body.
-
-Pitfall: `python -m hermes_cli.kanban ...` may have no CLI entrypoint in repo checkouts. Use the Hermes CLI command path instead.
-
-Reference: `references/session-context-kanban.md` has a concrete command template for mirroring session context into Mission Control.
-
-For fleet-wide context ingestion across Appie profiles, use `references/fleet-context-ingestion.md`: it lists authoritative evidence files, card body shape, idempotency keys, and verification steps. Prefer a dedicated board such as `appie-fleet-context` over dumping cross-profile cards into the default board.
-
-## Diagnostics
-
-### Check Diddy/Appie Hermes logs
-
-```bash
-# Recent errors
-tail -50 ~/.hermes/logs/errors.log
-# Gateway errors
-tail -20 ~/.hermes/logs/gateway.error.log
-# Agent activity
-tail -30 ~/.hermes/logs/agent.log
+**Fix (on mc-1):** Set in `.env.local`:
 ```
+MC_DISPATCH_MODEL=litellm/deepseek/deepseek-v4-flash
+LOCAL_LLM_ENDPOINT=https://openrouter.ai/api/v1
+```
+The `litellm/` prefix preserves provider routing. Never use `provider: auto`.
 
-Common patterns to watch for:
-- `unknown provider 'openai'` — vision provider not configured; falls back to auto
-- `No endpoints found that support image input` — current model can't handle images
-- `Telegram network error` — connectivity issue (usually transient)
-- `Discord RESUMED session` — normal if occasional; if every 2-3h, gateway may be unstable
+## References
+
+- `references/mc-feature-roadmap.md` — open features and defects from the July 4 handoff audit
 
 ## References
 
 - `references/access-patterns.md` — full MC_ALLOWED_HOSTS proxy logic and access control
 - `references/log-patterns.md` — common Hermes log warnings and their meanings
 - `references/fleet-topology.md` — current Appie fleet layout (local vs remote agents)
+- `references/session-context-kanban.md` — mirroring session context into MC kanban
+- `references/fleet-context-ingestion.md` — fleet-wide context ingestion workflow
+- `references/mc-deploy-handoff.md` — MC-1 wave deploy process, branches, access topology, and verification checklist
+- `references/mc-feature-roadmap.md` — open features and defects from the July 4 handoff audit
