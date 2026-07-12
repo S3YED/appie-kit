@@ -27,7 +27,7 @@ git clone git@github.com:S3YED/appie-brain.git ~/.hermes/appie-brain
 cd ~/.hermes
 git init
 git remote add origin git@github.com:S3YED/appie-brain.git
-git config user.email "appieN@yourdomain.com"
+git config user.email "appieN@weblyfe.nl"
 git config user.name "Appie-N"
 
 # 5. Install deps
@@ -39,6 +39,33 @@ pip install pymupdf requests --break-system-packages
 # 7. Start Hermes
 hermes-agent start
 ```
+
+## Beta client Appie WhatsApp / wacli baseline
+
+For every client Appie we spin up in beta, treat WhatsApp/wacli setup as part of the default onboarding checklist when the client expects WhatsApp communication or WhatsApp-history-aware work.
+
+1. Use client-owned credentials only. Never copy Seyed's WhatsApp, OpenRouter, Notion, Google, or other private credentials into a client bot.
+2. Install the current wacli package:
+   - Homebrew: `brew install openclaw/tap/wacli` or `brew upgrade openclaw/tap/wacli`
+   - Go fallback: `go install github.com/openclaw/wacli/cmd/wacli@latest`
+3. Verify before pairing: `wacli version && wacli doctor && wacli auth status --json`.
+4. If auth fails with `client outdated (405)` or WhatsApp closes the QR channel, upgrade wacli first, then retry. Do not keep retrying old QR auth.
+5. Prefer phone-code pairing for remote beta onboarding:
+   ```bash
+   wacli auth --phone "+31..." --idle-exit 5m --events
+   ```
+   Tell the client: WhatsApp Settings -> Linked Devices -> Link a Device -> Link with phone number instead.
+6. Keep the auth process alive until paired, then verify:
+   ```bash
+   wacli auth status --json
+   wacli doctor
+   ```
+   Look for `authenticated: true`, linked JID, chats/messages counts, and recent `LAST_SYNC`.
+7. For ongoing beta sync, bound local growth unless the client explicitly wants full-history ingestion:
+   ```bash
+   wacli sync --follow --max-messages 10000 --max-db-size 1GB --events
+   ```
+8. Privacy/default safety: no outbound WhatsApp sends without explicit recipient and message confirmation. For client Appies, make this a SOUL/AGENTS rule, not only a skill rule.
 
 ## Key Files to Create
 
@@ -68,12 +95,12 @@ CUSTOM_OPENAI_BASE_URL=http://localhost:11434/v1
 CUSTOM_OPENAI_MODEL=gemma4:26b
 TELEGRAM_BOT_TOKEN=...
 TELEGRAM_ALLOWED_USERS=1817919454
-HERMES_WORKING_DIR=$HOME/workspace
+HERMES_WORKING_DIR=/root/workspace
 EXA_API_KEY=...
 NOTION_API_KEY=ntn_...   # Required for Notion access
-NOTION_CONTENT_FACTORY=<content-database-id>  # Set from the target workspace
-NOTION_TASK_LIST=<task-database-id>
-NOTION_PROJECTS=<projects-database-id>
+NOTION_CONTENT_FACTORY=124c3321-de60-8098-a0e0-f55416c5f95f  # Key DB ID
+NOTION_TASK_LIST=538bdf7b-a506-4c9c-b451-5d2f78b4d544
+NOTION_PROJECTS=60414e0a-cccc-480a-8800-eb3186da93a3
 ```
 
 **Note:** Notion token variable name is `NOTION_API_KEY` (from Notion integration setup).

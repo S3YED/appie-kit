@@ -347,3 +347,9 @@ CSS: `.faq-item.open .faq-a { max-height: 300px; }` and `.faq-item.open .faq-q .
 11. **Vercel token gets masked in terminal** — `$VERCEL_TOKEN` and token values containing `vcp_` get masked to `***` in Hermes terminal output. The token IS stored correctly in `.env.secrets` but you can't use it directly in shell commands. Workaround: read via Python from the file and pass to `subprocess.run(['npx','vercel','--token',token,'--yes','--prod'], cwd='/path')` instead of inline terminal commands.
 12. **Dark background sites use glass morphism, NOT pure white** — Seyed rejected pure white boxes on dark backgrounds as "te fel". Use `bg-white/30 backdrop-blur-md border-white/30` with dark green text. See `references/apple-glass-morphism.md` for the full pattern.
 13. **Always verify the Vercel team scope** — weblyfe.ai was locked because Vercel Authentication was enabled. Also, the Vercel team scope changed from `weblyfe` to `weblyfe-team-s-projects` — check `vercel teams ls` before deploying.
+
+## Specialized Patterns (Reference Files)
+
+- **Coaching/Info-Business Funnels:** `references/coaching-funnel-pattern.md` — quiz-based qualification, offer routing, downsell pages, TIPS adaptation for coaching, no-price rule
+- **Three.js Cosmic Background:** `references/threejs-cosmic-background.md` — 3D particle galaxy, mouse parallax, scroll-driven zoom, gold glow rings
+- **Google Drive Asset Download:** `references/google-drive-asset-download.md` — zero-dependency Python OAuth pattern for listing + downloading client Drive folders

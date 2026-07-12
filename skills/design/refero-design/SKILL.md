@@ -23,6 +23,8 @@ Refero has three research layers:
 Best results come from combining layers: visual direction from styles, concrete UI
 patterns from screens, and sequencing from flows when the task has multiple steps.
 
+- [Mercury Polish Strategy](references/mercury-polish.md): Specialized premium design direction for high-end professional services. Includes light-weight display types, pill buttons, and shadowless surface depth.
+
 ## Non-Negotiables
 
 - **Research before design work.** Every design must be grounded in references before
@@ -148,7 +150,26 @@ Use styles for:
 - component treatments and sometimes component/code examples
 - imagery and product screenshot treatment
 - design-system inspiration
-- making a generic interface feel more tasteful
+- copy and CTA patterns
+
+## Logo Refinement & Asset Delivery
+When the user provides a logo sketch or request (e.g. HZA Bouwgroep):
+- **Precision:** Use exact SVG pathing for architectural symmetry (e.g. specific roof pitches like 45°).
+- **Proportions:** Match high-end typography (e.g. Inter Extra Bold 800) with generous tracking for subtitles (0.6em).
+- **Full Bundle:** Always deliver a comprehensive branding set:
+    - Vector: `.svg`, `.pdf`
+    - PWA/App: `icon-192.png`, `icon-512.png`
+    - Apple: `apple-touch-icon.png`
+    - Social: `og-image.png` (1200x675)
+
+## Top Design Trends (June 2026)
+- **Midnight Cosmos:** Pure black backgrounds (#000000) with thin, high-contrast borders and neon accents.
+- **High-Tech Editorial:** Minimalist layouts using serif headlines with generous whitespace.
+- **Interaction Clarity:** Massive 24px border radii and subtle hover scales.
+
+### Common Style Pairings
+- **Corporate/Premium:** Mercury (Dark Blue/Exectutive), Stripe (Light/Airy).
+- **SaaS/Dev-Tools:** Linear (Onyx/Acid-Lime), Modal (Phosphor/Holographic).
 
 ### Use Screens For Concrete UI Patterns
 
@@ -161,7 +182,7 @@ Use `refero_search_screens` when you need:
 - form/state examples
 - dashboards, settings, modals, tables, pricing, empty states, auth, or product-screen details
 
-**CODE ARCHITECTURE**: For React applications, follow pragmatic component modularization patterns. See [wai-componenty-sizing.md](references/wai-componenty-sizing.md) for WAI-inspired file size standards and architecture patterns.
+After finding strong screens:
 
 - use `refero_get_screen` for full details
 - use `refero_get_similar_screens` to expand from a strong example
