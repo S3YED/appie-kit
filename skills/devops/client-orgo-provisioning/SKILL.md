@@ -242,6 +242,56 @@ Update `~/.weblyfe-secrets/bot-provisioning-ledger.json`:
 - `orgo_computer`: new computer ID
 - `verified_at`: today's date
 
+### 11. Deploy standalone Cognify (client knowledge graph)
+
+Client bots need their OWN Cognify instance — the fleet Cognify is Tailscale-only and reserved for Seyed's team. Deploy Cognify directly on the Orgo machine so the bot accesses it via `http://127.0.0.1:8799`.
+
+**Prerequisites:**
+- A separate OpenRouter API key for the client (do NOT reuse the fleet key)
+- Python 3.10+ on the Orgo machine (comes standard)
+
+**Steps:**
+
+```python
+# Clone Cognify (HTTPS — no SSH deploy key needed for this public repo)
+bash("cd /root && git clone https://github.com/S3YED/cognify.git 2>&1", timeout=120)
+
+# Run setup
+bash("cd /root/cognify && bash setup.sh local 2>&1", timeout=300)
+```
+
+Write the `.env` file (base64-encode as always):
+```bash
+OPENROUTER_API_KEY=<client-specific key>
+COGNIFY_BACKEND=local
+# COGNIFY_DATA_DIR defaults to ~/.cognify — fine for local backend
+```
+
+Start `cognify-serve` as a background process (no systemd on Orgo):
+```bash
+cd /root/cognify
+source .venv/bin/activate && set -a && . ./.env && set +a
+setsid cognify-serve </dev/null >/root/.hermes/logs/cognify.log 2>&1 &
+disown
+```
+
+Verify:
+```python
+out, code = bash("curl -s http://127.0.0.1:8799/health")
+# Expected: {"status":"ok","backend":"local","version":"..."}
+```
+
+**Configure the bot** to use its local Cognify:
+- Set `COGNIFY_HOST=127.0.0.1` and `COGNIFY_PORT=8799` in the bot's Hermes `.env`
+- The `cognify` skill's recall endpoint is `http://$COGNIFY_HOST:$COGNIFY_PORT/recall`
+- Namespace convention for client bots: `workspace:<bot-name>` (e.g. `workspace:zeus`)
+
+**Differences from fleet Cognify:**
+- Fleet: `100.101.29.56:8765/cognify/recall` (Tailscale-only, shared Neo4j backend)
+- Client: `127.0.0.1:8799/recall` (localhost, local ChromaDB+networkx backend)
+- Client endpoint does NOT have the `/cognify/` path prefix — that was nginx on the fleet machine
+- Client has its own data directory (~/.cognify/), fully isolated
+
 ## Pitfalls
 
 - **Orgo computer IDs are ephemeral.** A rebuilt machine gets a new ID. Always re-discover.
@@ -254,6 +304,14 @@ Update `~/.weblyfe-secrets/bot-provisioning-ledger.json`:
 - **`export` prefix in env files.** The vault env files use `export KEY="value"` format. Strip `export ` prefix and quotes before using values.
 - **SSH key per-repo on Appie-1.** The default `id_ed25519` key may not have access to all repos. For repos like `S3YED/nathan-nuyts`, use the account-level `id_ed25519_github` key via `git config --local core.sshCommand "ssh -i ~/.ssh/id_ed25519_github -o IdentitiesOnly=yes"`.
 - **Git pre-commit hook blocks em dashes.** Weblyfe projects have a hook that blocks commits containing `—` (U+2014). Replace with period, comma, colon, or hyphen before committing. Use `git commit --no-verify` only as emergency bypass.
+- **Orgo auth scoping across projects.** Not all computers in Seyed's main workspace (`77e2768b`) are accessible with the master key — some return 401. Computers in project-specific workspaces (e.g. `7a945fac` for Nathan Nuyts) ARE accessible. The machine named "Zeus (Nathan Nuyts)" in Seyed's workspace is a different computer ID from the actual Zeus. Always test `echo 'ALIVE'` before building tooling around a computer ID. If 401, re-discover — the real bot machine may be in a different project.
+- **Client bots get their OWN Cognify instance.** The fleet Cognify at `100.101.29.56:8765` is Tailscale-only and only for Appie's in Seyed's team. Client bots need their own standalone Cognify on their Orgo machine (see Cognify Deployment section below).
+- **Cognify clone requires HTTPS, not SSH.** Orgo machines only have deploy keys for their specific client repo. Clone Cognify via `https://github.com/S3YED/cognify.git` (public repo) instead of SSH.
+- **Disk fills up before Cognify install.** Orgo machines are often at 95%+ disk usage. Before `pip install`: clean `npm cache clean --force`, `rm -rf /root/.cache/pip /root/.cache/uv`, `apt-get clean`. Aim for 500MB+ free.
+- **`setup.sh local` does NOT install the serve extra.** The server command `cognify-serve` fails with "FastAPI not installed" unless you separately run `source .venv/bin/activate && pip install -e ".[serve]"`. Run this in background + poll, same pattern as setup.sh.
+- **Long commands must run in background.** Orgo's API gateway 504s at ~150s. For `setup.sh`, `pip install`, or `npm install`: use `nohup CMD > /tmp/log 2>&1 & echo PID:$!`, then poll with 10s intervals checking `pgrep` and `tail -1 /tmp/log`.
+- **Cognify client server has NO `/cognify/` path prefix.** The fleet instance uses `/cognify/recall` (via nginx reverse proxy). Client-local instances expose endpoints directly: `/recall`, `/ingest`, `/health` on the configured port.
+- **Don't blindly clean `/root/.cache/`.** That directory contains `chroma/` (ChromaDB ONNX embedder model). Cleaning pip/npm/uv caches is fine, but wiping the entire `.cache` breaks Cognify's vector search. If you must clean it, re-verify `curl /health` + `curl /recall` after. The Chroma model auto-redownloads on next use, but existing vector data may need re-ingest.
 
 ## References
 

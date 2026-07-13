@@ -110,6 +110,20 @@ Include a "top 5 to pitch first" section with reasoning.
 - **Forms often go to a black hole**. Direct emails have higher conversion than forms. Affiliate programs are the easiest entry point.
 - **Some brands only work through agencies**. For premium/luxury brands, find the agency contact instead.
 
-## Reference
+## Reference files
 
-The session that produced this skill researched 50+ brands across 10 categories for Nathan Nuyts. See `references/brand-outreach-data.md` for the compiled brand database with verified contacts.
+- `references/brand-outreach-data.md` — Compiled brand database with verified contacts (50+ brands, 10 categories)
+- `references/pitch-templates-mens-clothing.md` — 20 copy-paste pitch templates for men's clothing brand outreach, personalised to the creator's portfolio and niche
+
+## Pitch template strategy
+
+When the user asks for pitch templates after receiving a brand list:
+
+1. **Personalise each template** to the creator's specific niche, audience, and existing brand portfolio
+2. **Vary the tone** per brand — streetwear brands get casual energy, luxury brands get polish
+3. **Include specific brand references** (previous collabs, actual products worn) — never generic
+4. **Always mention the deal structure** — recurring, paid, ambassador, seasonal
+5. **Add subject line and recipient** — some go via email, others via forms or DMs
+6. **Prefer shorter templates for DMs** (streetwear brands, IG-heavy collabs)
+7. **Use longer templates for email** (premium/luxury — Ralph Lauren, Paul Smith)
+8. **Flag which brands need an agent** vs. which take cold outreach

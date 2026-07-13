@@ -115,9 +115,25 @@ LOCAL_LLM_ENDPOINT=https://openrouter.ai/api/v1
 ```
 The `litellm/` prefix preserves provider routing. Never use `provider: auto`.
 
+### 5. Routing 404s on New Projects
+When creating a new Vercel project from terminal, it may default to a generic name or have `autoExposeSystemEnvs` / `ssoProtection` enabled which causes a 404 / 302 wall for unauthenticated agents.
+**Fix:** Force link to existing project name: `vercel link --project <name> --yes`. Ensure SSO is disabled via `PATCH /v9/projects/{id}` body `{"ssoProtection": null, "autoExposeSystemEnvs": false}`.
+
+### 6. Domain ownership (403 Forbidden)
+If `GET /v5/domains/{domain}` returns 403, the domain belongs to a different Vercel account/user, not just a different team on the current token.
+**Verification:** Check all stored tokens: `grep -r "VERCEL_TOKEN" ~/.hermes/.env`. If all fail, the user must manually remove the domain from the old account.
+
 ## References
 
 - `references/mc-feature-roadmap.md` — open features and defects from the July 4 handoff audit
+
+### 5. Routing 404s on New Projects
+When creating a new Vercel project from terminal, it may default to a generic name or have `autoExposeSystemEnvs` / `ssoProtection` enabled which causes a 404 / 302 wall for unauthenticated agents.
+**Fix:** Force link to existing project name: `vercel link --project <name> --yes`. Ensure SSO is disabled via `PATCH /v9/projects/{id}` body `{"ssoProtection": null, "autoExposeSystemEnvs": false}`.
+
+### 6. Domain ownership (403 Forbidden)
+If `GET /v5/domains/{domain}` returns 403, the domain belongs to a different Vercel account/user, not just a different team on the current token.
+**Verification:** Check all stored tokens: `grep -r "VERCEL_TOKEN" ~/.hermes/.env`. If all fail, the user must manually remove the domain from the old account.
 
 ## References
 
