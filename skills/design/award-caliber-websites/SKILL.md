@@ -104,6 +104,7 @@ Good website motion:
 - reveals relationships
 - gives controls tactility
 - makes scrolling feel like progression
+- **scroll-scrub video** (Apple-style): direct `<video>` element driven by scroll progress via rAF lerp — never canvas + drawImage. See `references/scroll-scrub-video-hero.md` for the full implementation, encoding specs, and pitfalls.
 - focuses attention on the current idea
 - is respectful of `prefers-reduced-motion`
 
@@ -159,5 +160,6 @@ Before final delivery:
 
 ## References
 
+- `references/scroll-scrub-video-hero.md`: Complete scroll-driven video hero implementation (Soleiman method). Direct video element, rAF lerp, video encoding specs (-g 1, 720p @ 24fps, ~6MB), Safari/iOS priming, mobile fallback. Use when building a video hero that scrubs on scroll.
 - `references/criteria-and-method.md`: condensed notes on award criteria and the Weblyfe/Appie site-making method captured from prior design review work.
 - `references/legal-website-competitive-research.md`: workflow and heuristics for deep research on award-winning or competitor lawyer/law-firm websites, including source-list extraction, original-site crawling, conversion/SEO analysis, and report artifacts.

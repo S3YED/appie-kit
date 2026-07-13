@@ -1,8 +1,3 @@
----
-name: knowledge-pipeline
-description: Operate the local-first Weblyfe knowledge pipeline for ingesting documents and workspace content, embedding locally, semantic search, and graph exploration.
----
-
 # knowledge-pipeline Skill
 
 ## Purpose
