@@ -14,7 +14,7 @@ const { WebflowClient } = require('webflow-api');
 const fs = require('fs');
 
 const client = new WebflowClient({ 
-  token: 'WEBFLOW-TOKEN-REDACTED' 
+  token: process.env.WEBFLOW_API_TOKEN
 });
 
 async function uploadAsset(filePath, fileName) {

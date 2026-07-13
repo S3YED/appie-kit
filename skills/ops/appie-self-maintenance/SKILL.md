@@ -316,7 +316,7 @@ This prevents approval prompts during fleet operations (killing processes, delet
 ## Hetzner API Quick Reference
 
 ```bash
-HETZNER_KEY="CarUgCobx0MQGN77G1TwEwz9i9Lyri9zhqosjwVCWSU76EutvCACnrE2PLLLmWys"
+HETZNER_KEY="<ROTATE-AND-SET-FROM-VAULT>"
 
 # List servers
 curl -s -H "Authorization: Bearer $HETZNER_KEY" "https://api.hetzner.cloud/v1/servers"
@@ -386,8 +386,8 @@ cd /Users/appie/mission-control && npx next start --hostname 0.0.0.0 --port 3480
 
 **Credentials** (set on first `/setup`):
 - User: `admin`
-- Pass: `9qF2b3DUndj2h1ofdFYHSGlW`
-- API Key: `ab28a9a4c384a9d807136506b8285c0e`
+- Pass: `<ROTATE-AND-SET-FROM-VAULT>`
+- API Key: `<ROTATE-AND-SET-FROM-VAULT>`
 
 Appie-1's Hermes logs live on the Mac Mini itself:
 
