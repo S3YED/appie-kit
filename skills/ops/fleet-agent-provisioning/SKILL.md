@@ -198,3 +198,30 @@ ssh <target> 'cat >> ~/.hermes/MEMORY.md << '"'"'EOF'"'"'
 - Appie Kit v4.5 (994 skills)
 
 ### To do
+1. Send upgrade message to user
+2. Set up nightly cron
+3. Fill in USER.md
+4. Explore new skills
+EOF'
+```
+
+**9b. Send Telegram notification to user** (if agent has a Telegram token and user chat ID is known):
+
+```bash
+ssh <target> "python3 -c '
+import json, urllib.request
+with open(\"/root/.hermes/.env.secrets\") as f:
+    for line in f:
+        if \"TELEGRAM_BOT_TOKEN=*** in line:
+            token = line.split(\"=\", 1)[1].strip()
+            break
+msg = \"Your AI agent got upgraded! 994 skills, Neo4j knowledge graph, local embeddings, DOE loop.\"
+url = \"https://api.telegram.org/bot{}/sendMessage\".format(token)
+data = json.dumps({\"chat_id\": <USER_CHAT_ID>, \"text\": msg}).encode()
+req = urllib.request.Request(url, data=data, headers={\"Content-Type\": \"application/json\"})
+urllib.request.urlopen(req, timeout=10)
+print(\"Sent\")
+'"
+```
+
+### 10. Verification Checklist (final)===ME:fleet-agent-provisioning

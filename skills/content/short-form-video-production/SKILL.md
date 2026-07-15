@@ -57,4 +57,4 @@ Umbrella skill for Reels, Shorts, and TikTok production. Prefer this over separa
 - [ ] Final MP4 is stored outside /tmp or copied to a persistent path before delivery
 - [ ] If likeness matters, the opener matches the user's provided photo/reference
 - [ ] If the user asked for oversight, a review bundle was delivered before continuing to animation
-- [ ] Sound design / narration plan is included when the task is a reel or short-form video
+- [ ] Sound design / narration plan is included when the task is a reel or short-form video===ME:short-form-video-production

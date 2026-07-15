@@ -92,4 +92,4 @@ A fix is not done until:
 ## References
 
 - `references/model-switch-metadata-fallback.md` — session-derived pattern for Codex/GPT-5.5 switch issues where runtime was correct but session metadata and fallbacks were stale.
-- `references/oauth-to-apikey-provider-switch.md` — diagnosing and fixing a broken OAuth provider (empty credential pool) by switching to a working API-key provider, with exact commands and auth.json cleanup.
+- `references/oauth-to-apikey-provider-switch.md` — diagnosing and fixing a broken OAuth provider (empty credential pool) by switching to a working API-key provider, with exact commands and auth.json cleanup.===ME:hermes-gateway-troubleshooting

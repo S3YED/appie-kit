@@ -49,4 +49,4 @@ Check these for each briefing:
 
 ## Delivery
 
-Send to Ibrahim on Telegram with a clean, scannable format. Use bullet points. Keep it under 800 words. End with the strategic question.
+Send to Ibrahim on Telegram with a clean, scannable format. Use bullet points. Keep it under 800 words. End with the strategic question.===ME:client-acquisition/ibrahim-daily-briefing

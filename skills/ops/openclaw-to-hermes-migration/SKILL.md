@@ -277,4 +277,4 @@ systemctl --user enable openclaw-gateway
 
 # 3. Delete Hermes config (optional)
 rm -rf /root/.hermes
-```
+```===ME:openclaw-to-hermes-migration

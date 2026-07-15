@@ -132,4 +132,4 @@ See `references/soleiman-scrub-hero.md` for the full Soleiman ScrubHero componen
 - Text fades out cleanly during first ~20% of scrub
 - Works on mobile: shows autoplay loop, not frozen frame
 - Works on Safari (test iOS specifically — Safari's seeking has unique quirks)
-- Loading from cache is instant (21MB @ 7s = ~210 frames, all keyframes)
+- Loading from cache is instant (21MB @ 7s = ~210 frames, all keyframes)===ME:scroll-scrub-hero

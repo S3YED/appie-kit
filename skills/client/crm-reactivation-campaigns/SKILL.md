@@ -110,4 +110,4 @@ Track opens → tag "warm" → DM setter reaches out within 2 hours of open.
 - **Phone masking:** Don't report "missing phone numbers" as a data issue in GHL. Country code + last 4 digits is all the API returns by design.
 - **Lead volume overwhelm:** 150+ DMs in one day burns out a new setter. Batch into 30-50/day.
 - **No booking link:** Always ask for the specific booking link before sending scripts to the setter.
-- **API pagination:** GHL returns max 100 per page. Always paginate to get the full dataset.
+- **API pagination:** GHL returns max 100 per page. Always paginate to get the full dataset.===ME:client-acquisition/crm-reactivation-campaigns

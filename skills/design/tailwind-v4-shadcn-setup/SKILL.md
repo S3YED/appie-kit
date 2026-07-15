@@ -253,4 +253,4 @@ Install these in your Hermes/Claude config:
 ```
 
 - `tailwindcss-docs-mcp`: Local semantic search over Tailwind docs (v3 + v4)
-- `designmcp-server`: shadcn/ui theming with OKLCH color science
+- `designmcp-server`: shadcn/ui theming with OKLCH color science===ME:tailwind-v4-shadcn-setup
