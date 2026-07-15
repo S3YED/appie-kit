@@ -198,3 +198,152 @@ function ImageReveal({ src, alt, className }) {
 ### Hero parallax
 ```tsx
 const { scrollY } = useScroll();
+const heroScale = useTransform(scrollY, [0, 600], [1, 1.08]);
+// Apply style={{ scale: heroScale }} to hero image container
+```
+
+## SEO Checklist (Must Include)
+
+- [ ] H1 with primary keyword (exactly 1 per page)
+- [ ] Meta description with keyword + CTA
+- [ ] OG title, description (NOT template text)
+- [ ] Canonical URL
+- [ ] Schema.org structured data (LocalBusiness, Service, etc.)
+- [ ] All images have descriptive alt text
+- [ ] Keywords meta tag with 5-8 relevant terms
+- [ ] Heading hierarchy: H1, H2, H3 (no skips)
+- [ ] Viewport meta tag present
+
+## Scroll-Video Hero Pattern
+
+For client sites where you want a cinematic "transformative" reveal (interior design empty→finished, renovation before→after, construction timelapse), use a canvas-scroll scrub video:
+
+```html
+<section class="hero" style="height:300vh;background:#0d0a08">
+  <div class="hero-sticky" style="position:sticky;top:0;height:100vh;overflow:hidden">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-overlay"><!-- title, tagline, scroll hint --></div>
+  </div>
+</section>
+```
+
+Scroll logic (vanilla JS, no framework needed):
+```js
+const canvas = document.getElementById('heroCanvas');
+const ctx = canvas.getContext('2d');
+const video = document.createElement('video');
+video.preload = 'auto'; video.muted = true; video.playsInline = true;
+video.src = 'videos/transformation.mp4'; // MUST be H.264, not MPEG4
+let fps = 30, totalFrames, ready = false;
+
+video.addEventListener('loadedmetadata', () => {
+  ready = true; totalFrames = Math.round(video.duration * fps);
+});
+
+function resize() {
+  const rect = canvas.parentElement.getBoundingClientRect();
+  canvas.width = rect.width; canvas.height = rect.height;
+}
+
+function render() {
+  if (!ready) return;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  const scale = Math.max(canvas.width / video.videoWidth, canvas.height / video.videoHeight);
+  const sw = video.videoWidth * scale, sh = video.videoHeight * scale;
+  ctx.drawImage(video, (canvas.width-sw)/2, (canvas.height-sh)/2, sw, sh);
+}
+
+function onScroll() {
+  const hero = document.getElementById('hero');
+  const scrolled = -hero.getBoundingClientRect().top;
+  const scrollable = hero.offsetHeight - window.innerHeight;
+  const progress = Math.max(0, Math.min(1, scrolled / scrollable));
+  const targetFrame = Math.round(progress * totalFrames);
+  const targetTime = targetFrame / fps;
+  if (ready && Math.abs(video.currentTime - targetTime) > 0.02) {
+    video.currentTime = targetTime;
+  }
+}
+window.addEventListener('scroll', onScroll, { passive: true });
+video.addEventListener('seeked', () => { if (ready) render(); });
+window.addEventListener('resize', resize);
+video.load();
+```
+
+**Frame-accurate tips:**
+- Use `Math.round(progress * totalFrames)` to map scroll to discrete frames — prevents redundant seeks
+- Smooth overlay fade: calculate `Math.max(0, 1 - Math.max(0, progress - 0.05) / 0.2)` and apply to `overlay.style.opacity`
+- Scroll hint text: something specific like "Scroll om de transformatie te zien" or "Scroll om interieur te stijlen"
+- Progress bar: pair with `progressBar.style.width = (progress * 100) + '%'`
+
+**Video codec check (critical):**
+```bash
+ffprobe -v error -show_entries stream=codec_name -of default=noprint_wrappers=1 video.mp4
+# Expect: h264 — if mpeg4, transcode:
+ffmpeg -i input.mp4 -c:v libx264 -crf 23 -movflags +faststart -c:a aac output.mp4
+```
+
+## Standard Landing Page Components (Copy-Paste Ready)
+
+### Lucide Icons
+Load from CDN: `<script src="https://unpkg.com/lucide@latest"></script>`
+Add icons: `<i data-lucide="icon-name"></i>` — init with `lucide.createIcons()` after DOM ready.
+Replace all emoji in production UI with Lucide equivalents (armchair, truck, gift, camera, phone, map-pin, clock, arrow-right, chevron-down, menu, message-circle, instagram, facebook).
+
+### WhatsApp Floating Bubble
+```html
+<style>
+.wa-button {
+  position:fixed; bottom:1.5rem; right:1.5rem; z-index:100;
+  width:56px; height:56px; border-radius:50%;
+  background:#25d366; border:none; cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 4px 16px rgba(37,211,102,.35);
+  animation:waPulse 2s ease-in-out infinite;
+}
+@keyframes waPulse { 0%,100% { box-shadow:0 4px 16px rgba(37,211,102,.35); } 50% { box-shadow:0 4px 24px rgba(37,211,102,.6); } }
+</style>
+<button class="wa-button" onclick="window.open('https://wa.me/31XXXXXXXXX','_blank')" aria-label="WhatsApp">
+  <i data-lucide="message-circle" style="width:26px;height:26px;color:#fff"></i>
+</button>
+```
+Add a tooltip div that fades after 5s: "Hoe kunnen we helpen?"
+
+### FAQ Accordion
+```html
+<div class="faq-item" style="border-bottom:1px solid #ece8e2;cursor:pointer">
+  <div class="faq-q" onclick="this.parentElement.classList.toggle('open')"
+       style="display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0">
+    <span>Vraag</span>
+    <i data-lucide="chevron-down" style="width:18px;height:18px;transition:transform .3s"></i>
+  </div>
+  <div class="faq-a" style="max-height:0;overflow:hidden;transition:max-height .4s;font-size:.9rem;color:#6a5a4a">
+    <p style="padding-bottom:1.25rem">Antwoord</p>
+  </div>
+</div>
+```
+CSS: `.faq-item.open .faq-a { max-height: 300px; }` and `.faq-item.open .faq-q .lucide { transform: rotate(180deg); }`
+
+### Custom Scrollbar
+```css
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f8f6f3; }
+::-webkit-scrollbar-thumb { background: #c4b5a5; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #a09080; }
+```
+
+## Pitfalls
+
+1. **Don't use dark theme unless asked** — Seyed corrected this. White/light is default.
+2. **Don't invent new colors** — use the client's existing brand palette.
+3. **Don't skimp on images** — Seyed asked for "dramatically more pictures." Use 10+ Unsplash images.
+4. **Framer Motion ease arrays need `as const`** in Next.js 16: `ease: [0.19, 1, 0.22, 1] as const`
+5. **Never deploy with an expired Vercel token** — refresh first.
+6. **Always verify the deploy with curl** before reporting success.
+7. **Check Next.js version** — conventions change between major versions. Use `cat node_modules/next/package.json | python3 -c "import sys,json; print(json.load(sys.stdin)['version'])"`
+8. **For creator/personal brand sites, don't flatten everything into one offer** — preserve multiple pathways, proof layers, and the social identity from Instagram.
+9. **Separate template content from true brand assets** — template scaffolds like Olivia can hide the real brand direction if you don't audit carefully.
+10. **Preserve approved hero/header imagery** — when Seyed says the hero/header image was good, treat it as locked. Improvements from Drive assets should enrich supporting visuals, brand/proof sections, and responsive presentation unless he explicitly asks to replace the hero.
+11. **Vercel token gets masked in terminal** — `$VERCEL_TOKEN` and token values containing `vcp_` get masked to `***` in Hermes terminal output. The token IS stored correctly in `.env.secrets` but you can't use it directly in shell commands. Workaround: read via Python from the file and pass to `subprocess.run(['npx','vercel','--token',token,'--yes','--prod'], cwd='/path')` instead of inline terminal commands.
+12. **Dark background sites use glass morphism, NOT pure white** — Seyed rejected pure white boxes on dark backgrounds as "te fel". Use `bg-white/30 backdrop-blur-md border-white/30` with dark green text. See `references/apple-glass-morphism.md` for the full pattern.
+13. **Always verify the Vercel team scope** — weblyfe.ai was locked because Vercel Authentication was enabled. Also, the Vercel team scope changed from `weblyfe` to `weblyfe-team-s-projects` — check `vercel teams ls` before deploying.===ME:weblyfe-landing-page

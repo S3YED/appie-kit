@@ -35,42 +35,21 @@ This makes contributions traceable across the fleet.
 
 ## How to Sync
 
-Always confirm the repo root before you touch git. This repo may live in different places on different hosts, so do not hardcode a path from memory. Use the actual checkout you are already in, or resolve it with `git rev-parse --show-toplevel`.
-
 ```bash
-cd /path/to/appie-brain
+cd /root/.hermes/appie-brain
 
-# Check what changed, including untracked files
-git status --short --branch
+# Check what changed
+git status
 
-# Review the exact delta before staging
-git diff --stat
-git diff --name-only
-
-# Add files selectively. Avoid sweeping in secrets or unrelated noise.
+# Add files (be selective - don't expose secrets)
 git add path/to/your/changes/
 
-# Commit with Appie identity
-git commit -m "🪽 Appie-X: Brief description"
+# Commit with Appie-3 identity
+git commit -m "🪽 Appie-3: Your learning/change description"
 
-# Push the current branch
-git push origin HEAD
+# Push to remote
+git push origin master
 ```
-
-Pitfall: a sync often includes lots of generated or historical files. Review staged content with `git diff --cached --check` before push so you catch whitespace issues and accidental bulk adds early.
-
-See `references/safe-sync-checklist.md` for a compact pre-push checklist.
-
-## Packaging rule
-
-When a topic shows up more than once, or it could help future fleet work, promote it to a **class-level umbrella doc** in `knowledge/docs/` or a comparable top-level knowledge area.
-
-- Put the reusable rules in the umbrella doc.
-- Put session-specific evidence in `references/<topic>.md` under the relevant skill.
-- Add one short cross-link from the umbrella doc to the reference file.
-- Do not create narrow one-session skills unless the workflow is genuinely reusable across unrelated tasks.
-
-See `references/class-level-packaging.md` for the house pattern.
 
 ## Commit Message Format
 

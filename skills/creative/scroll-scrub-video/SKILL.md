@@ -204,4 +204,4 @@ ffmpeg -i source.mp4 \
 2. Scroll back up — video should reverse smoothly
 3. Test on Safari/iOS — video should play, not stay black
 4. Check blob loading via DevTools Network tab — video should load once, then show `blob:` URL in video element
-5. Open on mobile (<768px) — should autoplay in a loop, not scrub
+5. Open on mobile (<768px) — should autoplay in a loop, not scrub===ME:scroll-scrub-video

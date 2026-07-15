@@ -301,4 +301,4 @@ SQLite knowledge DB → filter by business domain → export .md files → Cogni
 ## Related skills
 
 - `google-workspace` — Raw Drive/Gmail/Calendar CLI ops (pre-pipeline)
-- `srt-subtitles` — Parsing .srt subtitle files from Drive
+- `srt-subtitles` — Parsing .srt subtitle files from Drive===ME:drive-knowledge-ingestion

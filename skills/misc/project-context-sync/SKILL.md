@@ -1,3 +1,10 @@
+---
+name: project-context-sync
+description: "Install and use project-context-sync hooks that maintain PROJECT_STATE.md after commits for cross-session project continuity."
+version: 1.0.0
+category: automation
+---
+
 # project-context-sync
 
 Keep a living project state document updated after each commit, so any agent (or future session) can instantly understand where things stand.

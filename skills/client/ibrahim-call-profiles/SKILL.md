@@ -81,4 +81,4 @@ echo "$JSON_SUMMARY" | cognify --tenant ibrahim ingest -
 Send the profile as a structured message to Ibrahim on Telegram/WhatsApp with:
 - Key insights (3 bullet points max)
 - Recommended approach for Call 2
-- Suggested timing for the follow-up
+- Suggested timing for the follow-up===ME:client-acquisition/ibrahim-call-profiles

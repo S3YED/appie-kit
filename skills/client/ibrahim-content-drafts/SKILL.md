@@ -68,4 +68,4 @@ Want the system that fixes this? DM me CREED."
 - Aspirational not shaming?
 - Uses "everyone" not "guys"?
 - Clear CTA?
-- Sounds like a real person?
+- Sounds like a real person?===ME:client-acquisition/ibrahim-content-drafts

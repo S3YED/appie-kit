@@ -131,4 +131,4 @@ Save to `docs/<PROJECT>-LAUNCH-PLAN.md` and present a concise summary in the rep
 4. **Feature-rich does not mean deployed.** A project can have massive feature surface but zero deployments on Vercel.
 5. **Private repos won't show in web search.** Try cloning with `git@github.com:<handle>/<repo>.git` after verifying SSH auth.
 6. **Shell quoting with env vars containing special chars is fragile.** Write Python scripts to files for complex API calls; avoid interpolating env vars directly in shell commands.
-7. **Verbal feature names may not match repo names.** "WAI" = WhatsApp Intelligence, not a tool called "wai". Ask for clarification.
+7. **Verbal feature names may not match repo names.** "WAI" = WhatsApp Intelligence, not a tool called "wai". Ask for clarification.===ME:codebase-audit-and-roadmap
