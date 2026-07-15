@@ -1,10 +1,10 @@
 # 🧙🏽‍♂️ Appie Kit: Build Your Own AI Employee
 
-> The same system that runs a real web design agency, now with 557 production skills extracted from a live 7-agent fleet.
+> The same system that runs a real web design agency, now with 939 production skills extracted from a live 7-agent fleet running 24/7.
 
 [![Hermes Agent](https://img.shields.io/badge/Powered%20by-Hermes%20Agent-031D16?style=for-the-badge)](https://github.com/NousResearch/hermes-agent)
 [![OpenClaw](https://img.shields.io/badge/Also%20works%20with-OpenClaw-0a4020?style=for-the-badge)](https://github.com/openclaw/openclaw)
-[![Skills](https://img.shields.io/badge/Skills-557%20production-DFB771?style=for-the-badge)](skills/INDEX.md)
+[![Skills](https://img.shields.io/badge/Skills-939%20production-DFB771?style=for-the-badge)](skills/INDEX.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-555?style=for-the-badge)](LICENSE)
 
 ## What Is This?
@@ -24,18 +24,16 @@ This is the **exact configuration, tools, and skills** extracted from running [W
 
 ---
 
-## What's New in v4.5
+## What's New in v4.6
 
-Released June 2026.
+Released July 2026.
 
-- **557 production skills** extracted from the live Appie fleet (Mac Mini, GPU/media workers, VPS nodes, and approved client-bot hosts). Up from 156 in v4.4.
-- **Hermes Agent compatibility** across the board. Skills were originally OpenClaw-only; the fleet now runs primarily on [Hermes Agent](https://github.com/NousResearch/hermes-agent).
-- **MiniMax M2.7 as the default model** via OpenRouter: 17x cheaper than Claude at GPT-4 class quality.
-- **fal.ai + RunPod media stack** for image and video generation (Kling, Nano Banana, ComfyUI workers).
-- **UI/UX Pro Max design framework**: 67+ UI styles, 161 palettes, 57 font pairings, 99 UX guidelines bundled as a skill.
-- **9-category skill layout**: automation, communication, content, integrations, knowledge, meta, ops, personal, and ecc.
-
-Full setup guide: [Build Your Own Techwiz PDF v4.5](https://weblyfe.ai/pdf)
+- **939 production skills** extracted from the live Appie fleet (Mac Mini, GPU/media workers, VPS nodes, and approved client-bot hosts). Up from 557 in v4.5.
+- **42 skill categories** covering automation, design, devops, AI/ML, integrations, content creation, client operations, and more.
+- **Multi-agent runtime detection** -- skills now work across Hermes Agent, Claude Code, Codex CLI, and Pi agents.
+- **Orgo-managed fleet** with 4 client bots (Ferdows/Soleiman, Bakkali/Clark, Ramzy/Ibrahim, Nathan Nuyts) contributing unique skills back to the kit.
+- **Cognify shared brain integration** -- fleet-wide knowledge graph with typed entities and cross-agent memory consolidation.
+- **Agentic web design research pipeline** -- daily automated research on new tools, frameworks, and design patterns.
 
 ---
 
@@ -43,14 +41,14 @@ Full setup guide: [Build Your Own Techwiz PDF v4.5](https://weblyfe.ai/pdf)
 
 ### Prerequisites
 - [Hermes Agent](https://github.com/NousResearch/hermes-agent) installed (or [OpenClaw](https://github.com/openclaw/openclaw))
-- An OpenRouter API key (MiniMax M2.7 recommended, ~$0.01/1M tokens)
+- An OpenRouter API key (deepseek-v4-flash recommended, ~$0.03/1M tokens)
 - A Telegram bot token (optional, for messaging interface)
 
-### Recommended: MiniMax M2.7 via OpenRouter
+### Recommended: deepseek-v4-flash via OpenRouter
 
-The default for v4.4 is **MiniMax M2.7** via OpenRouter:
+The default for v4.6 is **deepseek-v4-flash** via OpenRouter:
 
-- Cost: ~$0.01/1M tokens (vs $3.50/1M for Claude Opus)
+- Cost: ~$0.03/1M tokens (vs $3.50/1M for Claude Opus)
 - Quality: equivalent to GPT-4 class
 - Setup: get an OpenRouter key at [openrouter.ai](https://openrouter.ai)
 
@@ -109,21 +107,23 @@ That's it. Your AI employee is live.
 
 ## Skills by Category
 
-557 public skills across 9 categories. Each category has its own index.
+939 production skills across 42 categories. Each category has its own index.
 
-| Category | Net Skills | What it covers |
+| Category | Skills | What it covers |
 |---|---|---|
-| [automation](skills/automation/INDEX.md) | 27 | Agent self-management, fleet coordination, brain sync, sub-agent spawning, ClawFlow workflows |
-| [communication](skills/communication/INDEX.md) | 7 | Telegram, Discord, Slack, iMessage (BlueBubbles), WhatsApp (wacli), voice calls |
-| [content](skills/content/INDEX.md) | 65 | UI/UX design, image gen, video production, SEO, copywriting, Next.js, TTS, stable diffusion |
-| [integrations](skills/integrations/INDEX.md) | 109 | Airtable, Notion, Google Workspace, GitHub, n8n, fal.ai, Spotify, Webflow, Trello, Gemini |
-| [knowledge](skills/knowledge/INDEX.md) | 33 | LLM fine-tuning (LoRA/GRPO), quantization, vLLM, Whisper STT, DSPy, model evaluation |
-| [meta](skills/meta/INDEX.md) | 11 | Skill authoring, ClawHub registry, task planning, dogfood QA, brainstorming frameworks |
-| [ops](skills/ops/INDEX.md) | 30 | GitHub/git, DigitalOcean, tmux, 1Password, healthcheck, session management, fleet maintenance |
-| [personal](skills/personal/INDEX.md) | 25 | Bear Notes, Spotify, Things 3 (macOS), weather |
-| [ecc](skills/ecc/INDEX.md) | 250 | Imported MIT engineering and agentic-ops skills |
+| automation | 37 | Agent self-management, fleet coordination, brain sync, sub-agent spawning, autonomous workflows |
+| integrations | 138 | Airtable, Notion, Google Workspace, GitHub, n8n, fal.ai, Spotify, Webflow, Trello, Gemini, Stripe |
+| ecc | 241 | MIT engineering and agentic-ops skills: CLI tools, MCP servers, browser automation, model inference |
+| content | 85 | UI/UX design, image gen, video production, SEO, copywriting, Next.js, TTS, stable diffusion |
+| ops | 55 | GitHub/git, DigitalOcean, tmux, 1Password, healthcheck, session management, fleet maintenance |
+| knowledge | 38 | LLM fine-tuning (LoRA/DPO/GRPO), quantization, vLLM, Whisper STT, DSPy, model evaluation |
+| personal | 36 | Bear Notes, Spotify, Things 3, Apple Notes/Reminders, smart home, macOS automation |
+| openclaw-imports | 24 | Legacy OpenClaw-native skills: GWS, calendar, email, recipes, ClawHub |
+| misc | 117 | 117 additional specialized skills across marketing, design systems, security, and productivity |
+| devops | 18 | Fleet operations, Orgo provisioning, email auth, Vercel deploy, webhook subscriptions |
+| additional categories | 150 | creative, agentic, fleet, meta, design, client, content-creation, productivity, communication, client-acquisition, autonomous-ai-agents, software-development, seo, media, agentic-webdesign, social-media, research, and more |
 
-557 ready-to-drop-in skills across 9 categories. The full skill library from the live fleet is larger; this kit contains the skills that transfer cleanly to any Hermes or OpenClaw setup.
+939 ready-to-drop-in skills across 42 categories. The full skill library from the live fleet is larger; this kit contains the skills that transfer cleanly to any Hermes, Claude Code, or OpenClaw setup.
 
 ---
 
@@ -204,16 +204,17 @@ appie-kit/
 │   ├── IDENTITY.md     # Multi-agent identity (for fleets)
 │   ├── HEARTBEAT.md    # Proactive check-in configuration
 │   └── memory/         # Persistent memory directory
-├── skills/             # 557 public skills, 9 categories
+├── skills/             # 939 production skills, 42 categories
 │   ├── automation/     # Agent self-management, fleet coordination
-│   ├── communication/  # Messaging platform integrations
-│   ├── content/        # Design, video, SEO, copywriting, frontend
 │   ├── integrations/   # Third-party APIs and SaaS connectors
-│   ├── knowledge/      # ML/AI fine-tuning, search, research
-│   ├── meta/           # Skill authoring, planning, QA
+│   ├── ecc/            # MIT engineering and agentic-ops skills
+│   ├── content/        # Design, video, SEO, copywriting, frontend
 │   ├── ops/            # Infrastructure, git, DevOps
-│   ├── personal/       # Notes, tasks, music (macOS)
-│   └── INDEX.md        # Master skill index with counts
+│   ├── knowledge/      # ML/AI fine-tuning, search, research
+│   ├── personal/       # Notes, tasks, music, macOS automation
+│   ├── misc/           # Marketing, design systems, security
+│   ├── devops/         # Fleet operations, provisioning, deploys
+│   └── ... (33 more categories)
 ├── tools/              # Production shell scripts
 │   ├── validate-public-skills.py # Pre-publish skill validation
 │   ├── setup-openclaw-mac.sh    # Full Mac setup
@@ -244,7 +245,7 @@ appie-kit/
 
 | Category | Tool | Why |
 |---|---|---|
-| AI model | MiniMax M2.7 (OpenRouter) | 17x cheaper than Claude, GPT-4 class quality |
+| AI model | deepseek-v4-flash (OpenRouter) | 100x cheaper than Claude, GPT-4 class quality |
 | Agent framework | Hermes Agent (Nous Research) | Open source, persistent memory, multi-platform |
 | Alternative framework | OpenClaw | macOS-native, good for desktop automation |
 | Messaging | Telegram | Best bot API, instant delivery, group support |
@@ -321,12 +322,12 @@ Before going live:
 - [Fleet Access](docs/FLEET-ACCESS.md): safely add worker/client-bot hosts for skill inventory without leaking private data
 - [FAQ](FAQ.md): setup, skills, models, privacy, hardware, use cases
 - [Troubleshooting](TROUBLESHOOTING.md): symptom-first index for common issues
-- [Skills Catalog](SKILLS.md): browse 557 skills by category
+- [Skills Catalog](SKILLS.md): browse 939 skills by category
 - [Contributing](CONTRIBUTING.md): how to add skills and submit changes
 - [Changelog](CHANGELOG.md): version history
 - [Code of Conduct](CODE_OF_CONDUCT.md): community standards
 - [Security Policy](SECURITY.md): how to report a vulnerability
-- v4.5 guide: [Build Your Own Techwiz PDF](https://weblyfe.ai/pdf)
+- v4.6 guide: [Build Your Own Techwiz PDF](https://weblyfe.ai/pdf)
 - Hermes Agent: [github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)
 - OpenClaw: [github.com/openclaw/openclaw](https://github.com/openclaw/openclaw)
 - MiniMax M2.7 via OpenRouter: [openrouter.ai](https://openrouter.ai)
