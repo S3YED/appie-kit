@@ -389,7 +389,7 @@ xxd "/Users/appie/.hermes/skills/appie-self-maintenance/SKILL.md" | sed -n '/000
 
 When using the key in curl, Hermes will mask it inline too. Write to a temp file first:
 ```bash
-python3 -c "key='CarUgCobx0MQGN77G1TwEwz9i9Lyri9zhqosjwVCWSU76EutvCACnrE2PLLLmWys'; open('/tmp/hk','w').write(key)"
+python3 -c "key='${HETZNER_API_KEY}'; open('/tmp/hk','w').write(key)"
 HETZNER_KEY=$(cat /tmp/hk)
 curl -s -H "Authorization: Bearer $HETZNER_KEY" "https://api.hetzner.cloud/v1/servers"
 rm /tmp/hk
@@ -466,8 +466,8 @@ cd /Users/appie/mission-control && npx next start --hostname 0.0.0.0 --port 3480
 
 **Credentials** (set on first `/setup`):
 - User: `admin`
-- Pass: `9qF2b3DUndj2h1ofdFYHSGlW`
-- API Key: `ab28a9a4c384a9d807136506b8285c0e`
+- Pass: `${MC_PASSWORD_REDACTED}`
+- API Key: `${MC_API_KEY_REDACTED}`
 
 Appie-1's Hermes logs live on the Mac Mini itself:
 
