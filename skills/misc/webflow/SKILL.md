@@ -1,7 +1,7 @@
 # Webflow CMS Skill
 
 ## Credentials
-- **API Token**: `WEBFLOW-TOKEN-REDACTED`
+- **API Token**: `${WEBFLOW_API_KEY}`
 - **Site ID**: `68f612cac31a6f533ce5528d`
 - **Site**: berendstrik.webflow.io
 
