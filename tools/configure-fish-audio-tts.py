@@ -7,6 +7,7 @@ import argparse
 from datetime import datetime, timezone
 import os
 from pathlib import Path
+import shlex
 import shutil
 import tempfile
 
@@ -27,7 +28,7 @@ def configure(config: dict, command_path: Path) -> dict:
     providers = tts.setdefault("providers", {})
     providers["fish-audio"] = {
         "type": "command",
-        "command": f"{command_path} --input {{input_path}} --output {{output_path}}",
+        "command": f"{shlex.quote(str(command_path))} --input {{input_path}} --output {{output_path}}",
         "output_format": "mp3",
         "timeout": 150,
         "max_text_length": 12000,
