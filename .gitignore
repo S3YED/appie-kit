@@ -17,6 +17,10 @@ Thumbs.db
 node_modules/
 package-lock.json
 
+# Python
+__pycache__/
+*.py[cod]
+
 # Logs
 *.log
 

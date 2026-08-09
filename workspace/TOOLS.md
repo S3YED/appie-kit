@@ -85,8 +85,26 @@ echo $BREVO_API_KEY  # Available in shell
 # - Offorte: Create proposals, track views, manage templates
 # - n8n: Trigger workflows, manage automations
 
+## Text to speech: Fish Audio through OpenRouter
+
+Fish Audio is the default TTS layer for the fleet. Hermes calls the installed
+`fish-audio-tts` custom command provider, which uses
+`fish-audio/s2.1-pro-free:free` and the active agent's own
+`OPENROUTER_API_KEY`.
+
+Use Fish S2.1 emotion cues directly in voice text, for example:
+
+```text
+[warm and confident] Welcome back. [playful] I have something good for you.
+```
+
+The script emits MP3. Hermes converts it to Ogg/Opus for Telegram voice bubbles;
+Clark's WhatsApp bridge performs the same conversion before upload. Kokoro is
+retired and must not be installed or started. Explicit ElevenLabs application
+routes remain independent from this generic Hermes default.
+
 ## Notes
 # Add tool-specific notes here as you discover them:
-# - "Vercel encrypted env vars corrupt JWT tokens — always use plain type"
+# - "Vercel encrypted env vars corrupt JWT tokens - always use plain type"
 # - "Airtable rate limit: 5 requests/sec"
 # - "Brevo: 300 emails/day on free plan"

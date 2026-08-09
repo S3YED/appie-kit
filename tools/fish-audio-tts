@@ -1,0 +1,169 @@
+#!/usr/bin/env python3
+"""Fish Audio S2.1 TTS through OpenRouter for Hermes command providers.
+
+The active Hermes profile keeps its own OPENROUTER_API_KEY in `.env`. This
+executable reads that file at runtime, calls OpenRouter's audio endpoint, and
+writes MP3 output. No credential is accepted on the command line or stored in
+Hermes config.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import os
+from pathlib import Path
+import random
+import sys
+import tempfile
+import time
+from typing import Any, Callable
+import urllib.error
+import urllib.request
+
+ENDPOINT = "https://openrouter.ai/api/v1/audio/speech"
+DEFAULT_MODEL = "fish-audio/s2.1-pro-free:free"
+DEFAULT_TIMEOUT_SECONDS = 120
+DEFAULT_ATTEMPTS = 3
+
+
+def hermes_home() -> Path:
+    return Path(os.environ.get("HERMES_HOME", "~/.hermes")).expanduser()
+
+
+def load_dotenv(path: Path) -> None:
+    """Load simple KEY=VALUE entries without overwriting process environment."""
+    try:
+        lines = path.read_text(encoding="utf-8").splitlines()
+    except FileNotFoundError:
+        return
+    for raw in lines:
+        line = raw.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        if line.startswith("export "):
+            line = line[7:].lstrip()
+        key, value = line.split("=", 1)
+        key = key.strip()
+        if not key or key in os.environ:
+            continue
+        value = value.strip()
+        if len(value) >= 2 and value[:1] == value[-1:] and value[0] in "'\"":
+            value = value[1:-1]
+        os.environ[key] = value
+
+
+def build_payload(text: str, model: str | None = None) -> dict[str, str]:
+    """Build the stable OpenRouter audio payload while preserving emotion tags."""
+    return {
+        "model": model or os.environ.get("FISH_AUDIO_MODEL", DEFAULT_MODEL),
+        "input": text,
+        "response_format": "mp3",
+    }
+
+
+def safe_error(error: BaseException, api_key: str = "") -> str:
+    message = str(error)
+    if api_key:
+        message = message.replace(api_key, "[REDACTED]")
+    return message
+
+
+def synthesize(
+    text: str,
+    api_key: str,
+    *,
+    model: str | None = None,
+    timeout: int = DEFAULT_TIMEOUT_SECONDS,
+    attempts: int = DEFAULT_ATTEMPTS,
+    opener: Callable[..., Any] = urllib.request.urlopen,
+) -> bytes:
+    if not text.strip():
+        raise ValueError("TTS input is empty")
+    max_chars = int(os.environ.get("FISH_AUDIO_MAX_CHARS", "12000"))
+    if len(text) > max_chars:
+        raise ValueError(f"TTS input exceeds FISH_AUDIO_MAX_CHARS={max_chars}")
+    if not api_key:
+        raise RuntimeError(
+            f"OPENROUTER_API_KEY is missing from the environment or {hermes_home() / '.env'}"
+        )
+
+    body = json.dumps(build_payload(text, model)).encode("utf-8")
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json",
+        "Accept": "audio/mpeg,application/octet-stream",
+        "HTTP-Referer": os.environ.get("FISH_AUDIO_HTTP_REFERER", "https://getclark.app"),
+        "X-Title": os.environ.get("FISH_AUDIO_APP_NAME", "Weblyfe Hermes TTS"),
+    }
+
+    last_error: BaseException | None = None
+    for attempt in range(1, max(1, attempts) + 1):
+        request = urllib.request.Request(ENDPOINT, data=body, headers=headers, method="POST")
+        try:
+            with opener(request, timeout=timeout) as response:
+                audio = response.read()
+                content_type = (response.headers.get("content-type") or "").lower()
+                if not audio:
+                    raise RuntimeError("OpenRouter returned an empty audio response")
+                if "json" in content_type or audio.lstrip().startswith((b"{", b"[")):
+                    preview = audio.decode("utf-8", errors="replace")[:500]
+                    raise RuntimeError(f"OpenRouter returned JSON instead of audio: {preview}")
+                return audio
+        except urllib.error.HTTPError as error:
+            detail = error.read().decode("utf-8", errors="replace")[:500]
+            last_error = RuntimeError(f"OpenRouter HTTP {error.code}: {detail}")
+            retryable = error.code == 429 or 500 <= error.code < 600
+        except (urllib.error.URLError, TimeoutError) as error:
+            last_error = error
+            retryable = True
+        except BaseException as error:
+            last_error = error
+            retryable = False
+
+        if not retryable or attempt >= attempts:
+            break
+        time.sleep(min(8.0, (2 ** (attempt - 1)) + random.random()))
+
+    assert last_error is not None
+    raise RuntimeError(safe_error(last_error, api_key)) from last_error
+
+
+def atomic_write(path: Path, data: bytes) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with tempfile.NamedTemporaryFile(prefix=f".{path.name}.", dir=path.parent, delete=False) as tmp:
+        tmp.write(data)
+        tmp.flush()
+        os.fsync(tmp.fileno())
+        temp_path = Path(tmp.name)
+    os.replace(temp_path, path)
+
+
+def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Generate Fish Audio S2.1 speech through OpenRouter")
+    source = parser.add_mutually_exclusive_group(required=True)
+    source.add_argument("--input", type=Path, help="UTF-8 text input file")
+    source.add_argument("--text", help="Literal text input (prefer --input to avoid shell history)")
+    parser.add_argument("--output", required=True, type=Path, help="MP3 output path")
+    parser.add_argument("--model", default=None, help="Override FISH_AUDIO_MODEL")
+    parser.add_argument("--timeout", type=int, default=DEFAULT_TIMEOUT_SECONDS)
+    return parser.parse_args(argv)
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = parse_args(argv)
+    load_dotenv(hermes_home() / ".env")
+    text = args.input.read_text(encoding="utf-8") if args.input else args.text
+    key = os.environ.get("OPENROUTER_API_KEY", "").strip()
+    try:
+        audio = synthesize(text or "", key, model=args.model, timeout=args.timeout)
+        atomic_write(args.output.expanduser(), audio)
+    except BaseException as error:
+        print(f"fish-audio-tts: {safe_error(error, key)}", file=sys.stderr)
+        return 1
+    print(str(args.output.expanduser()))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
