@@ -1,4 +1,4 @@
-# Integrations - 116 skills
+# Integrations - 117 skills
 
 Third-party service integrations: Google Workspace, Notion, GitHub, n8n, fal.ai, Webflow, Spotify, Trello, and more.
 
@@ -118,5 +118,6 @@ Third-party service integrations: Google Workspace, Notion, GitHub, n8n, fal.ai,
 - [`trello`](trello/): Manage Trello boards, lists, and cards via the Trello REST API.
 - [`venice`](venice/): Run Venice AI research through an isolated subagent workflow and return summarized results without blocking the main session.
 - [`webflow`](webflow/): Operate Webflow CMS for Weblyfe client sites, including collections, item updates, image fields, publishing, and asset-upload fallbacks.
+- [`hermes-tweet`](hermes-tweet/): Native Hermes Agent plugin for catalog-guided public X research, monitoring, and explicitly approval-gated actions.
 - [`xurl`](xurl/): X/Twitter via xurl CLI: post, search, DM, media, v2 API.
 - [`yuanbao`](yuanbao/): Yuanbao (元宝) groups: @mention users, query info/members.

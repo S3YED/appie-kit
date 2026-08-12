@@ -49,7 +49,7 @@ Third-party service integrations: Google Workspace, Notion, GitHub, n8n, fal.ai,
 
 [Browse integrations skills](skills/integrations/INDEX.md) | [Readme](skills/integrations/README.md)
 
-Highlights: `exa-plus`, `n8n`, `github`, `gog`, `airtable`, `notion-masterclass`, `fal-ai`, `webflow`, `spotify`, `spark-comfy`
+Highlights: `exa-plus`, `hermes-tweet`, `n8n`, `github`, `gog`, `airtable`, `notion-masterclass`, `fal-ai`, `webflow`, `spotify`, `spark-comfy`
 
 ---
 
