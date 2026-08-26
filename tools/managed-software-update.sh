@@ -81,7 +81,9 @@ update_brew(){
 
 update_hermes(){
   with_timeout 600 hermes update --check >>"$LOG" 2>&1 || true
-  with_timeout 3600 hermes update --yes --backup
+  # Use Hermes' configured/default pre-update snapshot policy. Forcing a full
+  # HERMES_HOME zip on every upstream commit fills small customer disks.
+  with_timeout 3600 hermes update --yes
 }
 
 update_claude(){
