@@ -152,7 +152,12 @@ if command -v pipx >/dev/null 2>&1; then run_lane pipx update_pipx; fi
 if command -v uv >/dev/null 2>&1; then run_lane uv-tools update_uv; fi
 if command -v npm >/dev/null 2>&1; then run_lane npm-globals update_npm; fi
 
-if [ "$DRY" != "1" ] && ! health_check; then
+if [ "$DRY" = "1" ]; then
+  log "managed update dry-run complete"
+  exit 0
+fi
+
+if ! health_check; then
   log "UPDATE DEGRADED post-update serving health failed"
   FAILED=$((FAILED+1))
 fi
