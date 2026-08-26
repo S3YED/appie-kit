@@ -31,6 +31,8 @@ fi
 mkdir -p "$TARGET/memory"
 mkdir -p "$TARGET/tools"
 mkdir -p "$TARGET/skills"
+mkdir -p "$TARGET/scripts"
+TARGET_ABS=$(cd "$TARGET" && pwd)
 
 # Copy workspace files (don't overwrite)
 echo "=== Copying workspace files ==="
@@ -78,6 +80,23 @@ for TOOL in "$SCRIPT_DIR"/tools/*.sh; do
         echo "  ✅ tools/$BASENAME"
     fi
 done
+
+# Install the canonical daily software updater as a managed artifact. Unlike
+# optional tools, this file is refreshed on every Appie Kit install so security
+# and rollback improvements reach existing agents too.
+install -m 700 "$SCRIPT_DIR/tools/managed-software-update.sh" "$TARGET/scripts/managed-software-update.sh"
+echo "  ✅ scripts/managed-software-update.sh"
+if command -v crontab >/dev/null 2>&1; then
+    CRON_TMP=$(mktemp)
+    (crontab -l 2>/dev/null | grep -v 'managed-software-update.sh'; \
+      echo "0 2 * * * $TARGET_ABS/scripts/managed-software-update.sh run") > "$CRON_TMP"
+    if crontab "$CRON_TMP"; then
+        echo "  ✅ daily managed software update cron"
+    else
+        echo "  ⚠️  cron registration failed; the updater is installed and can be scheduled by launchd/Hermes"
+    fi
+    rm -f "$CRON_TMP"
+fi
 
 # Copy .env.example
 if [ ! -f "$TARGET/.env.secrets" ]; then
