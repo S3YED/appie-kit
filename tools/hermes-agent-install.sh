@@ -956,6 +956,36 @@ run_setup_wizard() {
     fi
 }
 
+install_fish_audio_tts() {
+    local base="https://raw.githubusercontent.com/S3YED/appie-kit/master/tools"
+    local bin_dir="$HERMES_HOME/bin"
+    local tts_bin="$bin_dir/fish-audio-tts"
+    local configure_script
+    configure_script=$(mktemp)
+
+    log_info "Configuring Fish Audio S2.1 through OpenRouter as default TTS..."
+    mkdir -p "$bin_dir"
+    if ! curl -fsSL "$base/fish-audio-tts" -o "$tts_bin" \
+      || ! curl -fsSL "$base/configure-fish-audio-tts.py" -o "$configure_script"; then
+        log_warn "Fish Audio helper download failed; install it later from appie-kit/tools"
+        rm -f "$configure_script"
+        return 0
+    fi
+    chmod 700 "$tts_bin"
+
+    local python_cmd="python3"
+    [ -x "$INSTALL_DIR/venv/bin/python" ] && python_cmd="$INSTALL_DIR/venv/bin/python"
+    if "$python_cmd" "$configure_script" --hermes-home "$HERMES_HOME" --command-path "$tts_bin"; then
+        log_success "Fish Audio is the default Hermes TTS provider"
+        if ! grep -q '^OPENROUTER_API_KEY=.' "$HERMES_HOME/.env" 2>/dev/null; then
+            log_warn "OPENROUTER_API_KEY is not configured yet; Fish TTS will activate when this agent receives its own key"
+        fi
+    else
+        log_warn "Fish Audio config update failed; run configure-fish-audio-tts.py manually"
+    fi
+    rm -f "$configure_script"
+}
+
 maybe_start_gateway() {
     # Check if any messaging platform tokens were configured
     ENV_FILE="$HERMES_HOME/.env"
@@ -1125,6 +1155,7 @@ main() {
     setup_path
     copy_config_templates
     run_setup_wizard
+    install_fish_audio_tts
     maybe_start_gateway
 
     print_success
